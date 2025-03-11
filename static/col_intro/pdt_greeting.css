@@ -22,12 +22,65 @@ header {
   width: 1200px;
   height: 600px;
   margin: 0 auto;
+  position: relative;
+}
+
+.greeting_h2 {
+  position: absolute;
+  top: 62px;
+  left: 0px;
+  font-size: 32px;
 }
 
 .container > aside {
-  border: 2px solid #222222;
   width: 210px;
   height: 302px;
+  position: absolute;
+  top: 116px;
+}
+
+aside > div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 59px;
+  border-top: 2px solid #222222;
+  border-bottom: 1px #dcdcdc;
+  background-color: #3f97f6;
+  cursor: pointer;
+}
+aside > div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 59px;
+  border-bottom: 4px red;
+}
+aside > div:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 59px;
+  border-bottom: 1px #dcdcdc;
+}
+aside > div:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 59px;
+  border-bottom: 1px #dcdcdc;
+}
+aside > div:nth-child(5) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 210px;
+  height: 59px;
+  border-bottom: 1px #dcdcdc;
 }
 
 .container > .greeting_content {
