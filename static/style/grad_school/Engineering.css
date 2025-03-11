@@ -1,0 +1,212 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans KR";
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+}
+body {
+    overflow-x: hidden; /* 가로 스크롤 추가 */
+    min-width: 1200px; /* 최소 너비 유지 */
+}
+
+/* --------- header start --------- */
+header {
+    width: 100%;
+    box-sizing: border-box;
+    height: 104px;
+}
+
+header > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.topMenuBar {
+    width: 100%;
+    background-color: #3F97F6;
+}
+.topMenus {
+    height: 28px;
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.topMenus li {
+    display: inline;
+}
+.topMenus li > a {
+    color: white;
+    border-right: 1px solid #78B6F9;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-weight: 350;
+}
+.topMenus li:last-child > a {
+    border: none;
+    padding-right: 0;
+}
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 0;    
+}
+.nav-container {
+    display: flex;
+    justify-content: right;
+}
+nav {
+    position: relative;
+    font-weight: 400;
+    font-size: 0;
+    display: flex;
+    padding: 0;
+    width: 80%;
+}
+nav .item {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    cursor: pointer;
+    width: 120px;
+    height: 65px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.dropdown {
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 66px;
+}
+.dropdown > div {
+    translate: 0 -100%;
+    transition: all 0.3s 0.1s;
+    position: relative;
+    background-color: #3F97F6;
+}
+.dropdown a {
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 0 10px 15px;
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    border-top: 1px solid #53A2F7;
+}
+.item:hover {
+    color: #3F97F6;
+    z-index: 5;
+}
+.dropdown a:hover {
+    background: #3a88db;
+    transition: 0.3s;
+}
+nav .item:hover > .dropdown > div {
+    translate: 0;
+}
+nav .item:nth-child(1):hover ~ .underline {
+    translate: 0;
+}
+nav .item:nth-child(2):hover ~ .underline {
+    translate: 100%;
+}
+nav .item:nth-child(3):hover ~ .underline {
+    translate: 200%;
+}
+nav .item:nth-child(4):hover ~ .underline {
+    translate: 300%;
+}
+
+/* --------- header end --------- */
+
+/* --------- footer start --------- */
+footer > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-link-container {
+    display: flex;
+    align-items: center;
+    background-color: #1F2838;
+    height: 50px;
+}
+.footer-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.footer-links li {
+    border-left: 1px solid #6F747E;
+    text-align: center;
+    flex: 1;
+}
+.footer-links li:last-child {
+    border-right: 1px solid #6F747E;
+}
+.footer-links li > a {
+    color: white;
+    font-size: 14px;
+    font-weight: 350;
+}
+.copyright {
+    background-color: #19202D;
+}
+.copyright-container {
+    display: flex;
+    padding: 30px 0;
+}
+.footer-logo {
+    width: 160px;
+    height: 41px;
+    margin-right: 20px;
+}
+.footer-text {
+    color: #A8A9AC;
+    font-size: 14px;
+    font-weight: 350;
+    line-height: 21px;
+}
+.footer-text:nth-child(2) {
+    margin-top: 20px;
+}
+
+select {
+    appearance:none;
+    background:url('/static/images/bg-related-arr-open.png') no-repeat right 16px center;
+    margin-left: auto;
+    display: flex;
+    width: 200px;
+    height: 36px;
+    padding-left: 20px;
+    align-items: center;
+    background-color: #121721;
+    box-sizing: border-box;
+    color: #A7A7A9;
+    font-size: 16px;
+    font-weight: 350;
+    border: none;
+}
+option {
+    color: #A7A7A9;
+    font-size: 16px;
+    font-weight: 350;
+}
+select:focus {
+    outline: none;
+}
+  
+/* --------- footer end --------- */
