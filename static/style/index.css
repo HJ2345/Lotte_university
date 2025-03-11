@@ -3,13 +3,15 @@
     padding: 0;
     font: normal 12px "Noto Sans KR";
 }
-
 a {
     text-decoration: none;
 }
-
 ul, li {
     list-style: none;
+}
+body {
+    overflow-x: hidden; /* 가로 스크롤 추가 */
+    min-width: 1200px; /* 최소 너비 유지 */
 }
 
 /* --------- header start --------- */
@@ -190,7 +192,7 @@ main > div > * {
 }
 .content {
     width: 600px;
-    height: 290px;
+    height: auto;
     padding: 35px;
     box-sizing: border-box;
     margin: 0;
@@ -312,4 +314,146 @@ main > div > * {
 }
 /* --------- dongari helper end --------- */
 
+/* --------- second content start --------- */
+.sec-content-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.news {
+    background-color: #F3F5F9;
+    box-sizing: border-box;
+    color: #333;
+    padding: 60px 35px 60px 0;
+    position: relative;
+}
+.news, .smart-link {
+    padding-top: 60px;
+}
+.news-header span {
+    color: #3F97F6;
+}
+.news-title {
+    color: #333;
+}
+.news-date {
+    color: #888888;
+}
+.smart-link {
+    background-color: white;
+    padding: 60px 0 60px 35px;
+    position: relative;
+}
+.smart-link-header {
+    text-align: center;
+}
+.smart-link-header span {
+    color: #3F97F6;
+}
+.smart-links-container {
+    border-bottom: 1px solid #DDDDDD;
+    height: 152px;
+}
+.smart-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.link-icons > img {
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+    padding: 25px;
+    background-color: #9ABEDF;
+    border-radius: 50px;
+}
+.link-icons > p {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #252525;
+}
+
+.sec-content-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: calc(50% - 600px);
+    height: 100%;
+    background-color: white;
+}
+/* --------- second content end --------- */
 /* --------- main end --------- */
+
+/* --------- footer start --------- */
+footer > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-link-container {
+    display: flex;
+    align-items: center;
+    background-color: #1F2838;
+    height: 50px;
+}
+.footer-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+.footer-links li {
+    border-left: 1px solid #6F747E;
+    text-align: center;
+    flex: 1;
+}
+.footer-links li:last-child {
+    border-right: 1px solid #6F747E;
+}
+.footer-links li > a {
+    color: white;
+    font-size: 14px;
+    font-weight: 350;
+}
+.copyright {
+    background-color: #19202D;
+}
+.copyright-container {
+    display: flex;
+    padding: 30px 0;
+}
+.footer-logo {
+    width: 160px;
+    height: 41px;
+    margin-right: 20px;
+}
+.footer-text {
+    color: #A8A9AC;
+    font-size: 14px;
+    font-weight: 350;
+    line-height: 21px;
+}
+.footer-text:nth-child(2) {
+    margin-top: 20px;
+}
+
+.dropdown {
+    margin-left: auto;
+    display: flex;
+    width: 200px;
+    height: 36px;
+    padding-left: 20px;
+    align-items: center;
+    background-color: #121721;
+    box-sizing: border-box;
+}
+.dropdown > a {
+    color: #A7A7A9;
+    font-size: 16px;
+    font-weight: 350;
+}
+  
+/* --------- footer end --------- */
