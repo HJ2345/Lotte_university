@@ -115,7 +115,7 @@ main > * {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 .main-header {
     display: flex;
@@ -151,6 +151,29 @@ main > * {
     font-weight: 400;
     color: #145074;
 }
+
+.oneline-two-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.oneline-two-title > div {
+    display: flex;
+    align-items: center;
+}
+.main-title > div > img {
+    margin-right: 5px;
+    margin-top: 2px;
+    height: 16px;
+}
+.main-title > div > p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #145074;
+}
+.viewmore {
+    margin-top: 5px;
+}
 table {
     border-collapse: collapse;
 }
@@ -172,10 +195,93 @@ td {
     text-align: center;
     height: 45px;
 }
+.table-container {
+    margin-bottom: 20px;
+}
 tr:last-child > td {
     border-bottom: 1px solid #D8D8D8;
 }
-.university-status {
+.tables {
     width: 100%;
 }
+.oneline-two-container {
+    display: flex;
+    justify-content: space-between;
+}
+.oneline-two-container > div:nth-child(1) {
+    flex: 1;
+    margin-right: 10px;
+}
+.oneline-two-container > div:nth-child(2) {
+    flex: 1;
+    margin-left: 10px;
+}
+.answer-status {
+    font-size: 14px;
+    font-weight: 350;
+    padding: 1px 12px;
+    color: white;
+}
+.wating-answer {
+    background-color: #CD3631;
+}
+.answer-complete {
+    background-color: #207918;
+}
+
+/* ------ 테이블 사이즈 ------ */
+
+.univ-manage-stat tr > td {
+    width: 136px;
+}
+.stat-students-grade tr > td {
+    width: 133px;
+}
+.stat-students-dep tr > td {
+    width: 133px;
+}
+.edc-stat tr > td:nth-child(1), td:nth-child(3) {
+    width: 150px;
+}
+.edc-stat tr > td:not(:nth-child(1), :nth-child(3)) {
+    width: 90px;
+}
+.aca-notice tr > td:nth-child(1) {
+    width: 73px;
+}
+.aca-notice tr > td:nth-child(2) {
+    width: 230px;
+}
+.aca-notice tr > td:not(:nth-child(1), :nth-child(2)) {
+    width: 90px;
+}
+.counseling tr > td:nth-child(1) {
+    width: 73px;
+}
+.counseling tr > td:nth-child(2) {
+    width: 230px;
+}
+.counseling tr > td:not(:nth-child(1), :nth-child(2)) {
+    width: 90px;
+}
 /* --------- main end --------- */
+
+/* --------- footer start --------- */
+footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+footer > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-container {
+    background-color: #19202D;
+    padding: 30px 0;
+}
+.footer-container > p {
+    font-size: 16px;
+    font-weight: 350;
+    color: white;
+}
+/* --------- footer end --------- */
