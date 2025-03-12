@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학사안내 공지사항</title>
+    <title>커뮤니티 qna</title>
     <link rel="stylesheet" href="/static/style/common/header.css"/>
     <link rel="stylesheet" href="/static/style/common/footer.css"/>
-    <link rel="stylesheet" href="/static/style/common/table.css"/>    
-   <header include-html="/static/common/header.html"></header>
+    <link rel="stylesheet" href="/static/style/common/table.css"/> 
+    <header include-html="/static/common/header.html"></header>
 </head>
-
 <body>
 		<div class ="uplayout">
 		<form class="search-box" action="" method="get">
@@ -24,34 +23,48 @@
 		</div>
 		
 
-        <table border="1px" >
-            <tr>
+        <table border="1px" class = "inner-table-qna" >
+            <tr class = tr>
                 <th>번호</th>
                 <th>제목</th>
                 <th>작성자</th>
                 <th>작성일</th>
-                <th>조회</th>
+                <th>상태</th>
             </tr>
             <tr>
+                <td>5</td>
+                <td><img src="/static/images/ico-lock.png" alt="자물쇠" class="photos">문의드립니다.</td>
+                <td>홍길동</td>
+                <td>24.04.09</td>
+                <td style="color: rgba(255, 0, 0, 1);">답변대기</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>취업 진로 상담</td>
+                <td>홍길동</td>
+                <td>24.04.09</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
+            </tr>
+            <tr class = tr1>
                 <td>3</td>
-                <td><img src="/static/images/ico-new01.png" alt="N" class="photos">2025학년도 신입학 3차 추가모집 모집요강 및 모집...</td>
+                <td><img src="/static/images/ico-reply.png" alt="re" class="photos">RE : [답변] 취업 진로 상담</td>
                 <td>담당자</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td><img src="/static/images/ico-new01.png" alt="N" class="photos">2025학년도 신입학 2차 추가모집 모집요강 및 모집...</td>
-                <td>담당자</td>
+                <td><img src="/static/images/ico-lock.png" alt="자물쇠" class="photos">취업실전전략1 일반선택 교과목 문의입니다</td>
+                <td>홍길동</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
-            <tr>
+            <tr class = tr1>
                 <td>1</td>
-                <td>2025학년도 신입학 추가모집 모집요강 및 모집</td>
+                <td><img src="/static/images/ico-reply.png" alt="re" class="photos">RE : [답변] 취업실전전략1 일반선택 교과목 문의입니다</td>
                 <td>담당자</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
             
         </table>
