@@ -1,32 +1,33 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>학사안내 공지사항</title>
-    <!--header 삽입 예정 -->
-
+    <link rel="stylesheet" href="/static/style/common/header.css"/>
+    <link rel="stylesheet" href="/static/style/common/footer.css"/>
+   <header include-html="/static/common/header.html"></header>
 </head>
+
 <body>
 		<form class="search-box" action="" method="get">
-			<input class="btn-frame1" type="text" name="" placeholder="전체">
-			<img src="/static/images/btn-sel-open01.png" alt="v" class="photos"></input>
+			 <select onchange="window.open(value,'_self');">
+                <option value="#" disabled selected>전체</option>
+            </select>
 			
 			<input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요."></input>
-			<input type="submit" value="검색">
+			<input type="submit" value="검색" class = btn_search>
 
 		</form>
 		
 
-        <table>
+        <table border="1px" >
             <tr>
-                <td>번호</td>
-                <td>제목</td>
-                <td>작성일자</td>
-                <td>작성일</td>
-                <td>조회</td>
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>작성일</th>
+                <th>조회</th>
             </tr>
             <tr>
                 <td>3</td>
@@ -53,27 +54,28 @@
         </table>
 
 		
-		<button type="button">
+		<button type="button" class = btn_pagecontroller>
 			<img src = "/static/images/btn-first-page.png" alt="처음" onclick="">														
 		</button>
-		<button type="button">
+		<button type="button" class = btn_pagecontroller>
 			<img src = "/static/images/btn-prev-page.png" alt="앞으로" onclick="">														
 		</button>
-		<button type="button">
+		<button type="button" class = btn_pagecontroller1>
 			<img src = "/static/images/" alt="1" onclick="">														
 		</button>
-		<button type="button">
+		<button type="button" class = btn_pagecontroller>
 			<img src = "/static/images/" alt="2" onclick="">														
 		</button>
-		<button type="button">
+		<button type="button" class = btn_pagecontroller>
 			<img src = "/static/images/" alt="3" onclick="">														
 		</button>
-		<button type="button">
+		<button type="button" class = btn_pagecontroller>
 			<img src = "/static/images/btn-next-page.png" alt="뒤로" onclick="">														
 		</button>
-		<button type="button">
+		<button type="button" class = btn_pagecontroller>
 			<img src = "/static/images/btn-last-page.png" alt="마지막" onclick="">														
-		</button>         
+		</button>       
     </div>
 </body>
+    <footer include-html="/static/common/footer.html"></footer>
 </html>

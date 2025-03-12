@@ -5,13 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>커뮤니티 자유게시판</title>
-    
+    <title>커뮤니티 qna</title>
     <link rel="stylesheet" href="/static/style/common/header.css"/>
     <link rel="stylesheet" href="/static/style/common/footer.css"/>
-   <header include-html="/static/common/header.html"></header>
+    <header include-html="/static/common/header.html"></header>
 </head>
-
 <body>
 		<form class="search-box" action="" method="get">
 			 <select onchange="window.open(value,'_self');">
@@ -30,28 +28,42 @@
                 <th>제목</th>
                 <th>작성자</th>
                 <th>작성일</th>
-                <th>조회</th>
+                <th>상태</th>
             </tr>
             <tr>
-                <td>3</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
+                <td>5</td>
+                <td><img src="/static/images/ico-lock.png" alt="자물쇠" class="photos">문의드립니다.</td>
                 <td>홍길동</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(255, 0, 0, 1);">답변대기</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>취업 진로 상담</td>
+                <td>홍길동</td>
+                <td>24.04.09</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
+            </tr>
+            <tr class = tr1>
+                <td>3</td>
+                <td><img src="/static/images/ico-reply.png" alt="re" class="photos">RE : [답변] 취업 진로 상담</td>
+                <td>담당자</td>
+                <td>24.04.09</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
+                <td><img src="/static/images/ico-lock.png" alt="자물쇠" class="photos">취업실전전략1 일반선택 교과목 문의입니다</td>
                 <td>홍길동</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
-            <tr>
+            <tr class = tr1>
                 <td>1</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td><img src="/static/images/ico-reply.png" alt="re" class="photos">RE : [답변] 취업실전전략1 일반선택 교과목 문의입니다</td>
+                <td>담당자</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
             
         </table>
@@ -77,7 +89,7 @@
 		</button>
 		<button type="button" class = btn_pagecontroller>
 			<img src = "/static/images/btn-last-page.png" alt="마지막" onclick="">														
-		</button>          
+		</button>       
     </div>
 </body>
     <footer include-html="/static/common/footer.html"></footer>
