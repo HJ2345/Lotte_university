@@ -1,15 +1,66 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
-        }
-        
+
+.fieldset {
+    width: 990px;
+    height: 623px; 
+    left: 210px;
+    position: relative; 
+}
+
+.filedset > .uplayout {
+    width: 930px; 
+    height: 40px; 
+    top: 148px; 
+    left: 60px; 
+    position: absolute; 
+}
+
+
+.filedset > .downlayout{
+	width: 930;
+	height: 62;
+	top: 561px;
+	left: 60px;
+	position: absolute;
+
+} 
+
+.filedset > .inner-table1 {
+    width: 930px;
+    height: 237px;
+    top: 208px;
+    left: 60px;
+    border-top-width: 2px;
+    position: absolute; 
+    border-bottom: 1px solid rgba(216, 216, 216, 1)
+}
+
+.filedset > .inner-table_news {
+    width: 930px;
+    height: 295px;
+    top: 208px;
+    left: 60px;
+    border-top-width: 2px;
+    position: absolute; 
+    border-bottom: 1px solid rgba(216, 216, 216, 1)
+}
+
+.filedset > .inner-table-qna {
+    width: 930px;
+    height: 353px;
+    top: 208px;
+    left: 60px;
+    border-top-width: 2px;
+    position: absolute; 
+    border-bottom: 1px solid rgba(216, 216, 216, 1)
+}
+
 th, td, tr {
-    font-family: 'Noto Sans KR', sans-serif;  /* 글씨체 */
-    padding: 8px;               /* 셀 안의 여백 */
-    justify-content: center;     /* 가로로 중앙 정렬 */
-    vertical-align: middle;     /* 세로 중앙 정렬 */
-    border: 1px solid #ddd;     /* 셀 테두리 */
-    height: 50px;               /* 셀 높이 설정 */
+    font-family: 'Noto Sans KR', sans-serif; 
+    padding: 8px;              
+    justify-content: center;     
+    vertical-align: middle;     
+    border: 1px solid #ddd;     
+    height: 50px;               
 }
 
 
@@ -31,107 +82,108 @@ th, td, tr {
         }
         
         .btn_search{
-        	width: 70;
-			height: 40;
+        	width: 70px;
+			height: 40px;
 			background: rgba(63, 151, 246, 1);
         }
+        
         .btn_pagecontroller{
-       		width: 32;
-			height: 32;
+       		width: 32px;
+			height: 32px;
 			border: 1px solid rgba(222, 222, 222, 1)
         }
         
         .btn_pagecontroller1{
-       		width: 32;
-			height: 32;
+       		width: 32px;
+			height: 32px;
 			background: rgba(63, 151, 246, 1);
 			border: 1px solid rgba(63, 151, 246, 1)
 
         }
         
 .text_box_c_Einfo1{
-    width: 45.13%;               /* 너비 */
-    height: 30px;                /* 높이 */
-    background: rgba(32, 160, 183, 1); /* 배경색 */
+    width: 45.13%;               
+    height: 30px;              
+    background: rgba(32, 160, 183, 1);
     
-    font-family: 'Noto Sans KR';  /* 글꼴 */
-    font-weight: 100;             /* 글씨 두께 */
-    font-size: 12px;              /* 글씨 크기 */
-    line-height: 100%;            /* 줄 간격 */
-    letter-spacing: 0%;           /* 글자 간격 */
+    font-family: 'Noto Sans KR';  
+    font-weight: 100;            
+    font-size: 12px;             
+    line-height: 100%;           
+    letter-spacing: 0%;           
     
-    text-align: center;           /* 가로 중앙 정렬 */
-    vertical-align: middle;       /* 세로 중앙 정렬 */
+    text-align: center;          
+    vertical-align: middle;       
     
-    display: flex;                /* Flexbox를 사용하여 중앙 정렬 */
-    justify-content: center;      /* 가로로 중앙 정렬 */
-    align-items: center;          /* 세로로 중앙 정렬 */
+    display: flex;               
+    justify-content: center;      
+    align-items: center;         
     color: white;
 }
 
         
        
 .text_box_c_Einfo2 {
-    width: 34.09%;               /* 너비 */
-    height: 25px;                /* 높이 */
-    background: rgba(155, 154, 154, 1); /* 배경색 */
+    width: 34.09%;            
+    height: 25px;                
+    background: rgba(155, 154, 154, 1); 
     
-    font-family: 'Noto Sans KR';  /* 글꼴 */
-    font-weight: 350;             /* 글씨 두께 */
-    font-size: 12px;              /* 글씨 크기 */
-    line-height: 100%;            /* 줄 간격 */
-    letter-spacing: 0%;           /* 글자 간격 */
+    font-family: 'Noto Sans KR';  
+    font-weight: 350;            
+    font-size: 12px;              
+    line-height: 100%;           
+    letter-spacing: 0%;          
     
-    text-align: center;           /* 가로 중앙 정렬 */
-    vertical-align: middle;       /* 세로 중앙 정렬 */
+    text-align: center;          
+    vertical-align: middle;       
     
-    display: flex;                /* Flexbox를 사용하여 중앙 정렬 */
-    justify-content: center;      /* 가로로 중앙 정렬 */
-    align-items: center;          /* 세로로 중앙 정렬 */
+    display: flex;               
+    justify-content: center;      
+    align-items: center;        
     
-    color: white;                 /* 글자 색깔을 흰색으로 설정 */
+    color: white;                 
 }
 
 
 .text_box_c_news1{
-    width: 45.13%;               /* 너비 */
-    height: 30px;                /* 높이 */
-    background: rgba(50, 130, 211, 1);
+    width: 45.13%;               
+    height: 30px;               
+    background: rgba(32, 160, 183, 1); 
     
-    font-family: 'Noto Sans KR';  /* 글꼴 */
-    font-weight: 100;             /* 글씨 두께 */
-    font-size: 12px;              /* 글씨 크기 */
-    line-height: 100%;            /* 줄 간격 */
-    letter-spacing: 0%;           /* 글자 간격 */
+    font-family: 'Noto Sans KR';  
+    font-weight: 100;            
+    font-size: 12px;           
+    line-height: 100%;          
+    letter-spacing: 0%;        
     
-    text-align: center;           /* 가로 중앙 정렬 */
-    vertical-align: middle;       /* 세로 중앙 정렬 */
+    text-align: center;           
+    vertical-align: middle;     
     
-    display: flex;                /* Flexbox를 사용하여 중앙 정렬 */
-    justify-content: center;      /* 가로로 중앙 정렬 */
-    align-items: center;          /* 세로로 중앙 정렬 */
+    display: flex;               
+    justify-content: center;     
+    align-items: center;        
     color: white;
 }
 
         
        
 .text_box_c_news2 {
-    width: 34.09%;               /* 너비 */
-    height: 25px;                /* 높이 */
-    background: rgba(160, 24, 58, 1);
+    width: 34.09%;              
+    height: 25px;             
+    background: rgba(155, 154, 154, 1); 
     
-    font-family: 'Noto Sans KR';  /* 글꼴 */
-    font-weight: 350;             /* 글씨 두께 */
-    font-size: 12px;              /* 글씨 크기 */
-    line-height: 100%;            /* 줄 간격 */
-    letter-spacing: 0%;           /* 글자 간격 */
+    font-family: 'Noto Sans KR';  
+    font-weight: 350;            
+    font-size: 12px;              
+    line-height: 100%;           
+    letter-spacing: 0%;          
     
-    text-align: center;           /* 가로 중앙 정렬 */
-    vertical-align: middle;       /* 세로 중앙 정렬 */
+    text-align: center;          
+    vertical-align: middle;      
     
-    display: flex;                /* Flexbox를 사용하여 중앙 정렬 */
-    justify-content: center;      /* 가로로 중앙 정렬 */
-    align-items: center;          /* 세로로 중앙 정렬 */
+    display: flex;               
+    justify-content: center;      
+    align-items: center;         
     
-    color: white;                 /* 글자 색깔을 흰색으로 설정 */
+    color: white;                
 }
