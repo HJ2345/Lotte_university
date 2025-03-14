@@ -1,0 +1,21 @@
+.location-container {
+    position: relative;
+    background-color: #ECF2F6;
+}
+.location-container > div > ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 42px;
+}
+.location-container > div > ul > li > a {
+    font-size: 14px;
+    font-weight: 350;
+    color: #333;
+}
+.ico-next {
+    margin: 0 10px;
+}
+.ico-home {
+    margin-top: 4px;
+}

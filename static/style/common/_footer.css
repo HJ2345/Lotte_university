@@ -1,0 +1,76 @@
+/* --------- footer start --------- */
+footer > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+  .footer-link-container {
+    display: flex;
+    align-items: center;
+    background-color: #1f2838;
+    height: 50px;
+}
+  .footer-links {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+  .footer-links li {
+    border-left: 1px solid #6f747e;
+    text-align: center;
+    flex: 1;
+}
+  .footer-links li:last-child {
+    border-right: 1px solid #6f747e;
+}
+  .footer-links li > a {
+    color: white;
+    font-size: 14px;
+    font-weight: 350;
+}
+  .copyright {
+    background-color: #19202d;
+}
+  .copyright-container {
+    display: flex;
+    padding: 30px 0;
+}
+  .footer-logo {
+    width: 160px;
+    height: 41px;
+    margin-right: 20px;
+}
+  .footer-text {
+    color: #a8a9ac;
+    font-size: 14px;
+    font-weight: 350;
+    line-height: 21px;
+}
+  .footer-text:nth-child(2) {
+    margin-top: 20px;
+}
+  
+.site {
+    appearance: none;
+    background: url("/static/images/bg-related-arr-open.png") no-repeat right 16px center;
+    margin-left: auto;
+    display: flex;
+    width: 200px;
+    height: 36px;
+    padding-left: 20px;
+    align-items: center;
+    background-color: #121721;
+    box-sizing: border-box;
+    color: #a7a7a9;
+    font-size: 16px;
+    font-weight: 350;
+    border: none;
+}
+.sites {
+    color: #a7a7a9;
+    font-size: 16px;
+    font-weight: 350;
+}
+.site:focus {
+    outline: none;
+}
+/* --------- footer end --------- */

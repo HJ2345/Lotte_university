@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans KR";
+}
+a {
+    text-decoration: none;
+}
+ul,
+li {
+    list-style: none;
+}
+body {
+    overflow-x: hidden; /* 가로 스크롤 추가 */
+    min-width: 1200px; /* 최소 너비 유지 */
+}
+
+/* --------- header start --------- */
+header {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+}
+
+header > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.topMenuBar {
+    width: 100%;
+    background-color: #3f97f6;
+}
+.topMenus {
+    height: 28px;
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.topMenus li {
+    display: inline;
+}
+.topMenus li > a {
+    color: white;
+    border-right: 1px solid #78b6f9;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-weight: 350;
+}
+.topMenus li:last-child > a {
+    border: none;
+    padding-right: 0;
+}
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.nav-container {
+    display: flex;
+    justify-content: right;
+}
+nav {
+    position: relative;
+    font-weight: 400;
+    font-size: 0;
+    display: flex;
+    padding: 0;
+    width: 80%;
+}
+nav .item {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    cursor: pointer;
+    width: 120px;
+    height: 65px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.dropdown {
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 100%;
+}
+.dropdown > div {
+    translate: 0 -100%;
+    transition: all 0.3s 0.1s;
+    position: relative;
+    background-color: #3f97f6;
+}
+.dropdown a {
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 0 10px 15px;
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    border-top: 1px solid #53a2f7;
+}
+.item:hover {
+    color: #3f97f6;
+}
+.dropdown a:hover {
+    background: #3a88db;
+    transition: 0.3s;
+}
+nav .item:hover > .dropdown > div {
+    translate: 0;
+}
