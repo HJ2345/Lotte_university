@@ -1,0 +1,41 @@
+
+.text_Q{
+    width: 30px;               
+    height: 30px;              
+    background: #3282D3;
+    
+    font-family: 'Noto Sans KR';  
+    font-weight: 100;            
+    font-size: 12px;             
+    line-height: 100%;           
+    letter-spacing: 0%;           
+    
+    text-align: center;          
+    vertical-align: middle;       
+    
+    display: inline-flex;               
+    justify-content: center;      
+    align-items: center;         
+    color: white;
+}
+
+
+.text_A{
+    width: 30px;               
+    height: 30px;              
+    background: #D8D8D8;
+    
+    font-family: 'Noto Sans KR';  
+    font-weight: 100;            
+    font-size: 12px;             
+    line-height: 100%;           
+    letter-spacing: 0%;           
+    
+    text-align: center;          
+    vertical-align: middle;       
+    
+    display: inline-flex;               
+    justify-content: center;      
+    align-items: center;         
+    color: white;
+}

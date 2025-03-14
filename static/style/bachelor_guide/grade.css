@@ -1,0 +1,72 @@
+
+/* =============== 메인 컨텐츠 작성 ===============  */
+.grade-container {
+    width: 100%;
+    margin: 8px 0 0 50px;
+}
+.grade-container h4 {
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    margin-bottom: 31px;
+    padding-bottom: 20.8px;
+}
+.container_body{
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    border: 1px solid red;
+}
+
+.container_body > ul {
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.blue_text > li{
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #0067B3;
+}
+
+.small_title > li{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter';
+    color: #145074;
+    margin-bottom: 5px;
+}
+
+.small_title > li > img{
+    margin-right: 10px;
+}
+
+.text > li {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.table_1{
+    box-sizing: border-box;
+    position: absolute;
+    height: 524px;
+    left: 60px;
+    right: 0px;
+    top: 720px;
+    border-top: 2px solid #071F4B;
+}
