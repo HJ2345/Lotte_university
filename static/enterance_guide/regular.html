@@ -1,21 +1,25 @@
-<!--
-      이름 : 최명기
-      날짜 : 2025/03/12
-      내용 : 정시모집 디자인 
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>정시모집</title>
-    <link rel="stylesheet" href="/static/style/common/container_header.css" />
-    <link rel="stylesheet" href="/static/style/common/footer.css" />
-    <link rel="stylesheet" href="/static/style/common/container.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="/static/js/header.js"></script>
+    <link rel="stylesheet" href="/static/test/test.css" />
+
+    <title>Test</title>
   </head>
   <body>
     <div id="wrapper">
+      <!-- header side -->
       <header>
         <div class="topMenuBar">
           <ul class="topMenus">
@@ -113,40 +117,75 @@
             </div>
           </div>
         </div>
-
-        <div class="background">
-          <div class="background_box">
-            <img src="/static/images/ico-home.png" class="icon_home" />
-            <img src="/static/images/bg-path-arrow.png" class="bg_arrow1" />
-
-            <span class="itr_text">입학안내</span>
-            <img src="/static/images/bg-path-arrow.png" class="bg_arrow2" />
-
-            <span class="grt_text">정시모집</span>
+        <div class="location-container">
+          <div>
+            <ul>
+              <li>
+                <a href="#">
+                  <img
+                    src="/static/images/ico-home.png"
+                    alt="home"
+                    class="ico-home"
+                  />
+                </a>
+              </li>
+              <li>
+                <img
+                  src="/static/images/btn-next-page.png"
+                  alt="next"
+                  class="ico-next"
+                />
+                <a href="#">대학생활</a>
+              </li>
+              <li>
+                <img
+                  src="/static/images/btn-next-page.png"
+                  alt="next"
+                  class="ico-next"
+                />
+                <a href="#" class="this-location">정시모집</a>
+              </li>
+            </ul>
           </div>
         </div>
       </header>
       <!-- header end -->
-
-      <!-- container 시작 -->
-      <main class="container_col_intro">
-        <h2 class="container_h2">대학소개</h2>
-
-        <aside>
-          <div onclick="location.href='이동할 링크주소(URL)';">공지사항</div>
-          <div onclick="location.href='이동할 링크주소(URL)';">수시모집</div>
-          <div onclick="location.href='이동할 링크주소(URL)';" class="aside_3">
-            정시모집
+      <main>
+        <div class="main-container">
+          <div>
+            <aside>
+              <h3>입학안내</h3>
+              <div class="side-link-container">
+                <a href="#">
+                  <div class="side-link">공지사항</div>
+                </a>
+                <a href="#">
+                  <div class="side-link">수시모집</div>
+                </a>
+                <a href="#">
+                  <div class="side-link selected-link">정시모집</div>
+                </a>
+                <a href="#">
+                  <div class="side-link">편입학</div>
+                </a>
+                <a href="#">
+                  <div class="side-link">입학상담</div>
+                </a>
+              </div>
+            </aside>
+            <div class="gallery-container">
+              <h4>정시모집</h4>
+              <!-- 
+                            여기서부터 컨텐츠 작성하시면 됩니다! 
+                            gallery-container 클래스 이름 원하는대로 변경해주세요!
+                            변경하시고 css파일에도 변경한 이름으로 적용해주세요! 
+                            나머지 요소들(aside, .location-container)도 
+                            작업하고 있는 파트에 맞게 수정하는 거 잊지마세요!😁😁!
+                        -->
+            </div>
           </div>
-          <div onclick="location.href='이동할 링크주소(URL)';">편입학</div>
-          <div onclick="location.href='이동할 링크주소(URL)';">입학상담</div>
-        </aside>
-        <section class="container_content">
-          <h3 class="container_h3">정시모집</h3>
-        </section>
+        </div>
       </main>
-
-      <!-- container 끝 -->
       <footer>
         <div class="footer-link-container">
           <div class="footer-link">
@@ -177,13 +216,23 @@
                 copyright ©Green University All rights reserved.
               </p>
             </div>
-            <select onchange="window.open(value,'_self');">
-              <option value="#" disabled selected>주요사이트</option>
-              <option value="https://naver.com">네이버</option>
-              <option value="https://www.kakaocorp.com/page/">카카오</option>
-              <option value="https://www.line.me/ko/">라인</option>
-              <option value="https://www.coupang.com/">쿠팡</option>
-              <option value="https://www.woowahan.com/">배달의민족</option>
+            <select onchange="window.open(value,'_self');" class="site">
+              <option class="sites" value="#" disabled selected>
+                주요사이트
+              </option>
+              <option class="sites" value="https://naver.com">네이버</option>
+              <option class="sites" value="https://www.kakaocorp.com/page/">
+                카카오
+              </option>
+              <option class="sites" value="https://www.line.me/ko/">
+                라인
+              </option>
+              <option class="sites" value="https://www.coupang.com/">
+                쿠팡
+              </option>
+              <option class="sites" value="https://www.woowahan.com/">
+                배달의민족
+              </option>
             </select>
           </div>
         </div>
