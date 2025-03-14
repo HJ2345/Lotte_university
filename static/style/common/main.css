@@ -37,11 +37,11 @@ aside h3 {
 }
 
 /* =============== 메인 컨텐츠 작성 ===============  */
-.gallery-container {
+.grade-container {
     width: 100%;
     margin: 8px 0 0 50px;
 }
-.gallery-container h4 {
+.grade-container h4 {
     font-size: 26px;
     font-weight: 700;
     border-bottom: 2px solid #222;
