@@ -241,7 +241,7 @@ footer > div > * {
     margin-top: 20px;
 }
   
-select {
+.site {
     appearance: none;
     background: url("/static/images/bg-related-arr-open.png") no-repeat right 16px center;
     margin-left: auto;
@@ -257,12 +257,12 @@ select {
     font-weight: 350;
     border: none;
 }
-  option {
+.sites {
     color: #a7a7a9;
     font-size: 16px;
     font-weight: 350;
 }
-  select:focus {
+.site:focus {
     outline: none;
 }
 /* --------- footer end --------- */
