@@ -239,8 +239,10 @@ aside h3 {
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    margin-bottom: 30px;
     box-sizing: border-box;
+}
+.paging-container > a {
+    color: #888;
 }
 .paging-container > a > img {
     padding: 10px;
@@ -255,8 +257,8 @@ aside h3 {
 .mb-2 {
     margin-bottom: 2px;
 }
-.mr-5 {
-    margin-right: 5px;
+.mr-3 {
+    margin-right: 3px;
 }
 .mr-10 {
     margin-right: 10px;
@@ -264,9 +266,6 @@ aside h3 {
 .selected {
     background: #3F97F6;
     color: white;
-}
-.unselect {
-    color: #888;
 }
 /* --------- main end --------- */
 
