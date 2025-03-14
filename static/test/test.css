@@ -143,7 +143,7 @@ main {
     width: 100%;
     position: relative;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
 }
 main > div > * {
     width: 1200px;
