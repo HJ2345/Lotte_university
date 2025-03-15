@@ -58,6 +58,9 @@ header > div > * {
   align-items: center;
   padding: 10px 0 10px 0;
 }
+.logo {
+  margin-bottom: 5px;
+}
 .nav-container {
   display: flex;
   justify-content: right;
