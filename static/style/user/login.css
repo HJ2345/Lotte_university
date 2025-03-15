@@ -157,10 +157,10 @@ main > div > * {
     justify-content: center;
 }
 .loginForm {
-    width: 495px;
     margin: 25px 0;
 }
 .loginForm-container {
+    width: 495px;
     display: flex;
     flex-direction: column;
 }
@@ -281,6 +281,7 @@ input[type='checkbox']{
     font-weight: 350;
     color: #666;
     margin-bottom: 8px;
+    width: max-content;
 }
 /* --------- main end --------- */
 
