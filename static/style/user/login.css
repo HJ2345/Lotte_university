@@ -207,7 +207,7 @@ input[type='checkbox']{
     width: 22px;
     height: 22px;
     background: #DFDFDF;
-    border-radius: 10px;
+    border-radius: 20px;
     box-sizing:border-box;
 }
 .check_label {
