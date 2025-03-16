@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/static/style/common/_header2.css"/>
     <link rel="stylesheet" href="/static/style/common/main.css"/>
     <link rel="stylesheet" href="/static/style/common/_footer.css"/>
-    <link rel="stylesheet" href="/static/style/bachelor_guide/grade.css"/>
+    <link rel="stylesheet" href="/static/style/bachelor_guide/coures_reg.css"/>
     <script src="/static/js/header.js"></script> <!--자바스크립트-->
-    <title>성적</title>
+    <title>수강신청</title>
 </head>
 <body>
     <header>
@@ -119,7 +119,7 @@
                     </li>
                     <li>
                         <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
-                        <a href="#" class="this-location">성적</a>
+                        <a href="#" class="this-location">수강신청</a>
                     </li>
                 </ul>
             </div>
@@ -138,10 +138,10 @@
                             <div class="side-link">학사일정</div>
                         </a>
                         <a href="#">
-                            <div class="side-link">수강신청</div>
+                            <div class="side-link selected-link">수강신청</div>
                         </a>
                         <a href="#">
-                            <div class="side-link selected-link">성적</div>
+                            <div class="side-link">성적</div>
                         </a>
                         <a href="#">
                             <div class="side-link">수료 및 졸업업</div>
@@ -151,118 +151,82 @@
                         </a>
                     </div>
                 </aside>
-                        <div class="grade-container"> 
-                            <h4>성적</h4>       
-                                <div class ="container_body">
-                                    <ul class="small_title" >
+                        <div class="coures-container"> 
+                            <h4>수강신청</h4>       
+                                <div id ="container_body">
+                                    <ul class="small_title">
                                         <li>
-                                            <img src="/static/images/bullet-h4.png" > 시험
-                                        </li>
-                                    </ul>
-                                    <ul class="blue_text">
-                                        <li>
-                                            - 시험은 정기시험, 비정기시험, 추가시험, 재시험 등으로 구분
+                                            <img src="/static/images/bullet-h4.png"> 수강정정기간
                                         </li>
                                     </ul>
                                     <ul class="text">
-                                        <li>
-                                            1) 정기시험 : 중간시험과 학기말시험으로 나누며 중간시험은 학기 당 수업일수 2분의 1이 되는 주에 실시하고, 학기말시험은 학기의 최종 주에 실시<br>
-                                            2) 비정기시험 : 과제학습, 세미나 등 계속적인 학습활동을 평가하는 시험으로 담당교수의 책임 하에 실시<br>
-                                            3) 추가시험 : 질병 또는 부득이한 사정으로 정기시험에 응시할 수 없는 학생은 사유와 증빙서류를 첨부하여 추가시험신청서를 제출
+                                        <li>-매학기 수강신청은 개강 전에 실시, 학생은 수강신청 공고를 충분히 숙지한 다음,수강신청 기간에 인터넷을 통해 신청과목을 입력<br>
+                                        -필요한 경우 학과사무실의 학사상담이나 지도교수의 지도를 받을 수 있으며, 반드시 학년별 지정된 날짜에 수강신청 완료<br>
+                                        -자세한 설명은 학사일정 공지사항 게시판 참조<br><br>
                                         </li>
                                     </ul>
-                                    <ul class="blue_text">
+                                    <ul class="small_title">
                                         <li>
-                                            - 시험 부정행위자의 처리
+                                            <img src="/static/images/bullet-h4.png"> 수강신청 학점
                                         </li>
+                                    </ul>
                                     <ul class="text">
-                                        <li>
-                                            1) 시험 중 부정행위가 적발되면 감독교수는 그 행위내용을 시험지 상단에 기록하고 날인한 후 즉시 총장에게 보고<br>
-                                            2) 시험 부정행위자에 대하여는 다음의 내용에 따라 제적 또는 유기정학 처분<br>
-                                            └ 시험에 대리로 응시하거나 대리응시를 부탁한 경우<br>
-                                            └ 시험지에 다른 사람의 이름을 쓰거나 쓰게 한 경우<br>
-                                            └ 부정행위자로 적발되어 징계처분을 받은 사실이 있는 학생이 거듭 부정행위를 한 경우<br><br>
-                                        </li>
+                                        <li>-학기당 미수학점: 18학점 이내(논문과목 별도) [대학 학칙 제20조]<br><br></li>
                                     </ul>
                             
                                     <ul class="small_title">
                                         <li>
-                                            <img src="/static/images/bullet-h4.png"> 성적
+                                            <img src="/static/images/bullet-h4.png"> 학부(과)별 신청학점
                                         </li>
                                     </ul>
-                                    <ul class="blue_text">
-                                        <li>
-                                            -평가내용
-                                        </li>
-                                    </ul>
-                                    <ul class="text">
-                                        <li>
-                                            1) 성적평가는 각 교과목의 시험성적, 과제평가, 출석상황 및 학습태도 등을 종합하여 평가<br>
-                                            2) 출석 및 학습태도 10-20%, 정기시험 50-70%, 비정기시험 및 과제 20-30%로 함을 원칙
-                                        </li>
-                                    </ul>
-                                    <ul class="blue_text">
-                                        <li>
-                                            -등급
-                                        </li>
-                                    </ul>
-                                    <table class="table_1">
+                                    <table class="table_1" >
                                         <tr>
-                                            <th>등급</th>
-                                            <th>평점</th>
-                                            <th>백분위 기준점수</th>
-                                            <th>비고</th>
+                                            <th colspan="2">수강신청 학점 점수</th>
+                                            <th>대상학부(과)</th>
                                         </tr>
                                         <tr>
-                                           <td>A+</td>
-                                           <td>4.5</td>
-                                           <td>99</td>
-                                           <td></td>
+                                            <td>졸업학점이 130학점인 학부(과)</td>
+                                            <td>최저 12학점, 최대 18학점</td>
+                                            <td>인문대학, 사회과학대학, 경영대학, 공과대학,
+                                                자연과학대학, 간호대학, 글로벌융합대학, 소
+                                                프트웨어융합대학, 미디어스쿨, 데이터과학융
+                                                합스쿨, 나노융합스쿨, 미래융합스쿨</td>
                                         </tr>
                                         <tr>
-                                            <td>A</td>
-                                            <td>4</td>
-                                            <td>94</td>
-                                            <td></td>
+                                            <td>졸업학점이 135-140학점인 학부(과)</td>
+                                            <td>최저 15학점, 최대 21학점</td>
+                                            <td>의과대학 의예과(수료학점은 72이상)</td>
                                         </tr>
                                         <tr>
-                                            <td>B+</td>
-                                            <td>B</td>
-                                            <td>84</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>C+</td>
-                                            <td>2.5</td>
-                                            <td>79</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>C</td>
-                                            <td>2</td>
-                                            <td>74</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>D+</td>
-                                            <td>1.5</td>
-                                            <td>69</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>F</td>
-                                            <td>0</td>
-                                            <td>59</td>
-                                            <td></td>
+                                            <td>졸업학점이 150학점인 학부(과)</td>
+                                            <td>최저 15학점, 최대 26학점</td>
+                                            <td>의과대학 의학과</td>
                                         </tr>
                                     </table>
                                     <ul class="text">
                                         <li>
-                                            ※ 이수한 교과목의 성적이 D0급 이상 또는 P일 경우는 학점을 취득한 것으로 인정
+                                            <br>- 4학년 1학기에는 12학점 이상, 최종학기에는 1과목 이상 수강신청 하여야 한다.<br>
+                                            - 직전학기 성적이 3.75 이상인 학생은 최대학점에서 3학점까지 초과 이수할 수 있다.<br>
+                                            - 장학생 선발은 직전학기에 평점평균 2.0 이상을 취득하여야 하며, 대학별 기준학점 이상을 이수하여야 한다.(학생지원팀 055-123-1010 문의)<br><br><br>
                                         </li>
                                     </ul>
-                                    
-                                </div>
+                                    <ul class="small_title">
+                                        <li>
+                                            <img src="/static/images/bullet-h4.png"> 수강신청 변경 및 수강과목 철회
+                                        </li>
+                                    </ul>
+                                    <ul class="text">
+                                        <li>
+                                            - 수강 신청한 과목을 철회하고자 할 때에는 수업주수 4분의 1이전까지 정해진 기간에 해당 교과목을 해당 사이트를 통하여 철회할 수 있음<br>
+                                            - 학기당 2과목까지 철회할 수 있으나, 철회로 수강인원이 폐강기준인원 미만이 되는 교과목은 수강철회를 불허<br>
+                                            - 철회 후 수강신청학점이 학기 당 최저 이수학점 이상이 되어야 함<br><br>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="link_btn">
+                                        수강신청하기
+                                        <img src="/static/images/bg-link.png" alt="링크 아이콘" class="icon">
+                                    </a>
+                                </div>    
                             </div>
                         </div>
                 </div>
