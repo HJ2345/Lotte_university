@@ -1,0 +1,50 @@
+main {
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+main > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+.main-container > div {
+    display: flex;
+}
+aside {
+    width: 210px;
+}
+aside h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.side-link-container {
+    width: 210px;
+    border-top: 2px solid #222;
+}
+.side-link {
+    width: 210px;
+    padding: 20px 0px 20px 20px;
+    border-bottom: 1px solid #DCDCDC;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+.selected-link {
+    color: white;
+    background-color: #3f97f6;
+}
+
+/* =============== 메인 컨텐츠 작성 ===============  */
+.grade-container {
+    width: 100%;
+    margin: 8px 0 0 50px;
+}
+.grade-container h4 {
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    margin-bottom: 31px;
+    padding-bottom: 20.8px;
+}

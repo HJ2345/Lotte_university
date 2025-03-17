@@ -1,7 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans KR";
+}
+a {
+    text-decoration: none;
+}
+ul,
+li {
+    list-style: none;
+}
+body {
+    overflow-x: hidden; /* 가로 스크롤 추가 */
+    min-width: 1200px; /* 최소 너비 유지 */
+}
+
+/* --------- header start --------- */
 header {
     width: 100%;
     box-sizing: border-box;
-    height: 104px;
+    height: auto;
 }
 
 header > div > * {
@@ -11,7 +29,7 @@ header > div > * {
 
 .topMenuBar {
     width: 100%;
-    background-color: #3F97F6;
+    background-color: #3f97f6;
 }
 .topMenus {
     height: 28px;
@@ -24,7 +42,7 @@ header > div > * {
 }
 .topMenus li > a {
     color: white;
-    border-right: 1px solid #78B6F9;
+    border-right: 1px solid #78b6f9;
     padding-left: 5px;
     padding-right: 7px;
     font-weight: 350;
@@ -38,7 +56,10 @@ header > div > * {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 10px 0;    
+    padding-top: 10px;
+}
+.logo {
+    margin-bottom: 5px;
 }
 .nav-container {
     display: flex;
@@ -71,13 +92,13 @@ nav .item {
     padding: 0;
     width: 100%;
     left: 0;
-    top: 66px;
+    top: 100%;
 }
 .dropdown > div {
     translate: 0 -100%;
     transition: all 0.3s 0.1s;
     position: relative;
-    background-color: #3F97F6;
+    background-color: #3f97f6;
 }
 .dropdown a {
     box-sizing: border-box;
@@ -88,11 +109,10 @@ nav .item {
     text-align: left;
     color: white;
     font-size: 15px;
-    border-top: 1px solid #53A2F7;
+    border-top: 1px solid #53a2f7;
 }
 .item:hover {
-    color: #3F97F6;
-    z-index: 5;
+    color: #3f97f6;
 }
 .dropdown a:hover {
     background: #3a88db;
@@ -100,16 +120,4 @@ nav .item {
 }
 nav .item:hover > .dropdown > div {
     translate: 0;
-}
-nav .item:nth-child(1):hover ~ .underline {
-    translate: 0;
-}
-nav .item:nth-child(2):hover ~ .underline {
-    translate: 100%;
-}
-nav .item:nth-child(3):hover ~ .underline {
-    translate: 200%;
-}
-nav .item:nth-child(4):hover ~ .underline {
-    translate: 300%;
 }

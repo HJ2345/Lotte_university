@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/static/style/admin/adminMain.css">
+    <title>학사관리시스템</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="topMenuBar">
+                <ul class="topMenus">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+            <div class="header-background">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="/static/images/admin_logo.png" alt="그린대학교" class="logo">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="sidebar">
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-setting.png" alt="환경설정" class="side-icon">
+                            <p class="side-title">환경설정</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">기본환경정보</a></li>
+                            <li><a href="#">약관관리</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-academic.png" alt="학사운영" class="side-icon">
+                            <p class="side-title">학사운영</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">교육 운영 현황</a></li>
+                            <li><a href="#">학년별 학생 현황</a></li>
+                            <li><a href="#">학과별 학생 현황</a></li>
+                            <li><a href="#">강의 목록</a></li>
+                            <li><a href="#">강의 등록</a></li>
+                            <li><a href="#">수강 현황</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-persons.png" alt="인사관리" class="side-icon">
+                            <p class="side-title">인사관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">학생 목록 및 등록</a></li>
+                            <li><a href="#">교수 목록 및 등록</a></li>
+                            <li><a href="#">임직원 목록 및 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-college.png" alt="대학 및 학과" class="side-icon">
+                            <p class="side-title">대학 및 학과</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">대학 및 학과 목록</a></li>
+                            <li><a href="#">대학 및 학과 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-board.png" alt="게시판관리" class="side-icon">
+                            <p class="side-title">게시판관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">입학안내 공지사항</a></li>
+                            <li><a href="#">학사안내 공지사항</a></li>
+                            <li><a href="#">커뮤니티 공지사항</a></li>
+                            <li><a href="#">입학상담</a></li>
+                            <li><a href="#">질문 및 답변</a></li>
+                            <li><a href="#">식단안내</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="main-header">
+                        <h3>운영현황 메인</h3>
+                        <p>HOME &nbsp;>&nbsp; <span class="current-location">운영현황 메인</span></p>
+                    </div>
+                    <div class="table-container">
+                        <div class="main-title">
+                            <img src="/static/images/bullet-h4.png" alt="before">
+                            <p>대학 운영 현황</p>
+                        </div>
+                        <table class="univ-manage-stat tables">
+                            <tr>
+                                <th>개설학과</th>
+                                <th>개설강좌</th>
+                                <th>전체교수</th>
+                                <th>임직원</th>
+                                <th>학생</th>
+                                <th>휴학생</th>
+                                <th>대학원생</th>
+                                <th>졸업생</th>
+                            </tr>
+                            <tr>
+                                <td>53</td>
+                                <td>214</td>
+                                <td>64</td>
+                                <td>24</td>
+                                <td>2047</td>
+                                <td>127</td>
+                                <td>364</td>
+                                <td>5680</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table-container oneline-two-container">
+                        <div>
+                            <div class="main-title">
+                                <img src="/static/images/bullet-h4.png" alt="before">
+                                <p>학년별 학생 현황</p>
+                            </div>
+                            <table class="stat-students-grade tables">
+                                <tr>
+                                    <th>학년</th>
+                                    <th>재학생</th>
+                                    <th>휴학생</th>
+                                    <th>전체</th>
+                                </tr>
+                                <tr>
+                                    <td>1학년</td>
+                                    <td>460</td>
+                                    <td>32</td>
+                                    <td>492</td>
+                                </tr>
+                                <tr>
+                                    <td>2학년</td>
+                                    <td>460</td>
+                                    <td>32</td>
+                                    <td>492</td>
+                                </tr>
+                                <tr>
+                                    <td>3학년</td>
+                                    <td>460</td>
+                                    <td>32</td>
+                                    <td>492</td>
+                                </tr>
+                                <tr>
+                                    <td>4학년</td>
+                                    <td>460</td>
+                                    <td>32</td>
+                                    <td>492</td>
+                                </tr>
+                                <tr>
+                                    <th>총합</th>
+                                    <th>1840</th>
+                                    <th>128</th>
+                                    <th>1968</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="main-title oneline-two-title">
+                                <div>
+                                    <img src="/static/images/bullet-h4.png" alt="before">
+                                    <p>학과별 학생 현황</p>
+                                </div>
+                                <a href="#" class="viewmore">
+                                    <img src="/static/images/bg-viewmore01.png" alt="before">
+                                </a>
+                            </div>
+                            <table class="stat-students-dep tables">
+                                <tr>
+                                    <th>학과</th>
+                                    <th>재학생</th>
+                                    <th>휴학생</th>
+                                    <th>전체</th>
+                                </tr>
+                                <tr>
+                                    <td>국어국문학과</td>
+                                    <td>120</td>
+                                    <td>2</td>
+                                    <td>122</td>
+                                </tr>
+                                <tr>
+                                    <td>영어영문학과</td>
+                                    <td>87</td>
+                                    <td>2</td>
+                                    <td>89</td>
+                                </tr>
+                                <tr>
+                                    <td>컴퓨터공학과</td>
+                                    <td>163</td>
+                                    <td>27</td>
+                                    <td>190</td>
+                                </tr>
+                                <tr>
+                                    <td>경제학과</td>
+                                    <td>460</td>
+                                    <td>32</td>
+                                    <td>546</td>
+                                </tr>
+                                <tr>
+                                    <th>총합</th>
+                                    <th>1840</th>
+                                    <th>128</th>
+                                    <th>1968</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="table-container">
+                        <div class="main-title oneline-two-title">
+                            <div>
+                                <img src="/static/images/bullet-h4.png" alt="before">
+                                <p>교육 운영 현황</p>
+                            </div>
+                            <a href="#" class="viewmore">
+                                <img src="/static/images/bg-viewmore01.png" alt="before">
+                            </a>
+                        </div>
+                        <table class="edc-stat tables">
+                            <tr>
+                                <th>학과</th>
+                                <th>과목코드</th>
+                                <th>과목명</th>
+                                <th>학년</th>
+                                <th>담당교수</th>
+                                <th>구분</th>
+                                <th>학점</th>
+                                <th>강의장</th>
+                                <th>수강인원</th>
+                                <th>수강률</th>
+                            </tr>
+                            <tr>
+                                <td>국어국문학과</td>
+                                <td>120001</td>
+                                <td>고전소설1</td>
+                                <td>2학년</td>
+                                <td>김국어</td>
+                                <td>전공</td>
+                                <td>3</td>
+                                <td>인문관101</td>
+                                <td>32/46</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td>컴퓨터과학과</td>
+                                <td>830003</td>
+                                <td>자바프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>전공</td>
+                                <td>3</td>
+                                <td>컴퓨터실</td>
+                                <td>32/46</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td>컴퓨터과학과</td>
+                                <td>830001</td>
+                                <td>프로그래밍의 이해</td>
+                                <td>1학년</td>
+                                <td>김코딩</td>
+                                <td>전공</td>
+                                <td>3</td>
+                                <td>공학관</td>
+                                <td>32/46</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td>컴퓨터과학과</td>
+                                <td>830003</td>
+                                <td>자바프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>전공</td>
+                                <td>3</td>
+                                <td>컴퓨터실</td>
+                                <td>32/46</td>
+                                <td>70%</td>
+                            </tr>
+                            <tr>
+                                <td>컴퓨터과학과</td>
+                                <td>830003</td>
+                                <td>자바프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>전공</td>
+                                <td>3</td>
+                                <td>컴퓨터실</td>
+                                <td>32/46</td>
+                                <td>70%</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="table-container oneline-two-container">
+                        <div>
+                            <div class="main-title oneline-two-title">
+                                <div>
+                                    <img src="/static/images/bullet-h4.png" alt="before">
+                                    <p>학사안내 공지사항</p>
+                                </div>
+                                <a href="#" class="viewmore">
+                                    <img src="/static/images/bg-viewmore01.png" alt="before">
+                                </a>
+                            </div>
+                            <table class="aca-notice tables">
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성자</th>
+                                    <th>작성일</th>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>담당자</td>
+                                    <td>25.03.13</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>담당자</td>
+                                    <td>25.03.13</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>담당자</td>
+                                    <td>25.03.13</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>담당자</td>
+                                    <td>25.03.13</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>담당자</td>
+                                    <td>25.03.13</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="main-title oneline-two-title">
+                                <div>
+                                    <img src="/static/images/bullet-h4.png" alt="before">
+                                    <p>입학상담</p>
+                                </div>
+                                <a href="#" class="viewmore">
+                                    <img src="/static/images/bg-viewmore01.png" alt="before">
+                                </a>
+                            </div>
+                            <table class="counseling tables">
+                                <tr>
+                                    <th>번호</th>
+                                    <th>제목</th>
+                                    <th>작성일</th>
+                                    <th>상태</th>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>[정시] 정시모집 관련해 문의…</td>
+                                    <td>25.03.13</td>
+                                    <td><span class="wating-answer answer-status">답변대기</span></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>25.03.13</td>
+                                    <td><span class="answer-complete answer-status">답변완료</span></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>25.03.13</td>
+                                    <td><span class="answer-complete answer-status">답변완료</span></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>25.03.13</td>
+                                    <td><span class="answer-complete answer-status">답변완료</span></td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2025학년도 신입학 추가모집 …</td>
+                                    <td>25.03.13</td>
+                                    <td><span class="answer-complete answer-status">답변완료</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

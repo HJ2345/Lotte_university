@@ -1,106 +1,340 @@
-
-.fieldset {
-    width: 990px;
-    height: 623px; 
-    left: 210px;
-    position: relative; 
+/* 전체 스타일 적용을 위한 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans KR";
+}
+a {
+    text-decoration: none;
+}
+ul,
+li {
+    list-style: none;
+}
+body {
+    overflow-x: hidden;
+    min-width: 1200px;
 }
 
-.filedset > .uplayout {
-    width: 930px; 
-    height: 40px; 
-    top: 148px; 
-    left: 60px; 
-    position: absolute; 
+/* --------- header start --------- */
+header {
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
 }
 
+header > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
 
-.filedset > .downlayout{
-	width: 930;
-	height: 62;
-	top: 561px;
-	left: 60px;
-	position: absolute;
+.topMenuBar {
+    width: 100%;
+    background-color: #3f97f6;
+}
+.topMenus {
+    height: 28px;
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.topMenus li {
+    display: inline;
+}
+.topMenus li > a {
+    color: white;
+    border-right: 1px solid #78b6f9;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-weight: 350;
+}
+.topMenus li:last-child > a {
+    border: none;
+    padding-right: 0;
+}
+.category {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.logo {
+    margin-bottom: 5px;
+}
+.nav-container {
+    display: flex;
+    justify-content: right;
+}
+nav {
+    position: relative;
+    font-weight: 400;
+    font-size: 0;
+    display: flex;
+    padding: 0;
+    width: 80%;
+}
+nav .item {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    cursor: pointer;
+    width: 120px;
+    height: 65px;
+    line-height: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.dropdown {
+    overflow: hidden;
+    list-style: none;
+    position: absolute;
+    padding: 0;
+    width: 100%;
+    left: 0;
+    top: 100%;
+}
+.dropdown > div {
+    translate: 0 -100%;
+    transition: all 0.3s 0.1s;
+    position: relative;
+    background-color: #3f97f6;
+}
+.dropdown a {
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 0 10px 15px;
+    width: 100%;
+    line-height: 40px;
+    text-align: left;
+    color: white;
+    font-size: 15px;
+    border-top: 1px solid #53a2f7;
+}
+.item:hover {
+    color: #3f97f6;
+}
+.dropdown a:hover {
+    background: #3a88db;
+    transition: 0.3s;
+}
+nav .item:hover > .dropdown > div {
+    translate: 0;
+}
+.location-container {
+    position: relative;
+    background-color: #ECF2F6;
+}
+.location-container > div > ul {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 42px;
+}
+.location-container > div > ul > li > a {
+    font-size: 14px;
+    font-weight: 350;
+    color: #333;
+}
+.ico-next {
+    margin: 0 10px;
+}
+.ico-home {
+    margin-top: 4px;
+}
 
-} 
+/* --------- main 영역 스타일 --------- */
+main {
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+}
+main > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+.main-container > div {
+    display: flex;
+}
+aside {
+    width: 210px;
+}
+aside h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.side-link-container {
+    width: 210px;
+    border-top: 2px solid #222;
+}
+.side-link {
+    width: 210px;
+    padding: 20px 0px 20px 20px;
+    border-bottom: 1px solid #DCDCDC;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+.selected-link {
+    color: white;
+    background-color: #3f97f6;
+}
 
-.filedset > .inner-table1 {
+/* =============== 공지사항 및 검색 영역 스타일 ===============  */
+.Education-container {
+    width: 100%;
+    margin: 8px 0 0 50px;
+    position: relative;
+}
+
+.Education-container h4 {
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    margin-bottom: 31px;
+    padding-bottom: 20.8px;
+}
+
+/* 공지사항 영역 스타일 */
+.Education-container .notice-area {
     width: 930px;
-    height: 237px;
-    top: 208px;
+    height: 56px;
+    position: absolute;
+    top: 62px;
     left: 60px;
-    border-top-width: 2px;
-    position: absolute; 
-    border-bottom: 1px solid rgba(216, 216, 216, 1)
+    border-bottom-width: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    padding: 10px 0;
 }
 
-.filedset > .inner-table_news {
+/* 검색 영역 스타일 */
+.uplayout .search-box {
+    display: flex; /* 자식 요소들이 가로로 배치되게 */
+    align-items: center; /* 세로 중앙 정렬 */
+    gap: 10px; /* 요소들 간의 간격 */
+    justify-content: flex-end; /* 버튼들을 오른쪽으로 정렬 */
+    width: 100%; /* 폼 너비를 100%로 설정 */
+}
+
+/* Select 버튼 스타일 */
+.search-box .dropdown-button {
+    width: 150.5px;
+    height: 40px;
+}
+
+/* 검색어 입력 필드 */
+.search-box .search-txt {
+    width: 237px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* 검색 버튼 */
+.search-box .btn_search {
+    width: 70px;
+    height: 40px;
+    background-color: #007BFF;
+    color: white;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* 테이블 스타일 */
+table {
     width: 930px;
-    height: 295px;
-    top: 208px;
-    left: 60px;
     border-top-width: 2px;
-    position: absolute; 
-    border-bottom: 1px solid rgba(216, 216, 216, 1)
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 0px;
 }
 
-.filedset > .inner-table-qna {
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    color: #333;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* 페이지 이동 버튼 스타일 */
+.downlayout {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 200px; /* 간격 추가 */
+    position: static;
+    top: 350px;
+    left: 0px;
     width: 930px;
-    height: 353px;
-    top: 208px;
-    left: 60px;
-    border-top-width: 2px;
-    position: absolute; 
-    border-bottom: 1px solid rgba(216, 216, 216, 1)
-}
-
-th, td, tr {
-    font-family: 'Noto Sans KR', sans-serif; 
-    padding: 8px;              
-    justify-content: center;     
-    vertical-align: middle;     
-    border: 1px solid #ddd;     
-    height: 50px;               
 }
 
 
-        /* tr 스타일 */
-        .tr {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            background: rgba(250, 250, 250, 1);
-            
-        }
-        
-        .tr1 {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-            background: rgba(239, 239, 239, 1);
-            
-        }
-        
-        .btn_search{
-        	width: 70px;
-			height: 40px;
-			background: rgba(63, 151, 246, 1);
-        }
-        
-        .btn_pagecontroller{
-       		width: 32px;
-			height: 32px;
-			border: 1px solid rgba(222, 222, 222, 1)
-        }
-        
-        .btn_pagecontroller1{
-       		width: 32px;
-			height: 32px;
-			background: rgba(63, 151, 246, 1);
-			border: 1px solid rgba(63, 151, 246, 1)
 
-        }
-        
+.btn_pagecontroller {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    cursor: pointer;
+    text-align: center;
+    line-height: 32px;
+    font-size: 1rem;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn_pagecontroller:hover {
+    background-color: #f1f1f1;
+}
+
+/* 선택된 페이지 버튼 스타일 */
+.btn_pagecontroller1 {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #007BFF;
+    background-color: #007BFF;
+    color: #007BFF;
+    text-align: center;
+    line-height: 32px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn_pagecontroller1:hover {
+    background-color: #f1f1f1;
+    color: #0056b3;
+}
+
+.btn_pagecontroller:disabled {
+    background-color: #f4f4f4;
+    border-color: #e0e0e0;
+    cursor: not-allowed;
+}
+
+/* 각 버튼 스타일 */
 .text_box_c_Einfo1{
     width: 45.13%;               
     height: 30px;              

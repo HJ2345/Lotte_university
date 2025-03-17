@@ -1,0 +1,106 @@
+/* =============== 메인 컨텐츠 작성 ===============  */
+.coures-container {
+    width: 100%;
+    margin: 8px 0 0 50px;
+}
+.coures-container h4 {
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    margin-bottom: 31px;
+    padding-bottom: 20.8px;
+}
+.container_body{
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.container_body > ul {
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+.link_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 47px;
+    border: 1px solid #6D6D6D;
+    padding: 0 10px; 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.link_btn >img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+
+.blue_text > li{
+    margin-bottom: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #0067B3;
+}
+
+.small_title > li{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    font-family: 'Inter';
+    color: #145074;
+    margin-bottom: 5px;
+}
+
+.small_title > li > img{
+    margin-right: 10px;
+}
+
+.text > li {
+    font-family: 'Noto Sans KR';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 15px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.table_1{
+    box-sizing: border-box;
+    width: 930px;
+    height: 284px;
+    left: 60px;
+    right: 0px;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    
+}
+
+.table_1 th{
+    height: 50px;
+    border-top: 2px solid #071F4B !important;
+    border: 1px solid #DEDEDE;
+    background: #F4F8FC;
+    font-weight: bold; 
+    font-size: 16px;
+}
+
+.table_1 td{
+    height: 50px;
+    font-size: 16px;   
+    border: 1px solid #DEDEDE;
+}

@@ -3,100 +3,326 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style/grad_school/Education.css">
+    <script src="/static/js/header.js"></script>
     <title>Education</title>
 </head>
 <body>
-    <main>
-        <h3>사범대학</h3>
-        <div>
-            <img src="/static/images/college-introduce-4.jpg" alt="사범대학">
-            <p>Education</p>
-            <p>
-                미래를 움직이는 큰 인재, 세계의 주역!
-            </p>
-            <p>
-                전공영역은 물론 현대 교육에 대한 학문적 탐구의 자질 및 인격 도야에 중점을 두고 있습니<br>
-                다. 원격강의 , 스튜디오, 원격교육강의실, 교육매체 제작실, 멀티미디어 강의실, 어학학습실,<br>
-                수업행동 분석실 등 첨단 시설을 갖춘 교육지원센터를 운영하고 있습니다. 부속기관으로는<br>
-                중등교육연수원, 과학교육연구소, 부설고등학교 등이 있습니다.
-            </p> 
+    <!-- header side -->
+    <header>
+        <div class="topMenuBar">
+            <ul class="topMenus">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">학생지원</a></li>
+            </ul>
         </div>
-        <h4>학부 및 학과</h4>
-        <table border="1px">
-            <thead>
-                <tr>
-                    <th>학과/전공</th>
-                    <th>학과장</th>
-                    <th>학과 사무실 번호</th>
-                    <th>비고</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <p>기계공학과</p>
-                        <a href="#"><img src="/static/images/ico_link.png" alt="기계공학과"></a>
-                    </td>
-                    <td>김기계</td>
-                    <td>051-123-3001</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>전자공학과</p>
-                        <a href="#"><img src="/static/images/ico_link.png" alt="전자공학과"></a>
-                    </td>
-                    <td>김전자</td>
-                    <td>051-123-3002</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>전기공학과</p>
-                        <a href="#"><img src="/static/images/ico_link.png" alt="전기공학과"></a>
-                    </td>
-                    <td>김전기</td>
-                    <td>051-123-3003</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>컴퓨터공학과</p>
-                        <a href="#"><img src="/static/images/ico_link.png" alt="컴퓨터공학과"></a>
-                    </td>
-                    <td>김컴공</td>
-                    <td>051-123-3004</td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td>
-                        <p>건축공학과</p>
-                        <a href="#"><img src="/static/images/ico_link.png" alt="건축공학과"></a>
-                    </td>
-                    <td>김건축</td>
-                    <td>051-123-3005</td>
-                    <td></td>
-                </tr>
-                <tr> 
-                    <td>
-                        <p>재료공학과</p>
-                        <a href="#"><img src="/static/images/ico_link.png" alt="재료공학과"></a>
-                    </td>
-                    <td>김재료</td>
-                    <td>051-123-3006</td>
-                    <td></td> 
-                </tr>
-                <tr>
-                    <td>
-                        <p>화학공학과</p>
-                        <a href="#"><img src="/static/images/ico_link.png" alt="화학공학과"></a>
-                    </td>
-                    <td>김화학</td>
-                    <td>051-123-3007</td>
-                    <td></td>
-                </tr>
-            </tbody>
-        </table>
+        <div>
+            <div class="category">
+                <a href="#">
+                    <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                </a>
+                <div class="nav-container">
+                    <nav>
+                        <div class="item">
+                            대학소개
+                            <div class="dropdown">
+                                <div>
+                                    <a href="#">총장 인사말</a>
+                                    <a href="#">교육이념</a>
+                                    <a href="#">연혁</a>
+                                    <a href="#">조직도</a>
+                                    <a href="#">오시는길</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            입학안내
+                            <div class="dropdown">
+                                <div>
+                                    <a href="#">공지사항</a>
+                                    <a href="#">수시모집</a>
+                                    <a href="#">정시모집</a>
+                                    <a href="#">편입학</a>
+                                    <a href="#">입학상담</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            대학·대학원
+                            <div class="dropdown">
+                                <div>
+                                    <a href="#">인문사회대학</a>
+                                    <a href="#">자연과학대학</a>
+                                    <a href="#">공과대학</a>
+                                    <a href="#">사범대학</a>
+                                    <a href="#">대학원</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            학사안내
+                            <div class="dropdown">
+                                <div>
+                                    <a href="#">공지사항</a>
+                                    <a href="#">학사일정</a>
+                                    <a href="#">수강신청</a>
+                                    <a href="#">성적</a>
+                                    <a href="#">수료 및 졸업</a>
+                                    <a href="#">자주묻는질문</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            대학생활
+                            <div class="dropdown">
+                                <div>
+                                    <a href="#">학생회소개</a>
+                                    <a href="#">동아리/스터디</a>
+                                    <a href="#">식단안내</a>
+                                    <a href="#">갤러리</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            커뮤니티
+                            <div class="dropdown">
+                                <div>
+                                    <a href="#">공지사항</a>
+                                    <a href="#">뉴스 및 칼럼</a>
+                                    <a href="#">취업정보</a>
+                                    <a href="#">자유게시판</a>
+                                    <a href="#">질문과 답변</a>
+                                    <a href="#">자료실</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="location-container">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/ico-home.png" alt="home" class="ico-home">
+                        </a>
+                    </li>
+                    <li>
+                        <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                        <a href="#">대학·대학원</a>
+                    </li>
+                    <li>
+                        <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                        <a href="#" class="this-location">사범대학</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+    <main>
+        <div class="main-container">
+            <div>
+                <aside>
+                    <h3>대학·대학원</h3>
+                    <div class="side-link-container">
+                        <a href="#">
+                            <div class="side-link">인문사회대학</div>
+                        </a>
+                        <a href="#">
+                            <div class="side-link">자연과학대학</div>
+                        </a>
+                        <a href="#">
+                            <div class="side-link">공과대학</div>
+                        </a>
+                        <a href="#">
+                            <div class="side-link selected-link">사범대학</div>
+                        </a>
+                        <a href="#">
+                            <div class="side-link">대학원</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="Education-container">
+                    <h4>사범대학</h4>
+                    <div class="education-intro">
+                        <img src="/static/images/college-introduce-4.jpg" alt="사범대학">
+                        <div class="education-intro-text">
+                            <p>Education</p>
+                            <p>
+                                미래를 움직이는 큰 인재, 세계의 주역!
+                            </p>
+                            <p>
+                                전공영역은 물론 현대 교육에 대한 학문적 탐구의 자질 및 인격 도야에 중점을 두고 있습니<br>
+                                다. 원격강의 , 스튜디오, 원격교육강의실, 교육매체 제작실, 멀티미디어 강의실, 어학학습실,<br>
+                                수업행동 분석실 등 첨단 시설을 갖춘 교육지원센터를 운영하고 있습니다. 부속기관으로는<br>
+                                중등교육연수원, 과학교육연구소, 부설고등학교 등이 있습니다.
+                            </p> 
+                        </div>
+                    </div>
+                    <div class="list">
+                        <img src="/static/images/bullet-h4.png" alt="네모">
+                        <h5>학부 및 학과</h5>
+                    </div>
+                    <div class="table">
+                        <table cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>학과/전공</th>
+                                    <th>학과장</th>
+                                    <th>학과 사무실 번호</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>국어교육과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="국어교육과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김국어</td>
+                                    <td>051-123-4001</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>영어교육과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="영어교육과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김영어</td>
+                                    <td>051-123-4002</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>수학교육과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="수학교육과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김수학</td>
+                                    <td>051-123-4003</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>윤리학과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="윤리학과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김윤리</td>
+                                    <td>051-123-4004</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>교육학과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="교육학과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김교육</td>
+                                    <td>051-123-4005</td>
+                                    <td></td>
+                                </tr>
+                                <tr> 
+                                    <td>
+                                        <div>
+                                            <p>사회교육과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="사회교육과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김사회</td>
+                                    <td>051-123-4006</td>
+                                    <td></td> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>역사교육과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="역사교육과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김역사</td>
+                                    <td>051-123-4007</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>체육교육과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="체육교육과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김체육</td>
+                                    <td>051-123-4008</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <p>특수교육과</p>
+                                            <a href="#"><img src="/static/images/ico_link.png" alt="특수교육과"></a>
+                                        </div>
+                                    </td>
+                                    <td>김특수</td>
+                                    <td>051-123-4009</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>         
+                </div>
+        
     </main>
+    <footer>
+        <div class="footer-link-container">
+            <div class="footer-link">
+                <ul class="footer-links">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">통합정보시스템</a></li>
+                    <li><a href="#">학사일정</a></li>
+                    <li><a href="#">주요민원 연락처</a></li>
+                    <li><a href="#">교내공지사항</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="copyright-container">
+                <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
+                <div class="footer-text-container">
+                    <p class="footer-text">
+                        그린대학교<br>
+                        [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
+                        입학안내 : 051-123-1302 팩스 : 051-123-333
+                    </p>
+                    <p class="footer-text text2">
+                        copyright ©Green University All rights reserved.
+                    </p>
+                </div>
+                <select onchange="window.open(value,'_self');">
+                    <option value="#" disabled selected>주요사이트</option>
+                    <option value="https://naver.com">네이버</option>
+                    <option value="https://www.kakaocorp.com/page/">카카오</option>
+                    <option value="https://www.line.me/ko/">라인</option>
+                    <option value="https://www.coupang.com/">쿠팡</option>
+                    <option value="https://www.woowahan.com/">배달의민족</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+</div>
 </body>
 </html>
