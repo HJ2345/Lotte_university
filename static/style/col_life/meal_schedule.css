@@ -1,0 +1,104 @@
+.meal_schedule-container {
+  width: 100%;
+  margin: 8px 0 0 50px;
+}
+.meal_schedule-container h4 {
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 2px solid #222;
+  margin-bottom: 31px;
+  padding-bottom: 20.8px;
+}
+
+.cal_header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 45px;
+  margin-bottom: 32px;
+}
+
+.cal_header > img:nth-child(1) {
+  width: 12px;
+  height: 30px;
+}
+
+.cal_header > img:nth-child(3) {
+  width: 12px;
+  height: 30px;
+}
+
+.meal_cal {
+  width: 366.68px;
+  height: 47px;
+  font-weight: 500px;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+table {
+  width: 930px;
+  height: 427.5px;
+  text-align: center;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+table th {
+  color: white;
+  background-color: #084a87;
+  width: 132.78px;
+  height: 43px;
+  text-align: center; /* 가로 가운데 정렬 */
+  vertical-align: middle; /* 세로 가운데 정렬 */
+}
+
+table th:last-child {
+  width: 132.81px;
+}
+
+tbody tr:nth-child(2) {
+  width: 928.5px;
+  height: 101px;
+  border-bottom: 1px solid #7798bd;
+}
+tbody tr:nth-child(3) {
+  width: 928.5px;
+  height: 182.5px;
+  border-bottom: 1px solid #7798bd;
+}
+tbody tr:nth-child(4) {
+  width: 928.5px;
+  height: 101px;
+  border-bottom: 1px solid #7798bd;
+}
+
+table td {
+  color: #555555;
+  border-left: 1px solid #e6ede6;
+  border-right: 1px solid #e6ede6;
+}
+
+td.cate {
+  color: #111111;
+}
+
+.price {
+  width: 90px;
+  height: 24.19px;
+  border: 1px solid #068368;
+  color: #068368;
+}
+
+.meal_item {
+  margin-top: 8px;
+}
+
+.thx {
+  width: 291.15px;
+  height: 24px;
+  color: #666666;
+  margin-top: 5px;
+}

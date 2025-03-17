@@ -13,7 +13,11 @@
     />
 
     <script src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/test/test.css" />
+    <link rel="stylesheet" href="/static/style/common/_header.css" />
+    <link rel="stylesheet" href="/static/style/common/_header2.css" />
+    <link rel="stylesheet" href="/static/style/common/main.css" />
+    <link rel="stylesheet" href="/static/style/enterance_guide/consult.css" />
+    <link rel="stylesheet" href="/static/style/common/_footer.css" />
 
     <title>Test</title>
   </head>
@@ -173,15 +177,90 @@
                 </a>
               </div>
             </aside>
-            <div class="gallery-container">
+            <div class="enterance-container">
               <h4>입학상담</h4>
-              <!-- 
-                            여기서부터 컨텐츠 작성하시면 됩니다! 
-                            gallery-container 클래스 이름 원하는대로 변경해주세요!
-                            변경하시고 css파일에도 변경한 이름으로 적용해주세요! 
-                            나머지 요소들(aside, .location-container)도 
-                            작업하고 있는 파트에 맞게 수정하는 거 잊지마세요!😁😁!
-                        -->
+              <div>
+                <form action="#" class="searchForm">
+                    <select name="search" class="selectType">
+                        <option value="#" disabled selected class="selectTypes">선택</option>
+                        <option value="#" class="selectTypes">학년</option>
+                        <option value="#" class="selectTypes">과목명</option>
+                        <option value="#" class="selectTypes">담당교수</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력해 주세요." class="searchWord">
+                    <button type="submit" class="searchBtn">검색</button>
+                </form>
+                <table>
+                    <tr>
+                        <th>번호</th>
+                        <th>구분</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>상태</th>
+                      
+                    </tr>
+
+                    <tr>
+                      <td>3</td>
+                      <td>정시</td>
+                      <td><img src="/static/images/ico-lock.png">정시모집 관련해 문의드립니다.</td>
+                      <td>홍길동</td>
+                      <td>24.04.09</td>
+                      <td class="first_td">답변완료</td>
+                    </tr>
+
+                    <tr>
+                      <td>2</td>
+                      <td>정시</td>
+                      <td><img src="/static/images/ico-lock.png">정시모집 관련해 문의드립니다.</td>
+                      <td>홍길동</td>
+                      <td>24.04.09</td>
+                      <td class="second_td">답변완료</td>
+                    </tr>
+
+                    <tr>
+                      <td>1</td>
+                      <td>정시</td>
+                      <td><img src="/static/images/ico-lock.png">정시모집 관련해 문의드립니다.</td>
+                      <td>홍길동</td>
+                      <td>24.04.09</td>
+                      <td class="third_td">답변완료</td>
+                     
+                    </tr>
+
+                    
+                    
+                    
+                </table>
+                <div class="paging-container">
+                    <a href="#" class="mr-3">
+                        <img src="/static/images/btn-first-page.png" alt="첫페이지">
+                    </a>
+                    <a href="#" class="mr-10">
+                        <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+                    </a>
+
+                    <a href="#" class="mr-3 mb-2">
+                        <span class="selected">1</span>
+                    </a>
+                    <a href="#" class="mr-3 mb-2">
+                        <span>2</span>
+                    </a>
+                    <a href="#" class="mr-10 mb-2">
+                        <span>3</span>
+                    </a>
+
+                    <a href="#" class="mr-5">
+                        <img src="/static/images/btn-next-page.png" alt="이전페이지">
+                    </a>
+                    <a href="#">
+                        <img src="/static/images/btn-last-page.png" alt="이전페이지">
+                    </a>
+                </div>
+                <div class="paging-btn-wrap">
+                  <button class="btn-inquiry">문의하기</button>
+                </div>
             </div>
           </div>
         </div>
