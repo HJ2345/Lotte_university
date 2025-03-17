@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/static/style/common/_header2.css"/>
     <link rel="stylesheet" href="/static/style/common/main.css"/>
     <link rel="stylesheet" href="/static/style/common/_footer.css"/>
-    <link rel="stylesheet" href="/static/style/bachelor_guide/grade.css"/>
+    <link rel="stylesheet" href="/static/style/bachelor_guide/com_n_grd.css"/>
     <script src="/static/js/header.js"></script> <!--자바스크립트-->
-    <title>성적</title>
+    <title>수료 및 졸업</title>
 </head>
 <body>
     <header>
@@ -119,7 +119,7 @@
                     </li>
                     <li>
                         <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
-                        <a href="#" class="this-location">성적</a>
+                        <a href="#" class="this-location">수료 및 졸업</a>
                     </li>
                 </ul>
             </div>
@@ -141,10 +141,10 @@
                             <div class="side-link">수강신청</div>
                         </a>
                         <a href="#">
-                            <div class="side-link selected-link">성적</div>
+                            <div class="side-link">성적</div>
                         </a>
                         <a href="#">
-                            <div class="side-link">수료 및 졸업업</div>
+                            <div class="side-link selected-link">수료 및 졸업</div>
                         </a>
                         <a href="#">
                             <div class="side-link">자주하는질문</div>
@@ -152,122 +152,170 @@
                     </div>
                 </aside>
                         <div class="grade-container"> 
-                            <h4>성적</h4>       
-                                <div class ="container_body">
-                                    <ul class="small_title" >
-                                        <li>
-                                            <img src="/static/images/bullet-h4.png" > 시험
-                                        </li>
-                                    </ul>
-                                    <ul class="blue_text">
-                                        <li>
-                                            - 시험은 정기시험, 비정기시험, 추가시험, 재시험 등으로 구분
-                                        </li>
-                                    </ul>
-                                    <ul class="text">
-                                        <li>
-                                            1) 정기시험 : 중간시험과 학기말시험으로 나누며 중간시험은 학기 당 수업일수 2분의 1이 되는 주에 실시하고, 학기말시험은 학기의 최종 주에 실시<br>
-                                            2) 비정기시험 : 과제학습, 세미나 등 계속적인 학습활동을 평가하는 시험으로 담당교수의 책임 하에 실시<br>
-                                            3) 추가시험 : 질병 또는 부득이한 사정으로 정기시험에 응시할 수 없는 학생은 사유와 증빙서류를 첨부하여 추가시험신청서를 제출
-                                        </li>
-                                    </ul>
-                                    <ul class="blue_text">
-                                        <li>
-                                            - 시험 부정행위자의 처리
-                                        </li>
-                                    <ul class="text">
-                                        <li>
-                                            1) 시험 중 부정행위가 적발되면 감독교수는 그 행위내용을 시험지 상단에 기록하고 날인한 후 즉시 총장에게 보고<br>
-                                            2) 시험 부정행위자에 대하여는 다음의 내용에 따라 제적 또는 유기정학 처분<br>
-                                            └ 시험에 대리로 응시하거나 대리응시를 부탁한 경우<br>
-                                            └ 시험지에 다른 사람의 이름을 쓰거나 쓰게 한 경우<br>
-                                            └ 부정행위자로 적발되어 징계처분을 받은 사실이 있는 학생이 거듭 부정행위를 한 경우<br><br>
-                                        </li>
-                                    </ul>
-                            
+                            <h4>수료 및 졸업</h4>       
+                                <div id ="container">
                                     <ul class="small_title">
                                         <li>
-                                            <img src="/static/images/bullet-h4.png"> 성적
-                                        </li>
-                                    </ul>
-                                    <ul class="blue_text">
-                                        <li>
-                                            -평가내용
-                                        </li>
-                                    </ul>
-                                    <ul class="text">
-                                        <li>
-                                            1) 성적평가는 각 교과목의 시험성적, 과제평가, 출석상황 및 학습태도 등을 종합하여 평가<br>
-                                            2) 출석 및 학습태도 10-20%, 정기시험 50-70%, 비정기시험 및 과제 20-30%로 함을 원칙
-                                        </li>
-                                    </ul>
-                                    <ul class="blue_text">
-                                        <li>
-                                            -등급
+                                            <img src="/static/images/bullet-h4.png">수료기준
                                         </li>
                                     </ul>
                                     <table class="table_1">
                                         <tr>
-                                            <th>등급</th>
-                                            <th>평점</th>
-                                            <th>백분위 기준점수</th>
-                                            <th>비고</th>
+                                            <th rowspan="2">구분</th>
+                                            <th rowspan="2">총 취득학점</th>
+                                            <th colspan="4">수료 학점</th>
                                         </tr>
                                         <tr>
-                                           <td>A+</td>
-                                           <td>4.5</td>
-                                           <td>99</td>
-                                           <td></td>
+                                            <th>1학년</th>
+                                            <th>2학년</th>
+                                            <th>3학년</th>
+                                            <th>4학년</th>
                                         </tr>
                                         <tr>
-                                            <td>A</td>
-                                            <td>4</td>
-                                            <td>94</td>
-                                            <td></td>
+                                            <td>인문대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>66</td>
+                                            <td>99</td>
+                                            <td>130</td>
                                         </tr>
                                         <tr>
-                                            <td>B+</td>
-                                            <td>B</td>
-                                            <td>84</td>
-                                            <td></td>
+                                            <td>사회과학대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>66</td>
+                                            <td>99</td>
+                                            <td>130</td>
                                         </tr>
                                         <tr>
-                                            <td>C+</td>
-                                            <td>2.5</td>
-                                            <td>79</td>
-                                            <td></td>
+                                            <td>경영대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>66</td>
+                                            <td>99</td>
+                                            <td>130</td>
                                         </tr>
                                         <tr>
-                                            <td>C</td>
-                                            <td>2</td>
-                                            <td>74</td>
-                                            <td></td>
+                                            <td>자연과학대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>66</td>
+                                            <td>99</td>
+                                            <td>130</td>
                                         </tr>
                                         <tr>
-                                            <td>D+</td>
-                                            <td>1.5</td>
-                                            <td>69</td>
-                                            <td></td>
+                                            <td>정보과학대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>66</td>
+                                            <td>99</td>
+                                            <td>130</td>
+                                        </tr>
+                                    </table>
+                                <ul class="text">
+                                    <li>- 수료기준 : 졸업학점에 따라 학년별 수료학점이 다르며, 각 학년별 수료학점을 취득한 경우 해당 학년에 대한 ‘수료증명서’를 발급 가능<br><br></li>
+                                </ul>
+                                <ul class="small_title">
+                                    <li>
+                                        <img src="/static/images/bullet-h4.png">조기졸업
+                                    </li>
+                                    </ul>
+                                    <table class="table_1">
+                                        <tr>
+                                            <th colspan="3">자격</th>
+                                            <th rowspan="2">신청절차</th>
                                         </tr>
                                         <tr>
-                                            <td>F</td>
-                                            <td>0</td>
-                                            <td>59</td>
-                                            <td></td>
+                                            <th>이수학기</th>
+                                            <th>평점평균</th>
+                                            <th>취득학점</th>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                6학기 또는 7학기 이수자로서 해당학기
+                                                이수로 모든 졸업요건의 충족이 가능한
+                                                자.
+                                            </td>
+                                            <td>
+                                                4.00이상
+                            
+                                            </td>
+                                            <td>
+                                                정규졸업 요구학점과 동일
+                                            </td>
+                                            <td>
+                                                졸업을 원하는 학기초 30일 이내에 “조기
+                                                졸업신청서”를 교무팀에 제출
+                                            </td>
                                         </tr>
                                     </table>
                                     <ul class="text">
+                                        <li>※ 편입생 제외<br><br></li>
+                                    </ul>
+                                    <ul class="small_title">
                                         <li>
-                                            ※ 이수한 교과목의 성적이 D0급 이상 또는 P일 경우는 학점을 취득한 것으로 인정
+                                            <img src="/static/images/bullet-h4.png">졸업
                                         </li>
                                     </ul>
-                                    
+                                    <table class="table_1">
+                                        <tr>
+                                            <th rowspan="2">소속단과대학</th>
+                                            <th rowspan="2">총 취득학점</th>
+                                            <th colspan="3">전공 이수 학점</th>
+                                        </tr>
+                                        <tr>
+                                            <th>복수전공(제1전공기준동일)</th>
+                                            <th>단일전공</th>
+                                            <th>부전공</th>
+                                        </tr>
+                                        <tr>
+                                            <td>인문대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>60</td>
+                                            <td>제1전공42/부전공21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>사회과학대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>60</td>
+                                            <td>제1전공42/부전공21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>경영대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>60</td>
+                                            <td>제1전공42/부전공21</td>
+                                        </tr>
+                                        <tr>
+                                            <td>자연과학대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>70</td>
+                                            <td>제1전공50/부전공25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>정보과학대학</td>
+                                            <td>130이상</td>
+                                            <td>33</td>
+                                            <td>60</td>
+                                            <td>제1전공42/부전공21</td>
+                                        </tr>
+                                    </table>
+                                    <ul class="text">
+                                        <li>- 등록학기 : 8학기 이상, 의과대학 의학과는 12학기 이상<br>
+                                            - 총 성적평점평균 : 2.00 이상<br>
+                                            - 졸업논문(또는 졸업종합시험) : 합격
+                                        </li>
+                                    </ul>
                                 </div>
+                            
                             </div>
-                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
     <footer>
         <div class="footer-link-container">
