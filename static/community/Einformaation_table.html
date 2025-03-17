@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/static/style/common/table.css">
-    <link rel="stylesheet" href="/static/style/common/_footer.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
     <script src="/static/js/header.js"></script>
-    <title>Education</title>
-</head>
-<body>
-    <!-- header side -->
-    <header>
+    <link rel="stylesheet" href="/static/style/common/_header.css" />
+    <link rel="stylesheet" href="/static/style/common/_header2.css" />
+    <link rel="stylesheet" href="/static/style/common/main.css" />
+    <link rel="stylesheet" href="/static/style/common/table_e.css" />
+    <link rel="stylesheet" href="/static/style/common/_footer.css" />
+
+    <title>Test</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- header side -->
+      <header>
         <div class="topMenuBar">
             <ul class="topMenus">
                 <li><a href="#">HOME</a></li>
@@ -121,7 +131,7 @@
                     </li>
                     <li>
                         <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
-                        <a href="#" class="this-location">뉴스 및 칼럼</a>
+                        <a href="#" class="this-location">공지사항  </a>
                     </li>
                 </ul>
             </div>
@@ -135,13 +145,13 @@
                     <h3>대학·대학원</h3>
                     <div class="side-link-container">
                         <a href="#">
-                            <div class="side-link">공지사항</div>
+                            <div class="side-link selected-link">공지사항</div>
                         </a>
                         <a href="#">
                             <div class="side-link">뉴스 및 칼럼</div>
                         </a>
                         <a href="#">
-                            <div class="side-link selected-link">취업정보</div>
+                            <div class="side-link">취업정보</div>
                         </a>
                         <a href="#">
                             <div class="side-link">자유게시판</div>
@@ -154,23 +164,22 @@
                         </a>
                     </div>
                 </aside>
-                <div class="Education-container">
-                    <h4>취업정보</h4>
-
-                    <div class ="uplayout">
-                        <form class="search-box">
-                        <div class="custom-dropdown">
-                            <button class="dropdown-button">전체<img src = "/static/images/btn-sel-open01.png" alt="마지막"></button>
-                        </div>
-                            
-                        <input class="search-txt" type="text" name="" placeholder="검색어를 입력하세요."></input>
-                        <input type="submit" value="검색" class = btn_search>
-                
-                        </form>
-                    </div>
+            <div class="enterance-container">
+              <h4>입학상담</h4>
+              <div>
+                <form action="#" class="searchForm">
+                    <select name="search" class="selectType">
+                        <option value="#" disabled selected class="selectTypes">선택</option>
+                        <option value="#" class="selectTypes">학년</option>
+                        <option value="#" class="selectTypes">과목명</option>
+                        <option value="#" class="selectTypes">담당교수</option>
+                    </select>
+                    <input type="text" placeholder="검색어를 입력해 주세요." class="searchWord">
+                    <button type="submit" class="searchBtn">검색</button>
+                </form>
 		
 
-       <table border="1px" >
+       <table>
             <tr class = tr>
                 <th>번호</th>
                 <th>상태</th>
@@ -183,7 +192,7 @@
                 <td>3</td>
                 <td class = "text_box_c_Einfo1">모집중</td>
                 <td>정석수학학원</td>
-                <td>고등 1학년 수학 (공통수학)만 지도 가능한 …</td>
+                <td class = "left">고등 1학년 수학 (공통수학)만 지도 가능한 …</td>
                 <td>2024.04.09 12:00</td>
                 <td>160</td>
             </tr>
@@ -191,7 +200,7 @@
                 <td>3</td>
                 <td class = "text_box_c_Einfo1">모집중</td>
                 <td>(주)삼성전자</td>
-                <td>2025 상반기 (주)삼성전자 대학원(석사) 신…</td>
+                <td class = "left">2025 상반기 (주)삼성전자 대학원(석사) 신…</td>
                 <td>2024.04.09 12:00</td>
                 <td>160</td>
             </tr>
@@ -199,7 +208,7 @@
                 <td>3</td>
                 <td class = "text_box_c_Einfo2">마감</td>
                 <td>(주)삼성전자</td>
-                <td>2025 상반기 (주)삼성전자 대학원(석사) 신…</td>
+                <td class = "left">2025 상반기 (주)삼성전자 대학원(석사) 신…</td>
                 <td>2024.04.09 12:00</td>
                 <td>160</td>
             </tr>
@@ -207,66 +216,86 @@
             
         </table>
 		
-		<div class ="downlayout">
-		<button type="button" class = btn_pagecontroller>
-			<img src = "/static/images/btn-first-page.png" alt="처음" onclick="">														
-		</button>
-		<button type="button" class = btn_pagecontroller>
-			<img src = "/static/images/btn-prev-page.png" alt="앞으로" onclick="">														
-		</button>
-		<button type="button" class = btn_pagecontroller1>
-			<img src = "/static/images/" alt="1" onclick="">														
-		</button>
-		<button type="button" class = btn_pagecontroller>
-			<img src = "/static/images/" alt="2" onclick="">														
-		</button>
-		<button type="button" class = btn_pagecontroller>
-			<img src = "/static/images/" alt="3" onclick="">														
-		</button>
-		<button type="button" class = btn_pagecontroller>
-			<img src = "/static/images/btn-next-page.png" alt="뒤로" onclick="">														
-		</button>
-		<button type="button" class = btn_pagecontroller>
-			<img src = "/static/images/btn-last-page.png" alt="마지막" onclick="">														
-		</button>         
+        <div class="paging-container">
+            <a href="#" class="mr-3">
+                <img src="/static/images/btn-first-page.png" alt="첫페이지">
+            </a>
+            <a href="#" class="mr-10">
+                <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+            </a>
+
+            <a href="#" class="mr-3 mb-2">
+                <span class="selected">1</span>
+            </a>
+            <a href="#" class="mr-3 mb-2">
+                <span>2</span>
+            </a>
+            <a href="#" class="mr-10 mb-2">
+                <span>3</span>
+            </a>
+
+            <a href="#" class="mr-5">
+                <img src="/static/images/btn-next-page.png" alt="이전페이지">
+            </a>
+            <a href="#">
+                <img src="/static/images/btn-last-page.png" alt="이전페이지">
+            </a>
         </div>
+    </div>
+  </div>
+</div>
 </main>
-    <footer>
-        <div class="footer-link-container">
-            <div class="footer-link">
-                <ul class="footer-links">
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">통합정보시스템</a></li>
-                    <li><a href="#">학사일정</a></li>
-                    <li><a href="#">주요민원 연락처</a></li>
-                    <li><a href="#">교내공지사항</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="copyright-container">
-                <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
-                <div class="footer-text-container">
-                    <p class="footer-text">
-                        그린대학교<br>
-                        [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
-                        입학안내 : 051-123-1302 팩스 : 051-123-333
-                    </p>
-                    <p class="footer-text text2">
-                        copyright ©Green University All rights reserved.
-                    </p>
-                </div>
-                <select onchange="window.open(value,'_self');">
-                    <option value="#" disabled selected>주요사이트</option>
-                    <option value="https://naver.com">네이버</option>
-                    <option value="https://www.kakaocorp.com/page/">카카오</option>
-                    <option value="https://www.line.me/ko/">라인</option>
-                    <option value="https://www.coupang.com/">쿠팡</option>
-                    <option value="https://www.woowahan.com/">배달의민족</option>
-                </select>
-            </div>
-        </div>
-    </footer>
+<footer>
+<div class="footer-link-container">
+  <div class="footer-link">
+    <ul class="footer-links">
+      <li><a href="#">개인정보처리방침</a></li>
+      <li><a href="#">통합정보시스템</a></li>
+      <li><a href="#">학사일정</a></li>
+      <li><a href="#">주요민원 연락처</a></li>
+      <li><a href="#">교내공지사항</a></li>
+    </ul>
+  </div>
+</div>
+<div class="copyright">
+  <div class="copyright-container">
+    <img
+      src="/static/images/footer_logo.png"
+      alt="그린대학교"
+      class="footer-logo"
+    />
+    <div class="footer-text-container">
+      <p class="footer-text">
+        그린대학교<br />
+        [12345] 부산광역시 부산진구 부전대로 123 그린대학교
+        &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br />
+        입학안내 : 051-123-1302 팩스 : 051-123-333
+      </p>
+      <p class="footer-text text2">
+        copyright ©Green University All rights reserved.
+      </p>
+    </div>
+    <select onchange="window.open(value,'_self');" class="site">
+      <option class="sites" value="#" disabled selected>
+        주요사이트
+      </option>
+      <option class="sites" value="https://naver.com">네이버</option>
+      <option class="sites" value="https://www.kakaocorp.com/page/">
+        카카오
+      </option>
+      <option class="sites" value="https://www.line.me/ko/">
+        라인
+      </option>
+      <option class="sites" value="https://www.coupang.com/">
+        쿠팡
+      </option>
+      <option class="sites" value="https://www.woowahan.com/">
+        배달의민족
+      </option>
+    </select>
+  </div>
+</div>
+</footer>
 </div>
 </body>
 </html>
