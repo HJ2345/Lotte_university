@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style/common/table.css">
-    <link rel="stylesheet" href="/static/style/common/_footer.css"/>
     <script src="/static/js/header.js"></script>
     <title>Education</title>
 </head>
@@ -121,7 +120,7 @@
                     </li>
                     <li>
                         <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
-                        <a href="#" class="this-location">뉴스 및 칼럼</a>
+                        <a href="#" class="this-location">공지사항  </a>
                     </li>
                 </ul>
             </div>
@@ -135,7 +134,7 @@
                     <h3>대학·대학원</h3>
                     <div class="side-link-container">
                         <a href="#">
-                            <div class="side-link">공지사항</div>
+                            <div class="side-link selected-link">공지사항</div>
                         </a>
                         <a href="#">
                             <div class="side-link">뉴스 및 칼럼</div>
@@ -144,7 +143,7 @@
                             <div class="side-link">취업정보</div>
                         </a>
                         <a href="#">
-                            <div class="side-link selected-link">자유게시판</div>
+                            <div class="side-link">자유게시판</div>
                         </a>
                         <a href="#">
                             <div class="side-link">질문과 답변</div>
@@ -155,7 +154,7 @@
                     </div>
                 </aside>
                 <div class="Education-container">
-                    <h4>자유게시판</h4>
+                    <h4>공지사항</h4>
 
                     <div class ="uplayout">
                         <form class="search-box">
@@ -168,8 +167,9 @@
                 
                         </form>
                     </div>
+		
 
-        <table border="1px" >
+         <table border="1px" >
             <tr class = tr>
                 <th>번호</th>
                 <th>제목</th>
@@ -179,22 +179,22 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td><img src="/static/images/ico-new01.png" alt="N" class="photos">2025학년도 1학기 그린장학회 장학생 신청 안내</td>
+                <td>학사지원실</td>
                 <td>24.04.09</td>
                 <td>160</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td><img src="/static/images/ico-new01.png" alt="N" class="photos">제42회 학위수여식 안내</td>
+                <td>학사지원실</td>
                 <td>24.04.09</td>
                 <td>160</td>
             </tr>
             <tr>
                 <td>1</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td><img src="/static/images/ico-new01.png" alt="N" class="photos">의료, 인공지능 융합인재 양성사업단 사업설명회</td>
+                <td>학사지원실</td>
                 <td>24.04.09</td>
                 <td>160</td>
             </tr>
@@ -225,43 +225,61 @@
 			<img src = "/static/images/btn-last-page.png" alt="마지막" onclick="">														
 		</button>         
         </div>
-    </main>
-    <footer>
-        <div class="footer-link-container">
-            <div class="footer-link">
-                <ul class="footer-links">
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">통합정보시스템</a></li>
-                    <li><a href="#">학사일정</a></li>
-                    <li><a href="#">주요민원 연락처</a></li>
-                    <li><a href="#">교내공지사항</a></li>
-                </ul>
             </div>
+          </div>
+        </div>
+</main>
+       <footer>
+        <div class="footer-link-container">
+          <div class="footer-link">
+            <ul class="footer-links">
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">통합정보시스템</a></li>
+              <li><a href="#">학사일정</a></li>
+              <li><a href="#">주요민원 연락처</a></li>
+              <li><a href="#">교내공지사항</a></li>
+            </ul>
+          </div>
         </div>
         <div class="copyright">
-            <div class="copyright-container">
-                <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
-                <div class="footer-text-container">
-                    <p class="footer-text">
-                        그린대학교<br>
-                        [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
-                        입학안내 : 051-123-1302 팩스 : 051-123-333
-                    </p>
-                    <p class="footer-text text2">
-                        copyright ©Green University All rights reserved.
-                    </p>
-                </div>
-                <select onchange="window.open(value,'_self');">
-                    <option value="#" disabled selected>주요사이트</option>
-                    <option value="https://naver.com">네이버</option>
-                    <option value="https://www.kakaocorp.com/page/">카카오</option>
-                    <option value="https://www.line.me/ko/">라인</option>
-                    <option value="https://www.coupang.com/">쿠팡</option>
-                    <option value="https://www.woowahan.com/">배달의민족</option>
-                </select>
+          <div class="copyright-container">
+            <img
+              src="/static/images/footer_logo.png"
+              alt="그린대학교"
+              class="footer-logo"
+            />
+            <div class="footer-text-container">
+              <p class="footer-text">
+                그린대학교<br />
+                [12345] 부산광역시 부산진구 부전대로 123 그린대학교
+                &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br />
+                입학안내 : 051-123-1302 팩스 : 051-123-333
+              </p>
+              <p class="footer-text text2">
+                copyright ©Green University All rights reserved.
+              </p>
             </div>
+            <select onchange="window.open(value,'_self');" class="site">
+              <option class="sites" value="#" disabled selected>
+                주요사이트
+              </option>
+              <option class="sites" value="https://naver.com">네이버</option>
+              <option class="sites" value="https://www.kakaocorp.com/page/">
+                카카오
+              </option>
+              <option class="sites" value="https://www.line.me/ko/">
+                라인
+              </option>
+              <option class="sites" value="https://www.coupang.com/">
+                쿠팡
+              </option>
+              <option class="sites" value="https://www.woowahan.com/">
+                배달의민족
+              </option>
+            </select>
+          </div>
         </div>
-    </footer>
-</div>
-</body>
+      </footer>
+    </div>
+  </body>
 </html>

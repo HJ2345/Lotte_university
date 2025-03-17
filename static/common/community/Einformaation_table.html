@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style/common/table.css">
-    <link rel="stylesheet" href="/static/style/common/_footer.css"/>
     <script src="/static/js/header.js"></script>
     <title>Education</title>
 </head>
@@ -141,10 +140,10 @@
                             <div class="side-link">뉴스 및 칼럼</div>
                         </a>
                         <a href="#">
-                            <div class="side-link">취업정보</div>
+                            <div class="side-link selected-link">취업정보</div>
                         </a>
                         <a href="#">
-                            <div class="side-link selected-link">자유게시판</div>
+                            <div class="side-link">자유게시판</div>
                         </a>
                         <a href="#">
                             <div class="side-link">질문과 답변</div>
@@ -155,7 +154,7 @@
                     </div>
                 </aside>
                 <div class="Education-container">
-                    <h4>자유게시판</h4>
+                    <h4>취업정보</h4>
 
                     <div class ="uplayout">
                         <form class="search-box">
@@ -168,39 +167,44 @@
                 
                         </form>
                     </div>
+		
 
-        <table border="1px" >
+       <table border="1px" >
             <tr class = tr>
                 <th>번호</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>작성일</th>
+                <th>상태</th>
+                <th>업체</th>
+                <th>채용정보</th>
+                <th>마감일</th>
                 <th>조회</th>
             </tr>
             <tr>
                 <td>3</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
-                <td>24.04.09</td>
+                <td class = "text_box_c_Einfo1">모집중</td>
+                <td>정석수학학원</td>
+                <td>고등 1학년 수학 (공통수학)만 지도 가능한 …</td>
+                <td>2024.04.09 12:00</td>
                 <td>160</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
-                <td>24.04.09</td>
+                <td>3</td>
+                <td class = "text_box_c_Einfo1">모집중</td>
+                <td>(주)삼성전자</td>
+                <td>2025 상반기 (주)삼성전자 대학원(석사) 신…</td>
+                <td>2024.04.09 12:00</td>
                 <td>160</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
-                <td>24.04.09</td>
+                <td>3</td>
+                <td class = "text_box_c_Einfo2">마감</td>
+                <td>(주)삼성전자</td>
+                <td>2025 상반기 (주)삼성전자 대학원(석사) 신…</td>
+                <td>2024.04.09 12:00</td>
                 <td>160</td>
             </tr>
+
             
         </table>
-
 		
 		<div class ="downlayout">
 		<button type="button" class = btn_pagecontroller>
@@ -225,7 +229,7 @@
 			<img src = "/static/images/btn-last-page.png" alt="마지막" onclick="">														
 		</button>         
         </div>
-    </main>
+</main>
     <footer>
         <div class="footer-link-container">
             <div class="footer-link">

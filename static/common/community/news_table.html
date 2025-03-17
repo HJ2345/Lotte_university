@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/style/common/table.css">
-    <link rel="stylesheet" href="/static/style/common/_footer.css"/>
     <script src="/static/js/header.js"></script>
     <title>Education</title>
 </head>
@@ -138,13 +137,13 @@
                             <div class="side-link">공지사항</div>
                         </a>
                         <a href="#">
-                            <div class="side-link">뉴스 및 칼럼</div>
+                            <div class="side-link selected-link">뉴스 및 칼럼</div>
                         </a>
                         <a href="#">
                             <div class="side-link">취업정보</div>
                         </a>
                         <a href="#">
-                            <div class="side-link selected-link">자유게시판</div>
+                            <div class="side-link">자유게시판</div>
                         </a>
                         <a href="#">
                             <div class="side-link">질문과 답변</div>
@@ -155,7 +154,7 @@
                     </div>
                 </aside>
                 <div class="Education-container">
-                    <h4>자유게시판</h4>
+                    <h4>뉴스 및 칼럼</h4>
 
                     <div class ="uplayout">
                         <form class="search-box">
@@ -169,9 +168,10 @@
                         </form>
                     </div>
 
-        <table border="1px" >
+       <table border="1px" class = "inner-table-news">
             <tr class = tr>
                 <th>번호</th>
+                <th>구분</th>
                 <th>제목</th>
                 <th>작성자</th>
                 <th>작성일</th>
@@ -179,28 +179,38 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td class = "text_box_c_news1">칼럼</td>
+                <td>정원호(식품자원경제) 교수, 시론 - 4차 산업 시대 …</td>
+                <td>정원호</td>
                 <td>24.04.09</td>
                 <td>160</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td>3</td>
+                <td class = "text_box_c_news1">칼럼</td>
+                <td>주윤정(법학전문대학원), 교수, 기고 - 인공지능, …</td>
+                <td>주윤정</td>
                 <td>24.04.09</td>
                 <td>160</td>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td>3</td>
+                <td class = "text_box_c_news2">뉴스</td>
+                <td>그린대, ‘2024년 2학기 늘봄학교 초1 맞춤형 프로…</td>
+                <td>홍보실</td>
+                <td>24.04.09</td>
+                <td>160</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class = "text_box_c_news1">칼럼</td>
+                <td>김동헌(의학) 명예교수, 세상읽기 - 절대로 포기하…</td>
+                <td>김동헌</td>
                 <td>24.04.09</td>
                 <td>160</td>
             </tr>
             
         </table>
-
 		
 		<div class ="downlayout">
 		<button type="button" class = btn_pagecontroller>

@@ -144,10 +144,10 @@
                             <div class="side-link">취업정보</div>
                         </a>
                         <a href="#">
-                            <div class="side-link selected-link">자유게시판</div>
+                            <div class="side-link">자유게시판</div>
                         </a>
                         <a href="#">
-                            <div class="side-link">질문과 답변</div>
+                            <div class="side-link selected-link">질문과 답변</div>
                         </a>
                         <a href="#">
                             <div class="side-link">자료실</div>
@@ -155,7 +155,7 @@
                     </div>
                 </aside>
                 <div class="Education-container">
-                    <h4>자유게시판</h4>
+                    <h4>질문과 답변</h4>
 
                     <div class ="uplayout">
                         <form class="search-box">
@@ -169,34 +169,48 @@
                         </form>
                     </div>
 
-        <table border="1px" >
+        <table border="1px" class = "inner-table-qna" >
             <tr class = tr>
                 <th>번호</th>
                 <th>제목</th>
                 <th>작성자</th>
                 <th>작성일</th>
-                <th>조회</th>
+                <th>상태</th>
             </tr>
             <tr>
-                <td>3</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
+                <td>5</td>
+                <td><img src="/static/images/ico-lock.png" alt="자물쇠" class="photos">문의드립니다.</td>
                 <td>홍길동</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(255, 0, 0, 1);">답변대기</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>취업 진로 상담</td>
+                <td>홍길동</td>
+                <td>24.04.09</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
+            </tr>
+            <tr class = tr1>
+                <td>3</td>
+                <td><img src="/static/images/ico-reply.png" alt="re" class="photos">RE : [답변] 취업 진로 상담</td>
+                <td>담당자</td>
+                <td>24.04.09</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
+                <td><img src="/static/images/ico-lock.png" alt="자물쇠" class="photos">취업실전전략1 일반선택 교과목 문의입니다</td>
                 <td>홍길동</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
-            <tr>
+            <tr class = tr1>
                 <td>1</td>
-                <td>2024 하반기 도서관 이용자 만족도 조사(추첨을 통해 모…</td>
-                <td>홍길동</td>
+                <td><img src="/static/images/ico-reply.png" alt="re" class="photos">RE : [답변] 취업실전전략1 일반선택 교과목 문의입니다</td>
+                <td>담당자</td>
                 <td>24.04.09</td>
-                <td>160</td>
+                <td style="color: rgba(0, 128, 0, 1);">답변완료</td>
             </tr>
             
         </table>
