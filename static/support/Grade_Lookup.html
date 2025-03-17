@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     
     <script src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/style/support/curriculum.css">
+    <link rel="stylesheet" href="/static/style/support/Grade_Lookup.css">
 
     <title>교과과정</title>
 </head>
@@ -155,156 +155,19 @@
                         </div>
                     </aside>
                     <div class="curriculum-container"> 
-                        <h4>교과과정</h4>       
-                        <div class="list">
-                            <img src="/static/images/bullet-h4.png" alt="네모">
-                            <h5>공통과목(전공)</h5>
-                        </div>
-                        <div class="table">
-                            <table cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>수준</th>
-                                        <th>코드번호</th>
-                                        <th>이수구분</th>
-                                        <th>교과목명</th>
-                                        <th>학점</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="6">1</td>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td rowspan="6">2</td>
-                                        <td>G01940</td> 
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td> 
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="list">
-                            <img src="/static/images/bullet-h4.png" alt="네모">
-                            <h5>선택과목(교양)</h5>
-                        </div>
-                        <div class="table">
-                            <table cellspacing="0">
-                                <thead>
-                                    <tr>
-                                        <th>수준</th>
-                                        <th>코드번호</th>
-                                        <th>이수구분</th>
-                                        <th>교과목명</th>
-                                        <th>학점</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="6">1</td>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                         <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                    <tr>
-                                        <td>G01940</td>
-                                        <td>공통</td>
-                                        <td>C언어</td>
-                                        <td>3</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <h4>성적조회</h4>       
+                    </div>
+                    <div class="gradeSelect">
+                        <form action="#">
+                            <select class="select year">
+                                <option value="">2025</option>
+                                <option value="">2024</option>
+                            </select>
+                            <select class="select grade">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                            </select>
+                        </form>
                     </div>
                 </div>
             </div>
