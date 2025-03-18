@@ -35,7 +35,7 @@
                         <nav>
                             <div class="item">
                                 대학소개
-                                <div cl     ">
+                                <div class="dropdown">
                                     <div>
                                         <a href="#">총장 인사말</a>
                                         <a href="#">교육이념</a>
@@ -160,11 +160,13 @@
                             <img src="/static/images/bullet-h4.png" alt="네모">
                             <h5>기본정보</h5>
                         </div>
-                        <div>
+                        <div class="table-container">
                             <table cellspacing="0" class="table information">
                                 <tbody>
                                     <tr>
                                         <td rowspan="5"><img src="/static/images/icon-avatar.png" alt="증명사진"></td>
+                                    </tr>
+                                    <tr>
                                         <td>학번</td>
                                         <td>202001230</td>
                                         <td>학과</td>
@@ -186,7 +188,7 @@
                                         <td>학년/학기</td>
                                         <td>3학년 / 1학기</td>
                                         <td>상태</td>
-                                        <td><span>재학중</span></td>
+                                        <td><span class="status">재학중</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -196,8 +198,8 @@
                             <img src="/static/images/bullet-h4.png" alt="네모">
                             <h5>취득학점현황</h5>
                         </div>
-                        <div>
-                            <table cellspacing="0" class="table">
+                        <div class="table-container">
+                            <table cellspacing="0" class="table gradeStat">
                                 <thead>
                                     <tr>
                                         <th>구분</th>
@@ -223,14 +225,15 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="description">- 각 괄호안의 숫자는 이수 과목수</p>
                         </div>
 
                         <div class="list">
                             <img src="/static/images/bullet-h4.png" alt="네모">
                             <h5>년도/학기별 취득학점현황</h5>
                         </div>
-                        <div>
-                            <table cellspacing="0" class="table">
+                        <div class="table-container">
+                            <table cellspacing="0" class="table dateGradeStat">
                                 <thead>
                                     <tr>
                                         <th>년도</th>

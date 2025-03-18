@@ -211,12 +211,15 @@ aside h3 {
     font-weight: 500;
     color: #145074;
 }
+.table-container {
+    margin-bottom: 60px;
+}
 
 .table {
     width: 930px;
     height: auto;
     margin-top: 10px;
-    margin-bottom: 80px;
+    margin-bottom: 10px;
     border-top: 2px solid #071f4b;
     box-sizing: border-box;
     text-align: center;
@@ -234,23 +237,26 @@ aside h3 {
     box-sizing: border-box;
 }
 
-.table:nth-of-type(2) th {
-    width: 116.25px;
+.information tr:not(:nth-child(1)) > td:nth-child(1) {
+    background: #F4F8FC;
+    font-size: 16px;
+    font-weight: 500;
 }
-
-.table:nth-child(3) th {
-    width: 93px;
+.information tr > td:nth-child(3) {
+    background: #F4F8FC;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .table th:last-child {
-    border-width: 0 0 1px 0;
-    border-style: solid;
-    border-color: #dedede;
+    border-bottom: 1px solid #dedede;
+    border-right: none;
     box-sizing: border-box;
 }
-
-.table td {
+.information tr > td {
     width: 186px;
+}
+.table td {
     height: 50px;
     font-weight: 350;
     font-size: 16px;
@@ -262,7 +268,6 @@ aside h3 {
 }
 
 .table td:last-child {
-    width: 182.38px;
     height: 50px;
     border-width: 0 0 1px 0;
     border-style: solid;
@@ -287,7 +292,23 @@ aside h3 {
     margin-top: 4px;
     margin-left: 7px;
 }
+.status {
+    font-size: 16px;
+    font-weight: 350;
+    color: #198515;
+}
+.description {
+    color: #666666;
+    font-weight: 350;
+    font-size: 16px;
+}
+.gradeStat tr > td {
+    width: 116.25px;
+}
 
+.dateGradeStat tr > td {
+    width: 93px;
+}
 
 /* --------- footer start --------- */
 footer > div > * {
