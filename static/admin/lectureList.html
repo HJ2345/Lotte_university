@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/static/style/admin/lectureList.css">
+    <title>강의 목록</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="topMenuBar">
+                <ul class="topMenus">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+            <div class="header-background">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="/static/images/admin_logo.png" alt="그린대학교" class="logo">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="sidebar">
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-setting.png" alt="환경설정" class="side-icon">
+                            <p class="side-title">환경설정</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">기본환경정보</a></li>
+                            <li><a href="#">약관관리</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-academic.png" alt="학사운영" class="side-icon">
+                            <p class="side-title">학사운영</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">교육 운영 현황</a></li>
+                            <li><a href="#">학년별 학생 현황</a></li>
+                            <li><a href="#">학과별 학생 현황</a></li>
+                            <li><a href="#">강의 목록</a></li>
+                            <li><a href="#">강의 등록</a></li>
+                            <li><a href="#">수강 현황</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-persons.png" alt="인사관리" class="side-icon">
+                            <p class="side-title">인사관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">학생 목록 및 등록</a></li>
+                            <li><a href="#">교수 목록 및 등록</a></li>
+                            <li><a href="#">임직원 목록 및 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-college.png" alt="대학 및 학과" class="side-icon">
+                            <p class="side-title">대학 및 학과</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">대학 및 학과 목록</a></li>
+                            <li><a href="#">대학 및 학과 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-board.png" alt="게시판관리" class="side-icon">
+                            <p class="side-title">게시판관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">입학안내 공지사항</a></li>
+                            <li><a href="#">학사안내 공지사항</a></li>
+                            <li><a href="#">커뮤니티 공지사항</a></li>
+                            <li><a href="#">입학상담</a></li>
+                            <li><a href="#">질문 및 답변</a></li>
+                            <li><a href="#">식단안내</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="main-header">
+                        <h3>강의 목록</h3>
+                        <div class="location">
+                            <p>학사운영</p>
+                            <img src="/static/images/bg-link-arr-over.png" alt="">
+                            <p class="current-location">강의 목록</p>
+                        </div>
+                    </div>
+                    <div class="select-container">
+                        <form action="#">
+                            <select name="type">
+                                <option value="#" disabled selected>검색조건</option>
+                                <option value="#">학과</option>
+                                <option value="#">과목코드</option>
+                                <option value="#">강의명</option>
+                                <option value="#">학년</option>
+                                <option value="#">담당교수</option>
+                                <option value="#">구분</option>
+                                <option value="#">학점</option>
+                                <option value="#">강의장</option>
+                                <option value="#">수강인원</option>
+                                <option value="#">수강률</option>
+                            </select>
+                            <input type="text" placeholder="키워드를 입력하세요.">
+                            <button type="submit" class="searchBtn">검색</button>
+                        </form>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>과목코드</th>
+                                <th>학과</th>
+                                <th>학년</th>
+                                <th>구분</th>
+                                <th>과목명</th>
+                                <th>교수</th>
+                                <th>학점</th>
+                                <th>수업시간</th>
+                                <th>강의실</th>
+                                <th>최대 수강 인원</th>
+                            </tr>
+                            <tr>
+                                <td>3025112</td>
+                                <td>컴퓨터공학과</td>
+                                <td>1</td>
+                                <td>전공선택</td>
+                                <td>프로그래밍 개론</td>
+                                <td>김컴공</td>
+                                <td>3</td>
+                                <td>월, 수 10:00 ~ 12:00</td>
+                                <td>컴퓨터실</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>3025112</td>
+                                <td>컴퓨터공학과</td>
+                                <td>1</td>
+                                <td>전공선택</td>
+                                <td>프로그래밍 개론</td>
+                                <td>김컴공</td>
+                                <td>3</td>
+                                <td>월, 수 10:00 ~ 12:00</td>
+                                <td>컴퓨터실</td>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <td>3025112</td>
+                                <td>컴퓨터공학과</td>
+                                <td>1</td>
+                                <td>전공선택</td>
+                                <td>프로그래밍 개론</td>
+                                <td>김컴공</td>
+                                <td>3</td>
+                                <td>월, 수 10:00 ~ 12:00</td>
+                                <td>컴퓨터실</td>
+                                <td>30</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="paging-container">
+                        <a href="#" class="mr-3">
+                            <img src="/static/images/btn-first-page.png" alt="첫페이지">
+                        </a>
+                        <a href="#" class="mr-10">
+                            <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+                        </a>
+
+                        <a href="#" class="mr-3">
+                            <button class="selected">1</button>
+                        </a>
+                        <a href="#" class="mr-3">
+                            <button>2</button>
+                        </a>
+                        <a href="#" class="mr-10">
+                            <button>3</button>
+                        </a>
+
+                        <a href="#" class="mr-3">
+                            <img src="/static/images/btn-next-page.png" alt="이전페이지">
+                        </a>
+                        <a href="#">
+                            <img src="/static/images/btn-last-page.png" alt="이전페이지">
+                        </a>
+                    </div>
+                </div>
+            </div>  
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

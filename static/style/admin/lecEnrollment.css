@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font: normal 12px "Noto Sans KR";
+    font: normal 13px "Noto Sans KR";
 }
 a {
     text-decoration: none;
@@ -167,15 +167,6 @@ main > * {
     color: #145074;
 }
 
-.oneline-two-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.oneline-two-title > div {
-    display: flex;
-    align-items: center;
-}
 .main-title > div > img {
     margin-right: 5px;
     margin-top: 2px;
@@ -186,97 +177,136 @@ main > * {
     font-weight: 400;
     color: #145074;
 }
-.viewmore {
-    margin-top: 4px;
-}
+
 table {
     border-collapse: collapse;
+    width: 100%;
+    border-top: 2px solid #8798A3;
 }
-th {
-    border-top: 1px solid black;
-    border-bottom: 1px solid #A3A3A3;
-    background-color: #FAFAFA;
-    color: #333;
-    font-size: 13px;
-    font-weight: 700;
-    text-align: center;
-    height: 45px;
-}
-td {
-    border-bottom: 1px solid #A3A3A3;
-    color: #333;
-    font-size: 13px;
+table tr > td {
+    width: 217px;
+    height: 48px;
+    border: 1px solid #e5e5e5;
     font-weight: 350;
-    text-align: center;
-    height: 45px;
+    color: #111;
 }
-.table-container {
+table tr > td:nth-child(1) {
+    background: #FAFAFA;
+    text-align: center;
+}
+table tr > td:nth-child(2) {
+    width: 290px;
+    padding-left: 10px;
+}
+table tr > td:nth-child(3) {
+    background: #FAFAFA;
+    text-align: center;
+}
+table tr > td:nth-child(4) {
+    width: 360px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.basicInfo tr:last-child > td {
+    height: 143px;
+}
+.basicInfo {
     margin-bottom: 20px;
 }
-tr:last-child > td {
-    border-bottom: 1px solid #D8D8D8;
-}
-.tables {
-    width: 100%;
-}
-.oneline-two-container {
-    display: flex;
-    justify-content: space-between;
-}
-.oneline-two-container > div:nth-child(1) {
-    flex: 1;
-    margin-right: 10px;
-}
-.oneline-two-container > div:nth-child(2) {
-    flex: 1;
-    margin-left: 10px;
-}
-.answer-status {
-    font-size: 14px;
-    font-weight: 350;
-    color: white;
-}
-.wating-answer {
-    color: #CD3631;
-}
-.answer-complete {
-    color: #207918;
-}
-
-/* ------ 테이블 사이즈 ------ */
-
-.univ-manage-stat tr > td {
-    width: 136px;
-}
-.stat-students-grade tr > td {
-    width: 133px;
-}
-.stat-students-dep tr > td {
-    width: 133px;
-}
-.edc-stat tr > td:nth-child(1), td:nth-child(3) {
+select {
+    background: url("/static/images/btn-sel-open01.png") no-repeat right 12px center;
     width: 150px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #959595;
+    color: #333;
+    font-weight: 350;
+    padding-left: 10px;
+    appearance: none;
 }
-.edc-stat tr > td:not(:nth-child(1), :nth-child(3)) {
-    width: 90px;
+option {
+    color: #333;
+    font-weight: 350;
 }
-.aca-notice tr > td:nth-child(1) {
-    width: 73px;
+input {
+    color: #333;
+    font-weight: 350;
+    padding-left: 6px;
+    box-sizing: border-box;
+    border: 1px solid #959595;
+    outline: none;
 }
-.aca-notice tr > td:nth-child(2) {
-    width: 230px;
+textarea {
+    width: 426px;
+    height: 126px;
+    margin-top: 5px;
+    padding: 6px;
+    color: #333;
+    font-weight: 350;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #959595;
 }
-.aca-notice tr > td:not(:nth-child(1), :nth-child(2)) {
-    width: 90px;
+label {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
 }
-.counseling tr > td:nth-child(1) {
-    width: 73px;
+button {
+    width: 100px;
+    height: 33px;
+    border: 1px solid #08305A;
+    background: #1A528E;
+    margin-top: 15px;
+    color: white;
+    float: right;
+    cursor: pointer;
 }
-.counseling tr > td:nth-child(2) {
-    width: 230px;
+.professorName {
+    width: 150px;
+    height: 35px;
+    
 }
-.counseling tr > td:not(:nth-child(1), :nth-child(2)) {
-    width: 90px;
+.lectureName {
+    width: 426px;
+    height: 33px;
+}
+.date {
+    width: 150px;
+    height: 35px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+.time {
+    width: 150px;
+    height: 35px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+.day {
+    display: inline-block;
+    align-content: center;
+}
+.day > div {
+    display: flex;
+    align-items: center;
+    font-weight: 350;
+    color: #111;
+}
+.day > div > input {
+    margin-left: 8px;
+    margin-right: 3px;
+    margin-top: 1px;
+}
+.evaluation, .book {
+    width: 450px;
+    height: 33px;
+}
+.lectureRoom, .maxPeople {
+    width: 200px;
+    height: 33px;
 }
 /* --------- main end --------- */
 
