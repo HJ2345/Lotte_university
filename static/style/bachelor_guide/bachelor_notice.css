@@ -1,0 +1,148 @@
+.enterance-container {
+  width: 100%;
+  margin: 8px 0 0 50px;
+}
+.enterance-container h4 {
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 2px solid #222;
+  margin-bottom: 31px;
+  padding-bottom: 20.8px;
+}
+
+.searchForm {
+  display: flex;
+  justify-content: right;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.selectType {
+  background-color: white;
+  background: url("/static/images/btn-sel-open01.png") no-repeat right 12px
+    center;
+  width: 150px;
+  padding: 9px 0 10px 10px;
+  border: 1px solid #dedede;
+  font-size: 15px;
+  font-weight: 350;
+  color: #666;
+  box-sizing: border-box;
+  appearance: none;
+  margin-right: 8px;
+}
+.selectType:focus {
+  outline: none;
+}
+.selectTypes {
+  font-size: 15px;
+  font-weight: 350;
+  color: #666;
+}
+.searchWord {
+  border: 1px solid #dedede;
+  width: 237px;
+  padding: 10px 0 10px 10px;
+  font-size: 15px;
+  font-weight: 350;
+  color: #666;
+  appearance: none;
+  box-sizing: border-box;
+}
+.searchWord:focus {
+  outline: none;
+}
+.searchBtn {
+  background: #3f97f6;
+  border: none;
+  width: 70px;
+  color: white;
+  font-size: 15px;
+  font-weight: 350;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-top: 2px solid black;
+  border-collapse: collapse;
+}
+
+table tr > th {
+  font-size: 16px;
+  font-weight: 700;
+  height: 61px;
+  background: #fafafa;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+td img {
+  margin-right: 8px;
+}
+
+table tr > th:nth-child(1) {
+  width: 79.98px;
+}
+table tr > th:nth-child(2) {
+  width: 490px;
+}
+table tr > th:nth-child(3) {
+  width: 170px;
+}
+table tr > th:nth-child(4) {
+  width: 119.98px;
+}
+table tr > th:nth-child(5) {
+  width: 70.03px;
+}
+table tr > td {
+  width: 90px;
+  height: 61px;
+  font-size: 16px;
+  font-weight: 350;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.appBtn {
+  padding: 5px 6px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 350;
+  background: #092e71;
+  cursor: pointer;
+}
+.paging-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+.paging-container > a {
+  color: #888;
+}
+.paging-container > a > img {
+  padding: 10px;
+  border: 1px solid #dedede;
+}
+.paging-container > a > span {
+  padding: 3px 11px;
+  border: 1px solid #dedede;
+  font-size: 15px;
+  font-weight: 350;
+}
+.mb-2 {
+  margin-bottom: 2px;
+}
+.mr-3 {
+  margin-right: 3px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.selected {
+  background: #3f97f6;
+  color: white;
+}
