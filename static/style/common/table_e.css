@@ -184,47 +184,25 @@
 
 
 /* 각 버튼 스타일 */
-.text_box_c_Einfo1{
-    width: 45.13px;               
-    height: 30px;              
-    background: rgba(32, 160, 183, 1);
-    
-    font-family: 'Noto Sans KR';  
-    font-weight: 100;            
-    font-size: 12px;             
-    line-height: 100%;           
-    letter-spacing: 0%;           
-    
-    text-align: center;          
-     
-    
-    display: flex;               
-    justify-content: center;      
-    align-items: center;         
-    color: white;
-    margin: 0 auto;      
+
+.btn-status1 {
+  font-size: 14px;
+  font-weight: 45;
+  padding: 8px 10px;
+  color: white;
 }
 
-        
-       
-.text_box_c_Einfo2 {
-    width: 34.09px;            
-    height: 25px;                
-    background: rgba(155, 154, 154, 1); 
-    
-    font-family: 'Noto Sans KR';  
-    font-weight: 350;            
-    font-size: 12px;              
-    line-height: 100%;           
-    letter-spacing: 0%;          
-    
-    text-align: center;          
-    vertical-align: middle;       
-    
-    display: flex;               
-    justify-content: center;      
-    align-items: center;        
-    
-    color: white;     
-    margin: 0 auto;                  
+.btn-status2 {
+  font-size: 14px;
+  font-weight: 34;
+  padding: 6px 9px;
+  color: white;
+}
+
+.btn-end {
+  background-color: #9B9A9A;
+}
+.btn-complete {
+  background-color: #20A0B7;
+
 }
