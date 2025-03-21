@@ -194,6 +194,7 @@ aside h3 {
 
 .map-all {
     display: flex;
+    margin-top: 50px;
 }
 
 .main-map {
@@ -204,25 +205,31 @@ aside h3 {
     box-sizing: border-box;
 }
 
+.main-map iframe {
+    width: 465px;
+    border-radius: 0 0 0 10%;
+    box-sizing: border-box;
+}
+
 .map-info {
     width: 50%;
     border: 0 solid #cfcfcf;
     border-width: 1px 1px 1px 0;
     border-radius: 0 10% 0 0;
     box-sizing: border-box;
-    background: #f1f1f1;
+    background: #ffffff;
 }
 
 .map-info > h3 {
     margin: 40px 0 0 30px;
     font-size: 30px;
     font-weight: 600;
-    color: #015ab9;
+    color: #3f97f6;
 }
 
 .map-info div {
     display: flex;
-    margin: 30px 0 30px 30px;
+    margin: 40px 0 30px 30px;
 }
 
 .map-info div:last-child {
