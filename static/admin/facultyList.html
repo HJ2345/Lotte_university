@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/static/style/admin/facultyList.css">
+    <title>교수 목록</title>
+</head>
+<body>
+    <div id="wrapp er">
+        <header>
+            <div class="topMenuBar">
+                <ul class="topMenus">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+            <div class="header-background">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="/static/images/admin_logo.png" alt="그린대학교" class="logo">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="sidebar">
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-setting.png" alt="환경설정" class="side-icon">
+                            <p class="side-title">환경설정</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">기본환경정보</a></li>
+                            <li><a href="#">약관관리</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-academic.png" alt="학사운영" class="side-icon">
+                            <p class="side-title">학사운영</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">교육 운영 현황</a></li>
+                            <li><a href="#">학년별 학생 현황</a></li>
+                            <li><a href="#">학과별 학생 현황</a></li>
+                            <li><a href="#">강의 목록</a></li>
+                            <li><a href="#">강의 등록</a></li>
+                            <li><a href="#">수강 현황</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-persons.png" alt="인사관리" class="side-icon">
+                            <p class="side-title">인사관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">학생 목록 및 등록</a></li>
+                            <li><a href="#">교수 목록 및 등록</a></li>
+                            <li><a href="#">임직원 목록 및 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-college.png" alt="대학 및 학과" class="side-icon">
+                            <p class="side-title">대학 및 학과</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">대학 및 학과 목록</a></li>
+                            <li><a href="#">대학 및 학과 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-board.png" alt="게시판관리" class="side-icon">
+                            <p class="side-title">게시판관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">입학안내 공지사항</a></li>
+                            <li><a href="#">학사안내 공지사항</a></li>
+                            <li><a href="#">커뮤니티 공지사항</a></li>
+                            <li><a href="#">입학상담</a></li>
+                            <li><a href="#">질문 및 답변</a></li>
+                            <li><a href="#">식단안내</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="main-header">
+                        <h3>교수 목록</h3>
+                        <div class="location">
+                            <p>인사관리</p>
+                            <img src="/static/images/bg-link-arr-over.png" alt="">
+                            <p class="current-location">교수 목록</p>
+                        </div> 
+                    </div>
+                    <div class="select-container">
+                        <form action="#">
+                            <select name="type">
+                                <option value="#" disabled selected>검색조건</option>
+                                <option value="#">교수번호</option>
+                                <option value="#">이름</option>
+                                <option value="#">주민번호</option>
+                                <option value="#">휴대폰</option>
+                                <option value="#">이메일</option>
+                                <option value="#">학과</option>
+                                <option value="#">직위</option>
+                                <option value="#">재직여부</option>
+                                <option value="#">임용일</option>
+                            </select>
+                            <input type="text" placeholder="키워드를 입력하세요.">
+                            <button type="submit" class="searchBtn">검색</button>
+                        </form>
+                    </div>
+                    <div class="table-container">
+                        <table>
+                            <tr>
+                                <th>교수번호</th>
+                                <th>이름</th>
+                                <th>주민번호</th>
+                                <th>휴대폰</th>
+                                <th>이메일</th>
+                                <th>학과</th>
+                                <th>직위</th>
+                                <th>재직여부</th>
+                                <th>임용일</th>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td> 
+                                <td>정교수</td>
+                                <td class="green">재직중</td> 
+                                <td>2025-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td> 
+                                <td>부교수</td>
+                                <td class="green">재직중</td> 
+                                <td>2025-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td> 
+                                <td>조교수</td>
+                                <td class="green">재직중</td> 
+                                <td>2025-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td> 
+                                <td>정교수</td>
+                                <td class="yellow">휴직</td> 
+                                <td>2025-01-01</td>
+                            </tr>
+                            <tr>
+                                <td>202001230</td>
+                                <td>홍길동</td>
+                                <td>900103-1234567</td>
+                                <td>010-1234-1001</td>
+                                <td>hong1001@naver.com</td>
+                                <td>컴퓨터공학과</td> 
+                                <td>정교수</td>
+                                <td class="red">퇴직</td> 
+                                <td>2025-01-01</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="paging-container">
+                        <a href="#" class="mr-3">
+                            <img src="/static/images/btn-first-page.png" alt="첫페이지">
+                        </a>
+                        <a href="#" class="mr-10">
+                            <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+                        </a>
+
+                        <a href="#" class="mr-3">
+                            <button class="selected">1</button>
+                        </a>
+                        <a href="#" class="mr-3">
+                            <button>2</button>
+                        </a>
+                        <a href="#" class="mr-10">
+                            <button>3</button>
+                        </a>
+
+                        <a href="#" class="mr-3">
+                            <img src="/static/images/btn-next-page.png" alt="이전페이지">
+                        </a>
+                        <a href="#">
+                            <img src="/static/images/btn-last-page.png" alt="이전페이지">
+                        </a>
+                    </div>
+                </div>
+            </div>  
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
