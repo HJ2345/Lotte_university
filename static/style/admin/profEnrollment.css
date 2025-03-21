@@ -184,35 +184,109 @@ table {
     border-top: 2px solid #8798A3;
 }
 table tr > td {
-    width: 217px;
-    height: 48px;
+    height: 46px;
     border: 1px solid #e5e5e5;
     font-weight: 350;
     color: #111;
 }
-table tr > td:nth-child(1) {
-    background: #FAFAFA;
-    text-align: center;
-}
-table tr > td:nth-child(2) {
-    width: 290px;
-    padding-left: 10px;
-}
-table tr > td:nth-child(3) {
-    background: #FAFAFA;
-    text-align: center;
-}
-table tr > td:nth-child(4) {
-    width: 360px;
-    box-sizing: border-box;
-    padding-left: 10px;
-}
-.basicInfo tr:last-child > td {
-    height: 143px;
-}
 .basicInfo {
     margin-bottom: 20px;
 }
+.basicInfo tr > td:nth-child(1) {
+    width: 163px;
+    text-align: center;
+}
+.basicInfo tr:not(:nth-child(1)) > td:nth-child(1) {
+    width: 163px;
+    background-color: #fafafa;
+}
+.basicInfo tr:not(:last-child) > td:nth-child(2) {
+    width: 300px;
+}
+.basicInfo tr:not(:last-child) > td:nth-child(4) {
+    width: 300px;
+}
+.basicInfo tr:not(:last-child) > td:nth-child(3) {
+    width: 163px;
+    background-color: #fafafa;
+    text-align: center;
+}
+.basicInfo tr:last-child > td:nth-child(2) {
+    text-align: center;
+    background-color: #fafafa;
+}
+.basicInfo tr:nth-child(2) > td:nth-child(2) {
+    padding-left: 10px;
+}
+.basicInfo tr:last-child > td:last-child {
+    box-sizing: border-box;
+    padding: 5px 0;
+}
+.basicInfo tr:last-child > td:last-child > input {
+    display: block;
+}
+.basicInfo tr:last-child > td:last-child > input:not(:first-child) {
+    width: 400px;
+    height: 33px;
+}
+.basicInfo tr:last-child > td:last-child > input:not(:last-child) {
+    margin-bottom: 3px;
+}
+.width-onehundfifty {
+    width: 150px;
+    height: 33px;
+}
+.width-twohund {
+    width: 200px;
+    height: 33px
+}
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+.checkbox > input {
+    margin-right: 5px;
+    appearance: none;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #767676;
+    border-radius: 15px;
+}
+.checkbox > input:checked {
+    background-image: url(/static/images/bu_h5.png);
+    background-repeat: none;
+    background-position: center;
+    background-size: 15px;
+}
+.country {
+    margin-left: 10px;
+}
+.academicInfo tr > td {
+    height: 48px;
+}
+.academicInfo tr > td > select:first-child {
+    margin-left: 10px;
+}
+.academicInfo tr > td:nth-child(1) {
+    width: 163px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+.academicInfo tr > td:nth-child(2) {
+    width: 381px;
+}
+.academicInfo tr > td:nth-child(3) {
+    width: 163px;
+    background-color: #FAFAFA;
+    text-align: center;
+}
+.academicInfo tr > td:nth-child(4) {
+    width: 381px;
+}
+.selectDate {
+    padding-right: 7px;
+}
+
 select {
     background: url("/static/images/btn-sel-open01.png") no-repeat right 12px center;
     width: 150px;
@@ -231,22 +305,11 @@ option {
 input {
     color: #333;
     font-weight: 350;
+    margin-left: 10px;
     padding-left: 6px;
     box-sizing: border-box;
     border: 1px solid #959595;
     outline: none;
-}
-textarea {
-    width: 426px;
-    height: 126px;
-    margin-top: 5px;
-    padding: 6px;
-    color: #333;
-    font-weight: 350;
-    resize: none;
-    outline: none;
-    box-sizing: border-box;
-    border: 1px solid #959595;
 }
 label {
     -webkit-user-select:none;
@@ -265,50 +328,7 @@ button {
     cursor: pointer;
     font-weight: 350;
 }
-.professorName {
-    width: 150px;
-    height: 35px;
-    
-}
-.lectureName {
-    width: 426px;
-    height: 33px;
-}
-.date {
-    width: 150px;
-    height: 35px;
-    padding-right: 5px;
-    box-sizing: border-box;
-}
-.time {
-    width: 150px;
-    height: 35px;
-    padding-right: 5px;
-    box-sizing: border-box;
-}
-.day {
-    display: inline-block;
-    align-content: center;
-}
-.day > div {
-    display: flex;
-    align-items: center;
-    font-weight: 350;
-    color: #111;
-}
-.day > div > input {
-    margin-left: 8px;
-    margin-right: 3px;
-    margin-top: 1px;
-}
-.evaluation, .book {
-    width: 450px;
-    height: 33px;
-}
-.lectureRoom, .maxPeople {
-    width: 200px;
-    height: 33px;
-}
+
 /* --------- main end --------- */
 
 /* --------- footer start --------- */
