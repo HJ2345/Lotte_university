@@ -11,7 +11,6 @@ li {
     list-style: none;
 }
 body {
-    overflow-x: hidden; /* 가로 스크롤 추가 */
     min-width: 1200px; /* 최소 너비 유지 */
 }
 
@@ -183,19 +182,18 @@ aside h3 {
 .org-container {
     width: 100%;
     margin: 8px 0 50px 50px;
-}
+  }
 .org-container h4 {
     font-size: 26px;
     font-weight: 700;
     border-bottom: 2px solid #222;
     margin-bottom: 31px;
     padding-bottom: 20.8px;
-}
-
-.org-container img {
+  }
+  
+  .org-container img {
     margin-top: 20px;
-}
-
+  }
 
 /* --------- footer start --------- */
 footer > div > * {
@@ -273,14 +271,4 @@ footer > div > * {
   select:focus {
     outline: none;
   }
-.gallery-container {
-  width: 100%;
-  margin: 8px 0 0 50px;
-}
-.gallery-container h4 {
-  font-size: 26px;
-  font-weight: 700;
-  border-bottom: 2px solid #222;
-  margin-bottom: 31px;
-  padding-bottom: 20.8px;
-}
+  
