@@ -189,101 +189,55 @@ table tr > td {
     font-weight: 350;
     color: #111;
 }
-.basicInfo {
-    margin-bottom: 20px;
-}
-.basicInfo tr > td:nth-child(1) {
-    width: 163px;
+.univInfo tr > td:first-child {
+    width: 217px;
+    height: 46px;
     text-align: center;
+    background: #fafafa;
 }
-.basicInfo tr:not(:nth-child(1)) > td:nth-child(1) {
-    width: 163px;
-    background-color: #fafafa;
-}
-.basicInfo tr:not(:last-child) > td:nth-child(2) {
-    width: 300px;
-}
-.basicInfo tr:not(:last-child) > td:nth-child(4) {
-    width: 300px;
-}
-.basicInfo tr:not(:last-child) > td:nth-child(3) {
-    width: 163px;
-    background-color: #fafafa;
-    text-align: center;
-}
-.basicInfo tr:last-child > td:nth-child(2) {
-    text-align: center;
-    background-color: #fafafa;
-}
-.basicInfo tr:nth-child(2) > td:nth-child(2) {
-    padding-left: 10px;
-}
-.basicInfo tr:last-child > td:last-child {
-    box-sizing: border-box;
-    padding: 5px 0;
-}
-.basicInfo tr:last-child > td:last-child > input {
+.univInfo tr:last-child > td > *:not(:last-child) {
     display: block;
-}
-.basicInfo tr:last-child > td:last-child > input:not(:first-child) {
-    width: 400px;
-    height: 33px;
-}
-.basicInfo tr:last-child > td:last-child > input:not(:last-child) {
+    width: 426px;
     margin-bottom: 3px;
 }
-.width-onehundfifty {
+.univInfo tr:last-child > td > input:first-child {
+    margin-top: 3px;
+    height: 33px;
+}
+.uploadFileBox > input {
+    padding: 5px;
+    margin-right: 5px;
+}
+.deptInfo tr > td:first-child {
+    width: 217px;
+    height: 48px;
+    text-align: center;
+    background: #fafafa;
+}
+.deptInfo tr:first-child > td:nth-child(2) {
+    padding-left: 10px;
+}
+.deptInfo tr > td:nth-child(3) {
+    width: 217px;
+    height: 48px;
+    text-align: center;
+    background: #fafafa;
+}
+.w-150 {
     width: 150px;
     height: 33px;
 }
-.width-twohund {
+.w-200 {
     width: 200px;
+    height: 33px;
+}
+.w-300 {
+    width: 300px;
     height: 33px
 }
-.checkbox {
-    display: flex;
-    align-items: center;
+.selectDate {
+    padding-right: 7px;
 }
-.checkbox > input {
-    margin-right: 5px;
-    appearance: none;
-    width: 13px;
-    height: 13px;
-    border: 1px solid #767676;
-    border-radius: 15px;
-}
-.checkbox > input:checked {
-    background-image: url(/static/images/bu_h5.png);
-    background-repeat: none;
-    background-position: center;
-    background-size: 15px;
-}
-.country {
-    margin-left: 10px;
-}
-.academicInfo tr > td {
-    height: 48px;
-}
-.academicInfo tr > td > select:first-child {
-    margin-left: 10px;
-}
-.academicInfo tr > td:nth-child(1) {
-    width: 163px;
-    background-color: #FAFAFA;
-    text-align: center;
-}
-.academicInfo tr > td:nth-child(2) {
-    width: 381px;
-}
-.academicInfo tr > td:nth-child(3) {
-    width: 163px;
-    background-color: #FAFAFA;
-    text-align: center;
-}
-.academicInfo tr > td:nth-child(4) {
-    width: 381px;
-}
-
 select {
     background: url("/static/images/btn-sel-open01.png") no-repeat right 12px center;
     width: 150px;
@@ -293,11 +247,20 @@ select {
     color: #333;
     font-weight: 350;
     padding-left: 10px;
+    margin-left: 10px;
     appearance: none;
 }
 option {
     color: #333;
     font-weight: 350;
+}
+textarea {
+    resize: none;
+    margin-left: 10px;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 126px;
+    outline: none;
 }
 input {
     color: #333;

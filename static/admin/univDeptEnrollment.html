@@ -54,7 +54,7 @@
                             <li><a href="#">학년별 학생 현황</a></li>
                             <li><a href="#">학과별 학생 현황</a></li>
                             <li><a href="#">강의 목록</a></li>
-                            <li><a href="#">강의 등록</a></li>
+                            <li><a href="/static/admin/lecEnrollment.html">강의 등록</a></li>
                             <li><a href="#">수강 현황</a></li>
                         </ul>
                     </div>
@@ -64,8 +64,8 @@
                             <p class="side-title">인사관리</p>
                         </a>
                         <ul>
-                            <li><a href="#">학생 목록 및 등록</a></li>
-                            <li><a href="#">교수 목록 및 등록</a></li>
+                            <li><a href="/static/admin/stdEnrollment.html">학생 목록 및 등록</a></li>
+                            <li><a href="/static/admin/profEnrollment.html">교수 목록 및 등록</a></li>
                             <li><a href="#">임직원 목록 및 등록</a></li>
                         </ul>
                     </div>
@@ -76,7 +76,7 @@
                         </a>
                         <ul>
                             <li><a href="#">대학 및 학과 목록</a></li>
-                            <li><a href="#">대학 및 학과 등록</a></li>
+                            <li><a href="/static/admin/univDeptEnrollment.html">대학 및 학과 등록</a></li>
                         </ul>
                     </div>
                     <div class="side-container">
@@ -114,22 +114,22 @@
                                 <tr>
                                     <td>대학명</td>
                                     <td>
-                                        <input type="text" name="univName" placeholder="예) 인문사회대학">
+                                        <input type="text" name="univName" class="w-300" placeholder="예) 인문사회대학">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>대학 영문명</td>
                                     <td>
-                                        <input type="text" name="univEngName" placeholder="예) Humanities And Social Sciences">
+                                        <input type="text" name="univEngName" class="w-300" placeholder="예) Humanities And Social Sciences">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>대학 소개</td>
                                     <td>
                                         <input type="text" name="univIntroTitle" placeholder="대학 소개 제목 입력">
-                                        <textarea name="univIntroContent" placeholder="대학 소개 내용 입력">
+                                        <textarea name="univIntroContent" placeholder="대학 소개 내용 입력"></textarea>
                                         <div class="uploadFileBox">
-                                            <input type="file" name="univIntroFile">
+                                            <input type="file" name="univIntroFile" class="w-200">
                                             <span style="color: #BC2E13;">대학·대학원 소개 페이지 출력 이미지(320 x 240) 첨부</span>
                                         </div>
                                     </td>
@@ -150,7 +150,7 @@
                                     <td style="color: #BC2E13;">고유 2자리 숫자 자동 생성</td>
                                     <td>단과대학</td>
                                     <td>
-                                        <select>
+                                        <select class="w-150">
                                             <option value="#" disabled selected>선택</option>
                                             <option value="#">인문대학</option>
                                             <option value="#">사회과학대학</option>
@@ -169,64 +169,40 @@
                                             <option value="#">교양대학</option>
                                         </select>
                                     </td>
-                                    <td>졸업년도</td>
+                                </tr>
+                                <tr>
+                                    <td>학과명</td>
                                     <td>
-                                        <select>
-                                            <option value="#" disabled selected>선택</option>
-                                            <option value="#">2027</option>
-                                            <option value="#">2028</option>
-                                            <option value="#">2029</option>
-                                            <option value="#">2030</option>
-                                        </select>
+                                        <input type="text" name="deptName" class="w-200" placeholder="학과명 입력">
+                                    </td>
+                                    <td>영문명</td>
+                                    <td>
+                                        <input type="text" name="deptEngName" class="w-200" placeholder="학과 공식 영문 이름">
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>입학구분</td>
+                                    <td>설립연도</td>
                                     <td>
-                                        <select>
-                                            <option value="#">수시</option>
-                                            <option value="#">정시</option>
-                                        </select>
+                                        <input type="date" class="selectDate w-200">
                                     </td>
-                                    <td>입학학과(전공)</td>
+                                    <td>학과장</td>
                                     <td>
-                                        <select id="category" onchange="updateOptions()">
-                                            <option value="" disabled selected>선택하세요</option>
-                                            <option value="humanitiesSociety">인문사회대학</option>
-                                            <option value="naturalScience">자연과학대학</option>
-                                            <option value="engineering">공과대학</option>
-                                            <option value="education">사범대학</option>
-                                            <option value="graduate">대학원</option>
-                                        </select>
-                                        <select id="item">
-                                            <option value="#"></option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>입학학년/학기</td>
-                                    <td>
-                                        <select>
-                                            <option value="#">1학년</option>
-                                            <option value="#">2학년</option>
-                                            <option value="#">3학년</option>
-                                            <option value="#">4학년</option>
-                                        </select>
-                                        <select>
-                                            <option value="#">1학기</option>
-                                            <option value="#">2학기</option>
-                                            <option value="#">3학기</option>
-                                            <option value="#">4학기</option>
-                                        </select>
-                                    </td>
-                                    <td>지도교수</td>
-                                    <td>
-                                        <select>
+                                        <select class="w-150">
                                             <option value="#" disabled selected>선택</option>
                                             <option value="#">이순신</option>
                                             <option value="#">강감찬</option>
                                             <option value="#">장보고</option>
                                         </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>학과 연락처</td>
+                                    <td>
+                                        <input type="text" name="deptHp" class="w-200" placeholder="학과 연락처 입력">
+                                    </td>
+                                    <td>학과 사무실</td>
+                                    <td>
+                                        <input type="text" name="deptOffice" class="w-200" placeholder="인문관 3층 306호">
                                     </td>
                                 </tr>
                             </table>
