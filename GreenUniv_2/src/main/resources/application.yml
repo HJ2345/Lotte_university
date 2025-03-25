@@ -1,0 +1,36 @@
+logging:
+    file:
+        name: GreenUniv.log
+        path: /logs
+    level:
+        org:
+            hibernate:
+                orm:
+                    jdbc:
+                        bind: trace
+        root: info
+server:
+    port: 8080
+    servlet:
+        context-path: /
+spring:
+    application:
+        name: GreenUniv
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 1234
+        url: jdbc:mysql://127.0.0.1:3306/greenUniv
+        username: root
+    devtools:
+        livereload:
+            enabled: true
+    jpa:
+        database: mysql
+        hibernate:
+            ddl-auto: update
+            naming:
+                physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        properties:
+            hibernate:
+                format_sql: true
+                show_sql: true

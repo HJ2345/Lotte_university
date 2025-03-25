@@ -11,9 +11,9 @@
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/static/js/swiper.js"></script>
+    <script th:src="@{/js/swiper.js}"></script>
 
-    <link rel="stylesheet" href="/static/style/index.css">
+    <link rel="stylesheet" th:href="@{/style/index.css}">
     <title>그린대학교</title>
 </head>
 <body>
@@ -31,7 +31,7 @@
             <div>
                 <div class="category">
                     <a href="#">
-                        <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                        <img th:src="@{/images/header_logo.png}" alt="그린대학교" class="logo">
                     </a>
                     <div class="nav-container">
                         <nav>
@@ -128,7 +128,7 @@
                         <p class="bgtext-light">급변하는 컴퓨터 기술의 발전에 선도적으로 참여하고 컴퓨터의 활용을 통하여 미래를 만들어 나갈 수 있는 인력을 배양</p>
                         <a href="#" class="shortcut">
                             학과소개 바로가기
-                            <img src="/static/images/bg-link-arr.png" alt="학과소개 바로가기" class="shortcut-icon">
+                            <img th:src="@{/images/bg-link-arr.png}" alt="학과소개 바로가기" class="shortcut-icon">
                         </a>
                     </div>
                     <div class="swiper-slide slide slide2">
@@ -137,7 +137,7 @@
                         <p class="bgtext-light">4차 산업혁명의 핵심 기술인 인공지능, 로봇 제어, 자동화 시스템을 연구하여 산업과 생활 속에서 혁신을 이끌어 나갈 창의적인 인재를 배양</p>
                         <a href="#" class="shortcut">
                             학과소개 바로가기
-                            <img src="/static/images/bg-link-arr.png" alt="학과소개 바로가기" class="shortcut-icon">
+                            <img th:src="@{/images/bg-link-arr.png}" alt="학과소개 바로가기" class="shortcut-icon">
                         </a>
                     </div>
                     <div class="swiper-slide slide slide3">
@@ -146,7 +146,7 @@
                         <p class="bgtext-light">국어와 한국 문학을 탐구하며 창의적 사고와 비판적 분석 능력을 키우고, 다양한 미디어 환경에서 활용할 수 있는 언어 전문가를 양성</p>
                         <a href="#" class="shortcut">
                             학과소개 바로가기
-                            <img src="/static/images/bg-link-arr.png" alt="학과소개 바로가기" class="shortcut-icon">
+                            <img th:src="@{/images/bg-link-arr.png}" alt="학과소개 바로가기" class="shortcut-icon">
                         </a>
                     </div>
                 </div>
@@ -160,7 +160,7 @@
                     <div class="content-header guide-header">
                         <span class="content-title">학사안내</span>
                         <a href="#">
-                            <img src="/static/images/bg-viewmore01.png" alt="더보기">
+                            <img th:src="@{/images/bg-viewmore01.png}" alt="더보기">
                         </a>
                     </div>
                     <ul>
@@ -175,7 +175,7 @@
                     <div class="content-header notice-header">
                         <span class="content-title">공지사항</span>
                         <a href="#">
-                            <img src="/static/images/bg-viewmore02.png" alt="더보기">
+                            <img th:src="@{/images/bg-viewmore02.png}" alt="더보기">
                         </a>
                     </div>
                     <ul>
@@ -192,31 +192,31 @@
                 <div class="gallery-header">
                     <span class="content-title">PHOTO GALLERY</span>
                     <a href="#">
-                        <img src="/static/images/bg-viewmore01.png" alt="더보기">
+                        <img th:src="@{/images/bg-viewmore01.png}" alt="더보기">
                     </a>
                 </div>
                 <div class="frame-container">
                     <div class="frame">
                         <a href="#">
-                            <img src="/static/images/gallary_sample1.jpg" alt="샘플이미지" class="photos">
+                            <img th:src="@{/images/gallary_sample1.jpg}" alt="샘플이미지" class="photos">
                             <div class="frame-title">글로벌 명문대학 그린대학교</div>
                         </a>
                     </div>
                     <div class="frame">
                         <a href="#">
-                            <img src="/static/images/gallary_sample2.jpg" alt="샘플이미지" class="photos">
+                            <img th:src="@{/images/gallary_sample2.jpg}" alt="샘플이미지" class="photos">
                             <div class="frame-title">글로벌 명문대학 그린대학교</div>
                         </a>
                     </div>
                     <div class="frame">
                         <a href="#">
-                            <img src="/static/images/gallary_sample3.jpg" alt="샘플이미지" class="photos">
+                            <img th:src="@{/images/gallary_sample3.jpg}" alt="샘플이미지" class="photos">
                             <div class="frame-title">글로벌 명문대학 그린대학교</div>
                         </a>
                     </div>
                     <div class="frame">
                         <a href="#">
-                            <img src="/static/images/gallary_sample4.png" alt="샘플이미지" class="photos">
+                            <img th:src="@{/images/gallary_sample4.png}" alt="샘플이미지" class="photos">
                             <div class="frame-title">글로벌 명문대학 그린대학교</div>
                         </a>
                     </div>
@@ -240,7 +240,7 @@
                     <div class="content-header news-header">
                         <span class="content-title">뉴스 및 칼럼</span>
                         <a href="#">
-                            <img src="/static/images/bg-viewmore01.png" alt="더보기">
+                            <img th:src="@{/images/bg-viewmore01.png}" alt="더보기">
                         </a>
                     </div>
                     <ul>
@@ -259,31 +259,31 @@
                         <ul class="smart-links">
                             <li>
                                 <a href="#" class="link-icons">
-                                    <img src="/static/images/bg-main-link01.png" alt="입학안내">
+                                    <img th:src="@{/images/bg-main-link01.png}" alt="입학안내">
                                     <p>입학안내</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="link-icons">
-                                    <img src="/static/images/bg-main-link02.png" alt="학사일정">
+                                    <img th:src="@{/images/bg-main-link02.png}" alt="학사일정">
                                     <p>학사일정</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="link-icons">
-                                    <img src="/static/images/bg-main-link03.png" alt="학생회">
+                                    <img th:src="@{/images/bg-main-link03.png}" alt="학생회">
                                     <p>학생회</p> 
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="link-icons">
-                                    <img src="/static/images/bg-main-link04.png" alt="교과과정">
+                                    <img th:src="@{/images/bg-main-link04.png}" alt="교과과정">
                                     <p>교과과정</p>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="link-icons">
-                                    <img src="/static/images/bg-main-link05.png" alt="취업안내">
+                                    <img th:src="@{/images/bg-main-link05.png}" alt="취업안내">
                                     <p>취업안내</p>
                                 </a>
                             </li>
@@ -309,7 +309,7 @@
             </div>
             <div class="copyright">
                 <div class="copyright-container">
-                    <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
+                    <img th:src="@{/images/footer_logo.png}" alt="그린대학교" class="footer-logo">
                     <div class="footer-text-container">
                         <p class="footer-text">
                             그린대학교<br>
