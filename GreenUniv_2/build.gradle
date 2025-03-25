@@ -7,6 +7,13 @@ plugins {
 group = 'kr.co.greenuniv'
 version = '0.0.1-SNAPSHOT'
 
+// application.properties 파일 참조를 위한 스크립트
+processResources {
+    filesMatching("application.yml") {
+        expand(project.properties)
+    }
+}
+
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
