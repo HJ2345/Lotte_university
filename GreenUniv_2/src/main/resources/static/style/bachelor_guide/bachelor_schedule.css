@@ -1,0 +1,71 @@
+.bachelor_schedule-container {
+    width: 100%;
+    margin: 8px 0 0 50px;
+  }
+  .bachelor_schedule-container h4 {
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    margin-bottom: 31px;
+    padding-bottom: 20.8px;
+  }
+  
+  .cal_header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 70px;
+    margin-top: 45px;
+    margin-bottom: 32px;
+  }
+  
+  .cal_header > img:nth-child(1) {
+    width: 12px;
+    height: 30px;
+  }
+  
+  .cal_header > img:nth-child(3) {
+    width: 12px;
+    height: 30px;
+  }
+  
+  .meal_cal {
+    width: 119px;
+    height: 47px;
+    font-weight: 500px;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #084A87;
+  }
+  
+  table {
+    width: 930px;
+    height: 427.5px;
+    text-align: center;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+table th {
+  color: white;
+  background-color: #084a87;
+  height: 43px; 
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+table td {
+  height: 141px; 
+  text-align: left; 
+  vertical-align: top; 
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 350;
+}
+  
+
+  

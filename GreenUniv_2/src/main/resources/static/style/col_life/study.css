@@ -1,0 +1,72 @@
+/*
+    이름 : 최명기
+    날짜 : 2025/03/21
+    내용 : 동아리/스터디 컨텐츠 디자인
+*/
+.study-contianer {
+  width: 100%;
+  margin: 8px 0 0 50px;
+}
+.study-contianer h4 {
+  font-size: 26px;
+  font-weight: 700;
+  border-bottom: 2px solid #222;
+  margin-bottom: 31px;
+  padding-bottom: 20.8px;
+}
+
+.box_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  margin-bottom: 40px;
+}
+
+.box1 {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  height: 250px;
+  border: 1px solid #e7e7e7;
+  gap: 30px;
+}
+
+.box2 {
+  display: flex;
+  align-items: center;
+  width: 450px;
+  height: 250px;
+  border: 1px solid #e7e7e7;
+  gap: 30px;
+}
+
+.box_img {
+  width: 195px;
+  height: 210px;
+}
+
+.side_box {
+  display: flex; /* flex 사용 */
+  flex-direction: column; /* 위아래 배치 */
+  justify-content: space-between; /* 위(맨처음) 아래(맨끝)로 밀기 */
+  height: 200px; /* 높이 설정 */
+  padding: 10px; /* 내부 여백 */
+}
+
+.side_box > p {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #181818;
+  line-height: 1;
+  padding-bottom: 22px;
+}
+
+.side_box > button {
+  width: 118px;
+  height: 34px;
+  color: #fff;
+  background-color: #a2cbea;
+  border: 1px solid #a2cbea;
+  font-size: 14px;
+}

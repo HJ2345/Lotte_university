@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="/static/js/daumPostCode.js"></script>
+    <script src="/static/js/checkOne.js"></script>
+    <script src="/static/js/selectDept.js"></script>
+    <link rel="stylesheet" href="/static/style/admin/stdEnrollment.css">
+    <title>학생 등록</title>
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="topMenuBar">
+                <ul class="topMenus">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">로그아웃</a></li>
+                </ul>
+            </div>
+            <div class="header-background">
+                <div class="header-logo">
+                    <a href="#">
+                        <img src="/static/images/admin_logo.png" alt="그린대학교" class="logo">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="main-container">
+                <div class="sidebar">
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-setting.png" alt="환경설정" class="side-icon">
+                            <p class="side-title">환경설정</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">기본환경정보</a></li>
+                            <li><a href="#">약관관리</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-academic.png" alt="학사운영" class="side-icon">
+                            <p class="side-title">학사운영</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">교육 운영 현황</a></li>
+                            <li><a href="#">학년별 학생 현황</a></li>
+                            <li><a href="#">학과별 학생 현황</a></li>
+                            <li><a href="#">강의 목록</a></li>
+                            <li><a href="/static/admin/lecEnrollment.html">강의 등록</a></li>
+                            <li><a href="#">수강 현황</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-persons.png" alt="인사관리" class="side-icon">
+                            <p class="side-title">인사관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="/static/admin/stdEnrollment.html">학생 목록 및 등록</a></li>
+                            <li><a href="/static/admin/profEnrollment.html">교수 목록 및 등록</a></li>
+                            <li><a href="#">임직원 목록 및 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-college.png" alt="대학 및 학과" class="side-icon">
+                            <p class="side-title">대학 및 학과</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">대학 및 학과 목록</a></li>
+                            <li><a href="/static/admin/univDeptEnrollment.html">대학 및 학과 등록</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-container">
+                        <a href="#">
+                            <img src="/static/images/ico-admin-board.png" alt="게시판관리" class="side-icon">
+                            <p class="side-title">게시판관리</p>
+                        </a>
+                        <ul>
+                            <li><a href="#">입학안내 공지사항</a></li>
+                            <li><a href="#">학사안내 공지사항</a></li>
+                            <li><a href="#">커뮤니티 공지사항</a></li>
+                            <li><a href="#">입학상담</a></li>
+                            <li><a href="#">질문 및 답변</a></li>
+                            <li><a href="#">식단안내</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="main-header">
+                        <h3>학생 등록</h3>
+                        <div class="location">
+                            <p>인사관리</p>
+                            <img src="/static/images/bg-link-arr-over.png" alt="">
+                            <span class="current-location">학생 등록</span>
+                        </div>
+                    </div>
+                    <form action="#">
+                        <div class="table-container">
+                            <div class="main-title">
+                                <img src="/static/images/bullet-h4.png" alt="before">
+                                <p>기본정보 입력</p>
+                            </div>
+                            <table class="basicInfo tables">
+                                <tr>
+                                    <td rowspan="5" class="profile">
+                                        <img src="/static/images/icon-avatar.png" alt="프로필사진">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>학번</td>
+                                    <td style="color: #BC2E13;">연도 + 학과 코드 + 순번 조합 자동생성</td>
+                                    <td>주민등록번호</td>
+                                    <td>
+                                        <input type="text" name="jumin" class="jumin width-twohund" placeholder="- 포함 14자리 입력">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>이름</td>
+                                    <td>
+                                        <input type="text" name="stdName" class="width-onehundfifty" placeholder="학생 이름 입력">
+                                    </td>
+                                    <td>영문명</td>
+                                    <td>
+                                        <input type="text" name="stdEngName" class="width-twohund" placeholder="여권 등과 동일한 영문 이름">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>성별</td>
+                                    <td>
+                                        <div class="checkbox">
+                                            <input type="checkbox" name="male" id="male" class="checked" onclick="checkOnlyOne(this)">
+                                            <label for="male">남</label>
+                                            
+                                            <input type="checkbox" name="female" id="female" class="checked" onclick="checkOnlyOne(this)">
+                                            <label for="female">여</label>
+                                        </div>
+                                    </td>
+                                    <td>국적</td>
+                                    <td>
+                                        <select name="country" class="country">
+                                            <option value="#" disabled selected>선택</option>
+                                            <option value="#">한국</option>
+                                            <option value="#">미국</option>
+                                            <option value="#">일본</option>
+                                            <option value="#">중국</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>휴대폰</td>
+                                    <td>
+                                        <input type="text" class="width-onehundfifty" placeholder="휴대폰 번호 입력" name="hp">
+                                    </td>
+                                    <td>이메일</td>
+                                    <td>
+                                        <input type="email" class="width-onehundfifty" placeholder="이메일 입력" name="email">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>주소</td>
+                                    <td class="address" colspan="3">
+                                        <input type="text" name="zip" id="postcode" class="width-onehundfifty" placeholder="우편번호 선택" readonly onclick="DaumPostcode()">
+                                        <input type="text" class="addrs" id="address" name="addr1" placeholder="기본주소 선택" readonly>
+                                        <input type="text" class="addrs" id="detailAddress" name="addr2" placeholder="상세주소 입력">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="table-container">
+                            <div class="main-title">
+                                <img src="/static/images/bullet-h4.png" alt="before">
+                                <p>학적정보 입력</p>
+                            </div>
+                            <table class="academicInfo tables">
+                                <tr>
+                                    <td>입학년도</td>
+                                    <td>
+                                        <select>
+                                            <option value="#" disabled selected>선택</option>
+                                            <option value="#">2025</option>
+                                            <option value="#">2026</option>
+                                        </select>
+                                    </td>
+                                    <td>졸업년도</td>
+                                    <td>
+                                        <select>
+                                            <option value="#" disabled selected>선택</option>
+                                            <option value="#">2027</option>
+                                            <option value="#">2028</option>
+                                            <option value="#">2029</option>
+                                            <option value="#">2030</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>입학구분</td>
+                                    <td>
+                                        <select>
+                                            <option value="#">수시</option>
+                                            <option value="#">정시</option>
+                                        </select>
+                                    </td>
+                                    <td>입학학과(전공)</td>
+                                    <td>
+                                        <select id="category" onchange="updateOptions()">
+                                            <option value="" disabled selected>선택하세요</option>
+                                            <option value="humanitiesSociety">인문사회대학</option>
+                                            <option value="naturalScience">자연과학대학</option>
+                                            <option value="engineering">공과대학</option>
+                                            <option value="education">사범대학</option>
+                                            <option value="graduate">대학원</option>
+                                        </select>
+                                        <select id="item">
+                                            <option value="#"></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>입학학년/학기</td>
+                                    <td>
+                                        <select>
+                                            <option value="#">1학년</option>
+                                            <option value="#">2학년</option>
+                                            <option value="#">3학년</option>
+                                            <option value="#">4학년</option>
+                                        </select>
+                                        <select>
+                                            <option value="#">1학기</option>
+                                            <option value="#">2학기</option>
+                                            <option value="#">3학기</option>
+                                            <option value="#">4학기</option>
+                                        </select>
+                                    </td>
+                                    <td>지도교수</td>
+                                    <td>
+                                        <select>
+                                            <option value="#" disabled selected>선택</option>
+                                            <option value="#">이순신</option>
+                                            <option value="#">강감찬</option>
+                                            <option value="#">장보고</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button type="submit">등록</button>
+                    </form>
+                </div>
+            </div>  
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+

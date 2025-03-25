@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 13px "Noto Sans KR";
+}
+a {
+    text-decoration: none;
+}
+ul, li {
+    list-style: none;
+}
+body {
+    overflow-x: hidden; /* 가로 스크롤 추가 */
+    min-width: 1200px; /* 최소 너비 유지 */
+}
+
+/* --------- header start --------- */
+header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.topMenuBar {
+    width: 100%;
+    background-color: #00518C;
+}
+.topMenus {
+    height: 28px;
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+.topMenus li {
+    display: inline;
+}
+.topMenus li > a {
+    color: white;
+    font-size: 12px;
+    border-right: 1px solid #4D85AE;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-weight: 350;
+}
+.topMenus li:last-child > a {
+    border: none;
+    padding-right: 0;
+}
+.header-background {
+    background-color: #1F2838;
+    padding: 17px 0;
+}
+/* --------- header end --------- */
+
+/* --------- main start --------- */
+main {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+.main-container {
+    display: flex;
+}
+.sidebar {
+    display: flex;
+    width: 270px;
+    flex-direction: column;
+    background-color: #EAEAEA;
+    border-left: 1px solid #C0C0C0;
+    padding-bottom: 20px;
+}
+.side-icon {
+    width: 20px;
+    margin-right: 5px;
+}
+.side-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #222;
+}
+.side-container {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.side-container > a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.side-container ul > li {
+    margin-bottom: 10px;
+}
+.side-container ul > li:last-child {
+    margin-bottom: 10px;
+}
+.side-container ul > li > a {
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: 350;
+    color: #111;
+}
+.side-container ul > li > a::before {
+    content: "·";
+    margin-right: 5px;
+}
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.main-header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #C0C0C0;
+}
+.location {
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+}
+.location > p {
+    font-size: 14px;
+    font-weight: 350;
+}
+.location > img {
+    width: 4px;
+    height: 6px;
+    margin: 3px 7px 0 7px;
+}
+.current-location {
+    font-size: 14px;
+    font-weight: 350;
+    color: #145074;
+}
+.main-header > h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.main-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.main-title > img {
+    margin-right: 5px;
+    margin-top: 2px;
+    height: 16px;
+}
+.main-title > p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #145074;
+}
+
+.main-title > div > img {
+    margin-right: 5px;
+    margin-top: 2px;
+    height: 16px;
+}
+.main-title > div > p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #145074;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-top: 2px solid #8798A3;
+}
+table tr > td {
+    width: 217px;
+    height: 48px;
+    border: 1px solid #e5e5e5;
+    font-weight: 350;
+    color: #111;
+}
+table tr > td:nth-child(1) {
+    background: #FAFAFA;
+    text-align: center;
+}
+table tr > td:nth-child(2) {
+    width: 290px;
+    padding-left: 10px;
+}
+table tr > td:nth-child(3) {
+    background: #FAFAFA;
+    text-align: center;
+}
+table tr > td:nth-child(4) {
+    width: 360px;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+.basicInfo tr:last-child > td {
+    height: 143px;
+}
+.basicInfo {
+    margin-bottom: 20px;
+}
+select {
+    background: url("/static/images/btn-sel-open01.png") no-repeat right 12px center;
+    width: 150px;
+    height: 35px;
+    outline: none;
+    border: 1px solid #959595;
+    color: #333;
+    font-weight: 350;
+    padding-left: 10px;
+    appearance: none;
+}
+option {
+    color: #333;
+    font-weight: 350;
+}
+input {
+    color: #333;
+    font-weight: 350;
+    padding-left: 6px;
+    box-sizing: border-box;
+    border: 1px solid #959595;
+    outline: none;
+}
+textarea {
+    width: 426px;
+    height: 126px;
+    margin-top: 5px;
+    padding: 6px;
+    color: #333;
+    font-weight: 350;
+    resize: none;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid #959595;
+}
+label {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+button {
+    width: 100px;
+    height: 33px;
+    border: 1px solid #08305A;
+    background: #1A528E;
+    margin-top: 15px;
+    color: white;
+    float: right;
+    cursor: pointer;
+    font-weight: 350;
+}
+.professorName {
+    width: 150px;
+    height: 35px;
+    
+}
+.lectureName {
+    width: 426px;
+    height: 33px;
+}
+.date {
+    width: 150px;
+    height: 35px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+.time {
+    width: 150px;
+    height: 35px;
+    padding-right: 5px;
+    box-sizing: border-box;
+}
+.day {
+    display: inline-block;
+    align-content: center;
+}
+.day > div {
+    display: flex;
+    align-items: center;
+    font-weight: 350;
+    color: #111;
+}
+.day > div > input {
+    margin-left: 8px;
+    margin-right: 3px;
+    margin-top: 1px;
+}
+.evaluation, .book {
+    width: 450px;
+    height: 33px;
+}
+.lectureRoom, .maxPeople {
+    width: 200px;
+    height: 33px;
+}
+/* --------- main end --------- */
+
+/* --------- footer start --------- */
+footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+footer > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+.footer-container {
+    background-color: #19202D;
+    padding: 21.5px 0;
+}
+.footer-container > p {
+    font-size: 12px;
+    font-weight: 350;
+    color: white;
+}
+/* --------- footer end --------- */

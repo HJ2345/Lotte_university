@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    
+    <script src="/static/js/header.js"></script>
+    <link rel="stylesheet" href="/static/style/support/lectureRegister.css">
+
+    <title>수강신청</title>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- header side -->
+        <header>
+            <div class="topMenuBar">
+                <ul class="topMenus">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">학생지원</a></li>
+                </ul>
+            </div>
+            <div>
+                <div class="category">
+                    <a href="#">
+                        <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                    </a>
+                    <div class="nav-container">
+                        <nav>
+                            <div class="item">
+                                대학소개
+                                <div class="dropdown">
+                                    <div>
+                                        <a href="#">총장 인사말</a>
+                                        <a href="#">교육이념</a>
+                                        <a href="#">연혁</a>
+                                        <a href="#">조직도</a>
+                                        <a href="#">오시는길</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                입학안내
+                                <div class="dropdown">
+                                    <div>
+                                        <a href="#">공지사항</a>
+                                        <a href="#">수시모집</a>
+                                        <a href="#">정시모집</a>
+                                        <a href="#">편입학</a>
+                                        <a href="#">입학상담</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                대학·대학원
+                                <div class="dropdown">
+                                    <div>
+                                        <a href="#">인문사회대학</a>
+                                        <a href="#">자연과학대학</a>
+                                        <a href="#">공과대학</a>
+                                        <a href="#">사범대학</a>
+                                        <a href="#">대학원</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                학사안내
+                                <div class="dropdown">
+                                    <div>
+                                        <a href="#">공지사항</a>
+                                        <a href="#">학사일정</a>
+                                        <a href="#">수강신청</a>
+                                        <a href="#">성적</a>
+                                        <a href="#">수료 및 졸업</a>
+                                        <a href="#">자주묻는질문</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                대학생활
+                                <div class="dropdown">
+                                    <div>
+                                        <a href="#">학생회소개</a>
+                                        <a href="#">동아리/스터디</a>
+                                        <a href="#">식단안내</a>
+                                        <a href="#">갤러리</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                커뮤니티
+                                <div class="dropdown">
+                                    <div>
+                                        <a href="#">공지사항</a>
+                                        <a href="#">뉴스 및 칼럼</a>
+                                        <a href="#">취업정보</a>
+                                        <a href="#">자유게시판</a>
+                                        <a href="#">질문과 답변</a>
+                                        <a href="#">자료실</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="location-container">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <img src="/static/images/ico-home.png" alt="home" class="ico-home">
+                            </a>
+                        </li>
+                        <li>
+                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <a href="#">학생지원</a>
+                        </li>
+                        <li>
+                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <a href="#" class="this-location">수강신청</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- header end -->
+        <main>
+            <div class="main-container">
+                <div>
+                    <aside>
+                        <h3>학생지원</h3>
+                        <div class="side-link-container">
+                            <a href="#">
+                                <div class="side-link selected-link">수강신청</div>
+                            </a>
+                            <a href="#">
+                                <div class="side-link">수강신청내역</div>
+                            </a>
+                            <a href="#">
+                                <div class="side-link">나의교육과정</div>
+                            </a>
+                            <a href="#">
+                                <div class="side-link">성적조회</div>
+                            </a>
+                            <a href="#">
+                                <div class="side-link">학적</div>
+                            </a>
+                        </div>
+                    </aside>
+                    <div class="lectureRegister-container"> 
+                        <h4>수강신청</h4>       
+                        <div>
+                            <form action="#" class="searchForm">
+                                <select name="search" class="selectType">
+                                    <option value="#" disabled selected class="selectTypes">선택</option>
+                                    <option value="#" class="selectTypes">학년</option>
+                                    <option value="#" class="selectTypes">과목명</option>
+                                    <option value="#" class="selectTypes">담당교수</option>
+                                </select>
+                                <input type="text" placeholder="검색어를 입력해 주세요." class="searchWord">
+                                <button type="submit" class="searchBtn">검색</button>
+                            </form>
+                            <table>
+                                <tr>
+                                    <th>개설학과</th>
+                                    <th>구분</th>
+                                    <th>학년</th>
+                                    <th>코드</th>
+                                    <th>과목명</th>
+                                    <th>학점</th>
+                                    <th>담당교수</th>
+                                    <th>수강인원</th>
+                                    <th>비고</th>
+                                    <th>신청</th>
+                                </tr>
+                                <tr>
+                                    <td>컴퓨터공학</td>
+                                    <td>전공</td>
+                                    <td>1</td>
+                                    <td>830001</td>
+                                    <td>컴퓨터과학개론</td>
+                                    <td>3</td>
+                                    <td>김컴공</td>
+                                    <td>12/30</td>
+                                    <td></td>
+                                    <td><button type="submit" class="appBtn">신청</button></td>
+                                </tr>
+                                <tr>
+                                    <td>컴퓨터공학</td>
+                                    <td>전공</td>
+                                    <td>1</td>
+                                    <td>830001</td>
+                                    <td>컴퓨터과학개론</td>
+                                    <td>3</td>
+                                    <td>김컴공</td>
+                                    <td>12/30</td>
+                                    <td></td>
+                                    <td><button type="submit" class="appBtn">신청</button></td>
+                                </tr>
+                                <tr>
+                                    <td>컴퓨터공학</td>
+                                    <td>전공</td>
+                                    <td>1</td>
+                                    <td>830001</td>
+                                    <td>컴퓨터과학개론</td>
+                                    <td>3</td>
+                                    <td>김컴공</td>
+                                    <td>12/30</td>
+                                    <td></td>
+                                    <td><button type="submit" class="appBtn">신청</button></td>
+                                </tr>
+                                <tr>
+                                    <td>컴퓨터공학</td>
+                                    <td>전공</td>
+                                    <td>1</td>
+                                    <td>830001</td>
+                                    <td>컴퓨터과학개론</td>
+                                    <td>3</td>
+                                    <td>김컴공</td>
+                                    <td>12/30</td>
+                                    <td></td>
+                                    <td><button type="submit" class="appBtn">신청</button></td>
+                                </tr>
+                                <tr>
+                                    <td>컴퓨터공학</td>
+                                    <td>전공</td>
+                                    <td>1</td>
+                                    <td>830001</td>
+                                    <td>컴퓨터과학개론</td>
+                                    <td>3</td>
+                                    <td>김컴공</td>
+                                    <td>12/30</td>
+                                    <td></td>
+                                    <td><button type="submit" class="appBtn">신청</button></td>
+                                </tr>
+                            </table>
+                            <div class="paging-container">
+                                <a href="#" class="mr-3">
+                                    <img src="/static/images/btn-first-page.png" alt="첫페이지">
+                                </a>
+                                <a href="#" class="mr-10">
+                                    <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+                                </a>
+    
+                                <a href="#" class="mr-3 mb-2">
+                                    <span class="selected">1</span>
+                                </a>
+                                <a href="#" class="mr-3 mb-2">
+                                    <span>2</span>
+                                </a>
+                                <a href="#" class="mr-10 mb-2">
+                                    <span>3</span>
+                                </a>
+    
+                                <a href="#" class="mr-3">
+                                    <img src="/static/images/btn-next-page.png" alt="이전페이지">
+                                </a>
+                                <a href="#">
+                                    <img src="/static/images/btn-last-page.png" alt="이전페이지">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-link-container">
+                <div class="footer-link">
+                    <ul class="footer-links">
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">통합정보시스템</a></li>
+                        <li><a href="#">학사일정</a></li>
+                        <li><a href="#">주요민원 연락처</a></li>
+                        <li><a href="#">교내공지사항</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="copyright-container">
+                    <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
+                    <div class="footer-text-container">
+                        <p class="footer-text">
+                            그린대학교<br>
+                            [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
+                            입학안내 : 051-123-1302 팩스 : 051-123-333
+                        </p>
+                        <p class="footer-text text2">
+                            copyright ©Green University All rights reserved.
+                        </p>
+                    </div>
+                    <select onchange="window.open(value,'_self');" class="site">
+                        <option class="sites" value="#" disabled selected>주요사이트</option>
+                        <option class="sites" value="https://naver.com">네이버</option>
+                        <option class="sites" value="https://www.kakaocorp.com/page/">카카오</option>
+                        <option class="sites" value="https://www.line.me/ko/">라인</option>
+                        <option class="sites" value="https://www.coupang.com/">쿠팡</option>
+                        <option class="sites" value="https://www.woowahan.com/">배달의민족</option>
+                    </select>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
