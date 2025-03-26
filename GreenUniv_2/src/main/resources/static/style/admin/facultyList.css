@@ -256,9 +256,7 @@ table tr > td:nth-child(9) {
 }
 .paging-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 40px;
     box-sizing: border-box;
 }
 .paging-container > a {
@@ -285,6 +283,19 @@ table tr > td:nth-child(9) {
 }
 .mr-10 {
     margin-right: 10px;
+}
+.functionBox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.btnBox > a > button {
+    width: 100px;
+    height: 33px;
+    color: white;
+    font-weight: 350;
+    background: #1A528E;
+    cursor: pointer;
 }
 .selected {
     border: none !important;

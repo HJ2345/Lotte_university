@@ -9,10 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     
-    <script src="/static/js/daumPostCode.js"></script>
-    <script src="/static/js/checkOne.js"></script>
-    <script src="/static/js/selectDept.js"></script>
-    <link rel="stylesheet" href="/static/style/admin/stdEnrollment.css">
+    <script th:src="@{/js/daumPostCode.js}"></script>
+    <script th:src="@{/js/checkOne.js}"></script>
+    <script th:src="@{/js/selectDept.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/admin/stdEnrollment.css}">
     <title>학생 등록</title>
 </head>
 <body>
@@ -20,7 +20,7 @@
         <header>
             <div class="topMenuBar">
                 <ul class="topMenus">
-                    <li><a href="#">HOME</a></li>
+                    <li><a th:href="@{/}">HOME</a></li>
                     <li><a href="#">사이트맵</a></li>
                     <li><a href="#">로그아웃</a></li>
                 </ul>
@@ -28,7 +28,7 @@
             <div class="header-background">
                 <div class="header-logo">
                     <a href="#">
-                        <img src="/static/images/admin_logo.png" alt="그린대학교" class="logo">
+                        <img th:src="@{/images/admin_logo.png}" alt="그린대학교" class="logo">
                     </a>
                 </div>
             </div>
@@ -39,7 +39,7 @@
                 <div class="sidebar">
                     <div class="side-container">
                         <a href="#">
-                            <img src="/static/images/ico-admin-setting.png" alt="환경설정" class="side-icon">
+                            <img th:src="@{/images/ico-admin-setting.png}" alt="환경설정" class="side-icon">
                             <p class="side-title">환경설정</p>
                         </a>
                         <ul>
@@ -49,42 +49,42 @@
                     </div>
                     <div class="side-container">
                         <a href="#">
-                            <img src="/static/images/ico-admin-academic.png" alt="학사운영" class="side-icon">
+                            <img th:src="@{/images/ico-admin-academic.png}" alt="학사운영" class="side-icon">
                             <p class="side-title">학사운영</p>
                         </a>
                         <ul>
-                            <li><a href="#">교육 운영 현황</a></li>
+                            <li><a th:href="@{/admin/eduStatus}">교육 운영 현황</a></li>
                             <li><a href="#">학년별 학생 현황</a></li>
                             <li><a href="#">학과별 학생 현황</a></li>
-                            <li><a href="#">강의 목록</a></li>
-                            <li><a href="/static/admin/lecEnrollment.html">강의 등록</a></li>
-                            <li><a href="#">수강 현황</a></li>
+                            <li><a th:href="@{/admin/lectureList}">강의 목록</a></li>
+                            <li><a th:href="@{/admin/lecEnrollment}">강의 등록</a></li>
+                            <li><a th:href="@{/admin/courseStatus}">수강 현황</a></li>
                         </ul>
                     </div>
                     <div class="side-container">
                         <a href="#">
-                            <img src="/static/images/ico-admin-persons.png" alt="인사관리" class="side-icon">
+                            <img th:src="@{/images/ico-admin-persons.png}" alt="인사관리" class="side-icon">
                             <p class="side-title">인사관리</p>
                         </a>
                         <ul>
-                            <li><a href="/static/admin/stdEnrollment.html">학생 목록 및 등록</a></li>
-                            <li><a href="/static/admin/profEnrollment.html">교수 목록 및 등록</a></li>
+                            <li><a th:href="@{/admin/studentList}">학생 목록 및 등록</a></li>
+                            <li><a th:href="@{/admin/facultyList}">교수 목록 및 등록</a></li>
                             <li><a href="#">임직원 목록 및 등록</a></li>
                         </ul>
                     </div>
                     <div class="side-container">
                         <a href="#">
-                            <img src="/static/images/ico-admin-college.png" alt="대학 및 학과" class="side-icon">
+                            <img th:src="@{/images/ico-admin-college.png}" alt="대학 및 학과" class="side-icon">
                             <p class="side-title">대학 및 학과</p>
                         </a>
                         <ul>
-                            <li><a href="#">대학 및 학과 목록</a></li>
-                            <li><a href="/static/admin/univDeptEnrollment.html">대학 및 학과 등록</a></li>
+                            <li><a th:href="@{/admin/departmentList}">대학 및 학과 목록</a></li>
+                            <li><a th:href="@{/admin/univDeptEnrollment}">대학 및 학과 등록</a></li>
                         </ul>
                     </div>
                     <div class="side-container">
                         <a href="#">
-                            <img src="/static/images/ico-admin-board.png" alt="게시판관리" class="side-icon">
+                            <img th:src="@{/images/ico-admin-board.png}" alt="게시판관리" class="side-icon">
                             <p class="side-title">게시판관리</p>
                         </a>
                         <ul>
@@ -103,20 +103,20 @@
                         <h3>학생 등록</h3>
                         <div class="location">
                             <p>인사관리</p>
-                            <img src="/static/images/bg-link-arr-over.png" alt="">
+                            <img th:src="@{/images/bg-link-arr-over.png}" alt="">
                             <span class="current-location">학생 등록</span>
                         </div>
                     </div>
                     <form action="#">
                         <div class="table-container">
                             <div class="main-title">
-                                <img src="/static/images/bullet-h4.png" alt="before">
+                                <img th:src="@{/images/bullet-h4.png}" alt="before">
                                 <p>기본정보 입력</p>
                             </div>
                             <table class="basicInfo tables">
                                 <tr>
                                     <td rowspan="5" class="profile">
-                                        <img src="/static/images/icon-avatar.png" alt="프로필사진">
+                                        <img th:src="@{/images/icon-avatar.png}" alt="프로필사진">
                                     </td>
                                 </tr>
                                 <tr>
@@ -183,7 +183,7 @@
                         
                         <div class="table-container">
                             <div class="main-title">
-                                <img src="/static/images/bullet-h4.png" alt="before">
+                                <img th:src="@{/images/bullet-h4.png}" alt="before">
                                 <p>학적정보 입력</p>
                             </div>
                             <table class="academicInfo tables">
