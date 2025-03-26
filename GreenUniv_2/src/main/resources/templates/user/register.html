@@ -13,12 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
     
     <!-- Daum Address -->
-    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script th:src="@{//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js}"></script>
 
-    <script src="/static/js/header.js"></script>
-    <script src="/static/js/checkOne.js"></script>
-    <script src="/static/js/daumPostCode.js"></script>
-    <link rel="stylesheet" href="/static/style/user/register.css">
+    <script th:src="@{/js/header.js}"></script>
+    <script th:src="@{/js/checkOne.js}"></script>
+    <script th:src="@{/js/daumPostCode.js}"></script>
+    <link rel="stylesheet" th:ref="@{/style/user/register.css}">
 
     <title>회원가입 - 그린대학교</title>
 </head>
@@ -37,7 +37,7 @@
             <div>
                 <div class="category">
                     <a href="#">
-                        <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                        <img th:src="@{/images/header_logo.png}" alt="그린대학교" class="logo">
                     </a>
                     <div class="nav-container">
                         <nav>
@@ -123,15 +123,15 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="/static/images/ico-home.png" alt="home" class="ico-home">
+                                <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
                             </a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
                             <a href="#">회원</a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
                             <a href="#" class="this-location">회원가입</a>
                         </li>
                     </ul>
@@ -219,7 +219,7 @@
             </div>
             <div class="copyright">
                 <div class="copyright-container">
-                    <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
+                    <img th:src="@{/images/footer_logo.png}" alt="그린대학교" class="footer-logo">
                     <div class="footer-text-container">
                         <p class="footer-text">
                             그린대학교<br>

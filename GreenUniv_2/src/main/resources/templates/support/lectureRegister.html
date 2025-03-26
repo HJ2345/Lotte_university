@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     
-    <script th:src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/style/support/lectureRegister.css">
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/support/lectureRegister.css}">
 
     <title>수강신청</title>
 </head>
@@ -115,15 +115,15 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="/static/images/ico-home.png" alt="home" class="ico-home">
+                                <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
                             </a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
                             <a href="#">학생지원</a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
                             <a href="#" class="this-location">수강신청</a>
                         </li>
                     </ul>
@@ -243,10 +243,10 @@
                             </table>
                             <div class="paging-container">
                                 <a href="#" class="mr-3">
-                                    <img src="/static/images/btn-first-page.png" alt="첫페이지">
+                                    <img th:src="@{/images/btn-first-page.png}" alt="첫페이지">
                                 </a>
                                 <a href="#" class="mr-10">
-                                    <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+                                    <img th:src="@{/images/btn-prev-page.png}" alt="이전페이지">
                                 </a>
     
                                 <a href="#" class="mr-3 mb-2">
@@ -260,10 +260,10 @@
                                 </a>
     
                                 <a href="#" class="mr-3">
-                                    <img src="/static/images/btn-next-page.png" alt="이전페이지">
+                                    <img th:src="@{/images/btn-next-page.png}" alt="이전페이지">
                                 </a>
                                 <a href="#">
-                                    <img src="/static/images/btn-last-page.png" alt="이전페이지">
+                                    <img th:src="@{/images/btn-last-page.png}" alt="이전페이지">
                                 </a>
                             </div>
                         </div>
@@ -285,7 +285,7 @@
             </div>
             <div class="copyright">
                 <div class="copyright-container">
-                    <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
+                    <img th:src="@{/images/footer_logo.png}" alt="그린대학교" class="footer-logo">
                     <div class="footer-text-container">
                         <p class="footer-text">
                             그린대학교<br>

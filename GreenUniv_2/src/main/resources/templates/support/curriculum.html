@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     
-    <script src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/style/support/curriculum.css">
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/support/curriculum.css}">
 
     <title>교과과정</title>
 </head>
@@ -29,7 +29,7 @@
             <div>
                 <div class="category">
                     <a href="#">
-                        <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                        <img th:src="@{/images/header_logo.png}" alt="그린대학교" class="logo">
                     </a>
                     <div class="nav-container">
                         <nav>
@@ -115,15 +115,15 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="/static/images/ico-home.png" alt="home" class="ico-home">
+                                <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
                             </a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
                             <a href="#">학생지원</a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
                             <a href="#" class="this-location">교과과정</a>
                         </li>
                     </ul>
@@ -157,7 +157,7 @@
                     <div class="curriculum-container"> 
                         <h4>교과과정</h4>       
                         <div class="list">
-                            <img src="/static/images/bullet-h4.png" alt="네모">
+                            <img th:src="@{/images/bullet-h4.png}" alt="네모">
                             <h5>공통과목(전공)</h5>
                         </div>
                         <div class="table">
@@ -250,7 +250,7 @@
                             </table>
                         </div>
                         <div class="list">
-                            <img src="/static/images/bullet-h4.png" alt="네모">
+                            <img th:src="@{/images/bullet-h4.png}" alt="네모">
                             <h5>선택과목(교양)</h5>
                         </div>
                         <div class="table">
@@ -323,7 +323,7 @@
             </div>
             <div class="copyright">
                 <div class="copyright-container">
-                    <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
+                    <img th:src="@{/images/footer_logo.png}" alt="그린대학교" class="footer-logo">
                     <div class="footer-text-container">
                         <p class="footer-text">
                             그린대학교<br>
