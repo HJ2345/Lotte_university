@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" th:href="@{/style/admin/adminMain.css}">
+    <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>학사관리시스템</title>
 </head>
 <body>
@@ -24,7 +25,7 @@
         </div>
         <div class="header-background">
             <div class="header-logo">
-                <a href="#">
+                <a th:href="@{/admin/adminMain}">
                     <img th:src="@{/images/admin_logo.png}" alt="그린대학교" class="logo">
                 </a>
             </div>

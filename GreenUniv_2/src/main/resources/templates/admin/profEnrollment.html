@@ -16,6 +16,7 @@
     <script th:src="@{/js/selectDept.js}"></script>
     <script th:src="@{/js/daumPostCode.js}"></script>
     <link rel="stylesheet" th:href="@{/style/admin/profEnrollment.css}">
+    <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>교수 등록</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
             </div>
             <div class="header-background">
                 <div class="header-logo">
-                    <a href="#">
+                    <a th:href="@{/admin/adminMain}">
                         <img th:src="@{/images/admin_logo.png}" alt="그린대학교" class="logo">
                     </a>
                 </div>
