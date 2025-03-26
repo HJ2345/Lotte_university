@@ -253,8 +253,7 @@ table tr > td {
     border-radius: 15px;
 }
 .checkbox > input:checked {
-    background-image: url(/static/images/bu_h5.png);
-    background-repeat: none;
+    background-image: url(../../images/bu_h5.png);
     background-position: center;
     background-size: 15px;
 }
@@ -288,7 +287,7 @@ table tr > td {
 }
 
 select {
-    background: url("/static/images/btn-sel-open01.png") no-repeat right 12px center;
+    background: url("../../images/btn-sel-open01.png") no-repeat right 12px center;
     width: 150px;
     height: 35px;
     outline: none;
