@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     
-    <script src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/style/support/lectureRegister.css">
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/support/lectureRegister.css}">
 
     <title>수강신청</title>
 </head>
@@ -29,7 +29,7 @@
             <div>
                 <div class="category">
                     <a href="#">
-                        <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                        <img th:src="@{/images/header_logo.png}" alt="그린대학교" class="logo">
                     </a>
                     <div class="nav-container">
                         <nav>
@@ -115,7 +115,7 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="/static/images/ico-home.png" alt="home" class="ico-home">
+                                <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
                             </a>
                         </li>
                         <li>
