@@ -18,12 +18,12 @@
       rel="stylesheet"
     />
 
-    <script src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/style/common/_header.css" />
-    <link rel="stylesheet" href="/static/style/common/_header2.css" />
-    <link rel="stylesheet" href="/static/style/common/main.css" />
-    <link rel="stylesheet" href="/static/style/col_intro/edu_phil.css" />
-    <link rel="stylesheet" href="/static/style/common/_footer.css" />
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}" />
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}" />
+    <link rel="stylesheet" th:href="@{/style/common/main.css}" />
+    <link rel="stylesheet" th:href="@{/style/col_intro/edu_phil.css}" />
+    <link rel="stylesheet" th:href="@{/style/common/_footer.css}" />
 
     <title>교육이념</title>
   </head>
@@ -43,7 +43,7 @@
           <div class="category">
             <a href="#">
               <img
-                src="/static/images/header_logo.png"
+                th:src="@{/images/header_logo.png}"
                 alt="그린대학교"
                 class="logo"
               />
@@ -133,7 +133,7 @@
               <li>
                 <a href="#">
                   <img
-                    src="/static/images/ico-home.png"
+                    th:src="@{/images/ico-home.png}"
                     alt="home"
                     class="ico-home"
                   />
@@ -141,7 +141,7 @@
               </li>
               <li>
                 <img
-                  src="/static/images/btn-next-page.png"
+                  th:src="@{/images/btn-next-page.png}"
                   alt="next"
                   class="ico-next"
                 />
@@ -149,7 +149,7 @@
               </li>
               <li>
                 <img
-                  src="/static/images/btn-next-page.png"
+                  th:src="@{/images/btn-next-page.png}"
                   alt="next"
                   class="ico-next"
                 />
@@ -224,7 +224,7 @@
         <div class="copyright">
           <div class="copyright-container">
             <img
-              src="/static/images/footer_logo.png"
+              th:src="@{/images/footer_logo.png}"
               alt="그린대학교"
               class="footer-logo"
             />
