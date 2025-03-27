@@ -215,6 +215,14 @@ td:nth-child(2) {
     padding: 10px;
     border-bottom: 1px solid #dedede;
 }
+
+.auth_Button {
+    display: flex;
+    width: 100px;
+    height: 40px;
+    margin-left: 313px;
+    margin-top: -38.5px;
+}
 .addrs {
     width: 463px !important;
 }

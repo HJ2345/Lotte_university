@@ -18,7 +18,7 @@
     <script th:src="@{/js/header.js}"></script>
     <script th:src="@{/js/checkOne.js}"></script>
     <script th:src="@{/js/daumPostCode.js}"></script>
-    <link rel="stylesheet" th:ref="@{/style/user/register.css}">
+    <link rel="stylesheet" th:href="@{/style/user/register.css}">
 
     <title>회원가입 - 그린대학교</title>
 </head>
@@ -178,12 +178,14 @@
                                     <td>휴대폰<span class="required">*</span></td>
                                     <td>
                                         <input type="text" name="hp" placeholder="휴대폰 입력">
+                                        <a href="#"><img th:src="@{/images/authButton.png}" alt="인증받기" class="auth_Button"></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>이메일<span class="required">*</span></td>
                                     <td>
                                         <input type="email" name="email" placeholder="이메일 입력">
+                                        <a href="#"><img th:src="@{/images/authButton.png}" alt="인증받기" class="auth_Button"></a>
                                     </td>
                                 </tr>
                                 <tr>
