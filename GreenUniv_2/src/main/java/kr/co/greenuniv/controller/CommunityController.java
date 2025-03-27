@@ -10,7 +10,7 @@ public class CommunityController {
     @GetMapping("/community/freeBoardWrite")
     public String CommunityController() {
         return "/community/freeBoardWrite";
-
+    }
     @GetMapping("/community/community_announcement")
     public String community_announcement(){
 
