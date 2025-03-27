@@ -30,22 +30,22 @@
             <aside>
                 <h3>커뮤니티</h3>
                 <div class="side-link-container">
-                    <a href="#">
+                    <a th:href="@{/community/community_announcement}">
                         <div class="side-link">공지사항</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/news}">
                         <div class="side-link">뉴스 및 칼럼</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/Einformation}">
                         <div class="side-link">취업정보</div>
                     </a>
-                    <a href="#">
-                        <div class="side-link  selected-link">자유게시판</div>
+                    <a th:href="@{/community/Fboard}">
+                        <div class="side-link selected-link">자유게시판</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/qna}">
                         <div class="side-link">질문과 답변</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/reference}">
                         <div class="side-link">자료실</div>
                     </a>
                 </div>
@@ -100,10 +100,16 @@
 
                     <div class="paging-container">
                         <a href="#" class="mr-3">
-                            <img src="/static/images/btn-first-page.png" alt="첫페이지">
+                            <img
+                                    th:src="@{/images/btn-first-page.png}"
+                                    th:alt="첫페이지"
+                            />
                         </a>
                         <a href="#" class="mr-10">
-                            <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+                            <img
+                                    th:src="@{/images/btn-prev-page.png}"
+                                    th:alt="이전페이지"
+                            />
                         </a>
 
                         <a href="#" class="mr-3 mb-2">
@@ -117,10 +123,16 @@
                         </a>
 
                         <a href="#" class="mr-5">
-                            <img src="/static/images/btn-next-page.png" alt="이전페이지">
+                            <img
+                                    th:src="@{/images/btn-next-page.png}"
+                                    th:alt="이전페이지"
+                            />
                         </a>
                         <a href="#">
-                            <img src="/static/images/btn-last-page.png" alt="이전페이지">
+                            <img
+                                    th:src="@{/images/btn-last-page.png}"
+                                    th:alt="이전페이지"
+                            />
                         </a>
                     </div>
                 </div>

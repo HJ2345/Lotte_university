@@ -31,22 +31,22 @@
             <aside>
                 <h3>커뮤니티</h3>
                 <div class="side-link-container">
-                    <a href="#">
+                    <a th:href="@{/community/community_announcement}">
                         <div class="side-link selected-link">공지사항</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/news}">
                         <div class="side-link">뉴스 및 칼럼</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/Einformation}">
                         <div class="side-link">취업정보</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/Fboard}">
                         <div class="side-link">자유게시판</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/qna}">
                         <div class="side-link">질문과 답변</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/community/reference}">
                         <div class="side-link">자료실</div>
                     </a>
                 </div>
@@ -76,7 +76,13 @@
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td class="left"><img src="/static/images/ico-new01.gif" alt="N" class="photos">2025학년도 1학기
+                            <td class="left">
+                                <img
+                                        th:src="@{/images/ico-new01.gif}"
+                                        th:alt="N"
+                                        class="photos"
+                                />
+                                2025학년도 1학기
                                 그린장학회 장학생 신청 안내
                             </td>
                             <td>학사지원실</td>
@@ -85,7 +91,13 @@
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td class="left"><img src="/static/images/ico-new01.gif" alt="N" class="photos">제42회 학위수여식
+                            <td class="left">
+                                <img
+                                        th:src="@{/images/ico-new01.gif}"
+                                        th:alt="N"
+                                        class="photos"
+                                />
+                                제42회 학위수여식
                                 안내
                             </td>
                             <td>학사지원실</td>
@@ -94,7 +106,13 @@
                         </tr>
                         <tr>
                             <td>1</td>
-                            <td class="left"><img src="/static/images/ico-new01.gif" alt="N" class="photos">의료, 인공지능
+                            <td class="left">
+                                <img
+                                        th:src="@{/images/ico-new01.gif}"
+                                        th:alt="N"
+                                        class="photos"
+                                />
+                                의료, 인공지능
                                 융합인재 양성사업단 사업설명회
                             </td>
                             <td>학사지원실</td>
@@ -106,10 +124,16 @@
 
                     <div class="paging-container">
                         <a href="#" class="mr-3">
-                            <img src="/static/images/btn-first-page.png" alt="첫페이지">
+                            <img
+                                    th:src="@{/images/btn-first-page.png}"
+                                    th:alt="첫페이지"
+                            />
                         </a>
                         <a href="#" class="mr-10">
-                            <img src="/static/images/btn-prev-page.png" alt="이전페이지">
+                            <img
+                                    th:src="@{/images/btn-prev-page.png}"
+                                    th:alt="이전페이지"
+                            />
                         </a>
 
                         <a href="#" class="mr-3 mb-2">
@@ -123,10 +147,16 @@
                         </a>
 
                         <a href="#" class="mr-5">
-                            <img src="/static/images/btn-next-page.png" alt="이전페이지">
+                            <img
+                                    th:src="@{/images/btn-next-page.png}"
+                                    th:alt="이전페이지"
+                            />
                         </a>
                         <a href="#">
-                            <img src="/static/images/btn-last-page.png" alt="이전페이지">
+                            <img
+                                    th:src="@{/images/btn-last-page.png}"
+                                    th:alt="이전페이지"
+                            />
                         </a>
                     </div>
                 </div>
