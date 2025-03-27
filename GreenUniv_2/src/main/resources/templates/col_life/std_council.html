@@ -12,293 +12,147 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/static/js/swiper.js"></script>
 
     <script src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/style/common/_header.css" />
-    <link rel="stylesheet" href="/static/style/common/_header2.css" />
-    <link rel="stylesheet" href="/static/style/common/main.css" />
-    <link rel="stylesheet" href="/static/style/col_life/std_council.css" />
-    <link rel="stylesheet" href="/static/style/common/_footer.css" />
-    <title>학생회 소개</title>
+    <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
+    <link rel="stylesheet" th:href="@{/style/col_life/std_council.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
+
+    <title>공지사항</title>
 </head>
 <body>
-    <div id="wrapper">
-        <!-- header side -->
-        <header>
-            <div class="topMenuBar">
-                <ul class="topMenus">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">사이트맵</a></li>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">학생지원</a></li>
-                </ul>
-            </div>
-            <div>
-                <div class="category">
+<header>
+    <th:block th:include="/common/_header.html"/>
+</header>
+<main>
+    <div class="main-container">
+        <div>
+            <aside>
+                <h3>대학생활</h3>
+                <div class="side-link-container">
                     <a href="#">
-                        <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                        <div class="side-link selected-link">학생회 소개</div>
                     </a>
-                    <div class="nav-container">
-                        <nav>
-                            <div class="item">
-                                대학소개
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">총장 인사말</a>
-                                        <a href="#">교육이념</a>
-                                        <a href="#">연혁</a>
-                                        <a href="#">조직도</a>
-                                        <a href="#">오시는길</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                입학안내
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">공지사항</a>
-                                        <a href="#">수시모집</a>
-                                        <a href="#">정시모집</a>
-                                        <a href="#">편입학</a>
-                                        <a href="#">입학상담</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                대학·대학원
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">인문사회대학</a>
-                                        <a href="#">자연과학대학</a>
-                                        <a href="#">공과대학</a>
-                                        <a href="#">사범대학</a>
-                                        <a href="#">대학원</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                학사안내
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">공지사항</a>
-                                        <a href="#">학사일정</a>
-                                        <a href="#">수강신청</a>
-                                        <a href="#">성적</a>
-                                        <a href="#">수료 및 졸업</a>
-                                        <a href="#">자주묻는질문</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                대학생활
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">학생회소개</a>
-                                        <a href="#">동아리/스터디</a>
-                                        <a href="#">식단안내</a>
-                                        <a href="#">갤러리</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                커뮤니티
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">공지사항</a>
-                                        <a href="#">뉴스 및 칼럼</a>
-                                        <a href="#">취업정보</a>
-                                        <a href="#">자유게시판</a>
-                                        <a href="#">질문과 답변</a>
-                                        <a href="#">자료실</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
+                    <a href="#">
+                        <div class="side-link">동아리/스터디</div>
+                    </a>
+                    <a href="#">
+                        <div class="side-link ">식단안내</div>
+                    </a>
+                    <a href="#">
+                        <div class="side-link">갤러리</div>
+                    </a>
+                </div>
+            </aside>
+            <div class="meal_schedule-container">
+                <h4>학생회 소개</h4>
+
+                <div class="std_council-contianer">
+
+                    <h2>제 6대 The Only, The Best 그린대 학생회</h2>
+                    <h3>학생회 소개</h3>
+                    <div class="council_img_p">
+                        <img src="/static/images/std_council.png" class="std_council_img" alt="학생회 사진">
+                        <!--
+                        <img
+                                th:src="@{/images/std_council.png}"
+                                th:alt="학생회 사진"
+                                class="std_council_img"
+                        />
+                        -->
+                        <p>그린대 학생회는 <strong>The Only, The Best</strong>라는 슬로건에 맞게 그린대학 최고라 할 수 있는 학생회를 만들어 가고자 합니다. 그린대과
+                            학생회는 <strong>Together</strong>라는 슬로건에 맞게 그린대가 하나되어 함께 화합을 이룬다는 뜻을 넘어 그린대학 학우들 모두가 하나가 될 수
+                            있도록 최선을 다하는 학생회입니다.<br>
+                            <br>웃음과 화합, 믿음 그리고 즐거움이 가득한 그린대학을 만들어 가기 위해 다음과 같이 약속드립니다. 후배들과의 단합과 교류를 활발히 하여 가족 같은 분위기를
+                            중요시 하겠습니다.여러분들의 불편함 없는 학교생활을 위해 개선사항이 있다면 언제든지 받아들이겠습니다.또한 학생회를 투명하게 운영하도록 하겠습니다.
+                            <strong>마지막으로 언제나 여러분들과의 소통을 소중히 여기는 학생회가 되고 언제나 여러분들의, 여러분들에 의한, 여러분들을 위한 학과가 될 수 있도록
+                                노력하겠습니다.</strong></p>
                     </div>
+
+                    <table>
+
+                        <tr>
+                            <th>직책</th>
+                            <th>이름</th>
+                            <th>연락처</th>
+                        </tr>
+
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+
+
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+
+                        <tr>
+                            <td class="president">학회장</td>
+                            <td>홍길동</td>
+                            <td>010-1111-1111</td>
+                        </tr>
+                    </table>
+
                 </div>
-            </div>
-            <div class="location-container">
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img src="/static/images/ico-home.png" alt="home" class="ico-home">
-                            </a>
-                        </li>
-                        <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
-                            <a href="#">대학생활</a>
-                        </li>
-                        <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
-                            <a href="#" class="this-location">학생회 소개</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <!-- header end -->
-        
-        <!-- main side -->
-        <main>
-            <div class="main-container">
-                <div>
-                    <aside>
-                        <h3>대학생활</h3>
-                        <div class="side-link-container">
-                            <a href="#">
-                                <div class="side-link selected-link">학생회 소개</div>
-                            </a>
-                            <a href="#">
-                                <div class="side-link">동아리/스터디</div>
-                            </a>
-                            <a href="#">
-                                <div class="side-link ">식단안내</div>
-                            </a>
-                            <a href="#">
-                                <div class="side-link">갤러리</div>
-                            </a>
-                        </div>
-                    </aside>
-                    <div class="meal_schedule-container">
-                        <h4>학생회 소개</h4>
 
-                        <div class="std_council-contianer">
-
-                            <h2>제 6대 The Only, The Best 그린대 학생회</h2>
-                            <h3>학생회 소개</h3>
-                            <div class="council_img_p">
-                            <img src="/static/images/std_council.png" class="std_council_img" alt="학생회 사진">
-                            <p>그린대 학생회는 <strong>The Only, The Best</strong>라는 슬로건에 맞게 그린대학  최고라 할 수 있는 학생회를 만들어 가고자 합니다. 그린대과 학생회는 <strong>Together</strong>라는 슬로건에 맞게 그린대가 하나되어 함께 화합을 이룬다는 뜻을 넘어 그린대학 학우들 모두가 하나가 될 수 있도록 최선을 다하는 학생회입니다.<br>
-                                <br>웃음과 화합, 믿음 그리고 즐거움이 가득한 그린대학을 만들어 가기 위해 다음과 같이 약속드립니다. 후배들과의 단합과 교류를 활발히 하여 가족 같은 분위기를 중요시 하겠습니다.여러분들의 불편함 없는 학교생활을 위해 개선사항이 있다면 언제든지 받아들이겠습니다.또한 학생회를 투명하게 운영하도록 하겠습니다.
-                                <strong>마지막으로 언제나 여러분들과의 소통을 소중히 여기는 학생회가 되고 언제나 여러분들의, 여러분들에 의한, 여러분들을 위한 학과가 될 수 있도록 노력하겠습니다.</strong></p>
-                            </div>
-                            
-                                <table>
-
-                                    <tr>
-                                        <th>직책</th>
-                                        <th>이름</th>
-                                        <th>연락처</th>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                   
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-
-
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td class="president">학회장</td>
-                                        <td>홍길동</td>
-                                        <td>010-1111-1111</td>
-                                    </tr>
-                                </table>
-
-                        </div>
-                        
-
-                   
-
-                            
-        </main>
-        <!-- main end -->
-
-        <footer>
-            <div class="footer-link-container">
-                <div class="footer-link">
-                    <ul class="footer-links">
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">통합정보시스템</a></li>
-                        <li><a href="#">학사일정</a></li>
-                        <li><a href="#">주요민원 연락처</a></li>
-                        <li><a href="#">교내공지사항</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="copyright-container">
-                    <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
-                    <div class="footer-text-container">
-                        <p class="footer-text">
-                            그린대학교<br>
-                            [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
-                            입학안내 : 051-123-1302 팩스 : 051-123-333
-                        </p>
-                        <p class="footer-text text2">
-                            copyright ©Green University All rights reserved.
-                        </p>
-                    </div>
-                    <select onchange="window.open(value,'_self');" class="site">
-                        <option value="#" disabled selected>주요사이트</option>
-                        <option value="https://naver.com">네이버</option>
-                        <option value="https://www.kakaocorp.com/page/">카카오</option>
-                        <option value="https://www.line.me/ko/">라인</option>
-                        <option value="https://www.coupang.com/">쿠팡</option>
-                        <option value="https://www.woowahan.com/">배달의민족</option>
-                    </select>
-                </div>
-            </div>
-        </footer>
-    </div>
+</main>
+<th:block th:include="/common/_footer.html"/>
 </body>
 </html>
