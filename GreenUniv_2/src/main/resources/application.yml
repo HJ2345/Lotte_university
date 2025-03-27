@@ -18,8 +18,8 @@ spring:
         name: GreenUniv
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: 1234
-        url: jdbc:mysql://127.0.0.1:3306/greenUniv
+        password: Qwerty123@
+        url: jdbc:mysql://3.34.46.178:3306/test_green
         username: root
     devtools:
         livereload:

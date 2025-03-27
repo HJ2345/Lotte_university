@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    
-    <script src="/static/js/header.js"></script>
-    <link rel="stylesheet" href="/static/style/support/student_record.css">
 
-    <title>학적</title>
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/support/Grade_Lookup.css}">
+
+    <title>성적조회</title>
 </head>
 <body>  
     <div id="wrapper">
@@ -29,7 +29,7 @@
             <div>
                 <div class="category">
                     <a href="#">
-                        <img src="/static/images/header_logo.png" alt="그린대학교" class="logo">
+                        <img th:src="@{/imasges/header_logo.png}" alt="그린대학교" class="logo">
                     </a>
                     <div class="nav-container">
                         <nav>
@@ -115,16 +115,16 @@
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="/static/images/ico-home.png" alt="home" class="ico-home">
+                                <img th:src="@{/imasges/ico-home.png}" alt="home" class="ico-home">
                             </a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
+                            <img th:src="@{/imasges/btn-next-page.png}" alt="next" class="ico-next">
                             <a href="#">학생지원</a>
                         </li>
                         <li>
-                            <img src="/static/images/btn-next-page.png" alt="next" class="ico-next">
-                            <a href="#" class="this-location">학적</a>
+                            <img th:src="@{/imasges/btn-next-page.png}" alt="next" class="ico-next">
+                            <a href="#" class="this-location">성적조회</a>
                         </li>
                     </ul>
                 </div>
@@ -147,159 +147,126 @@
                                 <div class="side-link">나의교육과정</div>
                             </a>
                             <a href="#">
-                                <div class="side-link">성적조회</div>
+                                <div class="side-link selected-link">성적조회</div>
                             </a>
                             <a href="#">
-                                <div class="side-link selected-link">학적</div>
+                                <div class="side-link">학적</div>
                             </a>
                         </div>
                     </aside>
                     <div class="curriculum-container"> 
-                        <h4>학적</h4>
-                        <div class="list">
-                            <img src="/static/images/bullet-h4.png" alt="네모">
-                            <h5>기본정보</h5>
+                        <h4>성적조회</h4>
+                        <div class="gradeSelect">
+                            <form action="#">
+                                <select class="select year">
+                                    <option value="">2025</option>
+                                    <option value="">2024</option>
+                                </select>
+                                <p>년</p>
+                                <select class="select grade">
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                </select>
+                                <p>학기</p>
+                                <h3>이수과목수 5과목, 총 취득학점 <span>15</span>학점</h3>
+                            </form>
                         </div>
-                        <div class="table-container">
-                            <table cellspacing="0" class="table information">
-                                <tbody>
-                                    <tr>
-                                        <td rowspan="5"><img src="/static/images/icon-avatar.png" alt="증명사진"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>학번</td>
-                                        <td>202001230</td>
-                                        <td>학과</td>
-                                        <td>컴퓨터공학과</td>
-                                    </tr>
-                                    <tr>
-                                        <td>이름</td>
-                                        <td>홍길동</td>
-                                        <td>주민번호</td>
-                                        <td>900103-1234567</td>
-                                    </tr>
-                                    <tr>
-                                        <td>휴대폰</td>
-                                        <td>010-1234-1001</td>
-                                        <td>EMAIL</td>
-                                        <td>hong1001@naver.com</td>
-                                    </tr>
-                                    <tr>
-                                        <td>학년/학기</td>
-                                        <td>3학년 / 1학기</td>
-                                        <td>상태</td>
-                                        <td><span class="status">재학중</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="list">
-                            <img src="/static/images/bullet-h4.png" alt="네모">
-                            <h5>취득학점현황</h5>
-                        </div>
-                        <div class="table-container">
-                            <table cellspacing="0" class="table gradeStat">
-                                <thead>
-                                    <tr>
-                                        <th>구분</th>
-                                        <th>전공(7)</th>
-                                        <th>교양(6)</th>
-                                        <th>선택(1)</th>
-                                        <th>사회봉사</th>
-                                        <th>기타</th>
-                                        <th>총취득학점</th>
-                                        <th>졸업요건학점</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>취득학점</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>3</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>40</td>
-                                        <td>130</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p class="description">- 각 괄호안의 숫자는 이수 과목수</p>
-                        </div>
-
-                        <div class="list">
-                            <img src="/static/images/bullet-h4.png" alt="네모">
-                            <h5>년도/학기별 취득학점현황</h5>
-                        </div>
-                        <div class="table-container">
-                            <table cellspacing="0" class="table dateGradeStat">
-                                <thead>
-                                    <tr>
-                                        <th>년도</th>
-                                        <th>학년</th>
-                                        <th>학기</th>
-                                        <th>신청학점</th>
-                                        <th>전공학점</th>
-                                        <th>선택학점</th>
-                                        <th>기타학점</th>
-                                        <th>총취득학점</th>
-                                        <th>평점평균</th>
-                                        <th>기타</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2020</td>
-                                        <td>1</td>
-                                        <td>1</td>
-                                        <td>18</td>
-                                        <td>15</td>
-                                        <td>3</td>
-                                        <td>0</td>
-                                        <td>18</td>
-                                        <td>3.2</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2020</td>
-                                        <td>1</td>
-                                        <td>2</td>
-                                        <td>18</td>
-                                        <td>15</td>
-                                        <td>3</td>
-                                        <td>0</td>
-                                        <td>18</td>
-                                        <td>3.2</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021</td>
-                                        <td>2</td>
-                                        <td>1</td>
-                                        <td>18</td>
-                                        <td>18</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>18</td>
-                                        <td>4.2</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2021</td>
-                                        <td>2</td>
-                                        <td>2</td>
-                                        <td>18</td>
-                                        <td>18</td>
-                                        <td>0</td>
-                                        <td>0</td>
-                                        <td>18</td>
-                                        <td>4.2</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                        <table cellspacing="0" class="table">
+                            <thead>
+                                <tr>
+                                    <th>교과목코드</th>
+                                    <th>과목명</th>
+                                    <th>대상학년</th>
+                                    <th>담당교수</th>
+                                    <th>이수구분</th>
+                                    <th>점수</th>
+                                    <th>등급</th>
+                                    <th>취득학점</th>
+                                    <th>기타</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>830003</td>
+                                    <td>자바 프로그래밍</td>
+                                    <td>2학년</td>
+                                    <td>김자바</td>
+                                    <td>전공</td>
+                                    <td>99.0</td>
+                                    <td>A+</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button>상세확인</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>830003</td>
+                                    <td>자료구조</td>
+                                    <td>2학년</td>
+                                    <td>김자료</td>
+                                    <td>전공</td>
+                                    <td>86.2</td>
+                                    <td>B</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button>상세확인</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>830003</td>
+                                    <td>대학영어</td>
+                                    <td>2학년</td>
+                                    <td>김영어</td>
+                                    <td>교양</td>
+                                    <td>92.6</td>
+                                    <td>A</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button>상세확인</button>
+                                    </td>
+                                </tr>   
+                                <tr>
+                                    <td>830003</td>
+                                    <td>알고리즘</td>
+                                    <td>2학년</td>
+                                    <td>김자바</td>
+                                    <td>전공</td>
+                                    <td>56.2</td>
+                                    <td>F</td>
+                                    <td>0</td>
+                                    <td>
+                                        <button>상세확인</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>830003</td>
+                                    <td>세계의역사</td>
+                                    <td>2학년</td>
+                                    <td>김역사</td>
+                                    <td>교양</td>
+                                    <td>80.0</td>
+                                    <td>B</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button>상세확인</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>830003</td>
+                                    <td>데이터베이스</td>
+                                    <td>2학년</td>
+                                    <td>김디비</td>
+                                    <td>전공</td>
+                                    <td>88.8</td>
+                                    <td>B+</td>
+                                    <td>3</td>
+                                    <td>
+                                        <button>상세확인</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>※ 점수 이의신청은 학생지원실에 문의하시기 바랍니다.</p> 
                     </div>
                 </div>
             </div>
@@ -318,7 +285,7 @@
             </div>
             <div class="copyright">
                 <div class="copyright-container">
-                    <img src="/static/images/footer_logo.png" alt="그린대학교" class="footer-logo">
+                    <img th:src="@{/imasges/footer_logo.png}" alt="그린대학교" class="footer-logo">
                     <div class="footer-text-container">
                         <p class="footer-text">
                             그린대학교<br>
