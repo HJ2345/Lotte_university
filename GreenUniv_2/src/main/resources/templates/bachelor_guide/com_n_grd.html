@@ -8,7 +8,7 @@
     <link rel="stylesheet" th:href="@{/style/common/main.css}" />
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}" />
     <link rel="stylesheet" th:href="@{/style/bachelor_guide/com_n_grd.css}"/>
-    <script src="/static/js/header.js"></script> <!--자바스크립트-->
+    <script th:src="@{/js/header.js}"></script> <!--자바스크립트-->
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>수료 및 졸업</title>
 </head>
@@ -236,8 +236,7 @@
                             </div>
                     </div>
                 </div>
-            </div>
     </main>
-    <th:block th:include="/common/_footer.html"/>
+    <th:block th:include="common/_footer.html"/>
 </body>
 </html>
