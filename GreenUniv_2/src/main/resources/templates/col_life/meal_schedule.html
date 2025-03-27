@@ -20,7 +20,6 @@
 
     <script src="/static/js/header.js"></script>
     <link rel="stylesheet" th:href="@{/style/col_life/meal_schedule.css}"/>
-    \
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
@@ -37,16 +36,16 @@
             <aside>
                 <h3>대학생활</h3>
                 <div class="side-link-container">
-                    <a href="#">
+                    <a th:href="@{/col_life/std_council}">
                         <div class="side-link">학생회 소개</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/col_life/study}">
                         <div class="side-link">동아리/스터디</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/col_life/meal_schedule}">
                         <div class="side-link selected-link">식단안내</div>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/col_life/gallery}">
                         <div class="side-link">갤러리</div>
                     </a>
                 </div>
