@@ -18,178 +18,212 @@
     <link rel="stylesheet" th:href="@{/style/col_life/gallery.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
 
     <title>갤러리</title>
 </head>
 <body>
-<header>
-    <th:block th:include="/common/_header.html"/>
-</header>
-<main>
-    <div class="main-container">
-        <div>
-            <aside>
-                <h3>대학생활</h3>
-                <div class="side-link-container">
-                    <a th:href="@{/col_life/std_council}">
-                        <div class="side-link">학생회 소개</div>
-                    </a>
-                    <a th:href="@{/col_life/study}">
-                        <div class="side-link">동아리/스터디</div>
-                    </a>
-                    <a th:href="@{/col_life/meal_schedule}">
-                        <div class="side-link">식단안내</div>
-                    </a>
-                    <a th:href="@{/col_life/gallery}">
-                        <div class="side-link selected-link">갤러리</div>
-                    </a>
-                </div>
-            </aside>
-            <div class="gallery-container">
-                <h4>갤러리</h4>
-                <div class="gallery-grid">
-                    <div>
+<div id="wrapper">
+    <!-- header side -->
+    <header>
+        <th:block th:include="/common/_header.html"/>
+        <div class="location-container">
+            <div>
+                <ul>
+                    <li>
                         <a href="#">
                             <img
-                                    th:src="@{/images/gallary_sample1.jpg}"
-                                    th:alt="sample"
+                                    th:src="@{/images/ico-home.png}"
+                                    th:alt="home"
+                                    class="ico-home"
                             />
                         </a>
-                        <a href="#">
-                            <p class="gallery-title">제40회 1995학년도 학위수여식</p>
-                        </a>
-                        <p class="post-info">
-                            <span>조회수 23</span><!-- 조회수 -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>글로벌…</span><!-- ? -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>25.03.13</span><!-- 등록 날짜 -->
-                        </p>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/gallary_sample2.jpg}"
-                                    th:alt="sample"
-                            />
-                        </a>
-                        <a href="#">
-                            <p class="gallery-title">제40회 1995학년도 학위수여식</p>
-                        </a>
-                        <p class="post-info">
-                            <span>조회수 23</span><!-- 조회수 -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>글로벌…</span><!-- ? -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>25.03.13</span><!-- 등록 날짜 -->
-                        </p>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/gallary_sample3.jpg}"
-                                    th:alt="sample"
-                            />
-                        </a>
-                        <a href="#">
-                            <p class="gallery-title">제40회 1995학년도 학위수여식</p>
-                        </a>
-                        <p class="post-info">
-                            <span>조회수 23</span><!-- 조회수 -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>글로벌…</span><!-- ? -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>25.03.13</span><!-- 등록 날짜 -->
-                        </p>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/gallary_sample4.png}"
-                                    th:alt="sample"
-                            />
-                        </a>
-                        <a href="#">
-                            <p class="gallery-title">제40회 1995학년도 학위수여식</p>
-                        </a>
-                        <p class="post-info">
-                            <span>조회수 23</span><!-- 조회수 -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>글로벌…</span><!-- ? -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>25.03.13</span><!-- 등록 날짜 -->
-                        </p>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/gallary_sample5.jpg}"
-                                    th:alt="sample"
-                            />
-                        </a>
-                        <a href="#">
-                            <p class="gallery-title">제40회 1995학년도 학위수여식</p>
-                        </a>
-                        <p class="post-info">
-                            <span>조회수 23</span><!-- 조회수 -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>글로벌…</span><!-- ? -->
-                            <span class="vl-symbol">&#124;</span>
-                            <span>25.03.13</span><!-- 등록 날짜 -->
-                        </p>
-                    </div>
-                    <div class="empty">
-
-                    </div>
-                    <div class="empty">
-
-                    </div>
-                    <div class="empty">
-
-                    </div>
-                </div>
-                <div class="paging-container">
-                    <a href="#" class="mr-3">
+                    </li>
+                    <li>
                         <img
-                                th:src="@{/images/btn-first-page.png}"
-                                th:alt="첫페이지"
+                                th:src="@{/images/btn-next-page.png}"
+                                th:alt="next"
+                                class="ico-next"
                         />
-                    </a>
-                    <a href="#" class="mr-10">
+                        <a href="#">대학생활</a>
+                    </li>
+                    <li>
                         <img
-                                th:src="@{/images/btn-prev-page.png}"
-                                th:alt="이전페이지"
+                                th:src="@{/images/btn-next-page.png}"
+                                th:alt="next"
+                                class="ico-next"
                         />
-                    </a>
+                        <a href="#" class="this-location">갤러리</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div>
+                <aside>
+                    <h3>대학생활</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/col_life/std_council}">
+                            <div class="side-link">학생회 소개</div>
+                        </a>
+                        <a th:href="@{/col_life/study}">
+                            <div class="side-link">동아리/스터디</div>
+                        </a>
+                        <a th:href="@{/col_life/meal_schedule}">
+                            <div class="side-link">식단안내</div>
+                        </a>
+                        <a th:href="@{/col_life/gallery}">
+                            <div class="side-link selected-link">갤러리</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="gallery-container">
+                    <h4>갤러리</h4>
+                    <div class="gallery-grid">
+                        <div>
+                            <a href="#">
+                                <img
+                                        th:src="@{/images/gallary_sample1.jpg}"
+                                        th:alt="sample"
+                                />
+                            </a>
+                            <a href="#">
+                                <p class="gallery-title">제40회 1995학년도 학위수여식</p>
+                            </a>
+                            <p class="post-info">
+                                <span>조회수 23</span><!-- 조회수 -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>글로벌…</span><!-- ? -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>25.03.13</span><!-- 등록 날짜 -->
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img
+                                        th:src="@{/images/gallary_sample2.jpg}"
+                                        th:alt="sample"
+                                />
+                            </a>
+                            <a href="#">
+                                <p class="gallery-title">제40회 1995학년도 학위수여식</p>
+                            </a>
+                            <p class="post-info">
+                                <span>조회수 23</span><!-- 조회수 -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>글로벌…</span><!-- ? -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>25.03.13</span><!-- 등록 날짜 -->
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img
+                                        th:src="@{/images/gallary_sample3.jpg}"
+                                        th:alt="sample"
+                                />
+                            </a>
+                            <a href="#">
+                                <p class="gallery-title">제40회 1995학년도 학위수여식</p>
+                            </a>
+                            <p class="post-info">
+                                <span>조회수 23</span><!-- 조회수 -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>글로벌…</span><!-- ? -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>25.03.13</span><!-- 등록 날짜 -->
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img
+                                        th:src="@{/images/gallary_sample4.png}"
+                                        th:alt="sample"
+                                />
+                            </a>
+                            <a href="#">
+                                <p class="gallery-title">제40회 1995학년도 학위수여식</p>
+                            </a>
+                            <p class="post-info">
+                                <span>조회수 23</span><!-- 조회수 -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>글로벌…</span><!-- ? -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>25.03.13</span><!-- 등록 날짜 -->
+                            </p>
+                        </div>
+                        <div>
+                            <a href="#">
+                                <img
+                                        th:src="@{/images/gallary_sample5.jpg}"
+                                        th:alt="sample"
+                                />
+                            </a>
+                            <a href="#">
+                                <p class="gallery-title">제40회 1995학년도 학위수여식</p>
+                            </a>
+                            <p class="post-info">
+                                <span>조회수 23</span><!-- 조회수 -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>글로벌…</span><!-- ? -->
+                                <span class="vl-symbol">&#124;</span>
+                                <span>25.03.13</span><!-- 등록 날짜 -->
+                            </p>
+                        </div>
+                        <div class="empty">
 
-                    <a href="#" class="mr-3 mb-2">
-                        <span class="selected">1</span>
-                    </a>
-                    <a href="#" class="mr-3 mb-2">
-                        <span>2</span>
-                    </a>
-                    <a href="#" class="mr-10 mb-2">
-                        <span>3</span>
-                    </a>
+                        </div>
+                        <div class="empty">
 
-                    <a href="#" class="mr-5">
-                        <img
-                                th:src="@{/images/btn-next-page.pn}"
-                                th:alt="이전페이지"
-                        />
-                    </a>
-                    <a href="#">
-                        <img
-                                th:src="@{/images//btn-last-page.png}"
-                                th:alt="이전페이지"
-                        />
-                    </a>
+                        </div>
+                        <div class="empty">
+
+                        </div>
+                    </div>
+                    <div class="paging-container">
+                        <a href="#" class="mr-3">
+                            <img
+                                    th:src="@{/images/btn-first-page.png}"
+                                    th:alt="첫페이지"
+                            />
+                        </a>
+                        <a href="#" class="mr-10">
+                            <img
+                                    th:src="@{/images/btn-prev-page.png}"
+                                    th:alt="이전페이지"
+                            />
+                        </a>
+
+                        <a href="#" class="mr-3 mb-2">
+                            <span class="selected">1</span>
+                        </a>
+                        <a href="#" class="mr-3 mb-2">
+                            <span>2</span>
+                        </a>
+                        <a href="#" class="mr-10 mb-2">
+                            <span>3</span>
+                        </a>
+
+                        <a href="#" class="mr-5">
+                            <img
+                                    th:src="@{/images/btn-next-page.pn}"
+                                    th:alt="이전페이지"
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                    th:src="@{/images//btn-last-page.png}"
+                                    th:alt="이전페이지"
+                            />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-<th:block th:include="/common/_footer.html"/>
-
+    </main>
+    <th:block th:include="/common/_footer.html"/>
+</div>
 </body>
 </html>
