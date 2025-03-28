@@ -22,154 +22,189 @@
     <link rel="stylesheet" th:href="@{/style/common/table_r_qna_f_a.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
 
     <title>공지사항</title>
 </head>
 <body>
-<header>
-    <th:block th:include="/common/_header.html"/>
-</header>
-<main>
-
-    <div class="main-container">
-        <div>
-            <aside>
-                <h3>커뮤니티</h3>
-                <div class="side-link-container">
-                    <a th:href="@{/community/community_announcement}">
-                        <div class="side-link selected-link">공지사항</div>
-                    </a>
-                    <a th:href="@{/community/news}">
-                        <div class="side-link">뉴스 및 칼럼</div>
-                    </a>
-                    <a th:href="@{/community/Einformation}">
-                        <div class="side-link">취업정보</div>
-                    </a>
-                    <a th:href="@{/community/Fboard}">
-                        <div class="side-link">자유게시판</div>
-                    </a>
-                    <a th:href="@{/community/qna}">
-                        <div class="side-link">질문과 답변</div>
-                    </a>
-                    <a th:href="@{/community/reference}">
-                        <div class="side-link">자료실</div>
-                    </a>
-                </div>
-            </aside>
-            <div class="enterance-container">
-                <h4>공지사항</h4>
-                <div>
-                    <form action="#" class="searchForm">
-                        <select name="search" class="selectType">
-                            <option value="#" disabled selected class="selectTypes">선택</option>
-                            <option value="#" class="selectTypes">학년</option>
-                            <option value="#" class="selectTypes">과목명</option>
-                            <option value="#" class="selectTypes">담당교수</option>
-                        </select>
-                        <input type="text" placeholder="검색어를 입력해 주세요." class="searchWord">
-                        <button type="submit" class="searchBtn">검색</button>
-                    </form>
-
-
-                    <table>
-                        <tr class=tr>
-                            <th>번호</th>
-                            <th>제목</th>
-                            <th>작성자</th>
-                            <th>작성일</th>
-                            <th>조회</th>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td class="left">
-                                <img
-                                        th:src="@{/images/ico-new01.gif}"
-                                        th:alt="N"
-                                        class="photos"
-                                />
-                                2025학년도 1학기
-                                그린장학회 장학생 신청 안내
-                            </td>
-                            <td>학사지원실</td>
-                            <td>24.04.09</td>
-                            <td>160</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td class="left">
-                                <img
-                                        th:src="@{/images/ico-new01.gif}"
-                                        th:alt="N"
-                                        class="photos"
-                                />
-                                제42회 학위수여식
-                                안내
-                            </td>
-                            <td>학사지원실</td>
-                            <td>24.04.09</td>
-                            <td>160</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td class="left">
-                                <img
-                                        th:src="@{/images/ico-new01.gif}"
-                                        th:alt="N"
-                                        class="photos"
-                                />
-                                의료, 인공지능
-                                융합인재 양성사업단 사업설명회
-                            </td>
-                            <td>학사지원실</td>
-                            <td>24.04.09</td>
-                            <td>160</td>
-                        </tr>
-
-                    </table>
-
-                    <div class="paging-container">
-                        <a href="#" class="mr-3">
-                            <img
-                                    th:src="@{/images/btn-first-page.png}"
-                                    th:alt="첫페이지"
-                            />
-                        </a>
-                        <a href="#" class="mr-10">
-                            <img
-                                    th:src="@{/images/btn-prev-page.png}"
-                                    th:alt="이전페이지"
-                            />
-                        </a>
-
-                        <a href="#" class="mr-3 mb-2">
-                            <span class="selected">1</span>
-                        </a>
-                        <a href="#" class="mr-3 mb-2">
-                            <span>2</span>
-                        </a>
-                        <a href="#" class="mr-10 mb-2">
-                            <span>3</span>
-                        </a>
-
-                        <a href="#" class="mr-5">
-                            <img
-                                    th:src="@{/images/btn-next-page.png}"
-                                    th:alt="이전페이지"
-                            />
-                        </a>
+<div id="wrapper">
+    <!-- header side -->
+    <header>
+        <th:block th:include="/common/_header.html"/>
+        <div class="location-container">
+            <div>
+                <ul>
+                    <li>
                         <a href="#">
                             <img
-                                    th:src="@{/images/btn-last-page.png}"
-                                    th:alt="이전페이지"
+                                    th:src="@{/images/ico-home.png}"
+                                    th:alt="home"
+                                    class="ico-home"
                             />
                         </a>
+                    </li>
+                    <li>
+                        <img
+                                th:src="@{/images/btn-next-page.png}"
+                                th:alt="next"
+                                class="ico-next"
+                        />
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <li>
+                        <img
+                                th:src="@{/images/btn-next-page.png}"
+                                th:alt="next"
+                                class="ico-next"
+                        />
+                        <a href="#" class="this-location">공지사항</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="main-container">
+            <div>
+                <aside>
+                    <h3>커뮤니티</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/community/community_announcement}">
+                            <div class="side-link selected-link">공지사항</div>
+                        </a>
+                        <a th:href="@{/community/news}">
+                            <div class="side-link">뉴스 및 칼럼</div>
+                        </a>
+                        <a th:href="@{/community/Einformation}">
+                            <div class="side-link">취업정보</div>
+                        </a>
+                        <a th:href="@{/community/Fboard}">
+                            <div class="side-link">자유게시판</div>
+                        </a>
+                        <a th:href="@{/community/qna}">
+                            <div class="side-link">질문과 답변</div>
+                        </a>
+                        <a th:href="@{/community/reference}">
+                            <div class="side-link">자료실</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="enterance-container">
+                    <h4>공지사항</h4>
+                    <div>
+                        <form action="#" class="searchForm">
+                            <select name="search" class="selectType">
+                                <option value="#" disabled selected class="selectTypes">선택</option>
+                                <option value="#" class="selectTypes">학년</option>
+                                <option value="#" class="selectTypes">과목명</option>
+                                <option value="#" class="selectTypes">담당교수</option>
+                            </select>
+                            <input type="text" placeholder="검색어를 입력해 주세요." class="searchWord">
+                            <button type="submit" class="searchBtn">검색</button>
+                        </form>
+
+
+                        <table>
+                            <tr class=tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일</th>
+                                <th>조회</th>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="left">
+                                    <img
+                                            th:src="@{/images/ico-new01.gif}"
+                                            th:alt="N"
+                                            class="photos"
+                                    />
+                                    2025학년도 1학기
+                                    그린장학회 장학생 신청 안내
+                                </td>
+                                <td>학사지원실</td>
+                                <td>24.04.09</td>
+                                <td>160</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="left">
+                                    <img
+                                            th:src="@{/images/ico-new01.gif}"
+                                            th:alt="N"
+                                            class="photos"
+                                    />
+                                    제42회 학위수여식
+                                    안내
+                                </td>
+                                <td>학사지원실</td>
+                                <td>24.04.09</td>
+                                <td>160</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="left">
+                                    <img
+                                            th:src="@{/images/ico-new01.gif}"
+                                            th:alt="N"
+                                            class="photos"
+                                    />
+                                    의료, 인공지능
+                                    융합인재 양성사업단 사업설명회
+                                </td>
+                                <td>학사지원실</td>
+                                <td>24.04.09</td>
+                                <td>160</td>
+                            </tr>
+
+                        </table>
+
+                        <div class="paging-container">
+                            <a href="#" class="mr-3">
+                                <img
+                                        th:src="@{/images/btn-first-page.png}"
+                                        th:alt="첫페이지"
+                                />
+                            </a>
+                            <a href="#" class="mr-10">
+                                <img
+                                        th:src="@{/images/btn-prev-page.png}"
+                                        th:alt="이전페이지"
+                                />
+                            </a>
+
+                            <a href="#" class="mr-3 mb-2">
+                                <span class="selected">1</span>
+                            </a>
+                            <a href="#" class="mr-3 mb-2">
+                                <span>2</span>
+                            </a>
+                            <a href="#" class="mr-10 mb-2">
+                                <span>3</span>
+                            </a>
+
+                            <a href="#" class="mr-5">
+                                <img
+                                        th:src="@{/images/btn-next-page.png}"
+                                        th:alt="이전페이지"
+                                />
+                            </a>
+                            <a href="#">
+                                <img
+                                        th:src="@{/images/btn-last-page.png}"
+                                        th:alt="이전페이지"
+                                />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
-<th:block th:include="/common/_footer.html"/>
-
+    </main>
+    <th:block th:include="/common/_footer.html"/>
+</div>
 </body>
 </html>

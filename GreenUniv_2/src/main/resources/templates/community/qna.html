@@ -23,13 +23,47 @@
     <link rel="stylesheet" th:href="@{/style/common/table_r_qna_f_a.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
 
     <title>질문과 답변</title>
 </head>
 <body>
-<header>
-    <th:block th:include="/common/_header.html"/>
-</header>
+<div id="wrapper">
+    <!-- header side -->
+    <header>
+        <th:block th:include="/common/_header.html"/>
+        <div class="location-container">
+            <div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img
+                                    th:src="@{/images/ico-home.png}"
+                                    th:alt="home"
+                                    class="ico-home"
+                            />
+                        </a>
+                    </li>
+                    <li>
+                        <img
+                                th:src="@{/images/btn-next-page.png}"
+                                th:alt="next"
+                                class="ico-next"
+                        />
+                        <a href="#">커뮤니티</a>
+                    </li>
+                    <li>
+                        <img
+                                th:src="@{/images/btn-next-page.png}"
+                                th:alt="next"
+                                class="ico-next"
+                        />
+                        <a href="#" class="this-location">질문과 답변</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
 <main>
     <div class="main-container">
         <div>
@@ -192,5 +226,6 @@
     </div>
 </main>
 <th:block th:include="/common/_footer.html"/>
+</div>
 </body>
 </html>
