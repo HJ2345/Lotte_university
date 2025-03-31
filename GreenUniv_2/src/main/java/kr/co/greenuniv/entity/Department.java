@@ -26,7 +26,7 @@ public class Department {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "profName")
-    private Professor professor;
+    private Professor2 professor;
 
     private String deptHp;
     private String deptOffice;

@@ -9,8 +9,8 @@ import lombok.*;
 @ToString
 @Builder
 @Entity
-@Table(name = "Professor")
-public class Professor {
+@Table(name = "Professor2")
+public class Professor2 {
 
     @Id
     private int profNo;
