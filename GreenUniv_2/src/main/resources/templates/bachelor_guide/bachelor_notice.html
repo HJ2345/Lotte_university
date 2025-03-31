@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,7 +29,7 @@
           <div>
             <ul>
               <li>
-                <a href="#">
+                <a th:href="@{/}">
                   <img
                     th:src="@{/images/ico-home.png}"
                     th:alt="home"
@@ -51,7 +51,7 @@
                   th:alt="next"
                   class="ico-next"
                 />
-                <a href="#" class="this-location">공지사항</a>
+                <a th:href="@{bachelor_guide/bachelor_notice}" class="this-location">공지사항</a>
               </li>
             </ul>
           </div>
@@ -64,22 +64,22 @@
             <aside>
               <h3>학사안내</h3>
               <div class="side-link-container">
-                <a href="#">
+                <a th:href="@{/bachelor_guide/bachelor_notice}">
                   <div class="side-link selected-link">공지사항</div>
                 </a>
-                <a href="#">
+                <a th:href="@{/bachelor_guide/bachelor_schedule}">
                   <div class="side-link">학사일정</div>
                 </a>
-                <a href="#">
+                <a th:href="@{/bachelor_guide/cou_reg}">
                   <div class="side-link">수강신청</div>
                 </a>
-                <a href="#">
+                <a th:href="@{/bachelor_guide/grade}">
                   <div class="side-link">성적</div>
                 </a>
-                <a href="#">
+                <a th:href="@{/bachelor_guide/com_n_grd}">
                   <div class="side-link">수료 밎 졸업</div>
                 </a>
-                <a href="#">
+                <a th:href="@{/bachelor_guide/fre_Que}">
                   <div class="side-link">자주묻는질문</div>
                 </a>
               </div>

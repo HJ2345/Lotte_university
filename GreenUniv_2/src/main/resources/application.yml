@@ -30,7 +30,7 @@ spring:
     jpa:
         database: mysql
         hibernate:
-            ddl-auto: update
+            ddl-auto: none # 테이블 자동 생성 막는 설정
             naming:
                 physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         properties:
