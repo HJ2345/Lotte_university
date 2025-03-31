@@ -1,7 +1,13 @@
 package kr.co.greenuniv.controller;
 
+import kr.co.greenuniv.dto.DeptDTO;
 import kr.co.greenuniv.dto.StudentDTO;
+import kr.co.greenuniv.dto.UnivDTO;
+import kr.co.greenuniv.entity.University;
+import kr.co.greenuniv.service.DeptService;
 import kr.co.greenuniv.service.StudentService;
+import kr.co.greenuniv.service.UnivService;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,15 +16,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
+
 import static java.rmi.server.LogStream.log;
 
 
 @Slf4j
 @Controller
+@RequiredArgsConstructor
 public class AdminController {
 
-    @Autowired
-    private StudentService studentService;  // 학생등록 service
+    private final StudentService studentService;  // 학생등록 service
+    private final UnivService univService;  // 학생등록 service
+    private final DeptService deptService;  // 학생등록 service
 
 
     @GetMapping("admin/adminMain")
@@ -90,7 +100,27 @@ public class AdminController {
     }
 
     @GetMapping("admin/univDeptEnrollment")
-    public String univDeptEnrollment(){
+    public String univDeptEnrollment(Model model) {
+        List<University> univList = univService.findAll();
+        model.addAttribute("univList", univList);
         return "admin/univDeptEnrollment";
+    }
+
+    @PostMapping("/admin/univDeptEnrollment")
+    public String univSave(UnivDTO univDTO) {
+
+        log.info("univDTO {}", univDTO);
+        univService.register(univDTO);
+
+        return "redirect:/admin/univDeptEnrollment";
+    }
+
+    @PostMapping("/admin/univDeptEnrollment2")
+    public String deptSave(DeptDTO deptDTO) {
+
+        log.info("deptDTO {}", deptDTO);
+        deptService.register(deptDTO);
+
+        return "redirect:/admin/univDeptEnrollment";
     }
 }

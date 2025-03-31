@@ -105,7 +105,7 @@
                             <span class="current-location">대학 및 학과 등록</span>
                         </div>
                     </div>
-                    <form action="#">
+                    <form th:action="@{/admin/univDeptEnrollment}" method="post">
                         <div class="table-container">
                             <div class="main-title">
                                 <img th:src="@{/images/bullet-h4.png}" alt="before">
@@ -139,7 +139,7 @@
                         </div>
                         <button type="submit">등록</button>
                     </form>  
-                    <form action="#">
+                    <form th:action="@{/admin/univDeptEnrollment2}" method="post">
                         <div class="table-container">
                             <div class="main-title">
                                 <img th:src="@{/images/bullet-h4.png}" alt="before">
@@ -151,23 +151,9 @@
                                     <td style="color: #BC2E13;">고유 2자리 숫자 자동 생성</td>
                                     <td>단과대학</td>
                                     <td>
-                                        <select class="w-150">
-                                            <option value="#" disabled selected>선택</option>
-                                            <option value="#">인문대학</option>
-                                            <option value="#">사회과학대학</option>
-                                            <option value="#">법과대학</option>
-                                            <option value="#">상과대학</option>
-                                            <option value="#">자연과학대학</option>
-                                            <option value="#">공과대학</option>
-                                            <option value="#">정보대학</option>
-                                            <option value="#">농과대학</option>
-                                            <option value="#">생활과학대학</option>
-                                            <option value="#">수산대학</option>
-                                            <option value="#">미술대학</option>
-                                            <option value="#">예술대학</option>
-                                            <option value="#">음악대학</option>
-                                            <option value="#">체육대학</option>
-                                            <option value="#">교양대학</option>
+                                        <select class="w-150" name="univName">
+                                            <option value="" selected disabled>-- 선택하세요 --</option>
+                                            <option th:each="univList : ${univList}" th:value="${univList.univName}" th:text="${univList.univName}"></option>
                                         </select>
                                     </td>
                                 </tr>
@@ -184,11 +170,11 @@
                                 <tr>
                                     <td>설립연도</td>
                                     <td>
-                                        <input type="date" class="selectDate w-200">
+                                        <input type="date" name="deptSetDate" class="selectDate w-200">
                                     </td>
                                     <td>학과장</td>
                                     <td>
-                                        <select class="w-150">
+                                        <select class="w-150" name="">
                                             <option value="#" disabled selected>선택</option>
                                             <option value="#">이순신</option>
                                             <option value="#">강감찬</option>
