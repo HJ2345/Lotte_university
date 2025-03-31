@@ -14,6 +14,8 @@
 
     <script th:src="@{/js/header.js}"></script>
     <script th:src="@{/js/checkOne.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
     <link rel="stylesheet" th:href="@{/style/user/login.css}">
 
     <title>로그인 - 그린대학교</title>
@@ -22,98 +24,7 @@
     <div id="wrapper">
         <!-- header side -->
         <header>
-            <div class="topMenuBar">
-                <ul class="topMenus">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">사이트맵</a></li>
-                    <li><a href="#">로그인</a></li>
-                    <li><a href="#">학생지원</a></li>
-                </ul>
-            </div>
-            <div>
-                <div class="category">
-                    <a href="#">
-                        <img th:src="@{/images/header_logo.png}" alt="그린대학교" class="logo">
-                    </a>
-                    <div class="nav-container">
-                        <nav>
-                            <div class="item">
-                                대학소개
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">총장 인사말</a>
-                                        <a href="#">교육이념</a>
-                                        <a href="#">연혁</a>
-                                        <a href="#">조직도</a>
-                                        <a href="#">오시는길</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                입학안내
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">공지사항</a>
-                                        <a href="#">수시모집</a>
-                                        <a href="#">정시모집</a>
-                                        <a href="#">편입학</a>
-                                        <a href="#">입학상담</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                대학·대학원
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">인문사회대학</a>
-                                        <a href="#">자연과학대학</a>
-                                        <a href="#">공과대학</a>
-                                        <a href="#">사범대학</a>
-                                        <a href="#">대학원</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                학사안내
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">공지사항</a>
-                                        <a href="#">학사일정</a>
-                                        <a href="#">수강신청</a>
-                                        <a href="#">성적</a>
-                                        <a href="#">수료 및 졸업</a>
-                                        <a href="#">자주묻는질문</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                대학생활
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">학생회소개</a>
-                                        <a href="#">동아리/스터디</a>
-                                        <a href="#">식단안내</a>
-                                        <a href="#">갤러리</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                커뮤니티
-                                <div class="dropdown">
-                                    <div>
-                                        <a href="#">공지사항</a>
-                                        <a href="#">뉴스 및 칼럼</a>
-                                        <a href="#">취업정보</a>
-                                        <a href="#">자유게시판</a>
-                                        <a href="#">질문과 답변</a>
-                                        <a href="#">자료실</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+            <th:block th:include="/common/_header.html"/>
             <div class="location-container">
                 <div>
                     <ul>
@@ -135,27 +46,27 @@
             </div>
         </header>
         <!-- header end -->
-        <main>
+        <main id="user">
             <div class="main-container">
                 <div>
                     <div class="loginForm-container">
                         <h4>LOGIN</h4>
                         <p>로그인을 하시면 더 다양한 서비스를 받으실 수 있습니다.</p>
-                        <form action="#" class="loginForm">
+                        <form  method="post" class="loginForm">
                             <div class="login-option">
                                 <div class="checkbox-container">
                                     <label class="check1 check_label">
-                                        <input type="checkbox" id="check1" class="checked" name="student" onclick="checkOnlyOne(this)" checked>
+                                        <input type="checkbox" class="checked check1" name="student" onclick="checkOnlyOne(this)" checked>
                                         <span class="checkbox_icon"></span>
                                         <span class="checkbox_text">학부생</span>
                                     </label>
                                     <label class="check2 check_label">
-                                        <input type="checkbox" id="check2" class="checked" name="staff" onclick="checkOnlyOne(this)">
+                                        <input type="checkbox" class="checked check2" name="staff" onclick="checkOnlyOne(this)">
                                         <span class="checkbox_icon"></span>
                                         <span class="checkbox_text">교직원</span>
                                     </label>
                                     <label class="check2 check_label">
-                                        <input type="checkbox" id="check2" class="checked" name="staff" onclick="checkOnlyOne(this)">
+                                        <input type="checkbox" class="checked check3" name="staff" onclick="checkOnlyOne(this)">
                                         <span class="checkbox_icon"></span>
                                         <span class="checkbox_text">일반인</span>
                                     </label>

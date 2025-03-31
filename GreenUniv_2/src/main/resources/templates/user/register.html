@@ -18,6 +18,7 @@
     <script th:src="@{/js/header.js}"></script>
     <script th:src="@{/js/checkOne.js}"></script>
     <script th:src="@{/js/daumPostCode.js}"></script>
+    <script th:src="@{/js/validation.js}"></script>
     <link rel="stylesheet" th:href="@{/style/user/register.css}">
 
     <title>회원가입 - 그린대학교</title>
@@ -139,20 +140,22 @@
             </div>
         </header>
         <!-- header end -->
-        <main>
+        <main id = "user">
             <div class="main-container">
                 <div>
                     <div class="registerForm-container">
                         <h4>회원가입</h4>
                         <p>반갑습니다 그린대학교 입니다. 회원가입 후 더 많은 정보를 이용하세요.</p>
                         <p>대학구성원(학생, 교직원)은 회원가입 없이 학번, 교번(사번) 아이디를 사용하여 로그인할 수 있습니다.</p>
-                        <form th:action="@{/user/register}" method="post" class="registerForm">
+                        <form id="formRegister" th:action="@{/user/register}" method="post" class="registerForm">
                             <table>
                                 <tr>
                                     <td>아이디<span class="required">*</span></td>
                                     <td>
                                         <input type="text" name="uid" placeholder="아이디 입력">
                                         <span class="description">영문·숫자 조합 4~10자 이내</span>
+                                        <button id="btnCheckUid" type="button">중복확인</button>
+                                        <span class="uidResult"></span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -165,27 +168,40 @@
                                 <tr>
                                     <td>비밀번호 확인<span class="required">*</span></td>
                                     <td>
-                                        <input type="password" name="pass" placeholder="비밀번호 확인 입력">
+                                        <input type="password" name="pass2" placeholder="비밀번호 확인 입력">
+                                        <span class="passResult"></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>이름<span class="required">*</span></td>
                                     <td>
                                         <input type="text" name="name" placeholder="이름 입력">
+                                        <span class="nameResult"></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>휴대폰<span class="required">*</span></td>
                                     <td>
                                         <input type="text" name="hp" placeholder="휴대폰 입력">
-                                        <a href="#"><img th:src="@{/images/authButton.png}" alt="인증받기" class="auth_Button"></a>
+                                        <button class="auth_Button" type="button"><img th:src="@{/images/authButton.png}" alt="확인"/></button>
+                                        <span class="hpResult"></span>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>이메일<span class="required">*</span></td>
                                     <td>
-                                        <input type="email" name="email" placeholder="이메일 입력">
-                                        <a href="#"><img th:src="@{/images/authButton.png}" alt="인증받기" class="auth_Button"></a>
+                                        <input type="email" name="email" placeholder="이메일 입력" />
+                                        <button id="btnSendEmail" class="auth_Button" type="button">
+                                            <img th:src="@{/images/authButton.png}" alt="인증번호 받기" />
+                                        </button>
+                                        <span class="emailResult"></span>
+                                        <!-- 인증번호 입력란이 기본적으로 숨겨져 있음 -->
+                                        <div class="auth" style="display: none;">
+                                            <input type="text" name="auth" placeholder="인증번호 입력"/>
+                                            <button id="btnAuthEmail" class="auth_Button" type="button">
+                                                <img th:src="@{/images/authButton.png}" alt="확인"/>
+                                            </button>
+                                        </div>
                                     </td>
                                 </tr>
                                 <tr>
@@ -244,5 +260,6 @@
             </div>
         </footer>
     </div>
+    <script src="/js/validation.js"></script>
 </body>
 </html>
