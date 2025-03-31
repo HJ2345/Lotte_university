@@ -22,12 +22,28 @@ public class User {
     private String email;
     private String hp;
 
+
+    //@Column(nullable = false)
     private String role;
 
     private String zip;
     private String addr1;
     private String addr2;
+    private String regip;
 
+    @CreationTimestamp
+    private LocalDateTime regDate;
 
-
+    private String leaveDate;
+    /*
+    @PrePersist
+    public void prePersist(){
+        if(this.role == null){
+            this.role = "USER";
+        }
+    }
+    */
 }
+
+
+

@@ -5,6 +5,8 @@ import kr.co.greenuniv.dto.StudentDTO;
 import kr.co.greenuniv.dto.UnivDTO;
 import kr.co.greenuniv.entity.University;
 import kr.co.greenuniv.service.DeptService;
+import kr.co.greenuniv.dto.ProfessorDTO;
+import kr.co.greenuniv.service.ProfessorService;
 import kr.co.greenuniv.service.StudentService;
 import kr.co.greenuniv.service.UnivService;
 import lombok.RequiredArgsConstructor;
@@ -26,9 +28,12 @@ import static java.rmi.server.LogStream.log;
 @RequiredArgsConstructor
 public class AdminController {
 
+
     private final StudentService studentService;  // 학생등록 service
     private final UnivService univService;  // 학생등록 service
     private final DeptService deptService;  // 학생등록 service
+    @Autowired
+    private ProfessorService professorService;
 
 
     @GetMapping("admin/adminMain")
@@ -66,16 +71,22 @@ public class AdminController {
         return "admin/lectureList";
     }
 
-    @GetMapping("admin/profEnrollment")
-    public String profEnrollment(){
+    @GetMapping("/admin/profEnrollment")
+    public String profEnrollment(Model model){
+        model.addAttribute("professorDto" , new ProfessorDTO());
         return "admin/profEnrollment";
+    }
+
+    @PostMapping("/admin/profEnrollment")
+    public String regProfEnrollment(@ModelAttribute ProfessorDTO professorDTO){
+        professorService.regProfessor(professorDTO);
+        return "redirect:/admin/profEnrollment";
     }
 
     @GetMapping("admin/stdEnrollment")
     public String stdEnrollment(Model model){
         model.addAttribute("studentDto", new StudentDTO());
         return "admin/stdEnrollment";
-
     }
 
     @PostMapping("/admin/stdEnrollment")
