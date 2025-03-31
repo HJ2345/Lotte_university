@@ -14,6 +14,8 @@
 
     <script th:src="@{/js/header.js}"></script>
     <script th:src="@{/js/checkOne.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
     <link rel="stylesheet" th:href="@{/style/user/login.css}">
 
     <title>로그인 - 그린대학교</title>
@@ -49,27 +51,27 @@
             </div>
         </header>
         <!-- header end -->
-        <main>
+        <main id="user">
             <div class="main-container">
                 <div>
                     <div class="loginForm-container">
                         <h4>LOGIN</h4>
                         <p>로그인을 하시면 더 다양한 서비스를 받으실 수 있습니다.</p>
-                        <form action="#" class="loginForm">
+                        <form  method="post" class="loginForm">
                             <div class="login-option">
                                 <div class="checkbox-container">
                                     <label class="check1 check_label">
-                                        <input type="checkbox" id="check1" class="checked" name="student" onclick="checkOnlyOne(this)" checked>
+                                        <input type="checkbox" class="checked check1" name="student" onclick="checkOnlyOne(this)" checked>
                                         <span class="checkbox_icon"></span>
                                         <span class="checkbox_text">학부생</span>
                                     </label>
                                     <label class="check2 check_label">
-                                        <input type="checkbox" id="check2" class="checked" name="staff" onclick="checkOnlyOne(this)">
+                                        <input type="checkbox" class="checked check2" name="staff" onclick="checkOnlyOne(this)">
                                         <span class="checkbox_icon"></span>
                                         <span class="checkbox_text">교직원</span>
                                     </label>
                                     <label class="check2 check_label">
-                                        <input type="checkbox" id="check2" class="checked" name="staff" onclick="checkOnlyOne(this)">
+                                        <input type="checkbox" class="checked check3" name="staff" onclick="checkOnlyOne(this)">
                                         <span class="checkbox_icon"></span>
                                         <span class="checkbox_text">일반인</span>
                                     </label>

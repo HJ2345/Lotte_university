@@ -1,20 +1,20 @@
-//유효성 검사에 사용할 정규표현식
+// 유효성 검사에 사용할 정규표현식
 const reUid   = /^[a-z]+[a-z0-9]{4,19}$/g;
 const rePass  = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{5,16}$/;
-const reName  = /^[가-힣]{2,10}$/
-const reNick  = /^[a-zA-Zㄱ-힣0-9][a-zA-Zㄱ-힣0-9]*$/;
+const reName  = /^[가-힣]{2,10}$/;
 const reEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 const reHp    = /^01(?:0|1|[6-9])-(?:\d{4})-\d{4}$/;
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
+    // 폼 요소 참조
 
-    // 유효성 검사에 사용할 상태 변수
+    // 유효성 검사 상태 변수
     let isUidOk = false;
     let isPassOk = false;
     let isNameOk = false;
-    let isNickOk = false;
     let isEmailOk = false;
     let isHpOk = false;
+
 
     // 1.아이디 유효성 검사(중복체크 포함)
     const btnCheckUid = document.getElementById('btnCheckUid');
@@ -96,40 +96,6 @@ document.addEventListener('DOMContentLoaded', function(){
             isNameOk = true;
         }
     });
-
-    // 4.별명 유효성 검사(중복체크 포함)
-    const btnCheckNick = document.getElementById('btnCheckNick');
-    const nickResult = document.getElementsByClassName('nickResult')[0];
-
-    btnCheckNick.onclick = async function(){
-
-        const value = formRegister.nick.value;
-
-        if(!value.match(reNick)){
-            nickResult.innerText = '유효하지 않은 별명 입니다.';
-            nickResult.style.color = 'red';
-            isNickOk = false;
-            return;
-        }
-
-        try {
-            const response = await fetch(`/user/nick/${value}`);
-            const data = await response.json();
-            console.log(data);
-
-            if(data.count > 0){
-                nickResult.innerText = '이미 사용중인 별명 입니다.';
-                nickResult.style.color = 'red';
-                isNickOk = false;
-            }else{
-                nickResult.innerText = '사용 가능한 별명 입니다.';
-                nickResult.style.color = 'green';
-                isNickOk = true;
-            }
-        }catch(err){
-            console.log(err);
-        }
-    };
 
     // 5. 이메일 유효성 검사(중복/인증처리 포함)
     const btnSendEmail = document.getElementById('btnSendEmail');
@@ -255,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
         // 5) 이메일 유효성 검사 결과
         if(!isEmailOk){
-            return false;
+            //return false;
         }
 
         // 6) 휴대폰 유효성 검사 결과
