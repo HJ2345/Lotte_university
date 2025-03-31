@@ -16,14 +16,17 @@ server:
 spring:
     application:
         name: GreenUniv
+        version: 1.0.0
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: Qwerty@123
-        url: jdbc:mysql://3.34.183.157:3306/GreenUniv
-        username: root
+        password: 1234
+        url: jdbc:mysql://localhost:3306/GreenUniv?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+        username: greenuser
     devtools:
         livereload:
             enabled: true
+
+
     jpa:
         database: mysql
         hibernate:
@@ -34,3 +37,5 @@ spring:
             hibernate:
                 format_sql: true
                 show_sql: true
+
+
