@@ -1,6 +1,8 @@
 package kr.co.greenuniv.controller;
 
+import kr.co.greenuniv.dto.ProfessorDTO;
 import kr.co.greenuniv.dto.StudentDTO;
+import kr.co.greenuniv.service.ProfessorService;
 import kr.co.greenuniv.service.StudentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ public class AdminController {
 
     @Autowired
     private StudentService studentService;  // 학생등록 service
+    @Autowired
+    private ProfessorService professorService;
 
 
     @GetMapping("admin/adminMain")
@@ -56,16 +60,22 @@ public class AdminController {
         return "admin/lectureList";
     }
 
-    @GetMapping("admin/profEnrollment")
-    public String profEnrollment(){
+    @GetMapping("/admin/profEnrollment")
+    public String profEnrollment(Model model){
+        model.addAttribute("professorDto" , new ProfessorDTO());
         return "admin/profEnrollment";
+    }
+
+    @PostMapping("/admin/profEnrollment")
+    public String regProfEnrollment(@ModelAttribute ProfessorDTO professorDTO){
+        professorService.regProfessor(professorDTO);
+        return "redirect:/admin/profEnrollment";
     }
 
     @GetMapping("admin/stdEnrollment")
     public String stdEnrollment(Model model){
         model.addAttribute("studentDto", new StudentDTO());
         return "admin/stdEnrollment";
-
     }
 
     @PostMapping("/admin/stdEnrollment")

@@ -111,7 +111,7 @@
                             <span class="current-location">교수 등록</span>
                         </div>
                     </div>
-                    <form action="#">
+                    <form th:action="@{/admin/profEnrollment}" method="post">
                         <div class="table-container">
                             <div class="main-title">
                                 <img th:src="@{/images/bullet-h4.png}" alt="before">
@@ -128,58 +128,58 @@
                                     <td style="color: #BC2E13;">연도 + 학과 코드 + 순번 조합 자동생성</td>
                                     <td>주민등록번호</td>
                                     <td>
-                                        <input type="text" name="jumin" class="jumin width-twohund" placeholder="- 포함 14자리 입력">
+                                        <input type="text" name="P_Pnum" class="jumin width-twohund" placeholder="- 포함 14자리 입력">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>이름</td>
                                     <td>
-                                        <input type="text" name="profName" class="width-onehundfifty" placeholder="교수 이름 입력">
+                                        <input type="text" name="P_name" class="width-onehundfifty" placeholder="교수 이름 입력">
                                     </td>
                                     <td>영문명</td>
                                     <td>
-                                        <input type="text" name="profEngName" class="width-twohund" placeholder="여권 등과 동일한 영문 이름">
+                                        <input type="text" name="P_Ename" class="width-twohund" placeholder="여권 등과 동일한 영문 이름">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>성별</td>
                                     <td>
                                         <div class="checkbox">
-                                            <input type="checkbox" name="male" id="male" class="checked" onclick="checkOnlyOne(this)">
+                                            <input type="radio" name="gender" id="male" value="M">
                                             <label for="male">남</label>
-                                            
-                                            <input type="checkbox" name="female" id="female" class="checked" onclick="checkOnlyOne(this)">
+
+                                            <input type="radio" name="gender" id="female" value="F">
                                             <label for="female">여</label>
                                         </div>
                                     </td>
                                     <td>국적</td>
                                     <td>
-                                        <select name="country" class="country">
+                                        <select name="P_nation" class="country">
                                             <option value="#" disabled selected>선택</option>
-                                            <option value="#">한국</option>
-                                            <option value="#">미국</option>
-                                            <option value="#">일본</option>
-                                            <option value="#">중국</option>
+                                            <option value="KOR">한국</option>
+                                            <option value="USA">미국</option>
+                                            <option value="JPN">일본</option>
+                                            <option value="CHN">중국</option>
                                         </select>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>휴대폰</td>
                                     <td>
-                                        <input type="text" class="width-onehundfifty" placeholder="휴대폰 번호 입력" name="hp">
+                                        <input type="text" class="width-onehundfifty" placeholder="휴대폰 번호 입력" name="P_hp">
                                     </td>
                                     <td>이메일</td>
                                     <td>
-                                        <input type="email" class="width-onehundfifty" placeholder="이메일 입력" name="email">
+                                        <input type="email" class="width-onehundfifty" placeholder="이메일 입력" name="P_email">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td>주소</td>
                                     <td class="address" colspan="3">
-                                        <input type="text" name="zip" id="postcode" class="width-onehundfifty" placeholder="우편번호 선택" readonly onclick="DaumPostcode()">
-                                        <input type="text" class="addrs" id="address" name="addr1" placeholder="기본주소 선택" readonly>
-                                        <input type="text" class="addrs" id="detailAddress" name="addr2" placeholder="상세주소 입력">
+                                        <input type="text" name="P_zip" id="postcode" class="width-onehundfifty" placeholder="우편번호 선택" readonly onclick="DaumPostcode()">
+                                        <input type="text" class="addrs" id="address" name="P_addr1" placeholder="기본주소 선택" readonly>
+                                        <input type="text" class="addrs" id="detailAddress" name="P_addr2" placeholder="상세주소 입력">
                                     </td>
                                 </tr>
                             </table>
@@ -194,34 +194,34 @@
                                 <tr>
                                     <td>졸업대학</td>
                                     <td>
-                                        <input type="text" name="greaduatedUniv" class="width-twohund" placeholder="대학교 이름 입력">
+                                        <input type="text" name="P_graduniv" class="width-twohund" placeholder="대학교 이름 입력">
                                     </td>
                                     <td>학문 분야(전공)</td>
                                     <td>
-                                        <input type="text" name="major" class="width-twohund" placeholder="전공 입력">
+                                        <input type="text" name="P_spec" class="width-twohund" placeholder="전공 입력">
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>졸업일</td>
                                     <td>
-                                        <input type="date" class="width-twohund selectDate">
+                                        <input type="date" name="P_graddate" class="width-twohund selectDate">
                                     </td>
                                     <td>학위</td>
                                     <td>
-                                        <select id="degree">
-                                            <option value="#">박사</option>
-                                            <option value="#">석사</option>
-                                            <option value="#">학사</option>
-                                            <option value="#">명예박사</option>
-                                            <option value="#">전문학사</option>
-                                            <option value="#">준학사</option>
+                                        <select id="degree" name="P_degree">
+                                            <option value="박사">박사</option>
+                                            <option value="석사">석사</option>
+                                            <option value="학사">학사</option>
+                                            <option value="명예박사">명예박사</option>
+                                            <option value="전문학사">전문학사</option>
+                                            <option value="준학사">준학사</option>
                                         </select>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>담당학과</td>
                                     <td>
-                                        <select id="category" onchange="updateOptions()">
+                                        <select id="category" name="P_lesson" onchange="updateOptions()">
                                             <option value="" disabled selected>선택하세요</option>
                                             <option value="humanitiesSociety">인문사회대학</option>
                                             <option value="naturalScience">자연과학대학</option>
@@ -229,13 +229,13 @@
                                             <option value="education">사범대학</option>
                                             <option value="graduate">대학원</option>
                                         </select>
-                                        <select id="item">
+                                        <select id="item" name="P_spec2">
                                             <option value="#"></option>
                                         </select>
                                     </td>
                                     <td>임용일</td>
                                     <td>
-                                        <input type="date" class="width-twohund selectDate">
+                                        <input type="date" name="P_appointdate" class="width-twohund selectDate">
                                     </td>
                                 </tr>
                             </table>
