@@ -35,3 +35,8 @@ out/
 
 ### VS Code ###
 .vscode/
+
+
+GreenUniv.log
+../database/green_db.mwb
+../database/green_db.mwb.bak

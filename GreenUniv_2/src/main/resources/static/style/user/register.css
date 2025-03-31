@@ -248,7 +248,7 @@ td:nth-child(2) {
     background: #8B8B8B;
     padding: 12px 13px;
 }
-.btn-next {
+.btn-register {
     background: #3F97F6;
     cursor: pointer;
 }
@@ -256,7 +256,7 @@ td:nth-child(2) {
     transition: 0.3s;
     background: #777777;
 }
-.btn-next:hover {
+.btn-register:hover {
     transition: 0.3s;
     background: #3781cf;
 }
