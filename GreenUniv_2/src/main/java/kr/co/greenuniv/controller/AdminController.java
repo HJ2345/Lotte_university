@@ -1,12 +1,16 @@
 package kr.co.greenuniv.controller;
 
-import kr.co.greenuniv.dto.DeptDTO;
+
+import kr.co.greenuniv.dto.CourseDTO;
 import kr.co.greenuniv.dto.StudentDTO;
+import kr.co.greenuniv.service.CourseService;
+import kr.co.greenuniv.dto.DeptDTO;
 import kr.co.greenuniv.dto.UnivDTO;
 import kr.co.greenuniv.entity.University;
 import kr.co.greenuniv.service.DeptService;
 import kr.co.greenuniv.dto.ProfessorDTO;
 import kr.co.greenuniv.service.ProfessorService;
+
 import kr.co.greenuniv.service.StudentService;
 import kr.co.greenuniv.service.UnivService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +21,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import java.util.List;
 
 import static java.rmi.server.LogStream.log;
@@ -32,8 +35,12 @@ public class AdminController {
     private final StudentService studentService;  // 학생등록 service
     private final UnivService univService;  // 학생등록 service
     private final DeptService deptService;  // 학생등록 service
+
+    @Autowired
+    private CourseService courseService;
     @Autowired
     private ProfessorService professorService;
+
 
 
     @GetMapping("admin/adminMain")
@@ -61,10 +68,19 @@ public class AdminController {
         return "admin/facultyList";
     }
 
-    @GetMapping("admin/lecEnrollment")
-    public String lecEnrollment(){
+    @GetMapping("admin/lecEnrollment")  // 강의 등록
+    public String lecEnrollment(Model model){
+        model.addAttribute("courseDto", new CourseDTO());
         return "admin/lecEnrollment";
     }
+
+    @PostMapping("admin/lecEnrollment")
+    public String lecEnrollment(@ModelAttribute("courseDto") CourseDTO courseDto){
+        courseService.save(courseDto);
+
+        return "redirect:/admin/lecEnrollment";
+    }
+
 
     @GetMapping("admin/lectureList")
     public String lectureList(){
