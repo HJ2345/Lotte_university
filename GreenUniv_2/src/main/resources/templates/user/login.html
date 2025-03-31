@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Google Font Noto Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <!-- Google Font 42dot Sans -->
     <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
-    
+
     <script th:src="@{/js/header.js}"></script>
     <script th:src="@{/js/checkOne.js}"></script>
     <link rel="stylesheet" th:href="@{/style/user/login.css}">
 
     <title>로그인 - 그린대학교</title>
+    <!--
+      이름 : 한결
+      날짜 : 2025/03
+      내용 : user login html
+    -->
 </head>
 <body>
     <div id="wrapper">
@@ -140,7 +145,7 @@
                 <div>
                     <div class="loginForm-container">
                         <h4>LOGIN</h4>
-                        <p>로그인을 하시면 더 다양한 서비스를 받으실 수 있습니다.</p>  
+                        <p>로그인을 하시면 더 다양한 서비스를 받으실 수 있습니다.</p>
                         <form action="#" class="loginForm">
                             <div class="login-option">
                                 <div class="checkbox-container">
@@ -154,8 +159,14 @@
                                         <span class="checkbox_icon"></span>
                                         <span class="checkbox_text">교직원</span>
                                     </label>
+                                    <label class="check2 check_label">
+                                        <input type="checkbox" id="check2" class="checked" name="staff" onclick="checkOnlyOne(this)">
+                                        <span class="checkbox_icon"></span>
+                                        <span class="checkbox_text">일반인</span>
+                                    </label>
                                 </div>
                                 <a href="#" class="find-account">아이디/비밀번호 찾기</a>
+                                <a th:href="@{/user/terms}" class="find-account">회원가입</a>
                             </div>
                             <div class="login-container">
                                 <input type="text" name="id" placeholder="아이디">

@@ -21,6 +21,11 @@
     <link rel="stylesheet" th:href="@{/style/user/register.css}">
 
     <title>회원가입 - 그린대학교</title>
+    <!--
+      이름 : 한결
+      날짜 : 2025/03
+      내용 : user register html
+    -->
 </head>
 <body>
     <div id="wrapper">
@@ -146,12 +151,12 @@
                         <h4>회원가입</h4>
                         <p>반갑습니다 그린대학교 입니다. 회원가입 후 더 많은 정보를 이용하세요.</p>
                         <p>대학구성원(학생, 교직원)은 회원가입 없이 학번, 교번(사번) 아이디를 사용하여 로그인할 수 있습니다.</p>
-                        <form action="#" class="registerForm">
+                        <form th:action="@{/user/register}" method="post" class="registerForm">
                             <table>
                                 <tr>
                                     <td>아이디<span class="required">*</span></td>
                                     <td>
-                                        <input type="text" name="id" placeholder="아이디 입력">
+                                        <input type="text" name="uid" placeholder="아이디 입력">
                                         <span class="description">영문·숫자 조합 4~10자 이내</span>
                                     </td>
                                 </tr>
@@ -199,7 +204,7 @@
                             </table>
                             <p><span class="required">*</span> 필수입력</p>
                             <div class="btnbox">
-                                <a href="#" class="btn btn-cancel">취소</a>
+                                <a th:href="@{/user/login}" class="btn btn-cancel">취소</a>
                                 <button class="btn btn-next" type="submit">회원가입</button>
                             </div>
                         </form>
