@@ -32,6 +32,9 @@ public class UserService {
     private final HttpServletRequest request;
 
     public void register(UserDTO userDTO){
+        // 비밀번호 암호화
+        String encodedPass = passwordEncoder.encode(userDTO.getPass());
+        userDTO.setPass(encodedPass);
 
         // 엔티티 변환
         User user = modelMapper.map(userDTO, User.class);

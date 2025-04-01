@@ -35,7 +35,7 @@ public class MyUserDetails implements UserDetails {
         return user.getUid();
     }
 
-    @Override
+   /* @Override
     public boolean isAccountNonExpired() {
         // 계정 만료 여부(true : 만료안됨, false : 만료됨)
         return true;
@@ -57,5 +57,5 @@ public class MyUserDetails implements UserDetails {
     public boolean isEnabled() {
         // 계정 활성화 여부
         return true;
-    }
+    }*/
 }
