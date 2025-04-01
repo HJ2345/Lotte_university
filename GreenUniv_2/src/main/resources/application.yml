@@ -28,6 +28,7 @@ spring:
                     timeout: 5000
                     starttls:
                         enable: true
+        version: 1.0.0
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: Qwerty@123
@@ -36,10 +37,14 @@ spring:
     devtools:
         livereload:
             enabled: true
+
+
     jpa:
         database: mysql
         hibernate:
-            ddl-auto: update
+
+            ddl-auto: none # 테이블 자동 생성 막는 설정
+
             naming:
                 physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         properties:
