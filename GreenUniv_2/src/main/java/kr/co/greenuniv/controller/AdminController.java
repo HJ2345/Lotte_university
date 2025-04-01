@@ -146,6 +146,7 @@ public class AdminController {
     public String deptSave(DeptDTO deptDTO) {
 
         log.info("deptDTO {}", deptDTO);
+
         deptService.register(deptDTO);
 
         return "redirect:/admin/univDeptEnrollment";
