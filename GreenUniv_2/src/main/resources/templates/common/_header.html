@@ -1,9 +1,11 @@
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <header>
     <div class="topMenuBar">
         <ul class="topMenus">
             <li><a href="#">HOME</a></li>
             <li><a href="#">사이트맵</a></li>
-            <li><a href="#">로그인</a></li>
+            <li><a sec:authorize="isAnonymous()" href="/user/login">로그인</a></li>
+            <li><a sec:authorize="isAuthenticated()" href="/user/logout">로그아웃</a></li>
             <li><a href="#">학생지원</a></li>
         </ul>
     </div>
