@@ -1,11 +1,11 @@
 // 유효성 검사에 사용할 정규표현식
-const reUid   = /^[a-z]+[a-z0-9]{4,19}$/g;
-const rePass  = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{5,16}$/;
-const reName  = /^[가-힣]{2,10}$/;
+const reUid = /^[a-z]+[a-z0-9]{4,19}$/g;
+const rePass = /^(?=.*[a-zA-z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{5,16}$/;
+const reName = /^[가-힣]{2,10}$/;
 const reEmail = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
-const reHp    = /^01(?:0|1|[6-9])-(?:\d{4})-\d{4}$/;
+const reHp = /^01(?:0|1|[6-9])-(?:\d{4})-\d{4}$/;
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // 폼 요소 참조
 
     // 유효성 검사 상태 변수
@@ -20,13 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnCheckUid = document.getElementById('btnCheckUid');
     const uidResult = document.getElementsByClassName('uidResult')[0];
 
-    btnCheckUid.onclick = function(){
+    btnCheckUid.onclick = function () {
         const value = formRegister.uid.value;
 
         // 아이디 유효성 검사
-        if(!value.match(reUid)){
+        if (!value.match(reUid)) {
             uidResult.innerText = '아이디 형식에 맞지 않습니다.';
             uidResult.style.color = 'red';
+            uidResult.style.display = 'block';
             isUidOk = false;
             return; // 처리 종료
         }
@@ -34,22 +35,24 @@ document.addEventListener('DOMContentLoaded', function() {
         // 아이디 중복 체크
         fetch(`/user/uid/${value}`)
             .then(response => response.json())
-            .then((data)=>{
+            .then((data) => {
                 console.log(data);
 
-                if(data.count > 0){
+                if (data.count > 0) {
                     // 이미 사용중인 아이디
                     uidResult.innerText = '이미 사용중인 아이디 입니다.';
                     uidResult.style.color = 'red';
+                    uidResult.style.display = 'block';
                     isUidOk = false;
-                }else{
+                } else {
                     // 사용 가능한 아이디
                     uidResult.innerText = '사용 가능한 아이디 입니다.';
                     uidResult.style.color = 'green';
+                    uidResult.style.display = 'block';
                     isUidOk = true;
                 }
             })
-            .catch((err)=>{
+            .catch((err) => {
                 console.log(err);
             });
     }
@@ -57,25 +60,28 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2.비밀번호 유효성 검사
     const passResult = document.getElementsByClassName('passResult')[0];
 
-    formRegister.pass2.addEventListener('focusout', function(){
+    formRegister.pass2.addEventListener('focusout', function () {
 
         const value1 = formRegister.pass.value;
         const value2 = formRegister.pass2.value;
 
-        if(!value1.match(rePass)){
+        if (!value1.match(rePass)) {
             passResult.innerText = '비밀번호는 숫자, 소문자, 대문자, 특수문자 조합 8자리';
             passResult.style.color = 'red';
+            passResult.style.display = 'block';
             isPassOk = false;
             return;
         }
 
-        if(value1 === value2){
+        if (value1 === value2) {
             passResult.innerText = '사용 가능한 비밀번호 입니다.';
             passResult.style.color = 'green';
+            passResult.style.display = 'block';
             isPassOk = true;
-        }else{
+        } else {
             passResult.innerText = '비밀번호가 일치하지 않습니다.';
             passResult.style.color = 'red';
+            passResult.style.display = 'block';
             isPassOk = false;
         }
     });
@@ -83,16 +89,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // 3.이름 유효성 검사
     const nameResult = document.getElementsByClassName('nameResult')[0];
 
-    formRegister.name.addEventListener('focusout', function(){
+    formRegister.name.addEventListener('focusout', function () {
 
         const value = this.value;
 
-        if(!value.match(reName)){
+        if (!value.match(reName)) {
             nameResult.innerText = '이름이 유효하지 않습니다.';
             nameResult.style.color = 'red';
+            nameResult.style.display = 'block';
             isNameOk = false;
-        }else{
+        } else {
             nameResult.innerText = '';
+            nameResult.style.display = 'none';
             isNameOk = true;
         }
     });
@@ -103,18 +111,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const auth = document.querySelector('.auth');
     let preventDoubleClick = false;
 
-    btnSendEmail.onclick = async function(){
+    btnSendEmail.onclick = async function () {
 
         const value = formRegister.email.value;
 
         // 이중 클릭 방지
-        if(preventDoubleClick){
+        if (preventDoubleClick) {
             return;
         }
 
-        if(!value.match(reEmail)){
+        if (!value.match(reEmail)) {
             emailResult.innerText = '이메일이 유효하지 않습니다.';
             emailResult.style.color = 'red';
+            emailResult.style.display = 'block';
             isEmailOk = false;
             return;
         }
@@ -123,11 +132,12 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(`/user/email/${value}`);
         const data = await response.json();
 
-        if(data.count > 0){
+        if (data.count > 0) {
             emailResult.innerText = '이미 사용중인 이메일 입니다.';
             emailResult.style.color = 'red';
+            emailResult.style.display = 'block';
             isEmailOk = false;
-        }else {
+        } else {
             // 인증번호 입력 필드 출력
             auth.style.display = 'block';
         }
@@ -135,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const btnAuthEmail = document.getElementById('btnAuthEmail');
 
-    btnAuthEmail.onclick = async function(){
+    btnAuthEmail.onclick = async function () {
 
         const value = formRegister.auth.value;
 
@@ -154,13 +164,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const data = await response.json();
         console.log(data);
 
-        if(data){
+        if (data) {
             emailResult.innerText = '이메일이 인증 되었습니다.';
             emailResult.style.color = 'green';
+            emailResult.style.display = 'block';
             isEmailOk = true;
-        }else{
+        } else {
             emailResult.innerText = '유효한 인증코드가 아닙니다.';
             emailResult.style.color = 'red';
+            emailResult.style.display = 'block';
             isEmailOk = false;
         }
 
@@ -169,13 +181,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // 6.휴대폰 유효성 검사(중복체크 포함)
     const hpResult = document.getElementsByClassName('hpResult')[0];
 
-    formRegister.hp.addEventListener('focusout', async function(){
+    formRegister.hp.addEventListener('focusout', async function () {
 
         const value = this.value;
 
-        if(!value.match(reHp)){
+        if (!value.match(reHp)) {
             hpResult.innerText = '휴대폰번호가 유효하지 않습니다.(- 포함)';
             hpResult.style.color = 'red';
+            hpResult.style.display = 'block';
             isHpOk = false;
             return;
         }
@@ -184,48 +197,50 @@ document.addEventListener('DOMContentLoaded', function() {
         const response = await fetch(`/user/hp/${value}`);
         const data = await response.json();
 
-        if(data.count > 0){
+        if (data.count > 0) {
             hpResult.innerText = '이미 사용중인 휴대폰번호 입니다.';
             hpResult.style.color = 'red';
+            hpResult.style.display = 'block';
             isHpOk = false;
-        }else{
+        } else {
             hpResult.innerText = '사용 가능한 휴대폰번호 입니다.';
             hpResult.style.color = 'green';
+            hpResult.style.display = 'block';
             isHpOk = true;
         }
     });
 
     // 최종 폼 전송 이벤트
-    formRegister.onsubmit = function(e){
+    formRegister.onsubmit = function (e) {
         console.log("form submit!!!")
 
         // 1) 아이디 유효성 검사 결과
-        if(!isUidOk){
+        if (!isUidOk) {
             return false; // 폼 전송 취소
         }
 
         // 2) 비밀번호 유효성 검사 결과
-        if(!isPassOk){
+        if (!isPassOk) {
             return false;
         }
 
         // 3) 이름 유효성 검사 결과
-        if(!isNameOk){
+        if (!isNameOk) {
             return false;
         }
 
         // 4) 별명 유효성 검사 결과
-        if(!isNickOk){
+        if (!isNickOk) {
             return false;
         }
 
         // 5) 이메일 유효성 검사 결과
-        if(!isEmailOk){
+        if (!isEmailOk) {
             //return false;
         }
 
         // 6) 휴대폰 유효성 검사 결과
-        if(!isHpOk){
+        if (!isHpOk) {
             return false;
         }
 

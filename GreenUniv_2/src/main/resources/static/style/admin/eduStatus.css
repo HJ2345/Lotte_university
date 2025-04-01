@@ -3,12 +3,15 @@
     padding: 0;
     font: normal 13px "Noto Sans KR";
 }
+
 a {
     text-decoration: none;
 }
+
 ul, li {
     list-style: none;
 }
+
 body {
     min-width: 1200px; /* 최소 너비 유지 */
 }
@@ -28,15 +31,18 @@ header > div > * {
     width: 100%;
     background-color: #00518C;
 }
+
 .topMenus {
     height: 28px;
     padding: 5px 0 5px 5px;
     box-sizing: border-box;
     text-align: right;
 }
+
 .topMenus li {
     display: inline;
 }
+
 .topMenus li > a {
     color: white;
     font-size: 12px;
@@ -45,14 +51,17 @@ header > div > * {
     padding-right: 7px;
     font-weight: 350;
 }
+
 .topMenus li:last-child > a {
     border: none;
     padding-right: 0;
 }
+
 .header-background {
     background-color: #1F2838;
     padding: 17px 0;
 }
+
 /* --------- header end --------- */
 
 /* --------- main start --------- */
@@ -65,9 +74,11 @@ main > * {
     width: 1200px;
     margin: 0 auto;
 }
+
 .main-container {
     display: flex;
 }
+
 .sidebar {
     display: flex;
     width: 270px;
@@ -76,41 +87,50 @@ main > * {
     border-left: 1px solid #C0C0C0;
     padding-bottom: 20px;
 }
+
 .side-icon {
     width: 20px;
     margin-right: 5px;
 }
+
 .side-title {
     font-size: 16px;
     font-weight: 700;
     color: #222;
 }
+
 .side-container {
     margin-top: 20px;
     margin-left: 20px;
 }
+
 .side-container > a {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .side-container ul > li {
     margin-bottom: 10px;
 }
+
 .side-container ul > li:last-child {
     margin-bottom: 10px;
 }
+
 .side-container ul > li > a {
     margin-left: 20px;
     font-size: 14px;
     font-weight: 350;
     color: #111;
 }
+
 .side-container ul > li > a::before {
     content: "·";
     margin-right: 5px;
 }
+
 .main {
     width: 100%;
     display: flex;
@@ -118,6 +138,7 @@ main > * {
     margin-top: 20px;
     margin-left: 20px;
 }
+
 .main-header {
     display: flex;
     box-sizing: border-box;
@@ -127,29 +148,35 @@ main > * {
     padding-bottom: 10px;
     border-bottom: 1px solid #C0C0C0;
 }
+
 .location {
     display: flex;
     align-items: center;
     margin-bottom: -10px;
 }
+
 .location > p {
     font-size: 14px;
     font-weight: 350;
 }
+
 .location > img {
     width: 4px;
     height: 6px;
     margin: 3px 7px 0 7px;
 }
+
 .current-location {
     font-size: 14px;
     font-weight: 350;
     color: #145074;
 }
+
 .main-header > h3 {
     font-size: 20px;
     font-weight: 700;
 }
+
 .select-container {
     display: flex;
     align-items: center;
@@ -168,6 +195,7 @@ select {
     box-sizing: border-box;
     border: 1px solid #959595;
 }
+
 option {
     font-weight: 350;
     color: #333;
@@ -193,16 +221,19 @@ input {
     border: none;
     cursor: pointer;
 }
+
 .table-container {
     margin-top: 10px;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     text-align: center;
-    
+
     color: #333;
 }
+
 table tr > th {
     border-top: 1px solid #a3a3a3;
     border-bottom: 1px solid #a3a3a3;
@@ -210,14 +241,17 @@ table tr > th {
     background: #FAFAFA;
     font-weight: 700;
 }
+
 table tr > td {
     width: 95px;
     height: 45px;
     border-bottom: 1px solid #a3a3a3;
 }
+
 table tr > td:nth-child(1) {
     width: 130px;
 }
+
 table tr > td:nth-child(3) {
     width: 150px;
 }
@@ -229,15 +263,18 @@ table tr > td:nth-child(3) {
     margin-top: 40px;
     box-sizing: border-box;
 }
+
 .paging-container > a {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
+
 .paging-container > a > img {
     padding: 10px;
     border: 1px solid #dedede;
 }
+
 .paging-container > a > button {
     width: 32px;
     height: 32px;
@@ -248,17 +285,21 @@ table tr > td:nth-child(3) {
     font-weight: 350;
     cursor: pointer;
 }
+
 .mr-3 {
     margin-right: 3px;
 }
+
 .mr-10 {
     margin-right: 10px;
 }
+
 .selected {
     border: none !important;
     color: white !important;
     background: #1A528E !important;
 }
+
 /* --------- main end --------- */
 
 /* --------- footer start --------- */
@@ -266,17 +307,21 @@ footer {
     width: 100%;
     box-sizing: border-box;
 }
+
 footer > div > * {
     width: 1200px;
     margin: 0 auto;
 }
+
 .footer-container {
     background-color: #19202D;
     padding: 21.5px 0;
 }
+
 .footer-container > p {
     font-size: 12px;
     font-weight: 350;
     color: white;
 }
+
 /* --------- footer end --------- */

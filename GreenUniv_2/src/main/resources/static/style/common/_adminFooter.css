@@ -1,0 +1,20 @@
+footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-container {
+    background-color: #19202D;
+    padding: 21.5px 0;
+}
+
+.footer-container > p {
+    font-size: 12px;
+    font-weight: 350;
+    color: white;
+}

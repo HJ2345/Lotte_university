@@ -12,10 +12,11 @@
     <!-- Google Font 42dot Sans -->
     <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
 
-    <script th:src="@{/js/header.js}"></script>
     <script th:src="@{/js/checkOne.js}"></script>
+    <script th:src="@{/js/header.js}"></script>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/user/login.css}">
 
     <title>로그인 - 그린대학교</title>
@@ -26,115 +27,83 @@
     -->
 </head>
 <body>
-    <div id="wrapper">
-        <!-- header side -->
-        <header>
-            <th:block th:include="/common/_header.html"/>
-            <div class="location-container">
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
-                            </a>
-                        </li>
-                        <li>
-                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
-                            <a href="#">회원</a>
-                        </li>
-                        <li>
-                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
-                            <a href="#" class="this-location">로그인</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <!-- header end -->
-        <main id="user">
-            <div class="main-container">
-                <div>
-                    <div class="loginForm-container">
-                        <h4>LOGIN</h4>
-                        <p>로그인을 하시면 더 다양한 서비스를 받으실 수 있습니다.</p>
-                        <form  method="post" class="loginForm">
-                            <div class="login-option">
-                                <div class="checkbox-container">
-                                    <label class="check1 check_label">
-                                        <input type="checkbox" class="checked check1" name="student" onclick="checkOnlyOne(this)" checked>
-                                        <span class="checkbox_icon"></span>
-                                        <span class="checkbox_text">학부생</span>
-                                    </label>
-                                    <label class="check2 check_label">
-                                        <input type="checkbox" class="checked check2" name="staff" onclick="checkOnlyOne(this)">
-                                        <span class="checkbox_icon"></span>
-                                        <span class="checkbox_text">교직원</span>
-                                    </label>
-                                    <label class="check2 check_label">
-                                        <input type="checkbox" class="checked check3" name="staff" onclick="checkOnlyOne(this)">
-                                        <span class="checkbox_icon"></span>
-                                        <span class="checkbox_text">일반인</span>
-                                    </label>
-                                </div>
-                                <a href="#" class="find-account">아이디/비밀번호 찾기</a>
-                                <a th:href="@{/user/terms}" class="find-account">회원가입</a>
-                            </div>
-                            <div class="login-container">
-                                <input type="text" name="id" placeholder="아이디">
-                                <input type="password" name="pass" placeholder="비밀번호">
-                                <button type="submit">로그인</button>
-                            </div>
-                        </form>
-                        <div class="bullet-in-h4">
-                            <img th:src="@{/images/bullet-h4.png}" alt="before">
-                            <h4>아이디, 비밀번호 안내</h4>
-                        </div>
-                        <div class="announcement">
-                            <p>- 대학 구성원(학원, 교직원)은 회원가입없이 교번, 학번을 사용하여 로그인이 가능합니다.</p>
-                            <p>- 비밀번호 분실시 학생지원팀에 방문하셔서 초기화하실 수 있습니다.</p>
-                            <p>- 재학, 휴학, 졸업 유예인 경우 사용하실 수 있으며, 매년 학적변동이 일어날 때 상태가 변경됩니다.</p>
-                            <p>- 문의사항이 있으시면 담당자(055-123-4567)에게 전화주세요.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footer-link-container">
-                <div class="footer-link">
-                    <ul class="footer-links">
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">통합정보시스템</a></li>
-                        <li><a href="#">학사일정</a></li>
-                        <li><a href="#">주요민원 연락처</a></li>
-                        <li><a href="#">교내공지사항</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="copyright-container">
-                    <img th:src="@{/images/footer_logo.png}" alt="그린대학교" class="footer-logo">
-                    <div class="footer-text-container">
-                        <p class="footer-text">
-                            그린대학교<br>
-                            [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
-                            입학안내 : 051-123-1302 팩스 : 051-123-333
-                        </p>
-                        <p class="footer-text text2">
-                            copyright ©Green University All rights reserved.
-                        </p>
-                    </div>
-                    <select onchange="window.open(value,'_self');" class="site">
-                        <option class="sites" value="#" disabled selected>주요사이트</option>
-                        <option class="sites" value="https://naver.com">네이버</option>
-                        <option class="sites" value="https://www.kakaocorp.com/page/">카카오</option>
-                        <option class="sites" value="https://www.line.me/ko/">라인</option>
-                        <option class="sites" value="https://www.coupang.com/">쿠팡</option>
-                        <option class="sites" value="https://www.woowahan.com/">배달의민족</option>
-                    </select>
-                </div>
-            </div>
-        </footer>
+<div id="wrapper">
+    <th:block th:include="/common/_header.html"/>
+    <div class="location-container">
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
+                    </a>
+                </li>
+                <li>
+                    <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
+                    <a href="#">회원</a>
+                </li>
+                <li>
+                    <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
+                    <a href="#" class="this-location">로그인</a>
+                </li>
+            </ul>
+        </div>
     </div>
+    </header>
+    <!-- header end -->
+    <main id="user">
+        <div class="main-container">
+            <div>
+                <div class="loginForm-container">
+                    <h4>LOGIN</h4>
+                    <p>로그인을 하시면 더 다양한 서비스를 받으실 수 있습니다.</p>
+                    <form method="post" class="loginForm">
+                        <div class="login-option">
+                            <div class="checkbox-container">
+                                <label class="check1 check_label">
+                                    <input type="checkbox" class="checked check1" name="student"
+                                           onclick="checkOnlyOne(this)" checked>
+                                    <span class="checkbox_icon"></span>
+                                    <span class="checkbox_text">학부생</span>
+                                </label>
+                                <label class="check2 check_label">
+                                    <input type="checkbox" class="checked check2" name="staff"
+                                           onclick="checkOnlyOne(this)">
+                                    <span class="checkbox_icon"></span>
+                                    <span class="checkbox_text">교직원</span>
+                                </label>
+                                <label class="check3 check_label">
+                                    <input type="checkbox" class="checked check3" name="staff"
+                                           onclick="checkOnlyOne(this)">
+                                    <span class="checkbox_icon"></span>
+                                    <span class="checkbox_text">일반인</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="login-container">
+                            <input type="text" name="id" placeholder="아이디">
+                            <input type="password" name="pass" placeholder="비밀번호">
+                            <button type="submit">로그인</button>
+                        </div>
+                    </form>
+                    <div class="loginService">
+                        <a href="#" class="find-account">아이디/비밀번호 찾기</a>
+                        <a th:href="@{/user/terms}" class="find-account">회원가입</a>
+                    </div>
+                    <div class="bullet-in-h4">
+                        <img th:src="@{/images/bullet-h4.png}" alt="before">
+                        <h4>아이디, 비밀번호 안내</h4>
+                    </div>
+                    <div class="announcement">
+                        <p>- 대학 구성원(학원, 교직원)은 회원가입없이 교번, 학번을 사용하여 로그인이 가능합니다.</p>
+                        <p>- 비밀번호 분실시 학생지원팀에 방문하셔서 초기화하실 수 있습니다.</p>
+                        <p>- 재학, 휴학, 졸업 유예인 경우 사용하실 수 있으며, 매년 학적변동이 일어날 때 상태가 변경됩니다.</p>
+                        <p>- 문의사항이 있으시면 담당자(055-123-4567)에게 전화주세요.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <th:block th:include="/common/_footer.html"/>
+</div>
 </body>
 </html>

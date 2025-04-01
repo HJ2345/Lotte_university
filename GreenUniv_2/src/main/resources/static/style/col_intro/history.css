@@ -1,61 +1,62 @@
-.history-container { 
-  width: 100%;
-  margin: 8px 0 0 50px;
+.history-container {
+    width: 100%;
+    margin: 8px 0 0 50px;
 }
 
 .history-container h4 {
-  font-size: 26px;
-  font-weight: 700;
-  border-bottom: 2px solid #222;
-  margin-bottom: 31px;
-  padding-bottom: 20.8px;
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    margin-bottom: 31px;
+    padding-bottom: 20.8px;
 }
+
 .years {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
 .year-box {
-  padding: 10px 20px;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #3f97f6;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #3f97f6;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .year-box:hover {
-  background-color: #3792f3;
+    background-color: #3792f3;
 }
 
 .year-box.active {
-  background-color: blue; /* 클릭한 연도 강조 색 */
+    background-color: blue; /* 클릭한 연도 강조 색 */
 }
 
 .history-details {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 .history-item {
-  display: none;
-  margin-bottom: 20px;
-  background-color: #fff;
-  padding: 15px;
-  border-radius: 6px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .history-item h5 {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
 }
 
 .history-item p {
-  font-size: 16px;
-  color: #555;
+    font-size: 16px;
+    color: #555;
 }

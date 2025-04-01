@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: normal 12px "Noto Sans KR";
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+}
+
+body {
+    overflow-x: hidden;
+    min-width: 1200px;
+}
+
+header {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header > div > * {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.topMenuBar {
+    width: 100%;
+    background-color: #00518C;
+}
+
+.topMenus {
+    height: 28px;
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+.topMenus li {
+    display: inline;
+}
+
+.topMenus li > a {
+    color: white;
+    font-size: 12px;
+    border-right: 1px solid #4D85AE;
+    padding-left: 5px;
+    padding-right: 7px;
+    font-weight: 350;
+}
+
+.topMenus li:last-child > a {
+    border: none;
+    padding-right: 0;
+}
+
+.header-background {
+    background-color: #1F2838;
+    padding: 17px 0;
+}

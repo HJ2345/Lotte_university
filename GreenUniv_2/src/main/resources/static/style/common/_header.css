@@ -3,19 +3,21 @@
     padding: 0;
     font: normal 12px "Noto Sans KR";
 }
+
 a {
     text-decoration: none;
 }
+
 ul,
 li {
     list-style: none;
 }
+
 body {
-    overflow-x: hidden; /* 가로 스크롤 추가 */
-    min-width: 1200px; /* 최소 너비 유지 */
+    overflow-x: hidden;
+    min-width: 1200px;
 }
 
-/* --------- header start --------- */
 header {
     width: 100%;
     box-sizing: border-box;
@@ -31,15 +33,18 @@ header > div > * {
     width: 100%;
     background-color: #3f97f6;
 }
+
 .topMenus {
     height: 28px;
     padding: 5px 0 5px 5px;
     box-sizing: border-box;
     text-align: right;
 }
+
 .topMenus li {
     display: inline;
 }
+
 .topMenus li > a {
     color: white;
     border-right: 1px solid #78b6f9;
@@ -47,10 +52,12 @@ header > div > * {
     padding-right: 7px;
     font-weight: 350;
 }
+
 .topMenus li:last-child > a {
     border: none;
     padding-right: 0;
 }
+
 .category {
     display: flex;
     flex-direction: row;
@@ -58,13 +65,16 @@ header > div > * {
     align-items: center;
     padding-top: 10px;
 }
+
 .logo {
     margin-bottom: 5px;
 }
+
 .nav-container {
     display: flex;
     justify-content: right;
 }
+
 nav {
     position: relative;
     font-weight: 400;
@@ -73,6 +83,7 @@ nav {
     padding: 0;
     width: 80%;
 }
+
 nav .item {
     display: inline-block;
     position: relative;
@@ -85,6 +96,7 @@ nav .item {
     font-weight: 500;
     text-align: center;
 }
+
 .dropdown {
     overflow: hidden;
     list-style: none;
@@ -94,12 +106,14 @@ nav .item {
     left: 0;
     top: 100%;
 }
+
 .dropdown > div {
     translate: 0 -100%;
     transition: all 0.3s 0.1s;
     position: relative;
     background-color: #3f97f6;
 }
+
 .dropdown a {
     box-sizing: border-box;
     display: block;
@@ -111,13 +125,16 @@ nav .item {
     font-size: 15px;
     border-top: 1px solid #53a2f7;
 }
+
 .item:hover {
     color: #3f97f6;
 }
+
 .dropdown a:hover {
     background: #3a88db;
     transition: 0.3s;
 }
+
 nav .item:hover > .dropdown > div {
     translate: 0;
 }

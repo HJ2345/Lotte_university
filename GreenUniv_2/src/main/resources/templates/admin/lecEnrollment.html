@@ -3,255 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <script th:src="@{/js/selectDept.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_adminHeader.css}">
+    <link rel="stylesheet" th:href="@{/style/common/_adminFooter.css}">
     <link rel="stylesheet" th:href="@{/style/admin/lecEnrollment.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>강의 등록</title>
 </head>
 <body>
-    <div id="wrapper">
-        <header>
-            <div class="topMenuBar">
-                <ul class="topMenus">
-                    <li><a th:href="@{/}">HOME</a></li>
-                    <li><a href="#">사이트맵</a></li>
-                    <li><a href="#">로그아웃</a></li>
-                </ul>
-            </div>
-            <div class="header-background">
-                <div class="header-logo">
-                    <a th:href="@{/admin/adminMain}">
-                        <img th:src="@{/images/admin_logo.png}" alt="그린대학교" class="logo">
+<div id="wrapper">
+    <th:block th:include="/common/_adminHeader.html"/>
+    <main>
+        <div class="main-container">
+            <div class="sidebar">
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-setting.png}" alt="환경설정" class="side-icon">
+                        <p class="side-title">환경설정</p>
                     </a>
+                    <ul>
+                        <li><a href="#">기본환경정보</a></li>
+                        <li><a href="#">약관관리</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-academic.png}" alt="학사운영" class="side-icon">
+                        <p class="side-title">학사운영</p>
+                    </a>
+                    <ul>
+                        <li><a th:href="@{/admin/eduStatus}">교육 운영 현황</a></li>
+                        <li><a href="#">학년별 학생 현황</a></li>
+                        <li><a href="#">학과별 학생 현황</a></li>
+                        <li><a th:href="@{/admin/lectureList}">강의 목록</a></li>
+                        <li><a th:href="@{/admin/lecEnrollment}">강의 등록</a></li>
+                        <li><a th:href="@{/admin/courseStatus}">수강 현황</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-persons.png}" alt="인사관리" class="side-icon">
+                        <p class="side-title">인사관리</p>
+                    </a>
+                    <ul>
+                        <li><a th:href="@{/admin/studentList}">학생 목록 및 등록</a></li>
+                        <li><a th:href="@{/admin/facultyList}">교수 목록 및 등록</a></li>
+                        <li><a href="#">임직원 목록 및 등록</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-college.png}" alt="대학 및 학과" class="side-icon">
+                        <p class="side-title">대학 및 학과</p>
+                    </a>
+                    <ul>
+                        <li><a th:href="@{/admin/departmentList}">대학 및 학과 목록</a></li>
+                        <li><a th:href="@{/admin/univDeptEnrollment}">대학 및 학과 등록</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-board.png}" alt="게시판관리" class="side-icon">
+                        <p class="side-title">게시판관리</p>
+                    </a>
+                    <ul>
+                        <li><a href="#">입학안내 공지사항</a></li>
+                        <li><a href="#">학사안내 공지사항</a></li>
+                        <li><a href="#">커뮤니티 공지사항</a></li>
+                        <li><a href="#">입학상담</a></li>
+                        <li><a href="#">질문 및 답변</a></li>
+                        <li><a href="#">식단안내</a></li>
+                        <li><a href="#">자료실</a></li>
+                    </ul>
                 </div>
             </div>
-        </header>
-
-        <main>
-            <div class="main-container">
-                <div class="sidebar">
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-setting.png}" alt="환경설정" class="side-icon">
-                            <p class="side-title">환경설정</p>
-                        </a>
-                        <ul>
-                            <li><a href="#">기본환경정보</a></li>
-                            <li><a href="#">약관관리</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-academic.png}" alt="학사운영" class="side-icon">
-                            <p class="side-title">학사운영</p>
-                        </a>
-                        <ul>
-                            <li><a th:href="@{/admin/eduStatus}">교육 운영 현황</a></li>
-                            <li><a href="#">학년별 학생 현황</a></li>
-                            <li><a href="#">학과별 학생 현황</a></li>
-                            <li><a th:href="@{/admin/lectureList}">강의 목록</a></li>
-                            <li><a th:href="@{/admin/lecEnrollment}">강의 등록</a></li>
-                            <li><a th:href="@{/admin/courseStatus}">수강 현황</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-persons.png}" alt="인사관리" class="side-icon">
-                            <p class="side-title">인사관리</p>
-                        </a>
-                        <ul>
-                            <li><a th:href="@{/admin/studentList}">학생 목록 및 등록</a></li>
-                            <li><a th:href="@{/admin/facultyList}">교수 목록 및 등록</a></li>
-                            <li><a href="#">임직원 목록 및 등록</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-college.png}" alt="대학 및 학과" class="side-icon">
-                            <p class="side-title">대학 및 학과</p>
-                        </a>
-                        <ul>
-                            <li><a th:href="@{/admin/departmentList}">대학 및 학과 목록</a></li>
-                            <li><a th:href="@{/admin/univDeptEnrollment}">대학 및 학과 등록</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-board.png}" alt="게시판관리" class="side-icon">
-                            <p class="side-title">게시판관리</p>
-                        </a>
-                        <ul>
-                            <li><a href="#">입학안내 공지사항</a></li>
-                            <li><a href="#">학사안내 공지사항</a></li>
-                            <li><a href="#">커뮤니티 공지사항</a></li>
-                            <li><a href="#">입학상담</a></li>
-                            <li><a href="#">질문 및 답변</a></li>
-                            <li><a href="#">식단안내</a></li>
-                            <li><a href="#">자료실</a></li>
-                        </ul>
+            <div class="main">
+                <div class="main-header">
+                    <h3>강의 등록</h3>
+                    <div class="location">
+                        <p>학사운영</p>
+                        <img th:src="@{/images/bg-link-arr-over.png}" alt="">
+                        <span class="current-location">강의 등록</span>
                     </div>
                 </div>
-                <div class="main">
-                    <div class="main-header">
-                        <h3>강의 등록</h3>
-                        <div class="location">
-                            <p>학사운영</p>
-                            <img th:src="@{/images/bg-link-arr-over.png}" alt="">
-                            <span class="current-location">강의 등록</span>
+                <form th:action="@{/admin/lecEnrollment}" method="post">
+                    <div class="table-container">
+                        <div class="main-title">
+                            <img th:src="@{/images/bullet-h4.png}" alt="before">
+                            <p>기본정보 입력</p>
                         </div>
+                        <table class="basicInfo tables">
+                            <tr>
+                                <td>과목코드</td>
+                                <td style="color: #BC2E13;">학과 코드 + 연도 + 학기 + 순번 조합 자동생성</td>
+                                <td>개설학과</td>
+                                <td>
+                                    <select id="category" onchange="updateOptions()">
+                                        <option value="" disabled selected>선택하세요</option>
+                                        <option value="humanitiesSociety">인문사회대학</option>
+                                        <option value="naturalScience">자연과학대학</option>
+                                        <option value="engineering">공과대학</option>
+                                        <option value="education">사범대학</option>
+                                        <option value="graduate">대학원</option>
+                                    </select>
+                                    <select id="item">
+                                        <option value="#"></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>개설학년</td>
+                                <td>
+                                    <select name="cor_grade">
+                                        <option value="1학년">1학년</option>
+                                        <option value="2학년">2학년</option>
+                                        <option value="3학년">3학년</option>
+                                        <option value="4학년">4학년</option>
+                                    </select>
+                                </td>
+                                <td>학점</td>
+                                <td>
+                                    <select name="cor_point">
+                                        <option value="1학점">1 학점</option>
+                                        <option value="2학점">2 학점</option>
+                                        <option value="3학점">3 학점</option>
+                                        <option value="4학점">4 학점</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이수구분</td>
+                                <td>
+                                    <select name="cor_selectMajor">
+                                        <option value="전공선택" selected>전공 선택</option>
+                                        <option value="전공필수">전공 필수</option>
+                                        <option value="교양선택">교양 선택</option>
+                                        <option value="교양필수">교양 필수</option>
+                                    </select>
+                                </td>
+                                <td>담당교수</td>
+                                <td>
+                                    <input type="text" class="professorName" maxlength="5" placeholder="교수명 입력"
+                                           name="cor_professor">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>강의명</td>
+                                <td colspan="3">
+                                    <input type="text" class="lectureName" placeholder="강의명 입력" name="cor_lecName">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>강의 설명</td>
+                                <td colspan="3">
+                                    <textarea class="lectureDesc" placeholder="강의 개요 및 목표, 학습내용 등"
+                                              name="cor_description"></textarea>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <form th:action="@{/admin/lecEnrollment}" method="post">
-                        <div class="table-container">
-                            <div class="main-title">
-                                <img th:src="@{/images/bullet-h4.png}" alt="before">
-                                <p>기본정보 입력</p>
-                            </div>
-                            <table class="basicInfo tables">
-                                <tr>
-                                    <td>과목코드</td>
-                                    <td style="color: #BC2E13;">학과 코드 + 연도 + 학기 + 순번 조합 자동생성</td>
-                                    <td>개설학과</td>
-                                    <td>
-                                        <select id="category" onchange="updateOptions()">
-                                            <option value="" disabled selected>선택하세요</option>
-                                            <option value="humanitiesSociety">인문사회대학</option>
-                                            <option value="naturalScience">자연과학대학</option>
-                                            <option value="engineering">공과대학</option>
-                                            <option value="education">사범대학</option>
-                                            <option value="graduate">대학원</option>
-                                        </select>
-                                        <select id="item">
-                                            <option value="#"></option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>개설학년</td>
-                                    <td>
-                                        <select name="cor_grade">
-                                            <option value="1학년">1학년</option>
-                                            <option value="2학년">2학년</option>
-                                            <option value="3학년">3학년</option>
-                                            <option value="4학년">4학년</option>
-                                        </select>
-                                    </td>
-                                    <td>학점</td>
-                                    <td>
-                                        <select name="cor_point">
-                                            <option value="1학점">1 학점</option>
-                                            <option value="2학점">2 학점</option>
-                                            <option value="3학점">3 학점</option>
-                                            <option value="4학점">4 학점</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>이수구분</td>
-                                    <td>
-                                        <select name="cor_selectMajor">
-                                            <option value="전공선택" selected>전공 선택</option>
-                                            <option value="전공필수">전공 필수</option>
-                                            <option value="교양선택">교양 선택</option>
-                                            <option value="교양필수">교양 필수</option>
-                                        </select>
-                                    </td>
-                                    <td>담당교수</td>
-                                    <td>
-                                        <input type="text" class="professorName" maxlength="5" placeholder="교수명 입력" name="cor_professor">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>강의명</td>
-                                    <td colspan="3">
-                                        <input type="text" class="lectureName" placeholder="강의명 입력" name="cor_lecName">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>강의 설명</td>
-                                    <td colspan="3">
-                                        <textarea class="lectureDesc" placeholder="강의 개요 및 목표, 학습내용 등" name="cor_description"></textarea>
-                                    </td>
-                                </tr>
-                            </table>
+
+                    <div class="table-container">
+                        <div class="main-title">
+                            <img th:src="@{/images/bullet-h4.png}" alt="before">
+                            <p>수업정보 입력</p>
                         </div>
-                        
-                        <div class="table-container">
-                            <div class="main-title">
-                                <img th:src="@{/images/bullet-h4.png}" alt="before">
-                                <p>수업정보 입력</p>
-                            </div>
-                            <table class="classInfo tables">
-                                <tr>
-                                    <td>수업 기간</td>
-                                    <td colspan="3">
-                                        <input type="date" class="date" name="startDate">
-                                        ~
-                                        <input type="date" class="date" name="endDate">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>수업 시간</td>
-                                    <td colspan="3">
-                                        <input type="time" class="time" name="startTime">
-                                        ~
-                                        <input type="time" class="time" name="endTime">
-                                        <div class="day" >
-                                            <div>
-                                                <input type="checkbox" id="mon" value="mon" name="lectureDays">
-                                                <label for="mon">월</label>
-                                                <input type="checkbox" id="tue" value="tue" name="lectureDays">
-                                                <label for="tue">화</label>
-                                                <input type="checkbox" id="wen"  value="wen" name="lectureDays">
-                                                <label for="wen">수</label>
-                                                <input type="checkbox" id="thu" value="thu" name="lectureDays">
-                                                <label for="thu">목</label>
-                                                <input type="checkbox" id="fri" value="fri" name="lectureDays">
-                                                <label for="fri">금</label>
-                                            </div>
+                        <table class="classInfo tables">
+                            <tr>
+                                <td>수업 기간</td>
+                                <td colspan="3">
+                                    <input type="date" class="date" name="startDate">
+                                    ~
+                                    <input type="date" class="date" name="endDate">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>수업 시간</td>
+                                <td colspan="3">
+                                    <input type="time" class="time" name="startTime">
+                                    ~
+                                    <input type="time" class="time" name="endTime">
+                                    <div class="day">
+                                        <div>
+                                            <input type="checkbox" id="mon" value="mon" name="lectureDays">
+                                            <label for="mon">월</label>
+                                            <input type="checkbox" id="tue" value="tue" name="lectureDays">
+                                            <label for="tue">화</label>
+                                            <input type="checkbox" id="wen" value="wen" name="lectureDays">
+                                            <label for="wen">수</label>
+                                            <input type="checkbox" id="thu" value="thu" name="lectureDays">
+                                            <label for="thu">목</label>
+                                            <input type="checkbox" id="fri" value="fri" name="lectureDays">
+                                            <label for="fri">금</label>
                                         </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>평가방식</td>
-                                    <td colspan="3">
-                                        <input type="text" class="evaluation" placeholder="출석 10%, 과제 30%, 시험 60%" name="cor_evalMethod">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>교재</td>
-                                    <td colspan="3">
-                                        <input type="text" class="book" placeholder="출판사 - 도서명 - 저자 입력" name="cor_book">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>강의실</td>
-                                    <td>
-                                        <input type="text" class="lectureRoom" placeholder="강의실 입력" name="cor_class">
-                                    </td>
-                                    <td>최대 수강인원</td>
-                                    <td>
-                                        <input type="number" class="maxPeople" name="cor_maxEnrolment">
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button type="submit">등록</button>
-                    </form>
-                </div>
-            </div>  
-        </main>
-
-        <footer>
-            <div class="footer-container">
-                <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>평가방식</td>
+                                <td colspan="3">
+                                    <input type="text" class="evaluation" placeholder="출석 10%, 과제 30%, 시험 60%"
+                                           name="cor_evalMethod">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>교재</td>
+                                <td colspan="3">
+                                    <input type="text" class="book" placeholder="출판사 - 도서명 - 저자 입력" name="cor_book">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>강의실</td>
+                                <td>
+                                    <input type="text" class="lectureRoom" placeholder="강의실 입력" name="cor_class">
+                                </td>
+                                <td>최대 수강인원</td>
+                                <td>
+                                    <input type="number" class="maxPeople" name="cor_maxEnrolment">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="submit">등록</button>
+                </form>
             </div>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <th:block th:include="/common/_adminFooter.html"/>
+</div>
 </body>
 </html>
