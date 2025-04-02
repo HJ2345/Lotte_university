@@ -80,6 +80,8 @@ public class AdminController {
     @GetMapping("admin/lecEnrollment")  // 강의 등록
     public String lecEnrollment(Model model){
         model.addAttribute("courseDto", new CourseDTO());
+        model.addAttribute("univList", univRepository.findAll());
+        model.addAttribute("deptList", deptRepository.findAll());
         return "admin/lecEnrollment";
     }
 
@@ -145,43 +147,24 @@ public class AdminController {
     @GetMapping("admin/univDeptEnrollment")
     public String univDeptEnrollment(Model model) {
         List<University> univList = univService.findAll();
-        List<Professor> profList = professorRepository.findAll();
-
         model.addAttribute("univList", univList);
-        model.addAttribute("profList", profList); // 전체 교수 목록 전달
-        model.addAttribute("univList", univRepository.findAll());
-        model.addAttribute("p_numList", professorRepository.findAll());
 
-        // 로그 찍기
-        profList.forEach(prof -> {
-            log.info("교수 이름: {}", prof.getP_name());
-            if (prof.getUniversity() != null) {
-                log.info("소속 대학: {}", prof.getUniversity().getUnivName());
-            } else {
-                log.warn("소속 대학 없음!");
-            }
-        });
-
+        log.info("univList = {}", univList);
 
         return "admin/univDeptEnrollment";
     }
 
     @PostMapping("/admin/univDeptEnrollment")
     public String univSave(UnivDTO univDTO) {
-
         log.info("univDTO {}", univDTO);
         univService.register(univDTO);
-
         return "redirect:/admin/univDeptEnrollment";
     }
 
     @PostMapping("/admin/univDeptEnrollment2")
     public String deptSave(DeptDTO deptDTO) {
-
         log.info("deptDTO {}", deptDTO);
-
         deptService.register(deptDTO);
-
         return "redirect:/admin/univDeptEnrollment";
     }
 }
