@@ -15,8 +15,6 @@ public class CommunityController {
     @GetMapping("/community/CommunityInfo")
     public String CommunityInfo(){
 
-
-
         return "/community/CommunityInfo";
     }
 

@@ -58,6 +58,13 @@ footer > div > * {
     margin-top: 20px;
 }
 
+.footer-select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 330px;
+}
+
 select {
     appearance: none;
     background: url("../../images/bg-related-arr-open.png") no-repeat right 16px center;
@@ -83,4 +90,10 @@ option {
 
 select:focus {
     outline: none;
+}
+
+.ver{
+    margin-top: 8px;
+    font-weight: bold;
+    color: #a7a7a9;
 }

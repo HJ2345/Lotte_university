@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" th:href="@{/style/index.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
-    <title>그린대학교</title>
+    <title>4조-그린대학교</title>
 </head>
 <body>
 <div id="wrapper">
@@ -350,21 +350,26 @@
                 <div class="footer-text-container">
                     <p class="footer-text">
                         그린대학교<br>
-                        [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
+                        [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000/<br>
                         입학안내 : 051-123-1302 팩스 : 051-123-333
                     </p>
                     <p class="footer-text text2">
                         copyright ©Green University All rights reserved.
                     </p>
                 </div>
-                <select onchange="window.open(value,'_self');">
-                    <option value="#" disabled selected>주요사이트</option>
-                    <option value="https://naver.com">네이버</option>
-                    <option value="https://www.kakaocorp.com/page/">카카오</option>
-                    <option value="https://www.line.me/ko/">라인</option>
-                    <option value="https://www.coupang.com/">쿠팡</option>
-                    <option value="https://www.woowahan.com/">배달의민족</option>
-                </select>
+                <div class="footer-select-container">
+                    <select onchange="window.open(value,'_self');">
+                        <option value="#" disabled selected>주요사이트</option>
+                        <option value="https://naver.com">네이버</option>
+                        <option value="https://www.kakaocorp.com/page/">카카오</option>
+                        <option value="https://www.line.me/ko/">라인</option>
+                        <option value="https://www.coupang.com/">쿠팡</option>
+                        <option value="https://www.woowahan.com/">배달의민족</option>
+                    </select>
+                    <div class="ver">
+                        <a>ver.[[${@appInfo.appVersion}]]</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

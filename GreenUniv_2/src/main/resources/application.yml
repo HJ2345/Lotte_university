@@ -36,12 +36,12 @@ spring:
 
     application:
         name: GreenUniv
-        version: 1.0.0
+        version:  0.0.3-SNAPSHOT
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: 1234
-        url: jdbc:mysql://127.0.0.1:3306/GreenUniv?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
-        username: greenuser
+        password: Qwerty@123
+        url: jdbc:mysql://3.34.183.157:3306/GreenUniv
+        username: root
     devtools:
         livereload:
             enabled: true
