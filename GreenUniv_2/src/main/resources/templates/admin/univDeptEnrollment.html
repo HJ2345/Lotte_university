@@ -3,209 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    
+
+    <link rel="stylesheet" th:href="@{/style/common/_adminHeader.css}">
+    <link rel="stylesheet" th:href="@{/style/common/_adminFooter.css}">
     <link rel="stylesheet" th:href="@{/style/admin/univDeptEnrollment.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>대학 및 학과 등록</title>
 </head>
 <body>
-    <div id="wrapper">
-        <header>
-            <div class="topMenuBar">
-                <ul class="topMenus">
-                    <li><a th:href="@{/}">HOME</a></li>
-                    <li><a href="#">사이트맵</a></li>
-                    <li><a href="#">로그아웃</a></li>
-                </ul>
-            </div>
-            <div class="header-background">
-                <div class="header-logo">
-                    <a th:href="@{/admin/adminMain}">
-                        <img th:src="@{/images/admin_logo.png}" alt="그린대학교" class="logo">
+<div id="wrapper">
+    <th:block th:include="/common/_adminHeader.html"/>
+    <main>
+        <div class="main-container">
+            <div class="sidebar">
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-setting.png}" alt="환경설정" class="side-icon">
+                        <p class="side-title">환경설정</p>
                     </a>
+                    <ul>
+                        <li><a href="#">기본환경정보</a></li>
+                        <li><a href="#">약관관리</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-academic.png}" alt="학사운영" class="side-icon">
+                        <p class="side-title">학사운영</p>
+                    </a>
+                    <ul>
+                        <li><a th:href="@{/admin/eduStatus}">교육 운영 현황</a></li>
+                        <li><a href="#">학년별 학생 현황</a></li>
+                        <li><a href="#">학과별 학생 현황</a></li>
+                        <li><a th:href="@{/admin/lectureList}">강의 목록</a></li>
+                        <li><a th:href="@{/admin/lecEnrollment}">강의 등록</a></li>
+                        <li><a th:href="@{/admin/courseStatus}">수강 현황</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-persons.png}" alt="인사관리" class="side-icon">
+                        <p class="side-title">인사관리</p>
+                    </a>
+                    <ul>
+                        <li><a th:href="@{/admin/studentList}">학생 목록 및 등록</a></li>
+                        <li><a th:href="@{/admin/facultyList}">교수 목록 및 등록</a></li>
+                        <li><a href="#">임직원 목록 및 등록</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-college.png}" alt="대학 및 학과" class="side-icon">
+                        <p class="side-title">대학 및 학과</p>
+                    </a>
+                    <ul>
+                        <li><a th:href="@{/admin/departmentList}">대학 및 학과 목록</a></li>
+                        <li><a th:href="@{/admin/univDeptEnrollment}">대학 및 학과 등록</a></li>
+                    </ul>
+                </div>
+                <div class="side-container">
+                    <a href="#">
+                        <img th:src="@{/images/ico-admin-board.png}" alt="게시판관리" class="side-icon">
+                        <p class="side-title">게시판관리</p>
+                    </a>
+                    <ul>
+                        <li><a href="#">입학안내 공지사항</a></li>
+                        <li><a href="#">학사안내 공지사항</a></li>
+                        <li><a href="#">커뮤니티 공지사항</a></li>
+                        <li><a href="#">입학상담</a></li>
+                        <li><a href="#">질문 및 답변</a></li>
+                        <li><a href="#">식단안내</a></li>
+                        <li><a href="#">자료실</a></li>
+                    </ul>
                 </div>
             </div>
-        </header>
-
-        <main>
-            <div class="main-container">
-                <div class="sidebar">
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-setting.png}" alt="환경설정" class="side-icon">
-                            <p class="side-title">환경설정</p>
-                        </a>
-                        <ul>
-                            <li><a href="#">기본환경정보</a></li>
-                            <li><a href="#">약관관리</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-academic.png}" alt="학사운영" class="side-icon">
-                            <p class="side-title">학사운영</p>
-                        </a>
-                        <ul>
-                            <li><a th:href="@{/admin/eduStatus}">교육 운영 현황</a></li>
-                            <li><a href="#">학년별 학생 현황</a></li>
-                            <li><a href="#">학과별 학생 현황</a></li>
-                            <li><a th:href="@{/admin/lectureList}">강의 목록</a></li>
-                            <li><a th:href="@{/admin/lecEnrollment}">강의 등록</a></li>
-                            <li><a th:href="@{/admin/courseStatus}">수강 현황</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-persons.png}" alt="인사관리" class="side-icon">
-                            <p class="side-title">인사관리</p>
-                        </a>
-                        <ul>
-                            <li><a th:href="@{/admin/studentList}">학생 목록 및 등록</a></li>
-                            <li><a th:href="@{/admin/facultyList}">교수 목록 및 등록</a></li>
-                            <li><a href="#">임직원 목록 및 등록</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-college.png}" alt="대학 및 학과" class="side-icon">
-                            <p class="side-title">대학 및 학과</p>
-                        </a>
-                        <ul>
-                            <li><a th:href="@{/admin/departmentList}">대학 및 학과 목록</a></li>
-                            <li><a th:href="@{/admin/univDeptEnrollment}">대학 및 학과 등록</a></li>
-                        </ul>
-                    </div>
-                    <div class="side-container">
-                        <a href="#">
-                            <img th:src="@{/images/ico-admin-board.png}" alt="게시판관리" class="side-icon">
-                            <p class="side-title">게시판관리</p>
-                        </a>
-                        <ul>
-                            <li><a href="#">입학안내 공지사항</a></li>
-                            <li><a href="#">학사안내 공지사항</a></li>
-                            <li><a href="#">커뮤니티 공지사항</a></li>
-                            <li><a href="#">입학상담</a></li>
-                            <li><a href="#">질문 및 답변</a></li>
-                            <li><a href="#">식단안내</a></li>
-                            <li><a href="#">자료실</a></li>
-                        </ul>
+            <div class="main">
+                <div class="main-header">
+                    <h3>대학 및 학과 등록</h3>
+                    <div class="location">
+                        <p>대학 및 학과</p>
+                        <img th:src="@{/images/bg-link-arr-over.png}" alt="">
+                        <span class="current-location">대학 및 학과 등록</span>
                     </div>
                 </div>
-                <div class="main">
-                    <div class="main-header">
-                        <h3>대학 및 학과 등록</h3>
-                        <div class="location">
-                            <p>대학 및 학과</p>
-                            <img th:src="@{/images/bg-link-arr-over.png}" alt="">
-                            <span class="current-location">대학 및 학과 등록</span>
+                <form th:action="@{/admin/univDeptEnrollment}" method="post">
+                    <div class="table-container">
+                        <div class="main-title">
+                            <img th:src="@{/images/bullet-h4.png}" alt="before">
+                            <p>대학 정보 입력</p>
                         </div>
+                        <table class="univInfo tables">
+                            <tr>
+                                <td>대학명</td>
+                                <td>
+                                    <input type="text" name="univName" class="w-300" placeholder="예) 인문사회대학">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>대학 영문명</td>
+                                <td>
+                                    <input type="text" name="univEngName" class="w-300"
+                                           placeholder="예) Humanities And Social Sciences">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>대학 소개</td>
+                                <td>
+                                    <input type="text" name="univIntroTitle" placeholder="대학 소개 제목 입력">
+                                    <textarea name="univIntroContent" placeholder="대학 소개 내용 입력"></textarea>
+                                    <div class="uploadFileBox">
+                                        <input type="file" name="univIntroFile" class="w-200">
+                                        <span style="color: #BC2E13;">대학·대학원 소개 페이지 출력 이미지(320 x 240) 첨부</span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-                    <form th:action="@{/admin/univDeptEnrollment}" method="post">
-                        <div class="table-container">
-                            <div class="main-title">
-                                <img th:src="@{/images/bullet-h4.png}" alt="before">
-                                <p>대학 정보 입력</p>
-                            </div>
-                            <table class="univInfo tables">
-                                <tr>
-                                    <td>대학명</td>
-                                    <td>
-                                        <input type="text" name="univName" class="w-300" placeholder="예) 인문사회대학">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>대학 영문명</td>
-                                    <td>
-                                        <input type="text" name="univEngName" class="w-300" placeholder="예) Humanities And Social Sciences">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>대학 소개</td>
-                                    <td>
-                                        <input type="text" name="univIntroTitle" placeholder="대학 소개 제목 입력">
-                                        <textarea name="univIntroContent" placeholder="대학 소개 내용 입력"></textarea>
-                                        <div class="uploadFileBox">
-                                            <input type="file" name="univIntroFile" class="w-200">
-                                            <span style="color: #BC2E13;">대학·대학원 소개 페이지 출력 이미지(320 x 240) 첨부</span>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
+                    <button type="submit">등록</button>
+                </form>
+                <form th:action="@{/admin/univDeptEnrollment2}" method="post">
+                    <div class="table-container">
+                        <div class="main-title">
+                            <img th:src="@{/images/bullet-h4.png}" alt="before">
+                            <p>학과 정보 입력</p>
                         </div>
-                        <button type="submit">등록</button>
-                    </form>  
-                    <form th:action="@{/admin/univDeptEnrollment2}" method="post">
-                        <div class="table-container">
-                            <div class="main-title">
-                                <img th:src="@{/images/bullet-h4.png}" alt="before">
-                                <p>학과 정보 입력</p>
-                            </div>
-                            <table class="deptInfo tables">
-                                <tr>
-                                    <td>학과번호</td>
-                                    <td style="color: #BC2E13;">고유 2자리 숫자 자동 생성</td>
-                                    <td>단과대학</td>
-                                    <td>
-                                        <select class="w-150" name="univName">
-                                            <option value="" selected disabled>-- 선택하세요 --</option>
-                                            <option th:each="univList : ${univList}" th:value="${univList.univName}" th:text="${univList.univName}"></option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>학과명</td>
-                                    <td>
-                                        <input type="text" name="deptName" class="w-200" placeholder="학과명 입력">
-                                    </td>
-                                    <td>영문명</td>
-                                    <td>
-                                        <input type="text" name="deptEngName" class="w-200" placeholder="학과 공식 영문 이름">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>설립연도</td>
-                                    <td>
-                                        <input type="date" name="deptSetDate" class="selectDate w-200">
-                                    </td>
-                                    <td>학과장</td>
-                                    <td>
-                                        <select class="w-150" name="">
-                                            <option value="#" disabled selected>선택</option>
-                                            <option value="#">이순신</option>
-                                            <option value="#">강감찬</option>
-                                            <option value="#">장보고</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>학과 연락처</td>
-                                    <td>
-                                        <input type="text" name="deptHp" class="w-200" placeholder="학과 연락처 입력">
-                                    </td>
-                                    <td>학과 사무실</td>
-                                    <td>
-                                        <input type="text" name="deptOffice" class="w-200" placeholder="인문관 3층 306호">
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                        <button type="submit">등록</button>
-                    </form>
-                </div>
-            </div>  
-        </main>
-
-        <footer>
-            <div class="footer-container">
-                <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+                        <table class="deptInfo tables">
+                            <tr>
+                                <td>학과번호</td>
+                                <td style="color: #BC2E13;">고유 2자리 숫자 자동 생성</td>
+                                <td>단과대학</td>
+                                <td>
+                                    <select class="w-150" name="univName">
+                                        <option value="" selected disabled>-- 선택하세요 --</option>
+                                        <option th:each="univList : ${univList}" th:value="${univList.univName}"
+                                                th:text="${univList.univName}"></option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>학과명</td>
+                                <td>
+                                    <input type="text" name="deptName" class="w-200" placeholder="학과명 입력">
+                                </td>
+                                <td>영문명</td>
+                                <td>
+                                    <input type="text" name="deptEngName" class="w-200" placeholder="학과 공식 영문 이름">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>설립연도</td>
+                                <td>
+                                    <input type="date" name="deptSetDate" class="selectDate w-200">
+                                </td>
+                                <td>학과장</td>
+                                <td>
+                                    <select class="w-150" name="">
+                                        <option value="#" disabled selected>선택</option>
+                                        <option value="#">이순신</option>
+                                        <option value="#">강감찬</option>
+                                        <option value="#">장보고</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>학과 연락처</td>
+                                <td>
+                                    <input type="text" name="deptHp" class="w-200" placeholder="학과 연락처 입력">
+                                </td>
+                                <td>학과 사무실</td>
+                                <td>
+                                    <input type="text" name="deptOffice" class="w-200" placeholder="인문관 3층 306호">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="submit">등록</button>
+                </form>
             </div>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <th:block th:include="/common/_adminFooter.html"/>
+</div>
 </body>
 </html>
-

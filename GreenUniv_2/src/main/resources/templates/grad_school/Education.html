@@ -3,63 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/grad_school/Education.css}">
-    <script src="/static/js/header.js"></script>
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>사범대학</title>
 </head>
 <body>
-    <!-- header side -->
+<div id="wrapper">
     <th:block th:include="/common/_header.html"/>
-        <div class="location-container">
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/ico-home.png}"
-                                    th:alt="home"
-                                    class="ico-home"
-                            />
-                        </a>
-                    </li>
-                    <li>
+    <div class="location-container">
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
                         <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
+                                th:src="@{/images/ico-home.png}"
+                                th:alt="home"
+                                class="ico-home"
                         />
-                        <a href="#">대학·대학원</a>
-                    </li>
-                    <li>
-                        <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
-                        />
-                        <a href="#" class="this-location">사범대학</a>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#">대학·대학원</a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#" class="this-location">사범대학</a>
+                </li>
+            </ul>
         </div>
+    </div>
     </header>
     <!-- header end -->
     <main>
         <div class="main-container">
             <div>
                 <aside>
-                <h3>대학·대학원</h3>
-                <div class="side-link-container">
-                    <a th:href="@{/grad_school/Humanities_And_Social_Sciences}"><div class="side-link ">인문사회대학</div></a>
-                    <a th:href="@{/grad_school/Natural_Sciences}"><div class="side-link ">자연과학대학</div></a>
-                    <a th:href="@{/grad_school/Engineering}"><div class="side-link ">공과대학</div></a>
-                    <a th:href="@{/grad_school/Education}"><div class="side-link selected-link">사범대학</div></a>
-                    <a th:href="@{/grad_school/Graduate_School}"><div class="side-link ">대학원</div></a>
-                </div>
+                    <h3>대학·대학원</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/grad_school/Humanities_And_Social_Sciences}">
+                            <div class="side-link ">인문사회대학</div>
+                        </a>
+                        <a th:href="@{/grad_school/Natural_Sciences}">
+                            <div class="side-link ">자연과학대학</div>
+                        </a>
+                        <a th:href="@{/grad_school/Engineering}">
+                            <div class="side-link ">공과대학</div>
+                        </a>
+                        <a th:href="@{/grad_school/Education}">
+                            <div class="side-link selected-link">사범대학</div>
+                        </a>
+                        <a th:href="@{/grad_school/Graduate_School}">
+                            <div class="side-link ">대학원</div>
+                        </a>
+                    </div>
                 </aside>
                 <div class="Education-container">
                     <h4>사범대학</h4>
@@ -75,7 +90,7 @@
                                 다. 원격강의 , 스튜디오, 원격교육강의실, 교육매체 제작실, 멀티미디어 강의실, 어학학습실,<br>
                                 수업행동 분석실 등 첨단 시설을 갖춘 교육지원센터를 운영하고 있습니다. 부속기관으로는<br>
                                 중등교육연수원, 과학교육연구소, 부설고등학교 등이 있습니다.
-                            </p> 
+                            </p>
                         </div>
                     </div>
                     <div class="list">
@@ -85,116 +100,116 @@
                     <div class="table">
                         <table cellspacing="0">
                             <thead>
-                                <tr>
-                                    <th>학과/전공</th>
-                                    <th>학과장</th>
-                                    <th>학과 사무실 번호</th>
-                                    <th>비고</th>
-                                </tr>
+                            <tr>
+                                <th>학과/전공</th>
+                                <th>학과장</th>
+                                <th>학과 사무실 번호</th>
+                                <th>비고</th>
+                            </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>국어교육과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="국어교육과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김국어</td>
-                                    <td>051-123-4001</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>영어교육과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="영어교육과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김영어</td>
-                                    <td>051-123-4002</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>수학교육과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="수학교육과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김수학</td>
-                                    <td>051-123-4003</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>윤리학과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="윤리학과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김윤리</td>
-                                    <td>051-123-4004</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>교육학과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="교육학과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김교육</td>
-                                    <td>051-123-4005</td>
-                                    <td></td>
-                                </tr>
-                                <tr> 
-                                    <td>
-                                        <div>
-                                            <p>사회교육과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="사회교육과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김사회</td>
-                                    <td>051-123-4006</td>
-                                    <td></td> 
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>역사교육과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="역사교육과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김역사</td>
-                                    <td>051-123-4007</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>체육교육과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="체육교육과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김체육</td>
-                                    <td>051-123-4008</td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div>
-                                            <p>특수교육과</p>
-                                            <a href="#"><img th:src="@{/images/ico_link.png}" alt="특수교육과"></a>
-                                        </div>
-                                    </td>
-                                    <td>김특수</td>
-                                    <td>051-123-4009</td>
-                                    <td></td>
-                                </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>국어교육과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="국어교육과"></a>
+                                    </div>
+                                </td>
+                                <td>김국어</td>
+                                <td>051-123-4001</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>영어교육과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="영어교육과"></a>
+                                    </div>
+                                </td>
+                                <td>김영어</td>
+                                <td>051-123-4002</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>수학교육과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="수학교육과"></a>
+                                    </div>
+                                </td>
+                                <td>김수학</td>
+                                <td>051-123-4003</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>윤리학과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="윤리학과"></a>
+                                    </div>
+                                </td>
+                                <td>김윤리</td>
+                                <td>051-123-4004</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>교육학과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="교육학과"></a>
+                                    </div>
+                                </td>
+                                <td>김교육</td>
+                                <td>051-123-4005</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>사회교육과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="사회교육과"></a>
+                                    </div>
+                                </td>
+                                <td>김사회</td>
+                                <td>051-123-4006</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>역사교육과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="역사교육과"></a>
+                                    </div>
+                                </td>
+                                <td>김역사</td>
+                                <td>051-123-4007</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>체육교육과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="체육교육과"></a>
+                                    </div>
+                                </td>
+                                <td>김체육</td>
+                                <td>051-123-4008</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>특수교육과</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="특수교육과"></a>
+                                    </div>
+                                </td>
+                                <td>김특수</td>
+                                <td>051-123-4009</td>
+                                <td></td>
+                            </tr>
                             </tbody>
                         </table>
-                    </div>         
+                    </div>
                 </div>
             </div>
         </div>

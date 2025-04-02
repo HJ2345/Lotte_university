@@ -1,9 +1,9 @@
-
 /* =============== 메인 컨텐츠 작성 ===============  */
 .grade-container {
     width: 100%;
     margin: 8px 0 0 50px;
 }
+
 .grade-container h4 {
     font-size: 26px;
     font-weight: 700;
@@ -11,7 +11,8 @@
     margin-bottom: 31px;
     padding-bottom: 20.8px;
 }
-.container_body{
+
+.container_body {
     width: 100%;
     box-sizing: border-box;
     height: 100%;
@@ -22,7 +23,7 @@
     letter-spacing: -0.5px;
 }
 
-.blue_text > li{
+.blue_text > li {
     margin-bottom: 10px;
     font-family: 'Inter';
     font-style: normal;
@@ -33,7 +34,7 @@
     color: #0067B3;
 }
 
-.small_title > li{
+.small_title > li {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -44,7 +45,7 @@
     margin-bottom: 5px;
 }
 
-.small_title > li > img{
+.small_title > li > img {
     margin-right: 10px;
 }
 
@@ -60,7 +61,7 @@
     margin-bottom: 20px;
 }
 
-.table_1{
+.table_1 {
     box-sizing: border-box;
     width: 930px;
     left: 60px;
@@ -70,16 +71,16 @@
     table-layout: fixed;
 }
 
-.table_1 th{
+.table_1 th {
     border-top: 2px solid #071F4B !important;
     border: 1px solid #DEDEDE;
     background: #F4F8FC;
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 16px;
 }
 
-.table_1 td{
-    font-size: 16px;   
+.table_1 td {
+    font-size: 16px;
     border: 1px solid #DEDEDE;
 }
 

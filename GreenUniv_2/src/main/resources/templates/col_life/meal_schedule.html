@@ -13,12 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/static/js/swiper.js"></script>
-
-    <script src="/static/js/header.js"></script>
+    <script th:src="@{/js/header.js}"></script>
     <link rel="stylesheet" th:href="@{/style/col_life/meal_schedule.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
@@ -29,40 +24,38 @@
 </head>
 <body>
 <div id="wrapper">
-    <!-- header side -->
-    <header>
-        <th:block th:include="/common/_header.html"/>
-        <div class="location-container">
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/ico-home.png}"
-                                    th:alt="home"
-                                    class="ico-home"
-                            />
-                        </a>
-                    </li>
-                    <li>
+    <th:block th:include="/common/_header.html"/>
+    <div class="location-container">
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
                         <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
+                                th:src="@{/images/ico-home.png}"
+                                th:alt="home"
+                                class="ico-home"
                         />
-                        <a href="#">대학생활</a>
-                    </li>
-                    <li>
-                        <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
-                        />
-                        <a href="#" class="this-location">식단안내</a>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#">대학생활</a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#" class="this-location">식단안내</a>
+                </li>
+            </ul>
         </div>
+    </div>
     </header>
     <main>
         <div class="main-container">
@@ -91,10 +84,8 @@
                         <h2 class="meal_cal">2025.03.10~2025.03.25</h2>
                         <img src="/static/images/btn-calendar-next.gif">
                     </div>
-
                     <div class="meal_td">
                         <table>
-
                             <tr>
                                 <th>구분</th>
                                 <th>2025.3.10(월)</th>
@@ -103,11 +94,7 @@
                                 <th>2025.3.13(목)</th>
                                 <th>2025.3.14(금)</th>
                                 <th>2025.3.15(토)</th>
-
-
                             </tr>
-
-
                             <tr>
                                 <td class="cate">조식</td>
                                 <td>미운영</td>
@@ -116,9 +103,7 @@
                                 <td>미운영</td>
                                 <td>미운영</td>
                                 <td>미운영</td>
-
                             </tr>
-
                             <tr>
                                 <td class="cate">중식</td>
                                 <td><span class="price">정식 5,500</span>
@@ -162,9 +147,7 @@
                                     <div>상수겉절이</div>
                                     <div>포기김치</div>
                                 <td>미운영</td>
-
                             </tr>
-
                             <tr>
                                 <td class="cate">석식</td>
                                 <td>미운영</td>
@@ -173,19 +156,15 @@
                                 <td>미운영</td>
                                 <td>미운영</td>
                                 <td>미운영</td>
-
                             </tr>
-
-
                         </table>
-
                     </div>
-
                     <div class="thx">
                         <span>※항상 그린식당을 이용해 주셔서 감사합니다</span>
                     </div>
                 </div>
-
+            </div>
+        </div>
     </main>
     <th:block th:include="/common/_footer.html"/>
 </div>

@@ -3,6 +3,7 @@
     width: 100%;
     margin: 8px 0 0 50px;
 }
+
 .cou-container h4 {
     font-size: 26px;
     font-weight: 700;
@@ -10,7 +11,8 @@
     margin-bottom: 31px;
     padding-bottom: 20.8px;
 }
-.container_body{
+
+.container_body {
     width: 100%;
     box-sizing: border-box;
     height: 100%;
@@ -28,19 +30,19 @@
     width: 150px;
     height: 47px;
     border: 1px solid #6D6D6D;
-    padding: 0 10px; 
+    padding: 0 10px;
     font-size: 16px;
     font-weight: bold;
 }
 
-.link_btn >img {
+.link_btn > img {
     width: 20px;
     height: 20px;
     margin-left: 10px;
 }
 
 
-.blue_text > li{
+.blue_text > li {
     margin-bottom: 10px;
     font-family: 'Inter';
     font-style: normal;
@@ -51,7 +53,7 @@
     color: #0067B3;
 }
 
-.small_title > li{
+.small_title > li {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -62,7 +64,7 @@
     margin-bottom: 5px;
 }
 
-.small_title > li > img{
+.small_title > li > img {
     margin-right: 10px;
 }
 
@@ -78,7 +80,7 @@
     margin-bottom: 20px;
 }
 
-.table_1{
+.table_1 {
     box-sizing: border-box;
     width: 930px;
     height: 284px;
@@ -87,20 +89,20 @@
     border-collapse: collapse;
     text-align: center;
     table-layout: fixed;
-    
+
 }
 
-.table_1 th{
+.table_1 th {
     height: 50px;
     border-top: 2px solid #071F4B !important;
     border: 1px solid #DEDEDE;
     background: #F4F8FC;
-    font-weight: bold; 
+    font-weight: bold;
     font-size: 16px;
 }
 
-.table_1 td{
+.table_1 td {
     height: 50px;
-    font-size: 16px;   
+    font-size: 16px;
     border: 1px solid #DEDEDE;
 }

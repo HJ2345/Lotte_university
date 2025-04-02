@@ -12,12 +12,9 @@
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
-            rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"/>
 
-    <script src="/static/js/header.js"></script>
+    <script th:src="@{/js/header.js}"></script>
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
     <link rel="stylesheet" th:href="@{/style/enterance_guide/early.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
@@ -28,173 +25,184 @@
 </head>
 <body>
 <div id="wrapper">
-    <!-- header side -->
-    <header>
-        <th:block th:include="/common/_header.html"/>
-        <div class="location-container">
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/ico-home.png}"
-                                    th:alt="home"
-                                    class="ico-home"
-                            />
-                        </a>
-                    </li>
-                    <li>
-                        <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
-                        />
-                        <a href="#">입학안내</a>
-                    </li>
-                    <li>
-                        <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
-                        />
-                        <a href="#" class="this-location">편입학</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
-<main>
-    <div class="main-container">
+    <th:block th:include="/common/_header.html"/>
+    <div class="location-container">
         <div>
-            <aside>
-                <h3>입학안내</h3>
-                <div class="side-link-container">
-                    <a th:href="@{/enterance_guide/notice}"><div class="side-link ">공지사항</div></a>
-                    <a th:href="@{/enterance_guide/early}"><div class="side-link ">수시모집</div></a>
-                    <a th:href="@{/enterance_guide/regular}"><div class="side-link ">정시모집</div></a>
-                    <a th:href="@{/enterance_guide/transfer}"><div class="side-link selected-link">편입학</div></a>
-                    <a th:href="@{/enterance_guide/consult}"><div class="side-link ">입학상담</div></a>
-                </div>
-            </aside>
-            <div class="enterance-container">
-                <h4>편입학</h4>
-                <div>
-                    <div class="education-intro-text">
-                        <p class="early-text1">
-                            2025학년도 편입학 전형일정
-                        </p>
-                    </div>
-                    <div class="table">
-                        <table cellspacing="0">
-                            <thead>
-                            <tr>
-                                <th>구분</th>
-                                <th>일정</th>
-                                <th>비고</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>원서 접수</td>
-                                <td>2025.01.02.(목)~2025.01.10.(금)</td>
-                                <td>
-                                    <li> 접수 사이트: 동의과학대 원서 접수 홈페이지 apply.dit.ac.kr</li>
-                                    <li> ※ 대학 원서 접수 사이트로만 접수 가능</li>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>서류 제출</td>
-                                <td>~2025.01.13.(월)까지</td>
-                                <td>
-                                    <li> ▶우편 또는 직접 방문 제출</li>
-                                    <li> ※ 익일 등기 우편 발송의 경우 제출일까지 도착분에 한함.</li>
-                                    <li> ※ 2025.01.13.(월) 도착분</li>
-                                    <li> ※ 원본 제출. 팩스 제출 불가.</li>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>면접 고사</td>
-                                <td>
-                                    <li> 간호학과, 방사선과, 응급구조과 : 2025. 01. 17.(금) 10시</li>
-                                    <li> 물리치료과 : 2025. 01. 17.(금) 14시</li>
-                                    <li> 임상병리과, 유아교육과 : 면접 미실시</li>
-                                </td>
-                                <td>
-                                    <li> [면접고사 대기실]</li>
-                                    <li> 방사선과 : 본관 5층 523호</li>
-                                    <li> 물리치료과 : 본관 4층 426호</li>
-                                    <li> 간호학과 : 황령관 7층 702호</li>
-                                    <li> 응급구조과 : 황령관 9층 909호</li>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>합격자 발표</td>
-                                <td>2025.01.24.(금) 15시 예정</td>
-                                <td>BNK부산은행 가상계좌 입금</td>
-                            </tr>
-                            <tr>
-                                <td>합격자 등록</td>
-                                <td>2024.12.18.(수) ~ 12.30.(월) 21:00까지</td>
-                                <td>BNK부산은행 가상계좌 입금</td>
-                            </tr>
-                            <tr>
-                                <td>추가 합격자 발표</td>
-                                <td>2025.01.24.(금) 15시 예정</td>
-                                <td>BNK부산은행 가상계좌 입금</td>
-                            </tr>
-                            <tr>
-                                <td>추가 합격자 등록</td>
-                                <td>
-                                    <li> ▶일반편입: 2025.02.12.(수)~02.28.(금) 17시</li>
-                                    <li> ▶학사편입: 2025.02.12.(수)~02.20.(목) 18시</li>
-                                </td>
-                                <td>BNK부산은행 가상계좌 입금</td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="early-text">
-                    <p>제출서류</p>
-                    <ol>
-                        <li> 전적 대학 제적, 졸업(예정)증명서, 수료(예정)증명서 중 해당 증명서 1부</li>
-                        <li> 전적 대학 성적증명서 1부 (2개 이상의 대학에서 수학한 경우 모든 대학의 원본 성적증명서 제출)</li>
-                    </ol>
-                    <p>※ 원본 제출. 팩스 제출 불가.</p>
-                    <p></p>
-                    <p></p>
-                    <p>접수방법 및 전형료</p>
-                    <h3>인터넷 접수방법</h3>
-                    <ol>
-                        <li>동의과학대학교 홈페이지 접속</p>
-                        <li>회원가입</li>
-                        <li>로그인</li>
-                        <li>원서작성(입력)</li>
-                        <li>원서/수험표 유의사항 확인</li>
-                        <li>제출서류 우편 송부 또는 방문 제출</li>
-                    </ol>
-
-                    <h3>유의사항</h3>
-                    <ol>
-                        <li>편입학 지원자는 동의과학대학교 홈페이지에서 한 번만 접수하여야 한다. (복수 지원 불가)</li>
-                        <li>인터넷 원서 작성(입력)이 완료된 후에는 접수 취소 및 원서 내용 변경이 불가하며, 오기재(입력)로 인한 불이익은 수험생 책임이므로 원서 작성(입력) 시 유의하여야
-                            한다.
-                        </li>
-                        <li>접수 후 제출 마감일까지 모집 요강에 명시된 제출 서류를 우리대학 입학홍보부로 송부하여야 하며, 지원 자격이 미달되거나 제출 서류가 미비된 경우 자격 미달로 불합격
-                            처리한다.
-                        </li>
-                        <li>입력 도중 컴퓨터의 이상을 발견하였을 경우 우리대학에 연락하여 반드시 접수 여부를 확인하여야 한다.</li>
-                        <li>제출서류 송부처 : (47230) 부산광역시 부산진구 양지로54 동의과학대학교 본관 1층 입학홍보처</li>
-                    </ol>
-
-                    <p> 전형료(수수료):무료</p>
-                </div>
-
-            </div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img
+                                th:src="@{/images/ico-home.png}"
+                                th:alt="home"
+                                class="ico-home"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#">입학안내</a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#" class="this-location">편입학</a>
+                </li>
+            </ul>
         </div>
     </div>
-</main>
-<th:block th:include="/common/_footer.html"/>
+    </header>
+    <main>
+        <div class="main-container">
+            <div>
+                <aside>
+                    <h3>입학안내</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/enterance_guide/notice}">
+                            <div class="side-link ">공지사항</div>
+                        </a>
+                        <a th:href="@{/enterance_guide/early}">
+                            <div class="side-link ">수시모집</div>
+                        </a>
+                        <a th:href="@{/enterance_guide/regular}">
+                            <div class="side-link ">정시모집</div>
+                        </a>
+                        <a th:href="@{/enterance_guide/transfer}">
+                            <div class="side-link selected-link">편입학</div>
+                        </a>
+                        <a th:href="@{/enterance_guide/consult}">
+                            <div class="side-link ">입학상담</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="enterance-container">
+                    <h4>편입학</h4>
+                    <div>
+                        <div class="education-intro-text">
+                            <p class="early-text1">
+                                2025학년도 편입학 전형일정
+                            </p>
+                        </div>
+                        <div class="table">
+                            <table cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>일정</th>
+                                    <th>비고</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>원서 접수</td>
+                                    <td>2025.01.02.(목)~2025.01.10.(금)</td>
+                                    <td>
+                                        <li> 접수 사이트: 동의과학대 원서 접수 홈페이지 apply.dit.ac.kr</li>
+                                        <li> ※ 대학 원서 접수 사이트로만 접수 가능</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>서류 제출</td>
+                                    <td>~2025.01.13.(월)까지</td>
+                                    <td>
+                                        <li> ▶우편 또는 직접 방문 제출</li>
+                                        <li> ※ 익일 등기 우편 발송의 경우 제출일까지 도착분에 한함.</li>
+                                        <li> ※ 2025.01.13.(월) 도착분</li>
+                                        <li> ※ 원본 제출. 팩스 제출 불가.</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>면접 고사</td>
+                                    <td>
+                                        <li> 간호학과, 방사선과, 응급구조과 : 2025. 01. 17.(금) 10시</li>
+                                        <li> 물리치료과 : 2025. 01. 17.(금) 14시</li>
+                                        <li> 임상병리과, 유아교육과 : 면접 미실시</li>
+                                    </td>
+                                    <td>
+                                        <li> [면접고사 대기실]</li>
+                                        <li> 방사선과 : 본관 5층 523호</li>
+                                        <li> 물리치료과 : 본관 4층 426호</li>
+                                        <li> 간호학과 : 황령관 7층 702호</li>
+                                        <li> 응급구조과 : 황령관 9층 909호</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>합격자 발표</td>
+                                    <td>2025.01.24.(금) 15시 예정</td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                <tr>
+                                    <td>합격자 등록</td>
+                                    <td>2024.12.18.(수) ~ 12.30.(월) 21:00까지</td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                <tr>
+                                    <td>추가 합격자 발표</td>
+                                    <td>2025.01.24.(금) 15시 예정</td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                <tr>
+                                    <td>추가 합격자 등록</td>
+                                    <td>
+                                        <li> ▶일반편입: 2025.02.12.(수)~02.28.(금) 17시</li>
+                                        <li> ▶학사편입: 2025.02.12.(수)~02.20.(목) 18시</li>
+                                    </td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="early-text">
+                        <p>제출서류</p>
+                        <ol>
+                            <li> 전적 대학 제적, 졸업(예정)증명서, 수료(예정)증명서 중 해당 증명서 1부</li>
+                            <li> 전적 대학 성적증명서 1부 (2개 이상의 대학에서 수학한 경우 모든 대학의 원본 성적증명서 제출)</li>
+                        </ol>
+                        <p>※ 원본 제출. 팩스 제출 불가.</p>
+                        <p></p>
+                        <p></p>
+                        <p>접수방법 및 전형료</p>
+                        <h3>인터넷 접수방법</h3>
+                        <ol>
+                            <li>동의과학대학교 홈페이지 접속</p>
+                            <li>회원가입</li>
+                            <li>로그인</li>
+                            <li>원서작성(입력)</li>
+                            <li>원서/수험표 유의사항 확인</li>
+                            <li>제출서류 우편 송부 또는 방문 제출</li>
+                        </ol>
+
+                        <h3>유의사항</h3>
+                        <ol>
+                            <li>편입학 지원자는 동의과학대학교 홈페이지에서 한 번만 접수하여야 한다. (복수 지원 불가)</li>
+                            <li>인터넷 원서 작성(입력)이 완료된 후에는 접수 취소 및 원서 내용 변경이 불가하며, 오기재(입력)로 인한 불이익은 수험생 책임이므로 원서 작성(입력) 시
+                                유의하여야
+                                한다.
+                            </li>
+                            <li>접수 후 제출 마감일까지 모집 요강에 명시된 제출 서류를 우리대학 입학홍보부로 송부하여야 하며, 지원 자격이 미달되거나 제출 서류가 미비된 경우 자격 미달로
+                                불합격
+                                처리한다.
+                            </li>
+                            <li>입력 도중 컴퓨터의 이상을 발견하였을 경우 우리대학에 연락하여 반드시 접수 여부를 확인하여야 한다.</li>
+                            <li>제출서류 송부처 : (47230) 부산광역시 부산진구 양지로54 동의과학대학교 본관 1층 입학홍보처</li>
+                        </ol>
+
+                        <p> 전형료(수수료):무료</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <th:block th:include="/common/_footer.html"/>
+</div>
 </body>
 </html>

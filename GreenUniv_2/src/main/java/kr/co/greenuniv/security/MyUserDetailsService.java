@@ -23,19 +23,20 @@ public class MyUserDetailsService implements UserDetailsService {
 
         log.info("username : {}", username);
 
-        // 사용자 조회 - 사용자가 입력한 아이디, 비밀번호는 이전단계인 AuthenticationProvider 쪽에서 먼저 수행됨
+        // 사용자 조회
         Optional<User> optUser = userRepository.findById(username);
 
         if(optUser.isPresent()){
             // Security 사용자 인증객체 생성
             MyUserDetails myUserDetails = MyUserDetails.builder()
-                    .user(optUser.get())
+                    .user(optUser.get())  // User 객체에서 사용자 정보를 MyUserDetails로 변환
                     .build();
 
             // 리턴되는 myUserDetails는 Security ContextHolder에 저장
             return myUserDetails;
         }
 
-        return null;
+        // 사용자 없음 -> 예외 던지기
+        throw new UsernameNotFoundException("User not found with username: " + username);
     }
 }

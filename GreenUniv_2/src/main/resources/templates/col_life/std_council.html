@@ -13,12 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/static/js/swiper.js"></script>
-
-    <script src="/static/js/header.js"></script>
+    <script th:src="@{/js/header.js}"></script>
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
     <link rel="stylesheet" th:href="@{/style/col_life/std_council.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
@@ -29,40 +24,38 @@
 </head>
 <body>
 <div id="wrapper">
-    <!-- header side -->
-    <header>
-        <th:block th:include="/common/_header.html"/>
-        <div class="location-container">
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/ico-home.png}"
-                                    th:alt="home"
-                                    class="ico-home"
-                            />
-                        </a>
-                    </li>
-                    <li>
+    <th:block th:include="/common/_header.html"/>
+    <div class="location-container">
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
                         <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
+                                th:src="@{/images/ico-home.png}"
+                                th:alt="home"
+                                class="ico-home"
                         />
-                        <a href="#">대학생활</a>
-                    </li>
-                    <li>
-                        <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
-                        />
-                        <a href="#" class="this-location">학생회 소개</a>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#">대학생활</a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#" class="this-location">학생회 소개</a>
+                </li>
+            </ul>
         </div>
+    </div>
     </header>
     <main>
         <div class="main-container">
@@ -92,14 +85,7 @@
                         <h2>제 6대 The Only, The Best 그린대 학생회</h2>
                         <h3>학생회 소개</h3>
                         <div class="council_img_p">
-                            <img src="/static/images/std_council.png" class="std_council_img" alt="학생회 사진">
-                            <!--
-                            <img
-                                    th:src="@{/images/std_council.png}"
-                                    th:alt="학생회 사진"
-                                    class="std_council_img"
-                            />
-                            -->
+                            <img th:src="@{/images/std_council.png}" class="std_council_img" alt="학생회 사진">
                             <p>그린대 학생회는 <strong>The Only, The Best</strong>라는 슬로건에 맞게 그린대학 최고라 할 수 있는 학생회를 만들어 가고자 합니다.
                                 그린대과
                                 학생회는 <strong>Together</strong>라는 슬로건에 맞게 그린대가 하나되어 함께 화합을 이룬다는 뜻을 넘어 그린대학 학우들 모두가 하나가 될
@@ -186,9 +172,10 @@
                                 <td>010-1111-1111</td>
                             </tr>
                         </table>
-
                     </div>
-
+                </div>
+            </div>
+        </div>
     </main>
     <th:block th:include="/common/_footer.html"/>
 </div>

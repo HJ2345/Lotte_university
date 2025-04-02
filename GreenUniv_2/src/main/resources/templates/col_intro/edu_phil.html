@@ -7,249 +7,114 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
-          rel="stylesheet"
-  />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"/>
 
-  <script th:src="@{/js/header.js}"></script>
-  <link rel="stylesheet" th:href="@{/style/common/_header.css}" />
-  <link rel="stylesheet" th:href="@{/style/common/_header2.css}" />
-  <link rel="stylesheet" th:href="@{/style/common/main.css}" />
-  <link rel="stylesheet" th:href="@{/style/col_intro/edu_phil.css}" />
-  <link rel="stylesheet" th:href="@{/style/common/_footer.css}" />
-  <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
-  <title>교육이념</title>
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
+    <link rel="stylesheet" th:href="@{/style/col_intro/edu_phil.css}"/>
+    <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
+    <title>교육이념</title>
 </head>
 <body>
 <div id="wrapper">
-  <!-- header side -->
-  <header>
-    <div class="topMenuBar">
-      <ul class="topMenus">
-        <li><a th:href="@{/}">HOME</a></li>
-        <li><a href="#">사이트맵</a></li>
-        <li><a th:href="@{/user/login}">로그인</a></li>
-        <li><a th:href="@{/support/studentRecord}">학생지원</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="category">
-        <a href="#">
-          <img
-                  th:src="@{/images/header_logo.png}"
-                  alt="그린대학교"
-                  class="logo"
-          />
-        </a>
-        <div class="nav-container">
-          <nav>
-            <div class="item">
-              대학소개
-              <div class="dropdown">
-                <div>
-                  <a th:href="@{/col_intro/pdt_greeting}">총장 인사말</a>
-                  <a th:href="@{/col_intro/edu_phil}">교육이념</a>
-                  <a th:href="@{/col_intro/history}">연혁</a>
-                  <a th:href="@{/col_intro/organization}">조직도</a>
-                  <a th:href="@{/col_intro/map}">오시는길</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              입학안내
-              <div class="dropdown">
-                <div>
-                  <a th:href="@{/enterance_guide/notice}">공지사항</a>
-                  <a th:href="@{/enterance_guide/early}">수시모집</a>
-                  <a th:href="@{/enterance_guide/regular}">정시모집</a>
-                  <a th:href="@{/enterance_guide/transfer}">편입학</a>
-                  <a th:href="@{/enterance_guide/consult}">입학상담</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              대학·대학원
-              <div class="dropdown">
-                <div>
-                  <a th:href="@{/grad_school/Humanities_And_Social_Sciences}">인문사회대학</a>
-                  <a th:href="@{/grad_school/Natural_Sciences}">자연과학대학</a>
-                  <a th:href="@{/grad_school/Engineering}">공과대학</a>
-                  <a th:href="@{/grad_school/Education}">사범대학</a>
-                  <a th:href="@{/grad_school/Graduate_School}">대학원</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              학사안내
-              <div class="dropdown">
-                <div>
-                  <a th:href="@{/bachelor_guide/bachelor_notice}">공지사항</a>
-                  <a th:href="@{/bachelor_guide/bachelor_schedule}">학사일정</a>
-                  <a th:href="@{/bachelor_guide/cou_reg}">수강신청</a>
-                  <a th:href="@{/bachelor_guide/grade}">성적</a>
-                  <a th:href="@{/bachelor_guide/com_n_grd}">수료 및 졸업</a>
-                  <a th:href="@{/bachelor_guide/fre_Que}">자주묻는질문</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              대학생활
-              <div class="dropdown">
-                <div>
-                  <a th:href="@{/col_life/std_council}">학생회소개</a>
-                  <a th:href="@{/col_life/study}">동아리/스터디</a>
-                  <a th:href="@{/col_life/meal_schedule}">식단안내</a>
-                  <a th:href="@{/col_life/gallery}">갤러리</a>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              커뮤니티
-              <div class="dropdown">
-                <div>
-                  <a th:href="@{/community/community_announcement}">공지사항</a>
-                  <a th:href="@{/community/news}">뉴스 및 칼럼</a>
-                  <a th:href="@{/community/Einformation}">취업정보</a>
-                  <a th:href="@{/community/Fboard}">자유게시판</a>
-                  <a th:href="@{/community/qna}">질문과 답변</a>
-                  <a th:href="@{/community/reference}">자료실</a>
-                </div>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </div>
-    </div>
+    <th:block th:include="/common/_header.html"/>
     <div class="location-container">
-      <div>
-        <ul>
-          <li>
-            <a th:href="@{/}">
-              <img
-                      th:src="@{/images/ico-home.png}"
-                      alt="home"
-                      class="ico-home"
-              />
-            </a>
-          </li>
-          <li>
-            <img
-                    th:src="@{/images/btn-next-page.png}"
-                    alt="next"
-                    class="ico-next"
-            />
-            <a th:href="@{/col_intro/edu_phil}">대학소개</a>
-          </li>
-          <li>
-            <img
-                    th:src="@{/images/btn-next-page.png}"
-                    alt="next"
-                    class="ico-next"
-            />
-            <a th:href="@{/col_intro/edu_phil}" class="this-location">교육이념</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </header>
-  <!-- header end -->
-  <main>
-    <div class="main-container">
-      <div>
-        <aside>
-          <h3>대학소개</h3>
-          <div class="side-link-container">
-            <a th:href="@{/col_intro/pdt_greeting}"><div class="side-link">총장 인사말</div></a>
-            <a th:href="@{/col_intro/edu_phil}"><div class="side-link selected-link">교육이념</div></a>
-            <a th:href="@{/col_intro/history}"><div class="side-link">연혁</div></a>
-            <a th:href="@{/col_intro/organization}"><div class="side-link">조직도</div></a>
-            <a th:href="@{/col_intro/map}"><div class="side-link">오시는길</div></a>
-          </div>
-        </aside>
-        <div class="edu-container">
-          <h4>교육이념</h4>
-          <div class="education-ideology">
-            <div class="ideology-header">
-              <h5>취업률, 자격증, SW 개발, 비전공자도 할 수 있는 취업 준비</h5>
-              <p>그린대학교는 모든 학생들이 실용적인 교육을 통해 원하는 직업을 얻을 수 있도록, 취업률을 높이고 자격증 취득을 지원하며, SW 개발 능력을 배양하는 데 중점을 둡니다. 또한, 비전공자도 쉽게 취업할 수 있도록 실무 중심의 교육을 제공합니다.</p>
-            </div>
-
-            <div class="ideology-details">
-              <h6>1. 실용적인 취업 준비</h6>
-              <p>그린대학교는 학생들이 졸업 후 바로 취업할 수 있도록 실용적인 교육 프로그램을 제공합니다. 다양한 취업 관련 자격증 취득과 맞춤형 취업 지원을 통해, 학생들의 취업 경쟁력을 강화합니다.</p>
-
-              <h6>2. 자격증 취득 지원</h6>
-              <p>취업에 중요한 역할을 하는 다양한 자격증을 취득할 수 있는 교육과정을 제공합니다. 이를 통해 학생들이 이론뿐만 아니라 실무 능력까지 갖출 수 있도록 돕습니다.</p>
-
-              <h6>3. SW 개발 역량 배양</h6>
-              <p>SW 개발 능력은 현대 사회에서 중요한 자질로 자리 잡고 있습니다. 그린대학교는 학생들이 최신 기술을 습득하고, 실무에서 바로 사용할 수 있는 기술력을 갖추도록 지원합니다.</p>
-
-              <h6>4. 비전공자도 할 수 있는 교육</h6>
-              <p>비전공자들도 SW 개발과 관련된 기술을 쉽게 배울 수 있도록, 기초부터 심화까지 단계별로 지원하는 교육과정을 마련하여, 모든 학생이 취업할 수 있는 기회를 제공합니다.</p>
-            </div>
-          </div>
+        <div>
+            <ul>
+                <li>
+                    <a th:href="@{/}">
+                        <img
+                                th:src="@{/images/ico-home.png}"
+                                alt="home"
+                                class="ico-home"
+                        />
+                    </a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            alt="next"
+                            class="ico-next"
+                    />
+                    <a th:href="@{/col_intro/edu_phil}">대학소개</a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            alt="next"
+                            class="ico-next"
+                    />
+                    <a th:href="@{/col_intro/edu_phil}" class="this-location">교육이념</a>
+                </li>
+            </ul>
         </div>
-      </div>
     </div>
-  </main>
-  <footer>
-    <div class="footer-link-container">
-      <div class="footer-link">
-        <ul class="footer-links">
-          <li><a href="#">개인정보처리방침</a></li>
-          <li><a href="#">통합정보시스템</a></li>
-          <li><a th:href="@{/bachelor_guide/bachelor_schedule}">학사일정</a></li>
-          <li><a href="#">주요민원 연락처</a></li>
-          <li><a href="#">교내공지사항</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="copyright">
-      <div class="copyright-container">
-        <img
-                th:src="@{/images/footer_logo.png}"
-                alt="그린대학교"
-                class="footer-logo"
-        />
-        <div class="footer-text-container">
-          <p class="footer-text">
-            그린대학교<br />
-            [12345] 부산광역시 부산진구 부전대로 123 그린대학교
-            &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br />
-            입학안내 : 051-123-1302 팩스 : 051-123-333
-          </p>
-          <p class="footer-text text2">
-            copyright ©Green University All rights reserved.
-          </p>
+    </header>
+    <!-- header end -->
+    <main>
+        <div class="main-container">
+            <div>
+                <aside>
+                    <h3>대학소개</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/col_intro/pdt_greeting}">
+                            <div class="side-link">총장 인사말</div>
+                        </a>
+                        <a th:href="@{/col_intro/edu_phil}">
+                            <div class="side-link selected-link">교육이념</div>
+                        </a>
+                        <a th:href="@{/col_intro/history}">
+                            <div class="side-link">연혁</div>
+                        </a>
+                        <a th:href="@{/col_intro/organization}">
+                            <div class="side-link">조직도</div>
+                        </a>
+                        <a th:href="@{/col_intro/map}">
+                            <div class="side-link">오시는길</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="edu-container">
+                    <h4>교육이념</h4>
+                    <div class="education-ideology">
+                        <div class="ideology-header">
+                            <h5>취업률, 자격증, SW 개발, 비전공자도 할 수 있는 취업 준비</h5>
+                            <p>그린대학교는 모든 학생들이 실용적인 교육을 통해 원하는 직업을 얻을 수 있도록, 취업률을 높이고 자격증 취득을 지원하며, SW 개발 능력을 배양하는 데 중점을
+                                둡니다. 또한, 비전공자도 쉽게 취업할 수 있도록 실무 중심의 교육을 제공합니다.</p>
+                        </div>
+
+                        <div class="ideology-details">
+                            <h6>1. 실용적인 취업 준비</h6>
+                            <p>그린대학교는 학생들이 졸업 후 바로 취업할 수 있도록 실용적인 교육 프로그램을 제공합니다. 다양한 취업 관련 자격증 취득과 맞춤형 취업 지원을 통해, 학생들의
+                                취업 경쟁력을 강화합니다.</p>
+
+                            <h6>2. 자격증 취득 지원</h6>
+                            <p>취업에 중요한 역할을 하는 다양한 자격증을 취득할 수 있는 교육과정을 제공합니다. 이를 통해 학생들이 이론뿐만 아니라 실무 능력까지 갖출 수 있도록
+                                돕습니다.</p>
+
+                            <h6>3. SW 개발 역량 배양</h6>
+                            <p>SW 개발 능력은 현대 사회에서 중요한 자질로 자리 잡고 있습니다. 그린대학교는 학생들이 최신 기술을 습득하고, 실무에서 바로 사용할 수 있는 기술력을 갖추도록
+                                지원합니다.</p>
+
+                            <h6>4. 비전공자도 할 수 있는 교육</h6>
+                            <p>비전공자들도 SW 개발과 관련된 기술을 쉽게 배울 수 있도록, 기초부터 심화까지 단계별로 지원하는 교육과정을 마련하여, 모든 학생이 취업할 수 있는 기회를
+                                제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <select onchange="window.open(value,'_self');" class="site">
-          <option class="sites" value="#" disabled selected>
-            주요사이트
-          </option>
-          <option class="sites" value="https://naver.com">네이버</option>
-          <option class="sites" value="https://www.kakaocorp.com/page/">
-            카카오
-          </option>
-          <option class="sites" value="https://www.line.me/ko/">
-            라인
-          </option>
-          <option class="sites" value="https://www.coupang.com/">
-            쿠팡
-          </option>
-          <option class="sites" value="https://www.woowahan.com/">
-            배달의민족
-          </option>
-        </select>
-      </div>
-    </div>
-  </footer>
+    </main>
+    <th:block th:include="/common/_footer.html"/>
 </div>
 </body>
 </html>

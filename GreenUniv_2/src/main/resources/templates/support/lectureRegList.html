@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    
+
     <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/support/lectureRegList.css}">
 
     <title>수강신청내역</title>
@@ -20,177 +23,160 @@
     -->
 </head>
 <body>
-    <div id="wrapper">
-        <!-- header side -->
-        <header>
-            <th:block th:include="/common/_header.html"/>
-            <div class="location-container">
-                <div>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
-                            </a>
-                        </li>
-                        <li>
-                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
-                            <a href="#">학생지원</a>
-                        </li>
-                        <li>
-                            <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
-                            <a href="#" class="this-location">수강신청내역</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </header>
-        <!-- header end -->
-        <main>
-            <div class="main-container">
-                <div>
-                    <aside>
-                        <h3>학생지원</h3>
-                        <div class="side-link-container">
-                            <a th:href="@{/support/lectureRegister}"><div class="side-link ">수강신청</div></a>
-                            <a th:href="@{/support/lectureRegList}"><div class="side-link selected-link">수강신청내역</div></a>
-                            <a th:href="@{/support/curriculum}"><div class="side-link ">교과과정</div></a>
-                            <a th:href="@{/support/gradeLookUp}"><div class="side-link ">성적조회</div></a>
-                            <a th:href="@{/support/studentRecord}"><div class="side-link ">학적</div></a>
-                        </div>
-                    </aside>
-                    <div class="lectureRegister-container"> 
-                        <h4>수강신청내역</h4>       
-                        <div>
-                            <div class="select-container">
-                                <div>
-                                    <select name="year" class="selectYears">
-                                        <option value="#" selected class="selectYear">2025</option>
-                                        <option value="#" class="selectYear">2024</option>
-                                        <option value="#" class="selectYear">2023</option>
-                                        <option value="#" class="selectYear">2022</option>
-                                    </select>
-                                    <span>년</span>
-                                    <select name="year" class="selectSemeters">
-                                        <option value="#" selected class="selectSemeter">1</option>
-                                        <option value="#" class="selectSemeter">2</option>
-                                        <option value="#" class="selectSemeter">3</option>
-                                        <option value="#" class="selectSemeter">4</option>
-                                    </select>
-                                    <span>학기</span>
-                                </div>
-                                <div>
-                                    신청과목수 6과목, 총 신청학점 18학점
-                                </div>
-                            </div>
-                            <table>
-                                <tr>
-                                    <th>교과목코드</th>
-                                    <th>과목명</th>
-                                    <th>대상학년</th>
-                                    <th>담당교수</th>
-                                    <th>학점</th>
-                                    <th>이수구분</th>
-                                    <th>강의시간</th>
-                                    <th>강의장</th>
-                                    <th>관리</th>
-                                </tr>
-                                <tr>
-                                    <td>830003</td>
-                                    <td>자바 프로그래밍</td>
-                                    <td>2학년</td>
-                                    <td>김자바</td>
-                                    <td>3</td>
-                                    <td>전공</td>
-                                    <td>화 1,2,3</td>
-                                    <td>컴퓨터실</td>
-                                    <td><button type="submit" class="appBtn">취소</button></td>
-                                </tr>
-                                <tr>
-                                    <td>830003</td>
-                                    <td>자바 프로그래밍</td>
-                                    <td>2학년</td>
-                                    <td>김자바</td>
-                                    <td>3</td>
-                                    <td>전공</td>
-                                    <td>화 1,2,3</td>
-                                    <td>컴퓨터실</td>
-                                    <td><button type="submit" class="appBtn">취소</button></td>
-                                </tr>
-                                <tr>
-                                    <td>830003</td>
-                                    <td>자바 프로그래밍</td>
-                                    <td>2학년</td>
-                                    <td>김자바</td>
-                                    <td>3</td>
-                                    <td>전공</td>
-                                    <td>화 1,2,3</td>
-                                    <td>컴퓨터실</td>
-                                    <td><button type="submit" class="appBtn">취소</button></td>
-                                </tr>
-                                <tr>
-                                    <td>830003</td>
-                                    <td>자바 프로그래밍</td>
-                                    <td>2학년</td>
-                                    <td>김자바</td>
-                                    <td>3</td>
-                                    <td>전공</td>
-                                    <td>화 1,2,3</td>
-                                    <td>컴퓨터실</td>
-                                    <td><button type="submit" class="appBtn">취소</button></td>
-                                </tr>
-                                <tr>
-                                    <td>830003</td>
-                                    <td>자바 프로그래밍</td>
-                                    <td>2학년</td>
-                                    <td>김자바</td>
-                                    <td>3</td>
-                                    <td>전공</td>
-                                    <td>화 1,2,3</td>
-                                    <td>컴퓨터실</td>
-                                    <td><button type="submit" class="appBtn">취소</button></td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="footer-link-container">
-                <div class="footer-link">
-                    <ul class="footer-links">
-                        <li><a href="#">개인정보처리방침</a></li>
-                        <li><a href="#">통합정보시스템</a></li>
-                        <li><a href="#">학사일정</a></li>
-                        <li><a href="#">주요민원 연락처</a></li>
-                        <li><a href="#">교내공지사항</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <div class="copyright-container">
-                    <img th:src="@{/images/footer_logo.png}" alt="그린대학교" class="footer-logo">
-                    <div class="footer-text-container">
-                        <p class="footer-text">
-                            그린대학교<br>
-                            [12345] 부산광역시 부산진구 부전대로 123 그린대학교 &nbsp;/&nbsp; 대표전화 : 051-123-1000 /<br>
-                            입학안내 : 051-123-1302 팩스 : 051-123-333
-                        </p>
-                        <p class="footer-text text2">
-                            copyright ©Green University All rights reserved.
-                        </p>
-                    </div>
-                    <select onchange="window.open(value,'_self');" class="site">
-                        <option class="sites" value="#" disabled selected>주요사이트</option>
-                        <option class="sites" value="https://naver.com">네이버</option>
-                        <option class="sites" value="https://www.kakaocorp.com/page/">카카오</option>
-                        <option class="sites" value="https://www.line.me/ko/">라인</option>
-                        <option class="sites" value="https://www.coupang.com/">쿠팡</option>
-                        <option class="sites" value="https://www.woowahan.com/">배달의민족</option>
-                    </select>
-                </div>
-            </div>
-        </footer>
+<div id="wrapper">
+    <th:block th:include="/common/_header.html"/>
+    <div class="location-container">
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home">
+                    </a>
+                </li>
+                <li>
+                    <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
+                    <a href="#">학생지원</a>
+                </li>
+                <li>
+                    <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next">
+                    <a href="#" class="this-location">수강신청내역</a>
+                </li>
+            </ul>
+        </div>
     </div>
+    </header>
+    <!-- header end -->
+    <main>
+        <div class="main-container">
+            <div>
+                <aside>
+                    <h3>학생지원</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/support/lectureRegister}">
+                            <div class="side-link ">수강신청</div>
+                        </a>
+                        <a th:href="@{/support/lectureRegList}">
+                            <div class="side-link selected-link">수강신청내역</div>
+                        </a>
+                        <a th:href="@{/support/curriculum}">
+                            <div class="side-link ">교과과정</div>
+                        </a>
+                        <a th:href="@{/support/gradeLookUp}">
+                            <div class="side-link ">성적조회</div>
+                        </a>
+                        <a th:href="@{/support/studentRecord}">
+                            <div class="side-link ">학적</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="lectureRegister-container">
+                    <h4>수강신청내역</h4>
+                    <div>
+                        <div class="select-container">
+                            <div>
+                                <select name="year" class="selectYears">
+                                    <option value="#" selected class="selectYear">2025</option>
+                                    <option value="#" class="selectYear">2024</option>
+                                    <option value="#" class="selectYear">2023</option>
+                                    <option value="#" class="selectYear">2022</option>
+                                </select>
+                                <span>년</span>
+                                <select name="year" class="selectSemeters">
+                                    <option value="#" selected class="selectSemeter">1</option>
+                                    <option value="#" class="selectSemeter">2</option>
+                                    <option value="#" class="selectSemeter">3</option>
+                                    <option value="#" class="selectSemeter">4</option>
+                                </select>
+                                <span>학기</span>
+                            </div>
+                            <div>
+                                신청과목수 6과목, 총 신청학점 18학점
+                            </div>
+                        </div>
+                        <table>
+                            <tr>
+                                <th>교과목코드</th>
+                                <th>과목명</th>
+                                <th>대상학년</th>
+                                <th>담당교수</th>
+                                <th>학점</th>
+                                <th>이수구분</th>
+                                <th>강의시간</th>
+                                <th>강의장</th>
+                                <th>관리</th>
+                            </tr>
+                            <tr>
+                                <td>830003</td>
+                                <td>자바 프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>3</td>
+                                <td>전공</td>
+                                <td>화 1,2,3</td>
+                                <td>컴퓨터실</td>
+                                <td>
+                                    <button type="submit" class="appBtn">취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>830003</td>
+                                <td>자바 프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>3</td>
+                                <td>전공</td>
+                                <td>화 1,2,3</td>
+                                <td>컴퓨터실</td>
+                                <td>
+                                    <button type="submit" class="appBtn">취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>830003</td>
+                                <td>자바 프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>3</td>
+                                <td>전공</td>
+                                <td>화 1,2,3</td>
+                                <td>컴퓨터실</td>
+                                <td>
+                                    <button type="submit" class="appBtn">취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>830003</td>
+                                <td>자바 프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>3</td>
+                                <td>전공</td>
+                                <td>화 1,2,3</td>
+                                <td>컴퓨터실</td>
+                                <td>
+                                    <button type="submit" class="appBtn">취소</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>830003</td>
+                                <td>자바 프로그래밍</td>
+                                <td>2학년</td>
+                                <td>김자바</td>
+                                <td>3</td>
+                                <td>전공</td>
+                                <td>화 1,2,3</td>
+                                <td>컴퓨터실</td>
+                                <td>
+                                    <button type="submit" class="appBtn">취소</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <th:block th:include="/common/_footer.html"/>
+</div>
 </body>
 </html>

@@ -1,79 +1,80 @@
 .greeting-container {
-  width: 100%;
-  margin: 8px 0 0 50px;
+    width: 100%;
+    margin: 8px 0 0 50px;
 }
+
 .greeting-container h4 {
-  font-size: 26px;
-  font-weight: 700;
-  border-bottom: 2px solid #222;
-  margin-bottom: 31px;
-  padding-bottom: 20.8px;
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    margin-bottom: 31px;
+    padding-bottom: 20.8px;
 }
-/**/
+
 .content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-  background: #f4f4f9;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    background: #f4f4f9;
 }
 
 .inner {
-  width: 90%;
-  max-width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 /* 이미지 스타일 */
 .img-container {
-  flex: 1;
-  margin-right: 30px;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin-right: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .img-container img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 /* 텍스트 박스 스타일 */
 .text {
-  flex: 1.5;
-  background: linear-gradient(to bottom, #ffffff, #f1f3f5);
-  padding: 40px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  color: #333;
-  line-height: 1.6;
+    flex: 1.5;
+    background: linear-gradient(to bottom, #ffffff, #f1f3f5);
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    color: #333;
+    line-height: 1.6;
 }
 
 /* 제목 스타일 */
 .subject {
-  font-size: 32px;
-  font-weight: bold;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* 본문 스타일 */
 .con {
-  font-size: 15px;
-  color: #555;
-  text-align: justify;
+    font-size: 15px;
+    color: #555;
+    text-align: justify;
 }
 
 .con p {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 /* 강조 텍스트 */
 strong {
-  color: #3f97f6;
-  font-weight: bold;
+    color: #3f97f6;
+    font-weight: bold;
 }

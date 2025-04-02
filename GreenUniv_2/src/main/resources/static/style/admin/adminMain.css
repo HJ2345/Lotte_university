@@ -3,12 +3,15 @@
     padding: 0;
     font: normal 12px "Noto Sans KR";
 }
+
 a {
     text-decoration: none;
 }
+
 ul, li {
     list-style: none;
 }
+
 body {
     overflow-x: hidden; /* 가로 스크롤 추가 */
     min-width: 1200px; /* 최소 너비 유지 */
@@ -29,15 +32,18 @@ header > div > * {
     width: 100%;
     background-color: #00518C;
 }
+
 .topMenus {
     height: 28px;
     padding: 5px 0 5px 5px;
     box-sizing: border-box;
     text-align: right;
 }
+
 .topMenus li {
     display: inline;
 }
+
 .topMenus li > a {
     color: white;
     font-size: 12px;
@@ -46,14 +52,17 @@ header > div > * {
     padding-right: 7px;
     font-weight: 350;
 }
+
 .topMenus li:last-child > a {
     border: none;
     padding-right: 0;
 }
+
 .header-background {
     background-color: #1F2838;
     padding: 17px 0;
 }
+
 /* --------- header end --------- */
 
 /* --------- main start --------- */
@@ -66,9 +75,11 @@ main > * {
     width: 1200px;
     margin: 0 auto;
 }
+
 .main-container {
     display: flex;
 }
+
 .sidebar {
     display: flex;
     width: 270px;
@@ -77,41 +88,50 @@ main > * {
     border-left: 1px solid #C0C0C0;
     padding-bottom: 20px;
 }
+
 .side-icon {
     width: 20px;
     margin-right: 5px;
 }
+
 .side-title {
     font-size: 16px;
     font-weight: 700;
     color: #222;
 }
+
 .side-container {
     margin-top: 20px;
     margin-left: 20px;
 }
+
 .side-container > a {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .side-container ul > li {
     margin-bottom: 10px;
 }
+
 .side-container ul > li:last-child {
     margin-bottom: 10px;
 }
+
 .side-container ul > li > a {
     margin-left: 20px;
     font-size: 14px;
     font-weight: 350;
     color: #111;
 }
+
 .side-container ul > li > a::before {
     content: "·";
     margin-right: 5px;
 }
+
 .main {
     width: 100%;
     display: flex;
@@ -119,6 +139,7 @@ main > * {
     margin-top: 20px;
     margin-left: 20px;
 }
+
 .main-header {
     display: flex;
     box-sizing: border-box;
@@ -128,39 +149,47 @@ main > * {
     padding-bottom: 10px;
     border-bottom: 1px solid #C0C0C0;
 }
+
 .location {
     display: flex;
     align-items: center;
     margin-bottom: -10px;
 }
+
 .location > p {
     font-size: 14px;
     font-weight: 350;
 }
+
 .location > img {
     width: 4px;
     height: 6px;
     margin: 3px 7px 0 7px;
 }
+
 .current-location {
     font-size: 14px;
     font-weight: 350;
     color: #145074;
 }
+
 .main-header > h3 {
     font-size: 20px;
     font-weight: 700;
 }
+
 .main-title {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
+
 .main-title > img {
     margin-right: 5px;
     margin-top: 2px;
     height: 16px;
 }
+
 .main-title > p {
     font-size: 18px;
     font-weight: 400;
@@ -172,26 +201,32 @@ main > * {
     justify-content: space-between;
     align-items: center;
 }
+
 .oneline-two-title > div {
     display: flex;
     align-items: center;
 }
+
 .main-title > div > img {
     margin-right: 5px;
     margin-top: 2px;
     height: 16px;
 }
+
 .main-title > div > p {
     font-size: 18px;
     font-weight: 400;
     color: #145074;
 }
+
 .viewmore {
     margin-top: 4px;
 }
+
 table {
     border-collapse: collapse;
 }
+
 th {
     border-top: 1px solid black;
     border-bottom: 1px solid #A3A3A3;
@@ -202,6 +237,7 @@ th {
     text-align: center;
     height: 45px;
 }
+
 td {
     border-bottom: 1px solid #A3A3A3;
     color: #333;
@@ -210,35 +246,44 @@ td {
     text-align: center;
     height: 45px;
 }
+
 .table-container {
     margin-bottom: 20px;
 }
+
 tr:last-child > td {
     border-bottom: 1px solid #D8D8D8;
 }
+
 .tables {
     width: 100%;
 }
+
 .oneline-two-container {
     display: flex;
     justify-content: space-between;
 }
+
 .oneline-two-container > div:nth-child(1) {
     flex: 1;
     margin-right: 10px;
 }
+
 .oneline-two-container > div:nth-child(2) {
     flex: 1;
     margin-left: 10px;
 }
+
 .answer-status {
     font-size: 14px;
     font-weight: 350;
     color: white;
 }
+
 .wating-answer {
     color: #CD3631;
 }
+
 .answer-complete {
     color: #207918;
 }
@@ -248,36 +293,47 @@ tr:last-child > td {
 .univ-manage-stat tr > td {
     width: 136px;
 }
+
 .stat-students-grade tr > td {
     width: 133px;
 }
+
 .stat-students-dep tr > td {
     width: 133px;
 }
+
 .edc-stat tr > td:nth-child(1), td:nth-child(3) {
     width: 150px;
 }
+
 .edc-stat tr > td:not(:nth-child(1), :nth-child(3)) {
     width: 90px;
 }
+
 .aca-notice tr > td:nth-child(1) {
     width: 73px;
 }
+
 .aca-notice tr > td:nth-child(2) {
     width: 230px;
 }
+
 .aca-notice tr > td:not(:nth-child(1), :nth-child(2)) {
     width: 90px;
 }
+
 .counseling tr > td:nth-child(1) {
     width: 73px;
 }
+
 .counseling tr > td:nth-child(2) {
     width: 230px;
 }
+
 .counseling tr > td:not(:nth-child(1), :nth-child(2)) {
     width: 90px;
 }
+
 /* --------- main end --------- */
 
 /* --------- footer start --------- */
@@ -285,17 +341,21 @@ footer {
     width: 100%;
     box-sizing: border-box;
 }
+
 footer > div > * {
     width: 1200px;
     margin: 0 auto;
 }
+
 .footer-container {
     background-color: #19202D;
     padding: 21.5px 0;
 }
+
 .footer-container > p {
     font-size: 12px;
     font-weight: 350;
     color: white;
 }
+
 /* --------- footer end --------- */

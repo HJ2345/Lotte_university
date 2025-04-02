@@ -12,8 +12,10 @@
     <!-- Google Font 42dot Sans -->
     <link href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&display=swap" rel="stylesheet">
 
-    <script th:src="@{/js/header.js}"></script>
     <script th:src="@{/js/checkOne.js}"></script>
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/user/term.css}">
 
@@ -100,27 +102,25 @@
                         </div>
                         <div class="btnbox">
                             <a th:href="@{/user/login}" class="btn btn-cancel">취소</a>
-                            <button type="button" class="btn btn-next" id="nextBtn">다음</button> <!-- '다음' 버튼을 <a>에서 <button>으로 변경 -->
+                            <button type="button" class="btn btn-next" id="nextBtn">다음</button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </main>
-
     <th:block th:include="/common/_footer.html"/>
 </div>
-
 <script>
     // '다음' 버튼 클릭 시 동작
-    document.querySelector('#nextBtn').addEventListener('click', function(event) {
+    document.querySelector('#nextBtn').addEventListener('click', function (event) {
         // 체크박스 상태 확인
         const privacyCheckbox = document.querySelector('#check');
 
         // 체크박스가 체크되지 않으면 경고 메시지 출력하고 페이지 이동 방지
         if (!privacyCheckbox.checked) {
             event.preventDefault(); // 페이지 이동 방지
-            alert("개인정보 처리방침에 동의하셔야 다음 단계로 진행할 수 있습니다.");
+            alert("약관에 동의를 하지 않으면 회원가입을 할 수 없습니다.");
         }
         // 체크박스가 선택되면 /user/register로 이동
         else {

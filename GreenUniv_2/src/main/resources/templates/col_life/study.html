@@ -13,11 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
-    <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/static/js/swiper.js"></script>
-    <script src="/static/js/header.js"></script>
+    <script th:src="@{/js/header.js}"></script>
     <link rel="stylesheet" th:href="@{/style/col_life/study.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
@@ -28,40 +24,38 @@
 </head>
 <body>
 <div id="wrapper">
-    <!-- header side -->
-    <header>
-        <th:block th:include="/common/_header.html"/>
-        <div class="location-container">
-            <div>
-                <ul>
-                    <li>
-                        <a href="#">
-                            <img
-                                    th:src="@{/images/ico-home.png}"
-                                    th:alt="home"
-                                    class="ico-home"
-                            />
-                        </a>
-                    </li>
-                    <li>
+    <th:block th:include="/common/_header.html"/>
+    <div class="location-container">
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
                         <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
+                                th:src="@{/images/ico-home.png}"
+                                th:alt="home"
+                                class="ico-home"
                         />
-                        <a href="#">대학생활</a>
-                    </li>
-                    <li>
-                        <img
-                                th:src="@{/images/btn-next-page.png}"
-                                th:alt="next"
-                                class="ico-next"
-                        />
-                        <a href="#" class="this-location">동아리/스터디</a>
-                    </li>
-                </ul>
-            </div>
+                    </a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#">대학생활</a>
+                </li>
+                <li>
+                    <img
+                            th:src="@{/images/btn-next-page.png}"
+                            th:alt="next"
+                            class="ico-next"
+                    />
+                    <a href="#" class="this-location">동아리/스터디</a>
+                </li>
+            </ul>
         </div>
+    </div>
     </header>
     <main>
         <div class="main-container">
