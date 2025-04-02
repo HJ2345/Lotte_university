@@ -16,6 +16,7 @@
     <script th:src="@{/js/checkOne.js}"></script>
     <script th:src="@{/js/selectDept.js}"></script>
     <script th:src="@{/js/admissionYear.js}"></script>
+    <script th:src="@{/js/studentFilter.js}"></script>
 
     <link rel="stylesheet" th:href="@{/style/common/_adminHeader.css}">
     <link rel="stylesheet" th:href="@{/style/common/_adminFooter.css}">
@@ -210,16 +211,23 @@
                                 </td>
                                 <td>입학학과(전공)</td>
                                 <td>
-                                    <select id="category" onchange="updateOptions()">
-                                        <option value="" disabled selected>선택하세요</option>
-                                        <option value="humanitiesSociety">인문사회대학</option>
-                                        <option value="naturalScience">자연과학대학</option>
-                                        <option value="engineering">공과대학</option>
-                                        <option value="education">사범대학</option>
-                                        <option value="graduate">대학원</option>
+                                    <select id="category" name="univName" onchange="filterDeptAndProf()">
+                                        <option disabled selected>-- 단과대학 선택 --</option>
+                                        <option th:each="univ : ${univList}"
+                                                th:if="${univ.univName != null}"
+                                                th:value="${univ.univName}"
+                                                th:text="${univ.univName}">
+                                        </option>
                                     </select>
-                                    <select id="item">
-                                        <option value="#"></option>
+                                    <!-- 학과 선택 -->
+                                    <select id="item" name="deptNo">
+                                        <option disabled selected>-- 학과 선택 --</option>
+                                        <option th:each="dept : ${deptList}"
+                                                th:if="${dept.university != null}"
+                                                th:data-univ="${dept.university.univName}"
+                                                th:value="${dept.deptNo}"
+                                                th:text="${dept.deptName}">
+                                        </option>
                                     </select>
                                 </td>
                             </tr>
@@ -240,11 +248,14 @@
                                 </td>
                                 <td>지도교수</td>
                                 <td>
-                                    <select>
-                                        <option value="#" disabled selected>선택</option>
-                                        <option value="#">이순신</option>
-                                        <option value="#">강감찬</option>
-                                        <option value="#">장보고</option>
+                                    <select id="profSelect" name="profNo">
+                                        <option disabled selected>-- 교수 선택 --</option>
+                                        <option th:each="prof : ${profList}"
+                                                th:if="${prof.university != null}"
+                                                th:data-univ="${prof.university.univName}"
+                                                th:value="${prof.P_num}"
+                                                th:text="${prof.P_name}">
+                                        </option>
                                     </select>
                                 </td>
                             </tr>

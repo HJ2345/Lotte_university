@@ -23,6 +23,8 @@ public class DeptDTO {
     private String deptSetDate;
     private String deptHp;
     private String deptOffice;
+    private String deptChief;
+
 
 
     // 외부에서 선택된 단과대학의 이름(FK로 사용할 값)

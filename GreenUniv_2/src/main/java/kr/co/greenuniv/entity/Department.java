@@ -24,9 +24,8 @@ public class Department {
     private String deptEngName;
     private String deptSetDate;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "profName")
-    private Professor professor;
+    @Column(name = "deptChief")
+    private String deptChief; // 학과장 이름 직접 입력
 
     private String deptHp;
     private String deptOffice;

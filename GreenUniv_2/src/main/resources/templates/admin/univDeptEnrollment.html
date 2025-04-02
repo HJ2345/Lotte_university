@@ -13,6 +13,9 @@
     <link rel="stylesheet" th:href="@{/style/common/_adminFooter.css}">
     <link rel="stylesheet" th:href="@{/style/admin/univDeptEnrollment.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
+
+    <script th:src="@{/js/filterProfessor.js}"></script>
+
     <title>대학 및 학과 등록</title>
 </head>
 <body>
@@ -138,10 +141,12 @@
                                 <td style="color: #BC2E13;">고유 2자리 숫자 자동 생성</td>
                                 <td>단과대학</td>
                                 <td>
-                                    <select class="w-150" name="univName">
-                                        <option value="" selected disabled>-- 선택하세요 --</option>
-                                        <option th:each="univList : ${univList}" th:value="${univList.univName}"
-                                                th:text="${univList.univName}"></option>
+                                    <select id="univSelect" class="w-150" onchange="filterProfessors()">
+                                        <option value="" disabled selected>-- 단과대학 선택 --</option>
+                                        <option th:each="univ : ${univList}"
+                                                th:value="${univ.univName}"
+                                                th:text="${univ.univName}">
+                                        </option>
                                     </select>
                                 </td>
                             </tr>
@@ -150,6 +155,7 @@
                                 <td>
                                     <input type="text" name="deptName" class="w-200" placeholder="학과명 입력">
                                 </td>
+
                                 <td>영문명</td>
                                 <td>
                                     <input type="text" name="deptEngName" class="w-200" placeholder="학과 공식 영문 이름">
@@ -162,12 +168,7 @@
                                 </td>
                                 <td>학과장</td>
                                 <td>
-                                    <select class="w-150" name="">
-                                        <option value="#" disabled selected>선택</option>
-                                        <option value="#">이순신</option>
-                                        <option value="#">강감찬</option>
-                                        <option value="#">장보고</option>
-                                    </select>
+                                    <input type="text" name="deptChief" class="w-200" placeholder="학과장 이름 입력">
                                 </td>
                             </tr>
                             <tr>
