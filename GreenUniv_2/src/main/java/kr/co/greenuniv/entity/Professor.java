@@ -16,6 +16,7 @@ public class Professor {
     @Id
     private String P_num;
 
+
     private String P_Pnum;
     private String P_name;
     private String P_Ename;
@@ -34,12 +35,12 @@ public class Professor {
     private String P_appointdate;
 
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "P_lesson")
     private University university;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "P_spec2")
+    @JoinColumn(name = "P_spec2")   // 학과 번호
     private Department department;
 
 

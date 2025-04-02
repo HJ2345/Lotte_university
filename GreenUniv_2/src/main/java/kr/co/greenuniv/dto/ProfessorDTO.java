@@ -31,5 +31,6 @@ public class ProfessorDTO {
     private String P_lesson;  // univName
     private String P_spec2;   // deptName
 
+
     }
 

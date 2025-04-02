@@ -42,28 +42,29 @@ public class ProfessorService {
             throw new RuntimeException("Department not found");
         }
 
-        // P_num 생성: 연도 + 학과코드 + 순번
-        String year = professorDTO.getP_appointdate().substring(0, 4); // ex: 2024
-        String deptCode = department.getDeptNo();                      // ex: 01
-        String prefix = year + deptCode;                               // ex: 202401
+        // 2. 교수번호 생성
+        String year = professorDTO.getP_appointdate().substring(0, 4);
+        String prefix = year + department.getDeptNo(); // ex: 202401
 
-        String latestPnum = professorRepository.findMaxPNumWithPrefix(prefix);
-        int nextSeq = 1;
-        if (latestPnum != null) {
-            String lastSeq = latestPnum.substring(prefix.length());
-            nextSeq = Integer.parseInt(lastSeq) + 1;
+        String latest = professorRepository.findMaxPNumWithPrefix(prefix);
+        int next = 1;
+        if (latest != null) {
+            next = Integer.parseInt(latest.substring(prefix.length())) + 1;
         }
-        String newPnum = prefix + String.format("%02d", nextSeq);
 
-        // 저장
+        String newPnum = prefix + String.format("%02d", next);                         // ex: 202401
+
+
+
+
+
+        // 3. 엔티티 저장
         Professor professor = modelMapper.map(professorDTO, Professor.class);
-
-
-
         professor.setP_num(newPnum);
         professor.setUniversity(university);
         professor.setDepartment(department);
 
+        log.info("등록된 교수 정보: {}", professor);
         professorRepository.save(professor);
     }
 

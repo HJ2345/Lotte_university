@@ -3,18 +3,20 @@ package kr.co.greenuniv.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Table(name="student")
 public class Student {
 
+    @Column(name = "S_num", unique = true)
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "S_num")
-    private int S_num;
+    private String S_num; // 학번: 연도 + 학과코드 + 순번
 
     private String S_name;
     private String S_Ename;
@@ -27,10 +29,26 @@ public class Student {
     private String S_residentId;
 
     private int admissionYear;
+    private int graduationYear;
+
     private String admissionType;
     private String admissionGrade;
     private String admissionSemester;
-    private int graduationYear;
+
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "univName")
+    private University university;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "deptNo")
+    private Department department;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "profNo")
+    private Professor professor;
+
 
 
 
