@@ -9,18 +9,23 @@ logging:
                     jdbc:
                         bind: trace
         root: info
+mybatis:
+    mapper-locations: classpath:mappers/**/*.xml
 server:
     port: 8080
     servlet:
         context-path: /
 spring:
-    application:
-        name: GreenUniv
+    servlet:
+        multipart:
+            location: uploads
+            max-file-size: 10MB
+
     mail:
         host: smtp.gmail.com
         port: 587
-        username: euns.lee77@gmail.com
-        password: xpkh mnjy urrz okms
+        username: chhak0503@gmail.com
+        password: admqtoctsjkywwcw
         properties:
             mail:
                 smtp:
@@ -28,27 +33,27 @@ spring:
                     timeout: 5000
                     starttls:
                         enable: true
+
+    application:
+        name: GreenUniv
         version: 1.0.0
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: Qwerty@123
-        url: jdbc:mysql://3.34.183.157:3306/GreenUniv
-        username: root
+        password: 1234
+        url: jdbc:mysql://127.0.0.1:3306/GreenUniv?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Seoul
+        username: greenuser
     devtools:
         livereload:
             enabled: true
-
-
     jpa:
         database: mysql
         hibernate:
-
-            ddl-auto: none # 테이블 자동 생성 막는 설정
-
+            ddl-auto: none
             naming:
                 physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
         properties:
             hibernate:
                 format_sql: true
                 show_sql: true
-
+    thymeleaf:
+        prefix: classpath:/templates/
