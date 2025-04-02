@@ -15,6 +15,7 @@
     <script th:src="@{/js/checkOne.js}"></script>
     <script th:src="@{/js/selectDept.js}"></script>
     <script th:src="@{/js/daumPostCode.js}"></script>
+    <script th:src="@{/js/deptSelector.js}"></script>
     <link rel="stylesheet" th:href="@{/style/admin/profEnrollment.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>교수 등록</title>
@@ -145,10 +146,11 @@
                                     <td>성별</td>
                                     <td>
                                         <div class="checkbox">
-                                            <input type="radio" name="gender" id="male" value="M">
+                                            <!-- checkout을 radio로 수정 -->
+                                            <input type="radio" name="P_gender" id="male" value="M">
                                             <label for="male">남</label>
 
-                                            <input type="radio" name="gender" id="female" value="F">
+                                            <input type="radio" name="P_gender" id="female" value="F">
                                             <label for="female">여</label>
                                         </div>
                                     </td>
@@ -221,16 +223,24 @@
                                 <tr>
                                     <td>담당학과</td>
                                     <td>
+                                        <!-- 단과대학 선택 -->
                                         <select id="category" name="P_lesson" onchange="updateOptions()">
-                                            <option value="" disabled selected>선택하세요</option>
-                                            <option value="humanitiesSociety">인문사회대학</option>
-                                            <option value="naturalScience">자연과학대학</option>
-                                            <option value="engineering">공과대학</option>
-                                            <option value="education">사범대학</option>
-                                            <option value="graduate">대학원</option>
+                                            <option value="" disabled selected>-- 단과대학 선택 --</option>
+                                            <option th:each="univ : ${univList}"
+                                                    th:value="${univ.univName}"
+                                                    th:text="${univ.univName}">
+                                            </option>
                                         </select>
+
+                                        <!-- 학과 선택 -->
                                         <select id="item" name="P_spec2">
-                                            <option value="#"></option>
+                                            <option value="">-- 학과 선택 --</option>
+                                            <option th:each="dept : ${deptList}"
+                                                    th:if="${dept.university != null}"
+                                                    th:data-category="${dept.university.univName}"
+                                                    th:value="${dept.deptNo}"
+                                                    th:text="${dept.deptName}">
+                                            </option>
                                         </select>
                                     </td>
                                     <td>임용일</td>

@@ -1,13 +1,12 @@
 package kr.co.greenuniv.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
+
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
@@ -15,7 +14,7 @@ import lombok.ToString;
 public class Professor {
 
     @Id
-    private int P_num;
+    private String P_num;
 
     private String P_Pnum;
     private String P_name;
@@ -32,7 +31,18 @@ public class Professor {
     private String P_spec;
     private String P_graddate;
     private String P_degree;
-    private String P_lesson;
-    private String P_spec2;
     private String P_appointdate;
+
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "P_lesson")
+    private University university;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "P_spec2")
+    private Department department;
+
+
 }
+
+

@@ -10,4 +10,8 @@ import org.springframework.stereotype.Repository;
 public interface DeptRepository extends JpaRepository<Department, String> {
     @Query("SELECT d.deptNo FROM Department d ORDER BY d.deptNo DESC LIMIT 1")
     String findTopDeptNo();
+
+    Department findByDeptName(String deptName);
+
+    Department findByDeptNo(String deptNo);
 }
