@@ -12,10 +12,12 @@ public class CommunityController {
         return "/community/freeBoardWrite";
     }
 
-    @GetMapping("/community/community_announcement")
-    public String community_announcement(){
+    @GetMapping("/community/CommunityInfo")
+    public String CommunityInfo(){
 
-        return "/community/community_announcement";
+
+
+        return "/community/CommunityInfo";
     }
 
     @GetMapping("/community/Einformation")
