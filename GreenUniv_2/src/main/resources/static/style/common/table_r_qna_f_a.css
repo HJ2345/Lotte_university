@@ -157,22 +157,25 @@ table tr > .second_td,
     border: 1px solid #dedede;
 }
 
-.paging-container > a > span {
-    padding: 3px 11px;
+.paging-container > a > button {
+    width: 35px;
+    height: 35px;
     border: 1px solid #dedede;
     font-size: 15px;
     font-weight: 350;
+    cursor: pointer;
+    color: #333;
+    background: white;
 }
-
 
 .btn-inquiry {
     background-color: #3f97f6;
     width: 110px;
     height: 42px;
-    font-weight: 350px;
+    font-weight: 350;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     border: 1px solid #3f97f6;
     color: white;
 }
@@ -194,6 +197,6 @@ table tr > .second_td,
 }
 
 .selected {
-    background: #3f97f6;
-    color: white;
+    background: #3f97f6 !important;
+    color: white !important;
 }
