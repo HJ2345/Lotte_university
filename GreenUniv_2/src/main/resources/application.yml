@@ -36,7 +36,7 @@ spring:
 
     application:
         name: GreenUniv
-        version: 1.0.0
+        version:  0.0.3-SNAPSHOT
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: Qwerty@123
