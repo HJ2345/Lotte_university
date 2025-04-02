@@ -273,10 +273,17 @@ td:nth-child(2) {
 }
 /* --------- main end --------- */
 
+<<<<<<< Updated upstream
 /* --------- footer start --------- */
 footer > div > * {
     width: 1200px;
     margin: 0 auto;
+=======
+.vali {
+    display: none;
+    margin-top: 5px;
+    margin-left: 5px;
+>>>>>>> Stashed changes
 }
   .footer-link-container {
     display: flex;
@@ -350,3 +357,21 @@ footer > div > * {
 }
 /* --------- footer end --------- */
 
+<<<<<<< Updated upstream
+=======
+.auth_Button:hover {
+    transition: 0.3s;
+    background: #3781cf;
+}
+
+.authCode {
+    width: 154px;
+    height: 39px;
+    margin-top: 5px;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 350;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+>>>>>>> Stashed changes

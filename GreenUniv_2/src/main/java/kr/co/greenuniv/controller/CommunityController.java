@@ -12,10 +12,16 @@ public class CommunityController {
         return "/community/freeBoardWrite";
     }
 
+<<<<<<< Updated upstream
     @GetMapping("/community/community_announcement")
     public String community_announcement(){
 
         return "/community/community_announcement";
+=======
+    @GetMapping("/community/communityInfo")
+    public String CommunityInfo(){
+        return "/community/communityInfo";
+>>>>>>> Stashed changes
     }
 
     @GetMapping("/community/Einformation")
@@ -44,8 +50,11 @@ public class CommunityController {
 
     @GetMapping("/community/reference")
     public String reference(){
-
         return "/community/reference";
+    }
 
+    @GetMapping("/community/newsView")
+    public String newsView(){
+        return "/community/newsView";
     }
 }

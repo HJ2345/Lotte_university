@@ -18,10 +18,15 @@
   }
   .selectType {
     background-color: white;
+<<<<<<< Updated upstream
     background: url("/static/images/btn-sel-open01.png") no-repeat right 12px
       center;
+=======
+    background: url("../../images/btn-sel-open01.png") no-repeat right 12px center;
+>>>>>>> Stashed changes
     width: 150px;
-    padding: 9px 0 10px 10px;
+    height: 40px;
+    padding-left: 10px;
     border: 1px solid #dedede;
     font-size: 15px;
     font-weight: 350;

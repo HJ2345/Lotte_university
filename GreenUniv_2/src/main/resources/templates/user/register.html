@@ -21,6 +21,7 @@
     <script th:src="@{/js/validation.js}"></script>
     <link rel="stylesheet" th:href="@{/style/user/register.css}">
 
+    <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>회원가입 - 그린대학교</title>
     <!--
       이름 : 한결
@@ -41,6 +42,7 @@
                 </ul>
             </div>
             <div>
+<<<<<<< Updated upstream
                 <div class="category">
                     <a href="#">
                         <img th:src="@{/images/header_logo.png}" alt="그린대학교" class="logo">
@@ -122,6 +124,84 @@
                             </div>
                         </nav>
                     </div>
+=======
+                <div class="registerForm-container">
+                    <h4>회원가입</h4>
+                    <p>반갑습니다 그린대학교 입니다. 회원가입 후 더 많은 정보를 이용하세요.</p>
+                    <p>대학구성원(학생, 교직원)은 회원가입 없이 학번, 교번(사번) 아이디를 사용하여 로그인할 수 있습니다.</p>
+                    <form name="formRegister" th:action="@{/user/register}" method="post" class="registerForm">
+                        <table>
+                            <tr>
+                                <td>아이디<span class="required">*</span></td>
+                                <td>
+                                    <input type="text" name="uid" placeholder="아이디 입력">
+                                    <button id="btnCheckUid" type="button">중복확인</button>
+                                    <span class="description">영문·숫자 조합 4~10자 이내</span>
+                                    <span class="uidResult vali"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호<span class="required">*</span></td>
+                                <td>
+                                    <input type="password" name="pass" placeholder="비밀번호 입력">
+                                    <span class="description">비밀번호는 8-16자리 이내, 영문ㆍ숫자ㆍ특수문자 조합</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>비밀번호 확인<span class="required">*</span></td>
+                                <td>
+                                    <input type="password" name="pass2" placeholder="비밀번호 확인 입력">
+                                    <span class="passResult vali"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이름<span class="required">*</span></td>
+                                <td>
+                                    <input type="text" name="name" placeholder="이름 입력">
+                                    <span class="nameResult vali"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>휴대폰<span class="required">*</span></td>
+                                <td>
+                                    <input type="text" name="hp" placeholder="휴대폰 입력">
+                                    <span class="hpResult vali"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>이메일<span class="required">*</span></td>
+                                <td>
+                                    <input type="email" name="email" placeholder="이메일 입력"/>
+                                    <button id="btnSendEmail" class="auth_Button" type="button">인증받기</button>
+                                    <!-- 인증번호 입력란이 기본적으로 숨겨져 있음 -->
+                                    <div class="auth" style="display: none;">
+                                        <input type="text" class="authCode" name="auth" placeholder="인증번호 입력"/>
+                                        <button id="btnAuthEmail" class="auth_Button" type="button">확인</button>
+                                    </div>
+                                    <span class="emailResult vali"></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>주소</td>
+                                <td class="address">
+                                    <input type="text" name="zip" id="postcode" placeholder="우편번호 선택" readonly
+                                           onclick="DaumPostcode()">
+                                    <input type="text" class="addrs" id="address" name="addr1" placeholder="기본주소 선택"
+                                           readonly>
+                                    <input type="text" class="addrs" id="detailAddress" name="addr2"
+                                           placeholder="상세주소 입력">
+                                </td>
+                            </tr>
+                        </table>
+                        <p><span class="required">*</span> 필수입력</p>
+                        <div class="btnbox">
+                            <a th:href="@{/user/login}">
+                                <button class="btn btn-cancel">취소</button>
+                            </a>
+                            <button class="btn btn-register" type="submit">회원가입</button>
+                        </div>
+                    </form>
+>>>>>>> Stashed changes
                 </div>
             </div>
             <div class="location-container">

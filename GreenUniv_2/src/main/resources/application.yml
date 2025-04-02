@@ -16,6 +16,7 @@ server:
 spring:
     application:
         name: GreenUniv
+<<<<<<< Updated upstream
     mail:
         host: smtp.gmail.com
         port: 587
@@ -33,12 +34,33 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: Qwerty@123
         url: jdbc:mysql://3.34.183.157:3306/GreenUniv
+=======
+        version: 1.0.0
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: 1234
+        url: jdbc:mysql://127.0.0.1:3306/greenuniv
+>>>>>>> Stashed changes
         username: root
     devtools:
         livereload:
             enabled: true
+<<<<<<< Updated upstream
 
 
+=======
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: jinwooya55@gmail.com
+        password: xwgi jazf lcyg uagz
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+>>>>>>> Stashed changes
     jpa:
         database: mysql
         hibernate:
@@ -48,5 +70,9 @@ spring:
         properties:
             hibernate:
                 format_sql: true
+<<<<<<< Updated upstream
                 show_sql: true
 
+=======
+                show_sql: true
+>>>>>>> Stashed changes

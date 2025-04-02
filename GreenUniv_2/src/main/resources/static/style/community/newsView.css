@@ -1,0 +1,132 @@
+.view-container {
+    width: 100%;
+    margin: 8px 0 0 50px;
+}
+
+.view-container h4 {
+    font-size: 26px;
+    font-weight: 700;
+    border-bottom: 2px solid #3f97f6;
+    margin-bottom: 12px;
+    padding-bottom: 20.8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr, th {
+    border: 1px solid black;
+}
+
+td {
+    border: 1px solid black;
+}
+
+.content-container {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.articleHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.articleHeader > div {
+    display: flex;
+}
+
+.articleHeader > div > p:nth-child(1) {
+    margin-right: 5px;
+}
+
+.newsContent {
+    font-size: 15px;
+    font-weight: 350;
+}
+
+.comment-container {
+    border-top: 2px solid #eee;
+    padding-top: 40px;
+}
+
+.subheading {
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid #222;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.subheading2 {
+    margin-bottom: 10px;
+}
+
+.comments {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+}
+
+.comments > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentsInfo {
+    margin-bottom: 5px;
+}
+
+.comment-container > div {
+    margin-bottom: 25px;
+}
+
+.commentWrite {
+    resize: none;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 8px;
+}
+
+.commentSubmit {
+    background: #3F97F6;
+    color: white;
+    font-size: 13px;
+    font-weight: 350;
+    float: right;
+    border: none;
+    width: 70px;
+    height: 35px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.commentSubmit:hover {
+    background: #3a88db;
+    transition: 0.3s;
+}
+
+.btnContainer {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.btn > img {
+    width: 20px;
+    height: 20px;
+}

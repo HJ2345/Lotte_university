@@ -25,6 +25,7 @@
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
 
+    <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>질문과 답변</title>
 </head>
 <body>
@@ -34,6 +35,7 @@
         <th:block th:include="/common/_header.html"/>
         <div class="location-container">
             <div>
+<<<<<<< Updated upstream
                 <ul>
                     <li>
                         <a href="#">
@@ -103,6 +105,44 @@
                         <input type="text" placeholder="검색어를 입력해 주세요." class="searchWord">
                         <button type="submit" class="searchBtn">검색</button>
                     </form>
+=======
+                <aside>
+                    <h3>커뮤니티</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/community/communityInfo}">
+                            <div class="side-link">공지사항</div>
+                        </a>
+                        <a th:href="@{/community/news}">
+                            <div class="side-link">뉴스 및 칼럼</div>
+                        </a>
+                        <a th:href="@{/community/Einformation}">
+                            <div class="side-link">취업정보</div>
+                        </a>
+                        <a th:href="@{/community/Fboard}">
+                            <div class="side-link">자유게시판</div>
+                        </a>
+                        <a th:href="@{/community/qna}">
+                            <div class="side-link selected-link">질문과 답변</div>
+                        </a>
+                        <a th:href="@{/community/reference}">
+                            <div class="side-link">자료실</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="enterance-container">
+                    <h4>질문과 답변</h4>
+                    <div>
+                        <form action="#" class="searchForm">
+                            <select name="search" class="selectType">
+                                <option value="#" disabled selected class="selectTypes">전체</option>
+                                <option value="#" class="selectTypes">학년</option>
+                                <option value="#" class="selectTypes">과목명</option>
+                                <option value="#" class="selectTypes">담당교수</option>
+                            </select>
+                            <input type="text" placeholder="검색어를 입력해 주세요." class="searchWord">
+                            <button type="submit" class="searchBtn">검색</button>
+                        </form>
+>>>>>>> Stashed changes
 
 
                     <table>

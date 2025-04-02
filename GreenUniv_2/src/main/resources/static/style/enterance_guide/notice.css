@@ -17,6 +17,7 @@
   margin-bottom: 20px;
 }
 .selectType {
+<<<<<<< Updated upstream
   background-color: white;
   background: url("/static/images/btn-sel-open01.png") no-repeat right 12px
     center;
@@ -29,6 +30,19 @@
   box-sizing: border-box;
   appearance: none;
   margin-right: 8px;
+=======
+    background-color: white;
+    background: url("../../images/btn-sel-open01.png") no-repeat right 12px center;
+    width: 150px;
+    padding: 9px 0 10px 10px;
+    border: 1px solid #dedede;
+    font-size: 15px;
+    font-weight: 350;
+    color: #666;
+    box-sizing: border-box;
+    appearance: none;
+    margin-right: 8px;
+>>>>>>> Stashed changes
 }
 .selectType:focus {
   outline: none;
