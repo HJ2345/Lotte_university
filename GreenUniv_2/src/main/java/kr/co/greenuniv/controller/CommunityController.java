@@ -59,4 +59,9 @@ public class CommunityController {
     public String newsView() {
         return "/community/newsView";
     }
+
+    @GetMapping("/community/newsWrite")
+    public String newsWrite() {
+        return "/community/newsWrite";
+    }
 }
