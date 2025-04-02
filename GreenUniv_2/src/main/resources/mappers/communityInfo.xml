@@ -5,13 +5,15 @@
 <mapper namespace="kr.co.greenuniv.dao.CommunityInfoMapper">
 
     <!-- INSERT한 데이터의 no값을 반환받기 위해 useGeneratedKeys, keyProperty 속성 선언, no = PK -->
-<!--    <insert id="insertCommunity" useGeneratedKeys="true" keyProperty="no">-->
-<!--        INSERT INTO `Community_infor` SET-->
-<!--                                        `title`=#{title},-->
-<!--                                        `content`=#{content},-->
-<!--                                        `writer`=#{writer},-->
-<!--                                        `wdate`=NOW();-->
-<!--    </insert>-->
+    <insert id="insertCommunity" useGeneratedKeys="true" keyProperty="no">
+        INSERT INTO `Article` SET
+                                `title`=#{title},
+                                `content`=#{content},
+                                `file`=#{file},
+                                `writer`=#{writer},
+                                `regip`=#{regip},
+                                `wdate`=NOW();
+    </insert>
 
 
 </mapper>

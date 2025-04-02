@@ -41,7 +41,7 @@ public class CommunityInfoRepositoryImpl implements CommunityInfoRepositoryCusto
 
         long total = queryFactory.select(qCommunityInfo.count()).from(qCommunityInfo).fetchOne();
 
-        log.info(tupleList.toString());
+
 
         // 페이징 처리를 위한 페이지 객체 반환
         return new PageImpl<Tuple>(tupleList, pageable, total);

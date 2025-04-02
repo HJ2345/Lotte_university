@@ -14,7 +14,7 @@
     <link rel="stylesheet" th:href="@{/style/admin/univDeptEnrollment.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
 
-
+    <script th:src="@{/js/filterProfessor.js}"></script>
 
     <title>대학 및 학과 등록</title>
 </head>
@@ -141,7 +141,7 @@
                                 <td style="color: #BC2E13;">고유 2자리 숫자 자동 생성</td>
                                 <td>단과대학</td>
                                 <td>
-                                    <select id="univSelect" class="w-150" name="univName">
+                                    <select id="univSelect" class="w-150" onchange="filterProfessors()">
                                         <option value="" disabled selected>-- 단과대학 선택 --</option>
                                         <option th:each="univ : ${univList}"
                                                 th:value="${univ.univName}"

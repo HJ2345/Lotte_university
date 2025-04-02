@@ -23,9 +23,6 @@ public class DeptService {
         // 학과 엔티티 변환
         Department dept = modelMapper.map(deptDTO, Department.class);
 
-        // 학과장 이름 수동 설정 (중요)
-        dept.setDeptChief(deptDTO.getDeptChief());
-
         // 학과 번호 생성
         String latestDeptNo = deptRepository.findTopDeptNo(); // ex: "03"
         log.info("latestDeptNo {}", latestDeptNo);

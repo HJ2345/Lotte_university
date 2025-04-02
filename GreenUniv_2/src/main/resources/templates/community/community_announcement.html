@@ -35,7 +35,7 @@
         <div>
             <ul>
                 <li>
-                    <a th:href="@{/}">
+                    <a href="#">
                         <img
                                 th:src="@{/images/ico-home.png}"
                                 th:alt="home"
@@ -49,7 +49,7 @@
                             th:alt="next"
                             class="ico-next"
                     />
-                    <a th:href="@{/community}">커뮤니티</a>
+                    <a href="#">커뮤니티</a>
                 </li>
                 <li>
                     <img
@@ -57,7 +57,7 @@
                             th:alt="next"
                             class="ico-next"
                     />
-                    <a th:href="@{/community/CommunityInfo}" class="this-location">공지사항</a>
+                    <a href="#" class="this-location">공지사항</a>
                 </li>
             </ul>
         </div>
@@ -104,6 +104,7 @@
                             <button type="submit" class="searchBtn">검색</button>
                         </form>
 
+
                         <table>
                             <tr class=tr>
                                 <th>번호</th>
@@ -120,40 +121,43 @@
                                             th:alt="N"
                                             class="photos"
                                     />
-                                    <a th:href="@{/community/CommunityInfo(no=${community.no})}">[[${community.title}]]&#91;[[${community.comment}]]&#93;</a>
+                                    2025학년도 1학기
+                                    그린장학회 장학생 신청 안내
                                 </td>
-
+                                <td>학사지원실</td>
+                                <td>24.04.09</td>
+                                <td>160</td>
                             </tr>
-                            <!--                            <tr>-->
-                            <!--                                <td>2</td>-->
-                            <!--                                <td class="left">-->
-                            <!--                                    <img-->
-                            <!--                                            th:src="@{/images/ico-new01.gif}"-->
-                            <!--                                            th:alt="N"-->
-                            <!--                                            class="photos"-->
-                            <!--                                    />-->
-                            <!--                                    제42회 학위수여식-->
-                            <!--                                    안내-->
-                            <!--                                </td>-->
-                            <!--                                <td>학사지원실</td>-->
-                            <!--                                <td>24.04.09</td>-->
-                            <!--                                <td>160</td>-->
-                            <!--                            </tr>-->
-                            <!--                            <tr>-->
-                            <!--                                <td>1</td>-->
-                            <!--                                <td class="left">-->
-                            <!--                                    <img-->
-                            <!--                                            th:src="@{/images/ico-new01.gif}"-->
-                            <!--                                            th:alt="N"-->
-                            <!--                                            class="photos"-->
-                            <!--                                    />-->
-                            <!--                                    의료, 인공지능-->
-                            <!--                                    융합인재 양성사업단 사업설명회-->
-                            <!--                                </td>-->
-                            <!--                                <td>학사지원실</td>-->
-                            <!--                                <td>24.04.09</td>-->
-                            <!--                                <td>160</td>-->
-                            <!--                            </tr>-->
+                            <tr>
+                                <td>2</td>
+                                <td class="left">
+                                    <img
+                                            th:src="@{/images/ico-new01.gif}"
+                                            th:alt="N"
+                                            class="photos"
+                                    />
+                                    제42회 학위수여식
+                                    안내
+                                </td>
+                                <td>학사지원실</td>
+                                <td>24.04.09</td>
+                                <td>160</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="left">
+                                    <img
+                                            th:src="@{/images/ico-new01.gif}"
+                                            th:alt="N"
+                                            class="photos"
+                                    />
+                                    의료, 인공지능
+                                    융합인재 양성사업단 사업설명회
+                                </td>
+                                <td>학사지원실</td>
+                                <td>24.04.09</td>
+                                <td>160</td>
+                            </tr>
 
                         </table>
 
