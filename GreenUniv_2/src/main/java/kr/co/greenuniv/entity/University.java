@@ -17,6 +17,7 @@ public class University {
 
     @Id
     private String univName;
+
     private String univEngName;
     private String univIntroTitle;
     private String univIntroContent;

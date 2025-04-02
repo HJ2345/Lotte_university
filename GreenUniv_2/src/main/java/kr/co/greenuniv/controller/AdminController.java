@@ -3,6 +3,8 @@ package kr.co.greenuniv.controller;
 
 import kr.co.greenuniv.dto.CourseDTO;
 import kr.co.greenuniv.dto.StudentDTO;
+import kr.co.greenuniv.repository.DeptRepository;
+import kr.co.greenuniv.repository.UnivRepository;
 import kr.co.greenuniv.service.CourseService;
 import kr.co.greenuniv.dto.DeptDTO;
 import kr.co.greenuniv.dto.UnivDTO;
@@ -31,6 +33,8 @@ import static java.rmi.server.LogStream.log;
 @RequiredArgsConstructor
 public class AdminController {
 
+    private final UnivRepository univRepository;
+    private final DeptRepository deptRepository;
 
     private final StudentService studentService;  // 학생등록 service
     private final UnivService univService;  // 학생등록 service
@@ -90,12 +94,23 @@ public class AdminController {
     @GetMapping("/admin/profEnrollment")
     public String profEnrollment(Model model){
         model.addAttribute("professorDto" , new ProfessorDTO());
+        model.addAttribute("univList", univRepository.findAll());
+        model.addAttribute("deptList", deptRepository.findAll());
+
+
         return "admin/profEnrollment";
     }
 
     @PostMapping("/admin/profEnrollment")
     public String regProfEnrollment(@ModelAttribute ProfessorDTO professorDTO){
+
+        log.info("📌 전달받은 ProfessorDTO = {}", professorDTO);
+
         professorService.regProfessor(professorDTO);
+
+
+
+
         return "redirect:/admin/profEnrollment";
     }
 
