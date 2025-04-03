@@ -7,6 +7,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -24,7 +25,7 @@ public class CommunityInfo {
 
     //private String writer;
     // 조회수, 조인
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "writer")
     private User user;
     //private String writer;
@@ -33,6 +34,8 @@ public class CommunityInfo {
     private int hit;
     private int status;
     private String deadline;
+
+    private String regip;
 
     @CreationTimestamp
     private LocalDateTime wdate;

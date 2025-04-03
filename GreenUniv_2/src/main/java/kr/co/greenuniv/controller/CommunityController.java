@@ -30,6 +30,9 @@ public class CommunityController {
         // 전체 글 조회 서비스 호출(Mybatis)
         model.addAttribute("pageResponseDTO", pageResponseDTO);
 
+        log.info("pageResponseDTO: {}", pageResponseDTO);
+
+
         return "/community/CommunityInfo";
     }
 

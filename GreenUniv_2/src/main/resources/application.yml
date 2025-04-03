@@ -24,8 +24,8 @@ spring:
     mail:
         host: smtp.gmail.com
         port: 587
-        username: euns.lee77@gmail.com
-        password: zfucyqfkmcuwzxym
+        username: chhak0503@gmail.com
+        password: admqtoctsjkywwcw
         properties:
             mail:
                 smtp:
@@ -33,17 +33,14 @@ spring:
                     timeout: 5000
                     starttls:
                         enable: true
-                    ssl:
-                        trust: smtp.gmail.com
-                        protocol: TLSv1.2
 
     application:
         name: GreenUniv
-        version:  1.0 0 relese
+        version: 1.0.0
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
         password: Qwerty@123
-        url: jdbc:mysql://3.34.183.157:3306/GreenUniv
+        url: jdbc:mysql://3.34.183.157:3306/test
         username: root
     devtools:
         livereload:
