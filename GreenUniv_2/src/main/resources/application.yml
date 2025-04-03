@@ -21,18 +21,21 @@ spring:
             location: uploads
             max-file-size: 10MB
 
-    mail:
-        host: smtp.gmail.com
-        port: 587
-        username: chhak0503@gmail.com
-        password: admqtoctsjkywwcw
-        properties:
-            mail:
-                smtp:
-                    auth: true
-                    timeout: 5000
-                    starttls:
-                        enable: true
+mail:
+    host: smtp.gmail.com
+    port: 587
+    username: euns.lee77@gmail.com
+    password: zfucyqfkmcuwzxym
+    properties:
+        mail:
+            smtp:
+                auth: true
+                timeout: 5000
+                starttls:
+                    enable: true
+                ssl:
+                    trust: smtp.gmail.com
+                    protocol: TLSv1.2
 
     application:
         name: GreenUniv
