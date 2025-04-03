@@ -50,6 +50,10 @@ public class Student {
     private Professor professor;
 
 
+    @Column(name = "status")
+    private String status; // 예: 재학, 휴학, 졸업, 대학원
+
+
 
 
 
