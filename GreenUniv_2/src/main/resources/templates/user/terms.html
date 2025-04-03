@@ -85,13 +85,13 @@
                             <tr>
                                 <td>이용약관</td>
                                 <td>
-                                    <textarea name="term"></textarea>
+                                    <textarea name="term" readonly th:text="${terms}"></textarea>
                                 </td>
                             </tr>
                             <tr>
                                 <td>개인정보 수집안내</td>
                                 <td>
-                                    <textarea name="info"></textarea>
+                                    <textarea name="info" readonly th:text="${privacy}"></textarea>
                                 </td>
                             </tr>
                         </table>
