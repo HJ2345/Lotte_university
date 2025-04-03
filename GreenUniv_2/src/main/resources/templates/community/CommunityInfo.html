@@ -120,7 +120,7 @@
                                             th:alt="N"
                                             class="photos"
                                     />
-                                <a th:href="@{/community/CommunityInfo(no=${community.no})}">[[${community.title}]]&#91;[[${community.comment}]]&#93;</a>
+                                <a th:href="@{/community/CommunityInfo(CinforId=${community.CinforId})}">[[${community.title}]]&#91;[[${community.comment}]]&#93;</a>
                                 </td>
                                 <td>[[${community.writer}]]</td>
                                 <td>[[${community.wdate}]]</td>

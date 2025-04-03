@@ -14,6 +14,11 @@ public class CommunityController {
 
     private final CommunityService communityService;
 
+    @GetMapping("/community/freeBoardWrite")
+    public String CommunityController() {
+        return "/community/freeBoardWrite";
+    }
+
     @GetMapping("/community/CommunityInfo")
     public String CommunityInfo(Model model, PageRequestDTO pageRequestDTO) {
 
@@ -28,41 +33,39 @@ public class CommunityController {
 
     @GetMapping("/community/Einformation")
     public String Einformation(){
+
         return "/community/Einformation";
     }
 
     @GetMapping("/community/Fboard")
     public String Fboard(){
+
         return "/community/Fboard";
     }
 
     @GetMapping("/community/news")
     public String news(){
+
         return "/community/news";
     }
 
     @GetMapping("/community/qna")
     public String qna(){
+
         return "/community/qna";
     }
 
     @GetMapping("/community/reference")
     public String reference(){
+
         return "/community/reference";
-    }
 
-    @GetMapping("/community/newsView")
-    public String newsView() {
-        return "/community/newsView";
-    }
-
-    @GetMapping("/community/newsWrite")
-    public String newsWrite() {
-        return "/community/newsWrite";
     }
 
     @GetMapping("/community/newsEdit")
     public String newsEdit() {
         return "/community/newsEdit";
     }
+
 }
+
