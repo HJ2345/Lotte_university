@@ -13,6 +13,7 @@
     <link rel="stylesheet" th:href="@{/style/common/_adminFooter.css}">
     <link rel="stylesheet" th:href="@{/style/admin/studentList.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
+
     <title>학생 목록</title>
 </head>
 <body>
@@ -111,6 +112,7 @@
                 </div>
                 <div class="table-container">
                     <table>
+                        <thead>
                         <tr>
                             <th>학번</th>
                             <th>이름</th>
@@ -122,61 +124,20 @@
                             <th>학기</th>
                             <th>상태</th>
                         </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td class="green">재학중</td>
+                        </thead>
+                        <tbody>
+                        <tr th:each="student : ${studentList}">
+                            <td th:text="${student.sNum}"></td>
+                            <td th:text="${student.name}"></td>
+                            <td th:text="${student.residentId}"></td>
+                            <td th:text="${student.phone}"></td>
+                            <td th:text="${student.email}"></td>
+                            <td th:text="${student.deptName}"></td>
+                            <td th:text="${student.admissionGrade}"></td>
+                            <td th:text="${student.admissionSemester}"></td>
+                           <td th:text="${student.status}"></td>
                         </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td class="red">자퇴</td>
-                        </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td class="red">제적</td>
-                        </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td class="yellow">휴학중</td>
-                        </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>3</td>
-                            <td>1</td>
-                            <td class="blue">졸업</td>
-                        </tr>
+                        </tbody>
                     </table>
                 </div>
                 <div class="functionBox">

@@ -120,55 +120,15 @@
                             <th>소속 학생 수</th>
                             <th>개설 강의 수</th>
                         </tr>
-                        <tr>
-                            <td>10</td>
-                            <td>인문사회대학</td>
-                            <td>국문학과</td>
-                            <td>김국어</td>
-                            <td>051-512-1010</td>
-                            <td>23</td>
-                            <td>322</td>
-                            <td>42</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td>인문사회대학</td>
-                            <td>영어영문학과</td>
-                            <td>김영어</td>
-                            <td>051-512-1011</td>
-                            <td>20</td>
-                            <td>312</td>
-                            <td>42</td>
-                        </tr>
-                        <tr>
-                            <td>20</td>
-                            <td>자연과학대학</td>
-                            <td>생물학과</td>
-                            <td>김생물</td>
-                            <td>051-512-1234</td>
-                            <td>23</td>
-                            <td>322</td>
-                            <td>42</td>
-                        </tr>
-                        <tr>
-                            <td>30</td>
-                            <td>공과대학</td>
-                            <td>기계공학과</td>
-                            <td>김기계</td>
-                            <td>051-512-1234</td>
-                            <td>23</td>
-                            <td>322</td>
-                            <td>42</td>
-                        </tr>
-                        <tr>
-                            <td>31</td>
-                            <td>공과대학</td>
-                            <td>컴퓨터공학과</td>
-                            <td>김컴공</td>
-                            <td>051-512-1234</td>
-                            <td>23</td>
-                            <td>322</td>
-                            <td>42</td>
+                        <tr th:each="dept : ${departmentList}">
+                            <td th:text="${dept.deptNo}"></td>
+                            <td th:text="${dept.univName}"></td>
+                            <td th:text="${dept.deptName}"></td>
+                            <td th:text="${dept.deptChief}"></td>
+                            <td th:text="${dept.deptHp}"></td>
+                            <td th:text="${dept.professorCount}"></td>
+                            <td th:text="${dept.studentCount}"></td>
+                            <td th:text="${dept.courseCount}"></td>
                         </tr>
                     </table>
                 </div>

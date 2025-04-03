@@ -1,6 +1,8 @@
 package kr.co.greenuniv.service;
 
 import kr.co.greenuniv.dto.CourseDTO;
+import kr.co.greenuniv.dto.lectureListDTO;
+import kr.co.greenuniv.dto.EduStatusDTO;
 import kr.co.greenuniv.entity.Course;
 import kr.co.greenuniv.entity.Department;
 import kr.co.greenuniv.entity.University;
@@ -13,6 +15,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -57,4 +61,54 @@ public class CourseService {
 
         courseRepository.save(course);
     }
+
+    public List<EduStatusDTO> getEduStatusList() {
+        List<Course> courseList = courseRepository.findAll();
+        List<EduStatusDTO> result = new ArrayList<>();
+
+        for (Course c : courseList) {
+            EduStatusDTO dto = new EduStatusDTO(
+                    c.getDepartment().getDeptName(),
+                    c.getCor_code(),
+                    c.getCor_lecName(),
+                    c.getCor_grade(),
+                    c.getCor_professor(),
+                    c.getCor_type(),
+                    c.getCor_point(),
+                    c.getCor_class(),
+                    Integer.parseInt(c.getCor_maxEnrolment()),  // 수강인원
+                    Math.random() * 100                        // 수강률 (더미)
+            );
+            result.add(dto);
+        }
+
+        return result;
+    }
+
+
+
+    public List<lectureListDTO> getAllCourses() {
+        List<Course> lectureList = courseRepository.findAll();
+        List<lectureListDTO> dtoList = new ArrayList<>();
+
+        for (Course course : lectureList) {
+            dtoList.add(new lectureListDTO(
+                    course.getCor_code(),
+                    course.getDepartment().getDeptName(),
+                    course.getCor_grade(),
+                    course.getCor_type(),
+                    course.getCor_lecName(),
+                    course.getCor_professor(),
+                    course.getCor_point(),
+                    course.getLectureDays() + " / " + course.getStartTime() + "~" + course.getEndTime(),
+                    course.getCor_class(),
+                    course.getCor_maxEnrolment()
+            ));
+        }
+
+        return dtoList;
+    }
+
+
+
 }

@@ -2,6 +2,7 @@ package kr.co.greenuniv.service;
 
 
 import kr.co.greenuniv.dto.ProfessorDTO;
+import kr.co.greenuniv.dto.ProfessorListDTO;
 import kr.co.greenuniv.entity.Department;
 import kr.co.greenuniv.entity.Professor;
 import kr.co.greenuniv.entity.University;
@@ -15,6 +16,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 @Slf4j
@@ -57,6 +60,28 @@ public class ProfessorService {
 
         log.info("등록된 교수 정보: {}", professor);
         professorRepository.save(professor);
+    }
+
+
+    public List<ProfessorListDTO> getProfessorList() {
+        List<Professor> professors = professorRepository.findAll();
+        List<ProfessorListDTO> list = new ArrayList<>();
+
+        for (Professor p : professors) {
+            list.add(new ProfessorListDTO(
+                    p.getP_num(),
+                    p.getP_name(),
+                    p.getP_Pnum(),          // 주민번호
+                    p.getP_hp(),
+                    p.getP_email(),
+                    p.getDepartment().getDeptName(),
+                    "교수",                 // 직위 (더미)
+                    "재직",                 // 재직 여부 (더미)
+                    p.getP_appointdate()
+            ));
+        }
+
+        return list;
     }
 
 }
