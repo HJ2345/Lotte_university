@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"/>
+
+  <!-- ✅ 정적 리소스 경로 수정 -->
+  <script th:src="@{/js/header.js}"></script>
+  <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+  <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
+  <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
+  <link rel="stylesheet" th:href="@{/style/col_intro/pdt_greeting.css}"/>
+  <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
+
+  <title>총장인사말</title>
+</head>
+
+<body>
+<div id="wrapper">
+  <th:block th:include="/common/_header.html"/>
+  <div class="location-container">
+    <div>
+      <ul>
+        <li>
+          <a th:href="@{/}">
+            <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home"/>
+          </a>
+        </li>
+        <li>
+          <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next"/>
+          <a th:href="@{/col_intro/pdt_greeting}">대학소개</a>
+        </li>
+        <li>
+          <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next"/>
+          <a th:href="@{/col_intro/pdt_greeting}" class="this-location">총장 인사말</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </header>
+  <!-- header end -->
+
+  <main>
+    <div class="main-container">
+      <div>
+        <aside>
+          <h3>대학소개</h3>
+          <div class="side-link-container">
+            <a th:href="@{/col_intro/pdt_greeting}">
+              <div class="side-link selected-link">총장 인사말</div>
+            </a>
+            <a th:href="@{/col_intro/edu_phil}">
+              <div class="side-link">교육이념</div>
+            </a>
+            <a th:href="@{/col_intro/history}">
+              <div class="side-link">연혁</div>
+            </a>
+            <a th:href="@{/col_intro/organization}">
+              <div class="side-link">조직도</div>
+            </a>
+            <a th:href="@{/col_intro/map}">
+              <div class="side-link">오시는길</div>
+            </a>
+          </div>
+        </aside>
+
+        <div class="greeting-container">
+          <h4>총장인사말</h4>
+          <div class="content">
+            <div class="inner">
+              <div class="img-container">
+                <img th:src="@{/images/college-introduce-5.jpg}" alt="대학사진"/>
+                <img th:src="@{/images/college-introduce-4.jpg}" alt="대학사진"/>
+                <img th:src="@{/images/college-introduce-3.jpg}" alt="대학사진"/>
+              </div>
+              <div class="text">
+                <div class="subject">환영의 말씀</div>
+                <div class="con">
+                  <p>안녕하십니까?</p>
+                  <p>그린대학교 총장 김상곤입니다.</p>
+
+                  <p>그린대학교는 컴퓨터 소프트웨어(SW) 전문 교육을 선도하는 대학으로, 창의적이고 혁신적인 인재를 양성하는 데 중점을 두고 있습니다. 우리의 사명은 단순히 최신 기술을 가르치는 것을 넘어, 학생들이 기술과 인문학적 소양을 결합하여 지속 가능한 사회를 만들어갈 수 있도록 하는 것입니다.</p>
+
+                  <p>오늘날, 우리는 AI, 빅데이터, IoT 등 다양한 첨단 기술이 우리 사회의 중심으로 자리 잡고 있는 시대에 살고 있습니다. 이에 그린대학교는 변화하는 시대에 발맞춰 SW 교육의 최전선에서 혁신적이고 실용적인 교육 프로그램을 제공하고 있습니다. 또한, 이론과 실습을 융합한 교육과정을 통해 학생들이 실제 산업 현장에서 겪을 수 있는 다양한 문제를 해결할 수 있는 능력을 기를 수 있도록 돕고 있습니다.</p>
+
+                  <p>그린대학교의 인재상은 <strong>‘도전적이고 협력하는 창의적 리더’</strong>입니다. 우리는 학생들이 문제를 해결하는 데 있어 창의적인 접근을 시도하고, 다른 사람과 협력하여 더 큰 가치를 창출하는 능력을 갖출 수 있도록 지원합니다. 이를 위해 최신 교육 인프라와 뛰어난 교수진을 바탕으로, 학생들에게 최고의 학습 환경을 제공하고 있습니다.</p>
+
+                  <p>우리 대학은 또한, 지역 산업과의 긴밀한 협력을 통해 실무 중심의 교육을 실현하고 있으며, 다양한 산학 협력 프로젝트와 인턴십 프로그램을 통해 학생들이 현장에서 직접 경험을 쌓을 수 있는 기회를 제공합니다. 우리는 학생들이 졸업 후 사회에 진출하여 SW 분야에서 혁신적인 역할을 할 수 있도록 철저하게 준비시키고 있습니다.</p>
+
+                  <p>그린대학교는 끊임없는 변화와 도전 속에서도 학생들의 꿈과 열정을 응원하며, 미래 사회를 선도할 인재들을 양성해 나가겠습니다. 앞으로도 우리는 더욱 발전하는 대학으로 나아가며, 학생들이 세계 무대에서 활약할 수 있도록 최선의 노력을 다할 것입니다.</p>
+
+                  <p>여러분, 그린대학교에서 미래를 함께 만들어 가기를 기대합니다. 감사합니다.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <th:block th:include="/common/_footer.html"/>
+</div>
+</body>
+</html>
