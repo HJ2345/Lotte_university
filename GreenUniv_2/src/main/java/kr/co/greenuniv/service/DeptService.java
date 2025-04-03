@@ -1,14 +1,17 @@
 package kr.co.greenuniv.service;
 
+import kr.co.greenuniv.dto.DepartmentListDTO;
 import kr.co.greenuniv.dto.DeptDTO;
 import kr.co.greenuniv.entity.Department;
 import kr.co.greenuniv.entity.University;
-import kr.co.greenuniv.repository.DeptRepository;
-import kr.co.greenuniv.repository.UnivRepository;
+import kr.co.greenuniv.repository.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @Service
@@ -18,6 +21,13 @@ public class DeptService {
     private final DeptRepository deptRepository;
     private final UnivRepository univRepository;
     private final ModelMapper modelMapper;
+
+
+    private final ProfessorRepository professorRepository; // 추가
+    private final StudentRepository studentRepository;     // 학생 수용
+    private final CourseRepository courseRepository;
+
+
 
     public void register(DeptDTO deptDTO) {
         // 학과 엔티티 변환
@@ -51,4 +61,35 @@ public class DeptService {
         log.info("생성된 deptNo = {}", generatedDeptNo);
 
     }
+
+    public List<DepartmentListDTO> getDepartmentList() {
+        List<Department> departments = deptRepository.findAll();
+        List<DepartmentListDTO> list = new ArrayList<>();
+
+        for (Department d : departments) {
+            log.info(">>> 처리 중인 학과: {}, 학과장: {}", d.getDeptName(), d.getDeptChief());
+
+            String deptChief = d.getDeptChief() != null ? d.getDeptChief() : "없음";
+
+            int professorCount = professorRepository.countByDepartment_DeptNo(d.getDeptNo());
+            int studentCount = studentRepository.countByDepartment_DeptNo(d.getDeptNo());
+            int courseCount = courseRepository.countByDepartment_DeptNo(d.getDeptNo());
+            log.info(">>> 교수 수: {}, 학생 수: {}, 강의 수: {}", professorCount, studentCount, courseCount);
+
+            list.add(new DepartmentListDTO(
+                    d.getDeptNo(),
+                    d.getUniversity().getUnivName(),
+                    d.getDeptName(),
+                    deptChief,
+                    d.getDeptHp(),
+                    professorCount,
+                    studentCount,
+                    courseCount
+            ));
+        }
+        log.info(">>> 최종 반환되는 학과 수: {}", list.size());
+
+        return list;
+    }
+
 }

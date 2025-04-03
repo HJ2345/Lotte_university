@@ -13,6 +13,7 @@ public interface CourseRepository extends JpaRepository<Course, String> {
     String findMaxCorCodeWithPrefix(@Param("prefix") String prefix);
 
 
+    int countByDepartment_DeptNo(String deptNo); // 학과별 강의 수
 
 
 }

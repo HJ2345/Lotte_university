@@ -21,11 +21,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-
-import static java.rmi.server.LogStream.log;
 
 
 @Slf4j
@@ -84,17 +81,35 @@ public class AdminController {
     }
 
     @GetMapping("admin/departmentList")
-    public String deptList(){
+    public String deptList(Model model) {
+
+        List<DepartmentListDTO> departmentList = deptService.getDepartmentList();
+        log.info(">>> 전달되는 학과 목록 수: {}", departmentList.size());
+        model.addAttribute("departmentList", departmentList);
+
+
         return "/admin/departmentList";
     }
 
     @GetMapping("admin/eduStatus")
-    public String eduStatus(){
+    public String eduStatus(Model model){
+
+        List<EduStatusDTO> eduStatusList = courseService.getEduStatusList();
+        model.addAttribute("eduStatusList", eduStatusList);
+
+
+
         return "/admin/eduStatus";
     }
 
     @GetMapping("admin/facultyList")
-    public String facultyList(){
+    public String facultyList(Model model){
+
+
+        List<ProfessorListDTO> professorList = professorService.getProfessorList();
+        model.addAttribute("professorList", professorList);
+
+
         return "/admin/facultyList";
     }
 
@@ -121,7 +136,14 @@ public class AdminController {
 
 
     @GetMapping("admin/lectureList")
-    public String lectureList(){
+    public String lectureList(Model model) {
+
+
+        List<lectureListDTO> lectureList = courseService.getAllCourses();
+        model.addAttribute("lectureList", lectureList);
+
+
+
         return "/admin/lectureList";
     }
 
@@ -167,8 +189,13 @@ public class AdminController {
 
 
     @GetMapping("admin/studentList")
-    public String studentList(){
-        return "/admin/studentList";
+    public String studentList(Model model) {
+
+
+        List<StudentListDTO> studentList = studentService.getStudentList();
+        model.addAttribute("studentList", studentList);
+
+        return "admin/studentList";
     }
 
     @GetMapping("admin/univDeptEnrollment")
