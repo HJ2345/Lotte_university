@@ -2,12 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const steps = document.querySelectorAll(".steps li");
     const stepText = document.querySelector(".step");
     const subtitle = document.querySelector(".subtitle");
-    const subcontent = document.querySelector(".subcontent");
     const content = document.querySelector(".content");
     const date = document.querySelector(".date");
     const img = document.querySelector(".img img");
-    const additional = document.querySelector(".additional");
-    const date2 = document.querySelector(".date2");
 
     const stepData = [
         {
@@ -19,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             step: "STEP 02",
             title: "입학원서작성",
-            subcontent: "5회까지 복수 지원 가능",
             content: "대학 자체 접수 사이트 이용 시 전형료 무료",
             date: "2024-09-09(월) ~ 2024-10-02(수)",
             imgSrc: "/images/step2.png"
@@ -46,16 +42,15 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             step: "STEP 06",
             title: "추가합격",
-            content: "▶ 추가합격 발표",
-            date: "2024.12.18.(수)~12.30.(월) 21:00까지",
-            additional: "▶ 추가합격 등록",
-            date2: "2024.12.19.(목)~12.30.(월) 21:00까지",
+            content: "추가 합격자를 발표합니다.",
+            date: "2024-11-15(금) ~ 2024-11-20(수)",
             imgSrc: "/images/step6.png"
         },
         {
             step: "STEP 07",
             title: "본 등록",
-            date: "2025.02.10.(월) ~ 02.12.(수) 17:00까지",
+            content: "▶ 추가합격 발표",
+            date: "2024.12.18.(수)~12.30.(월) 21:00까지",
             imgSrc: "/images/step7.png"
         }
     ];
@@ -69,10 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
             stepText.textContent = stepData[index].step;
             subtitle.textContent = stepData[index].title;
             content.textContent = stepData[index].content;
-            subcontent.textContent = stepData[index].subcontent;
             date.textContent = stepData[index].date;
-            additional.textContent = stepData[index].additional;
-            date2.textContent = stepData[index].date2;
 
             img.src = stepData[index].imgSrc;
         });

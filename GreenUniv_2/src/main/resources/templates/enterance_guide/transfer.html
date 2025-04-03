@@ -16,7 +16,7 @@
 
     <script th:src="@{/js/header.js}"></script>
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
-    <link rel="stylesheet" th:href="@{/style/enterance_guide/transfer.css}"/>
+    <link rel="stylesheet" th:href="@{/style/enterance_guide/early.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
@@ -84,266 +84,121 @@
                 </aside>
                 <div class="enterance-container">
                     <h4>편입학</h4>
-                    <div class="tables table1">
-                        <p class="tableHeader">2025학년도 편입학 전형일정</p>
-                        <table>
-                            <tr>
-                                <th>구분</th>
-                                <th>일시</th>
-                                <th>비고</th>
-                            </tr>
-                            <tr>
-                                <td>원서 접수</td>
-                                <td>2025.01.02.(목)~2025.01.10.(금)</td>
-                                <td>
-                                    접수 사이트: <a href="http://greenart.co.kr" class="emphasis">그린대 원서 접수 홈페이지</a> greenart.co.kr<br>
-                                    ※ 대학 원서 접수 사이트로만 접수 가능
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>서류 제출</td>
-                                <td>~2025.01.13.(월)까지</td>
-                                <td>
-                                    ▶ 우편 또는 직접 방문 제출<br>
-                                    ※ 익일 등기 우편 발송의 경우 제출일까지 도착분에 한함.<br>
-                                    ※ 2025.01.13.(월) 도착분<br>
-                                    <span class="emphasis">※ 원본 제출. 팩스 제출 불가.</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>면접 고사</td>
-                                <td>
-                                    간호학과, 방사선과, 응급구조과 : 2025. 01. 17.(금) 10시<br>
-                                    물리치료과 : 2025. 01. 17.(금) 14시<br>
-                                    임상병리과, 유아교육과 : 면접 미실시
-                                </td>
-                                <td>
-                                    <span class="emphasis">[면접고사 대기실]</span><br>
-                                    방사선과 : 본관 5층 523호<br>
-                                    물리치료과 : 본관 4층 426호<br>
-                                    간호학과 : 황령관 7층 702호<br>
-                                    응급구조과 : 황령관 9층 909호
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>합격자 발표</td>
-                                <td>2025.01.24.(금) 15시 예정</td>
-                                <td><a href="http://greenart.co.kr" class="emphasis">그린대학교 입학 홈페이지</a></td>
-                            </tr>
-                            <tr>
-                                <td>합격자 등록</td>
-                                <td>2025.02.10.(월)~02.12.(수) 17시</td>
-                                <td>GCA그린은행 가상계좌 입금</td>
-                            </tr>
-                            <tr>
-                                <td>추가 합격자 발표</td>
-                                <td>
-                                    ▶ 일반편입: 2025.02.12.(수)~02.28.(금) 17시<br>
-                                    ▶ 학사편입: 2025.02.12.(수)~02.20.(목) 18시
-                                </td>
-                                <td><a href="http://greenart.co.kr" class="emphasis">그린대학교 입학 홈페이지</a></td>
-                            </tr>
-                            <tr>
-                                <td>추가 합격자 등록</td>
-                                <td>
-                                    ▶ 일반편입: 2025.02.12.(수)~02.28.(금) 17시<br>
-                                    ▶ 학사편입: 2025.02.12.(수)~02.21.(금) 24시
-                                </td>
-                                <td>GCA그린은행 가상계좌 입금</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="tables table2">
-                        <p class="tableHeader">2025학년도 모집학과 및 인원</p>
-                        <table>
-                            <tr>
-                                <th>계열</th>
-                                <th>모집 학과</th>
-                                <th>주야 구분</th>
-                                <th>
-                                    일반편입 모집인원<br>
-                                    (2학년 편입)
-                                </th>
-                                <th>
-                                    학사편입 모집인원<br>
-                                    (간호학과 3학년 편입)
-                                </th>
-                            </tr>
-                            <tr>
-                                <td rowspan="7">공학</td>
-                                <td>기계공학과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                                <td rowspan="7"></td>
-                            </tr>
-                            <tr>
-                                <td>반도체전자산업과</td>
-                                <td>주간</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td>소방안전관리과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>전기과</td>
-                                <td>주간</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>전기자동차과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>컴퓨터소프트웨어과</td>
-                                <td>주간</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>화학공학과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="7">보건</td>
-                                <td>간호학과 (4년제)</td>
-                                <td>주간</td>
-                                <td>6</td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <td>물리치료과 (3년제)</td>
-                                <td>주간</td>
-                                <td>3</td>
-                                <td rowspan="15"></td>
-                            </tr>
-                            <tr>
-                                <td>방사선과 (3년제)</td>
-                                <td>주간</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>보건행정과 (3년제)</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>응급구조과 (3년제)</td>
-                                <td>주간</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>임상병리과 (3년제)</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>한방약재과</td>
-                                <td>주간</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td>예체능</td>
-                                <td>스포츠재활트레이닝과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="4">인문사회</td>
-                                <td>경찰경호행정과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>부동산재테크정보과</td>
-                                <td>야간</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td>사회복지학과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>유아교육과 (3년제) ★</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td rowspan="4">자연과학</td>
-                                <td>베이커리카페산업과</td>
-                                <td>주간</td>
-                                <td>-</td>
-                            </tr>
-                            <tr>
-                                <td>외식조리산업과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>의료피부미용과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td>헤어뷰티과</td>
-                                <td>주간</td>
-                                <td>5</td>
-                            </tr>
-                            <tr>
-                                <td colspan="3">계</td>
-                                <td>92</td>
-                                <td>6</td>
-                            </tr>
-                        </table>
-                        <div class="caption">
-                            ※ 그린대학교는 지원자의 성별, 신체, 인종에 따른 차별을 두지 않습니다.<br>
-                            ※ 학과 및 모집 인원은 변동이 생길 수 있습니다.<br>
-                            ※ 모집인원이 없는 학과에서는 모집을 하지 않습니다.<br>
-                            ★ 유아교육과는 전적 대학의 동일 계열·학과 출신자만 지원 가능합니다.
+                    <div>
+                        <div class="education-intro-text">
+                            <p class="early-text1">
+                                2025학년도 편입학 전형일정
+                            </p>
+                        </div>
+                        <div class="table">
+                            <table cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>일정</th>
+                                    <th>비고</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>원서 접수</td>
+                                    <td>2025.01.02.(목)~2025.01.10.(금)</td>
+                                    <td>
+                                        <li> 접수 사이트: 동의과학대 원서 접수 홈페이지 apply.dit.ac.kr</li>
+                                        <li> ※ 대학 원서 접수 사이트로만 접수 가능</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>서류 제출</td>
+                                    <td>~2025.01.13.(월)까지</td>
+                                    <td>
+                                        <li> ▶우편 또는 직접 방문 제출</li>
+                                        <li> ※ 익일 등기 우편 발송의 경우 제출일까지 도착분에 한함.</li>
+                                        <li> ※ 2025.01.13.(월) 도착분</li>
+                                        <li> ※ 원본 제출. 팩스 제출 불가.</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>면접 고사</td>
+                                    <td>
+                                        <li> 간호학과, 방사선과, 응급구조과 : 2025. 01. 17.(금) 10시</li>
+                                        <li> 물리치료과 : 2025. 01. 17.(금) 14시</li>
+                                        <li> 임상병리과, 유아교육과 : 면접 미실시</li>
+                                    </td>
+                                    <td>
+                                        <li> [면접고사 대기실]</li>
+                                        <li> 방사선과 : 본관 5층 523호</li>
+                                        <li> 물리치료과 : 본관 4층 426호</li>
+                                        <li> 간호학과 : 황령관 7층 702호</li>
+                                        <li> 응급구조과 : 황령관 9층 909호</li>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>합격자 발표</td>
+                                    <td>2025.01.24.(금) 15시 예정</td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                <tr>
+                                    <td>합격자 등록</td>
+                                    <td>2024.12.18.(수) ~ 12.30.(월) 21:00까지</td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                <tr>
+                                    <td>추가 합격자 발표</td>
+                                    <td>2025.01.24.(금) 15시 예정</td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                <tr>
+                                    <td>추가 합격자 등록</td>
+                                    <td>
+                                        <li> ▶일반편입: 2025.02.12.(수)~02.28.(금) 17시</li>
+                                        <li> ▶학사편입: 2025.02.12.(수)~02.20.(목) 18시</li>
+                                    </td>
+                                    <td>BNK부산은행 가상계좌 입금</td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <div class="para">
-                        <p class="title">지원자격</p>
-                        <p class="subtitle">일반 편입(2학년 편입)</p>
-                        <p class="paraContent">
-                            •&nbsp; 전문대학 또는 4년제 대학 졸업(예정)자<br>
-                            •&nbsp; 4년제 대학 1학년 과정 수료자(35학점 이상)<br>
-                            •&nbsp; 전문대학 제적 또는 자퇴 후 해당 학기를 포함하여 2개 학기 이상 경과한 자로서 1학년 이상 수료자(35학점 이상), 단 우리 대학 출신자는 해당 없이 지원 가능<br>
-                            •&nbsp; 『학점 인정 등에 관한 법률』에 의거 35학점 이상 취득(예정)한 자<br>
-                            •&nbsp; 『고등교육법』에 의거 시간제등록으로 35학점 이상 취득한 자<br>
-                            •&nbsp; 『독학에 의한 학위취득에 관한 법률』에 의한 시험에 합격한 자<br>
-                            •&nbsp; 관계법령에 의거하여 동등 이상의 학력이 있다고 인정되는 자<br>
-                            •&nbsp; 전적 대학 전공과 관계없이 지원 가능 <span class="emphasis">(※유아교육과는 동일 계열·학과 출신자만 지원 가능)</span>
-                        </p>
+
+                    <div class="early-text">
+                        <p>제출서류</p>
+                        <ol>
+                            <li> 전적 대학 제적, 졸업(예정)증명서, 수료(예정)증명서 중 해당 증명서 1부</li>
+                            <li> 전적 대학 성적증명서 1부 (2개 이상의 대학에서 수학한 경우 모든 대학의 원본 성적증명서 제출)</li>
+                        </ol>
+                        <p>※ 원본 제출. 팩스 제출 불가.</p>
+                        <p></p>
+                        <p></p>
+                        <p>접수방법 및 전형료</p>
+                        <h3>인터넷 접수방법</h3>
+                        <ol>
+                            <li>동의과학대학교 홈페이지 접속</p>
+                            <li>회원가입</li>
+                            <li>로그인</li>
+                            <li>원서작성(입력)</li>
+                            <li>원서/수험표 유의사항 확인</li>
+                            <li>제출서류 우편 송부 또는 방문 제출</li>
+                        </ol>
+
+                        <h3>유의사항</h3>
+                        <ol>
+                            <li>편입학 지원자는 동의과학대학교 홈페이지에서 한 번만 접수하여야 한다. (복수 지원 불가)</li>
+                            <li>인터넷 원서 작성(입력)이 완료된 후에는 접수 취소 및 원서 내용 변경이 불가하며, 오기재(입력)로 인한 불이익은 수험생 책임이므로 원서 작성(입력) 시
+                                유의하여야
+                                한다.
+                            </li>
+                            <li>접수 후 제출 마감일까지 모집 요강에 명시된 제출 서류를 우리대학 입학홍보부로 송부하여야 하며, 지원 자격이 미달되거나 제출 서류가 미비된 경우 자격 미달로
+                                불합격
+                                처리한다.
+                            </li>
+                            <li>입력 도중 컴퓨터의 이상을 발견하였을 경우 우리대학에 연락하여 반드시 접수 여부를 확인하여야 한다.</li>
+                            <li>제출서류 송부처 : (47230) 부산광역시 부산진구 양지로54 동의과학대학교 본관 1층 입학홍보처</li>
+                        </ol>
+
+                        <p> 전형료(수수료):무료</p>
                     </div>
-                    <div class="para">
-                        <p class="subtitle">간호학과 학사 편입</p>
-                        <p class="paraContent">
-                            •&nbsp; 학사학위 소지자(학점인정제 또는 독학학위제에 의한 학사학위 소지자 포함) 또는 이와 동등 이상의 학력이 있다고 인정되는 사람<br>
-                            •&nbsp; 『학점인정 등에 관한 법률』에 의거하여 학점을 취득한 경우에도 같은 법 제9조에 따라 "학사학위를 취득"한 경우에 한하며, 학력인정(예정)증명서를 제출한 경우 입학 전 학사학위 취득여부를 반드시 확인함<br>
-                            •&nbsp; 전적 대학 전공과 관계없이 지원 가능
-                        </p>
-                    </div>
-                    <div class="para">
-                        <p class="title">접수</p>
-                        <p class="subtitle">제출서류</p>
-                        <p class="paraContent">
-                            •&nbsp; 전적 대학 제적, 졸업(예정)증명서, 수료(예정)증명서 중 해당 증명서 1부<br>
-                            •&nbsp; 전적 대학 성적증명서 1부 (2개 이상의 대학에서 수학한 경우 모든 대학의 원본 성적증명서 제출)<br>
-                            <span class="emphasis">※ 원본 제출. 팩스 제출 불가.</span>
-                        </p>
-                    </div>
-                    <div class="para">
-                        <p class="title">문의처</p>
-                        <p class="paraContent">
-                            •&nbsp; 기타 자세한 문의사항은 입학홍보부로 문의하여 주시기 바랍니다.<br>
-                            •&nbsp; 주소 : 부산광역시 부산진구 중앙대로 749 그린대학교 입학홍보처<br>
-                            •&nbsp; 전화 : <span class="emphasis">(051) 715-6224</span>
-                        </p>
-                    </div>
+
                 </div>
             </div>
         </div>

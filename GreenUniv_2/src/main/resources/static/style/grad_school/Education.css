@@ -150,7 +150,6 @@ aside h3 {
 .table td {
     width: 249.2px;
     height: 50px;
-    text-align: center;
     font-weight: 350;
     font-size: 16px;
     letter-spacing: -0.5px;
@@ -158,7 +157,6 @@ aside h3 {
     border-style: solid;
     border-color: #dedede;
     box-sizing: border-box;
-
 }
 
 .table td:last-child {

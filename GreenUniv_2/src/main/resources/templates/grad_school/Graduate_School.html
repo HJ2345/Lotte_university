@@ -112,18 +112,60 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr th:each="grad : ${gradDTOList}">
+                            <tr>
                                 <td>
                                     <div>
-                                        <p th:text="${grad.deptName}"></p>
-                                        <a href="#">
-                                            <img th:src="@{/images/ico_link.png}" alt="학과 링크">
-                                        </a>
+                                        <p>경영대학원</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="경영대학원"></a>
                                     </div>
                                 </td>
-                                <td th:text="${grad.deptChief}"></td>
-                                <td th:text="${grad.deptHp}"></td>
-                                <td th:text="${grad.univName}"></td>
+                                <td>김경영</td>
+                                <td>051-123-5001</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>경제대학원</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="경제대학원"></a>
+                                    </div>
+                                </td>
+                                <td>김경제</td>
+                                <td>051-123-5002</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>행정대학원</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="행정대학원"></a>
+                                    </div>
+                                </td>
+                                <td>김행정</td>
+                                <td>051-123-5003</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>교육대학원</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="교육대학원"></a>
+                                    </div>
+                                </td>
+                                <td>김교육</td>
+                                <td>051-123-5004</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div>
+                                        <p>산업대학원</p>
+                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="산업대학원"></a>
+                                    </div>
+                                </td>
+                                <td>김산업</td>
+                                <td>051-123-5005</td>
+                                <td></td>
                             </tr>
                             </tbody>
                         </table>
