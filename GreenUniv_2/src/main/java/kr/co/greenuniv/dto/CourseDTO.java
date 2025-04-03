@@ -18,6 +18,7 @@ public class CourseDTO {
     private String cor_code;    // 과목코드
     private String cor_grade;
     private String semester;    // 학기
+    private String cor_type;
     private String cor_lecName; // 강의명
     private String cor_description; // 강의 설명
 
