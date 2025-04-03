@@ -181,82 +181,71 @@
                     </div>
 
 
-                        <div class="table-container">
-                            <div class="main-title">
-                                <img th:src="@{/images/bullet-h4.png}" alt="before">
-                                <p>학적정보 입력</p>
-                            </div>
-                            <table class="academicInfo tables">
-                                <tr>
-                                    <td>졸업대학</td>
-                                    <td>
-                                        <input type="text" name="P_graduniv" class="width-twohund" placeholder="대학교 이름 입력">
-                                    </td>
-                                    <td>학문 분야(전공)</td>
-                                    <td>
-                                        <input type="text" name="P_spec" class="width-twohund" placeholder="전공 입력">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>졸업일</td>
-                                    <td>
-                                        <input type="date" name="P_graddate" class="width-twohund selectDate">
-                                    </td>
-                                    <td>학위</td>
-                                    <td>
-                                        <select id="degree" name="P_degree">
-                                            <option value="박사">박사</option>
-                                            <option value="석사">석사</option>
-                                            <option value="학사">학사</option>
-                                            <option value="명예박사">명예박사</option>
-                                            <option value="전문학사">전문학사</option>
-                                            <option value="준학사">준학사</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>담당학과</td>
-                                    <td>
-                                        <!-- 단과대학 선택 -->
-                                        <select id="category" name="P_lesson" onchange="updateOptions()">
-                                            <option value="" disabled selected>-- 단과대학 선택 --</option>
-                                            <option th:each="univ : ${univList}"
-                                                    th:value="${univ.univName}"
-                                                    th:text="${univ.univName}">
-                                            </option>
-                                        </select>
-
-                                        <!-- 학과 선택 -->
-                                        <select id="item" name="P_spec2">
-                                            <option value="">-- 학과 선택 --</option>
-                                            <option th:each="dept : ${deptList}"
-                                                    th:if="${dept.university != null}"
-                                                    th:data-category="${dept.university.univName}"
-                                                    th:value="${dept.deptNo}"
-                                                    th:text="${dept.deptName}">
-                                            </option>
-                                        </select>
-                                    </td>
-                                    <td>임용일</td>
-                                    <td>
-                                        <input type="date" name="P_appointdate" class="width-twohund selectDate">
-                                    </td>
-                                </tr>
-                            </table>
+                    <div class="table-container">
+                        <div class="main-title">
+                            <img th:src="@{/images/bullet-h4.png}" alt="before">
+                            <p>학적정보 입력</p>
                         </div>
-                        <button type="submit">등록</button>
-                    </form>
-                </div>
-            </div>
-        </main>
+                        <table class="academicInfo tables">
+                            <tr>
+                                <td>졸업대학</td>
+                                <td>
+                                    <input type="text" name="P_graduniv" class="width-twohund" placeholder="대학교 이름 입력">
+                                </td>
+                                <td>학문 분야(전공)</td>
+                                <td>
+                                    <input type="text" name="P_spec" class="width-twohund" placeholder="전공 입력">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>졸업일</td>
+                                <td>
+                                    <input type="date" name="P_graddate" class="width-twohund selectDate">
+                                </td>
+                                <td>학위</td>
+                                <td>
+                                    <select id="degree" name="P_degree">
+                                        <option value="박사">박사</option>
+                                        <option value="석사">석사</option>
+                                        <option value="학사">학사</option>
+                                        <option value="명예박사">명예박사</option>
+                                        <option value="전문학사">전문학사</option>
+                                        <option value="준학사">준학사</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>담당학과</td>
+                                <td>
+                                    <!-- 단과대학 선택 -->
+                                    <select id="category" name="P_lesson" onchange="updateOptions()">
+                                        <option value="" disabled selected>-- 단과대학 선택 --</option>
+                                        <option th:each="univ : ${univList}"
+                                                th:value="${univ.univName}"
+                                                th:text="${univ.univName}">
+                                        </option>
+                                    </select>
 
-        <footer>
-            <div class="footer-container">
-                <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
-
-
-
-
+                                    <!-- 학과 선택 -->
+                                    <select id="item" name="P_spec2">
+                                        <option value="">-- 학과 선택 --</option>
+                                        <option th:each="dept : ${deptList}"
+                                                th:if="${dept.university != null}"
+                                                th:data-category="${dept.university.univName}"
+                                                th:value="${dept.deptNo}"
+                                                th:text="${dept.deptName}">
+                                        </option>
+                                    </select>
+                                </td>
+                                <td>임용일</td>
+                                <td>
+                                    <input type="date" name="P_appointdate" class="width-twohund selectDate">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <button type="submit">등록</button>
+                </form>
             </div>
         </div>
     </main>
