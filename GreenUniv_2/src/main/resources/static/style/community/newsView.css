@@ -11,19 +11,6 @@
     padding-bottom: 20.8px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-tr, th {
-    border: 1px solid black;
-}
-
-td {
-    border: 1px solid black;
-}
-
 .content-container {
     width: 100%;
     margin-bottom: 10px;
@@ -91,7 +78,7 @@ td {
     width: 100%;
     height: auto;
     box-sizing: border-box;
-    border: 1px solid #ccc;
+    border: 1px solid #eee;
     outline: none;
     padding: 8px;
 }
@@ -127,6 +114,18 @@ td {
 }
 
 .btn > img {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+}
+
+.commentBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.commentBtn > img {
+    width: 14px;
+    height: 14px;
 }
