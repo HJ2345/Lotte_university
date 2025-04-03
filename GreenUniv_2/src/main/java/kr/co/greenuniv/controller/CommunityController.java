@@ -27,7 +27,7 @@ public class CommunityController {
         model.addAttribute(pageResponseDTO);
         log.info(pageResponseDTO.toString());
 
-        return "/community/CommunityInfo";
+        return "community/CommunityInfo";
     }
 
     @GetMapping("/community/Einformation")
