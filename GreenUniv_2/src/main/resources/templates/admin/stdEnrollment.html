@@ -108,7 +108,7 @@
                         </div>
                         <table class="basicInfo tables">
                             <tr>
-                                <td rowspan="5" class="profile">
+                                <td rowspan="6" class="profile">
                                     <img th:src="@{/images/icon-avatar.png}" alt="프로필사진">
                                 </td>
                             </tr>
@@ -154,15 +154,7 @@
                                         <option value="CHN">중국</option>
                                     </select>
                                 </td>
-                                <td>상태</td>
-                                <td>
-                                    <select name="status">
-                                        <option value="재학">재학</option>
-                                        <option value="휴학">휴학</option>
-                                        <option value="졸업">졸업</option>
-                                        <option value="대학원">대학원</option>
-                                    </select>
-                                </td>
+
                             </tr>
                             <tr>
                                 <td>휴대폰</td>
@@ -173,6 +165,19 @@
                                 <td>
                                     <input type="email" class="width-onehundfifty" placeholder="이메일 입력" name="S_email">
                                 </td>
+                            </tr>
+                            <tr>
+                                <td>상태</td>
+                                <td>
+                                    <select name="status" class="add_status">
+                                        <option value="재학">재학</option>
+                                        <option value="휴학">휴학</option>
+                                        <option value="졸업">졸업</option>
+                                        <option value="대학원">대학원</option>
+                                    </select>
+                                </td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td></td>

@@ -15,3 +15,4 @@ public interface DeptRepository extends JpaRepository<Department, String> {
 
     Department findByDeptNo(String deptNo);
 }
+
