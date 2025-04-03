@@ -20,9 +20,10 @@
 
 .selectType {
     background-color: white;
-    background: url("/static/images/btn-sel-open01.png") no-repeat right 12px center;
+    background: url("../../images/btn-sel-open01.png") no-repeat right 12px center;
     width: 150px;
-    padding: 9px 0 10px 10px;
+    height: 40px;
+    padding-left: 10px;
     border: 1px solid #dedede;
     font-size: 15px;
     font-weight: 350;
@@ -88,7 +89,7 @@ td img {
 }
 
 table tr > th:nth-child(1) {
-    width: 79.98px;
+    width: 90px;
 }
 
 table tr > th:nth-child(2) {
@@ -113,6 +114,10 @@ table tr > td {
     font-size: 16px;
     font-weight: 350;
     border-bottom: 1px solid #a3a3a3;
+}
+
+table tr > td:nth-child(2) {
+    text-align: left;
 }
 
 .appBtn {
@@ -142,11 +147,15 @@ table tr > td {
     border: 1px solid #dedede;
 }
 
-.paging-container > a > span {
-    padding: 3px 11px;
+.paging-container > a > button {
+    width: 35px;
+    height: 35px;
     border: 1px solid #dedede;
     font-size: 15px;
     font-weight: 350;
+    cursor: pointer;
+    color: #333;
+    background: white;
 }
 
 .mb-2 {
@@ -162,6 +171,6 @@ table tr > td {
 }
 
 .selected {
-    background: #3f97f6;
-    color: white;
+    background: #3f97f6 !important;
+    color: white !important;
 }

@@ -124,11 +124,15 @@ aside h3 {
     border: 1px solid #dedede;
 }
 
-.paging-container > a > span {
-    padding: 3px 11px;
+.paging-container > a > button {
+    width: 35px;
+    height: 35px;
     border: 1px solid #dedede;
     font-size: 15px;
     font-weight: 350;
+    cursor: pointer;
+    color: #333;
+    background: white;
 }
 
 .mb-2 {
@@ -144,6 +148,6 @@ aside h3 {
 }
 
 .selected {
-    background: #3F97F6;
-    color: white;
+    background: #3f97f6 !important;
+    color: white !important;
 }
