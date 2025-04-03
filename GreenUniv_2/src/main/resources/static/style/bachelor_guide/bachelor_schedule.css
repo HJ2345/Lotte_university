@@ -24,7 +24,7 @@
     --fc-bg-event-color: #8fdf82;
     --fc-bg-event-opacity: 0.3;
     --fc-highlight-color: rgba(188, 232, 241, .3);
-    --fc-today-bg-color: rgb(230,237,243);
+    --fc-today-bg-color: rgb(230, 237, 243);
     --fc-now-indicator-color: red;
 }
 
@@ -69,10 +69,6 @@
     color: #084A87;
     background: white;
     border: none;
-}
-
-.fc .fc-daygrid-day.fc-day-today {
-
 }
 
 td[role="presentation"] {
