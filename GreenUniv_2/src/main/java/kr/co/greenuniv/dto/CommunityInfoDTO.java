@@ -1,5 +1,6 @@
 package kr.co.greenuniv.dto;
 
+import kr.co.greenuniv.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,6 +29,9 @@ public class CommunityInfoDTO {
 
     // 추가필드
     private String nick;
+    private String regip;
+    private User user;
+    private User uid;
 
     public String getWdate() {
         if(wdate != null){
