@@ -9,28 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" th:href="@{/style/common/_adminHeader.css}">
+    <link rel="stylesheet" th:href="@{/style/common/_adminFooter.css}">
     <link rel="stylesheet" th:href="@{/style/admin/adminMain.css}">
     <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
     <title>학사관리시스템</title>
 </head>
 <body>
 <div id="wrapper">
-    <header>
-        <div class="topMenuBar">
-            <ul class="topMenus">
-                <li><a th:href="@{/}">HOME</a></li>
-                <li><a href="#">사이트맵</a></li>
-                <li><a href="#">로그아웃</a></li>
-            </ul>
-        </div>
-        <div class="header-background">
-            <div class="header-logo">
-                <a th:href="@{/admin/adminMain}">
-                    <img th:src="@{/images/admin_logo.png}" alt="그린대학교" class="logo">
-                </a>
-            </div>
-        </div>
-    </header>
+    <th:block th:include="/common/_adminHeader.html"/>
 
     <main>
         <div class="main-container">
@@ -332,7 +319,7 @@
 
     <footer>
         <div class="footer-container">
-            <p>Copyright ©Green University All rights reserved. ADMINISTRATOR Version 1.4.1</p>
+            <p>Copyright ©Green University All rights reserved. ADMINISTRATOR ver.[[${@appInfo.appVersion}]]</p>
         </div>
     </footer>
 </div>
