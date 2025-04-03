@@ -14,6 +14,7 @@ li {
 }
 
 body {
+    overflow-x: hidden; /* 가로 스크롤 추가 */
     min-width: 1200px; /* 최소 너비 유지 */
 }
 
