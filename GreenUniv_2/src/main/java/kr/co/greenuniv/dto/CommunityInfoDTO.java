@@ -24,10 +24,16 @@ public class CommunityInfoDTO {
     private int status;
     private String deadline;
 
-    @CreationTimestamp
-    private LocalDateTime wdate;
+    private String wdate;
 
     // 추가필드
     private String nick;
+
+    public String getWdate() {
+        if(wdate != null){
+            return wdate.substring(0, 10);
+        }
+        return null;
+    }
 
 }

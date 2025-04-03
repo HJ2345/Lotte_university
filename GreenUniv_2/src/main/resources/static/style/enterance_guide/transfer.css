@@ -1,3 +1,18 @@
+ol {
+    list-style-type: decimal; /* 기본 순서 번호 숨기기 */
+    counter-reset: item; /* 항목 카운터 초기화 */
+    padding-left: 20px;
+}
+
+li {
+    counter-increment: item; /* 각 항목에 번호를 추가 */
+    margin-bottom: 5px;
+}
+
+ol li::before {
+    content: "(" counter(item, lower-alpha) ".) "; /* 항목 앞에 "(가.), (나.)" 형태 추가 */
+}
+
 .enterance-container {
     width: 100%;
     margin: 8px 0 0 50px;
@@ -11,90 +26,98 @@
     padding-bottom: 20.8px;
 }
 
-.tableHeader {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 15px;
+.early-text1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.tables {
-    margin-bottom: 50px;
-}
-.tables tr > td:first-child, .tables tr > th:first-child {
-    border-left: none;
-}
-.tables tr > td:last-child, .tables tr > th:last-child {
-    border-right: none;
-}
-
-.table1 tr > td:last-child {
+.left {
     text-align: left;
-    padding-left: 12px;
-}
-.table1 tr > td:first-child {
-    background: #fcfdff;
-    width: 140px;
 }
 
-.table2 tr > td:first-child {
-    width: 120px;
-}
-.table2 tr > td:nth-child(2) {
-    width: 220px;
-}
-.table2 tr:last-child > td {
-    background: #fcfdff;
-    font-weight: 500;
-}
 
 table {
     width: 100%;
     text-align: center;
+    border-top: 2px solid black;
     border-collapse: collapse;
 }
 
-td, th {
-    font-size: 14px;
-    border: 1px solid #eee;
+th, td {
+    border: 1px solid #a3a3a3;
+    font-size: 15px;
 }
 
-th {
-    background: #f3f8ff;
-    font-weight: 500;
-    height: 50px;
-    color: #222;
+table tr > td li {
+    font-size: 15px;
 }
 
-td {
-    font-weight: 350;
-    padding: 14px 0;
-    color: #222;
+th:first-child, td:first-child {
+    border-left: none;
 }
 
-.emphasis {
-    color: #3F97F6;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
+th:last-child, td:last-child {
+    border-right: none;
 }
 
-.caption {
-    margin-top: 15px;
-    font-size: 14px;
-    font-weight: 350;
-    color: #222;
+table tr > th {
+    font-weight: 700px;
+    height: 61px;
+    background: #fafafa;
+    border-bottom: 1px solid #a3a3a3;
+
 }
 
-.para:not(.para:last-child) {
-    color: #222;
-    margin-bottom: 50px;
+table tr:nth-child(1) {
+    height: 100px;
 }
 
-.title {
-    font-size: 22px;
-    font-weight: 600;
-    margin-bottom: 20px;
+table tr:nth-child(3) {
+    height: 100px;
 }
+
+table tr:nth-child(9) {
+    height: 100px;
+}
+
+table tr > th:nth-child(1) {
+    width: 150px;
+    font-weight: bold;
+}
+
+table tr > th:nth-child(2) {
+    width: 300px;
+}
+
+table tr > th:nth-child(3) {
+    width: 400px;
+}
+
+table tr > td:nth-child(1) {
+    width: 90px;
+    height: 61px;
+    font-weight: 350px;
+    border-bottom: 1px solid #a3a3a3;
+}
+
+table tr > td:nth-child(2) {
+    width: 90px;
+    height: 61px;
+    font-weight: 350px;
+    border-bottom: 1px solid #a3a3a3;
+    padding-left: 10px;
+}
+
+table tr > td:nth-child(3) {
+    width: 90px;
+    height: 61px;
+    font-weight: 350px;
+    border-bottom: 1px solid #a3a3a3;
+    padding-left: 10px;
+    text-align: left;
+}
+
 
 .subtitle {
     font-size: 18px;
@@ -122,4 +145,5 @@ td {
     font-size: 14px;
     font-weight: 350;
     line-height: 25px;
+
 }

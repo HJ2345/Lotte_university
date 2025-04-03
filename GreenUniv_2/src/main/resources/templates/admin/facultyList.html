@@ -122,60 +122,16 @@
                             <th>재직여부</th>
                             <th>임용일</th>
                         </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>정교수</td>
-                            <td class="green">재직중</td>
-                            <td>2025-01-01</td>
-                        </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>부교수</td>
-                            <td class="green">재직중</td>
-                            <td>2025-01-01</td>
-                        </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>조교수</td>
-                            <td class="green">재직중</td>
-                            <td>2025-01-01</td>
-                        </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>정교수</td>
-                            <td class="yellow">휴직</td>
-                            <td>2025-01-01</td>
-                        </tr>
-                        <tr>
-                            <td>202001230</td>
-                            <td>홍길동</td>
-                            <td>900103-1234567</td>
-                            <td>010-1234-1001</td>
-                            <td>hong1001@naver.com</td>
-                            <td>컴퓨터공학과</td>
-                            <td>정교수</td>
-                            <td class="red">퇴직</td>
-                            <td>2025-01-01</td>
+                        <tr th:each="prof : ${professorList}">
+                            <td th:text="${prof.pNum}"></td>
+                            <td th:text="${prof.pName}"></td>
+                            <td th:text="${prof.pResidentId}"></td>
+                            <td th:text="${prof.pHp}"></td>
+                            <td th:text="${prof.pEmail}"></td>
+                            <td th:text="${prof.deptName}"></td>
+                            <td th:text="${prof.position}"></td>
+                            <td th:text="${prof.working}"></td>
+                            <td th:text="${prof.appointDate}"></td>
                         </tr>
                     </table>
                 </div>

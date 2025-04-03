@@ -26,38 +26,38 @@ public class CommunityService {
     private final ModelMapper modelMapper;
 
     // 글 목록 검색
-    public PageResponseDTO searchAll(PageRequestDTO pageRequestDTO) {
-
-        // 페이징 처리를 위한 pageable 객체 생성
-        Pageable pageable = pageRequestDTO.getPageable("no"); // 최신글부터 정렬, 내림차순
-
-        Page<Tuple> pageCommunityInfo = communityInfoRepository.selectAllForSearch(pageRequestDTO, pageable);
-
-        log.info("pageCommunityInfo : {} ", pageCommunityInfo);
-
-        // Article Entity 리스트를 ArticleDTO 리스트로 변환
-        List<CommunityInfoDTO> communityInfoDTOList = pageCommunityInfo.getContent().stream().map(tuple -> { // 아티클 엔티티를 아티클DTO로 변환
-
-            CommunityInfo communityInfo = tuple.get(0, CommunityInfo.class); // .select(qArticle, qUser.nick) 1번째 값
-            String nick = tuple.get(1, String.class); // .select(qArticle, qUser.nick) 2번째 값
-
-            CommunityInfoDTO communityInfoDTO = modelMapper.map(communityInfo, CommunityInfoDTO.class);
-            communityInfoDTO.setNick(nick);
-
-            return communityInfoDTO;
-
-        }).toList();
-
-        // 전체 게시물 갯수
-        int total = (int) pageCommunityInfo.getTotalElements();
-
-        return PageResponseDTO
-                .builder()
-                .pageRequestDTO(pageRequestDTO)
-                .dtoList(communityInfoDTOList)
-                .total(total)
-                .build();
-    }
+//    public PageResponseDTO searchAll(PageRequestDTO pageRequestDTO) {
+//
+//        // 페이징 처리를 위한 pageable 객체 생성
+//        Pageable pageable = pageRequestDTO.getPageable("no"); // 최신글부터 정렬, 내림차순
+//
+//        Page<Tuple> pageCommunityInfo = communityInfoRepository.selectAllForSearch(pageRequestDTO, pageable);
+//
+//        log.info("pageCommunityInfo : {} ", pageCommunityInfo);
+//
+//        // Article Entity 리스트를 ArticleDTO 리스트로 변환
+//        List<CommunityInfoDTO> communityInfoDTOList = pageCommunityInfo.getContent().stream().map(tuple -> { // 아티클 엔티티를 아티클DTO로 변환
+//
+//            CommunityInfo communityInfo = tuple.get(0, CommunityInfo.class); // .select(qArticle, qUser.nick) 1번째 값
+//            String nick = tuple.get(1, String.class); // .select(qArticle, qUser.nick) 2번째 값
+//
+//            CommunityInfoDTO communityInfoDTO = modelMapper.map(communityInfo, CommunityInfoDTO.class);
+//            communityInfoDTO.setNick(nick);
+//
+//            return communityInfoDTO;
+//
+//        }).toList();
+//
+//        // 전체 게시물 갯수
+//        int total = (int) pageCommunityInfo.getTotalElements();
+//
+//        return PageResponseDTO
+//                .builder()
+//                .pageRequestDTO(pageRequestDTO)
+//                .dtoList(communityInfoDTOList)
+//                .total(total)
+//                .build();
+//    }
 
     // 글 목록 조회
     public PageResponseDTO findAll(PageRequestDTO pageRequestDTO) {
@@ -93,19 +93,19 @@ public class CommunityService {
                 .build();
     }
 
-    // 글 클릭 시 뷰
-    public CommunityInfoDTO findById(int no) {
-
-        Optional<CommunityInfo> optArticle = communityInfoRepository.findById(no);
-
-        if (optArticle.isPresent()) {
-            CommunityInfo article = optArticle.get();
-            CommunityInfoDTO communityInfoDTO = modelMapper.map(article, CommunityInfoDTO.class);
-            return communityInfoDTO; // 유저 정보, 파일 정보
-
-        }
-
-        return null;
-
-    }
+//    // 글 클릭 시 뷰
+//    public CommunityInfoDTO findById(int no) {
+//
+//        Optional<CommunityInfo> optArticle = communityInfoRepository.findById(no);
+//
+//        if (optArticle.isPresent()) {
+//            CommunityInfo article = optArticle.get();
+//            CommunityInfoDTO communityInfoDTO = modelMapper.map(article, CommunityInfoDTO.class);
+//            return communityInfoDTO; // 유저 정보, 파일 정보
+//
+//        }
+//
+//        return null;
+//
+//    }
 }

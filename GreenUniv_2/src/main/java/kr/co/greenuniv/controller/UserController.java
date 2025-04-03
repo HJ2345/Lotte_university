@@ -1,15 +1,17 @@
 package kr.co.greenuniv.controller;
 
+import kr.co.greenuniv.entity.Terms;
 import jakarta.servlet.http.HttpServletRequest;
-//import kr.co.greenuniv.dto.TermsDTO;
+import kr.co.greenuniv.dto.TermsDTO;
 import jakarta.servlet.http.HttpSession;
 import kr.co.greenuniv.dto.UserDTO;
-//import kr.co.greenuniv.service.TermsService;
+import kr.co.greenuniv.service.TermsService;
 import kr.co.greenuniv.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -21,6 +23,7 @@ import java.util.Map;
 @Controller
 public class UserController {
 
+    private final TermsService termsService;
     private final UserService userService;
 
     // 로그인 페이지
@@ -48,9 +51,20 @@ public class UserController {
 
     // 약관 페이지
     @GetMapping("/terms")
-    public String terms() {
-        return "user/terms";
+    public String getTerms(Model model) {
+        TermsDTO termsDTO = termsService.getTermsById(1); // ✅ TermsDTO로 받기
+
+        if (termsDTO != null) {
+            model.addAttribute("terms", termsDTO.getTerms());
+            model.addAttribute("privacy", termsDTO.getPrivacy());
+        } else {
+            model.addAttribute("terms", "약관을 불러올 수 없습니다.");
+            model.addAttribute("privacy", "개인정보 처리방침을 불러올 수 없습니다.");
+        }
+
+        return "/user/terms";
     }
+
 
     // 이메일 중복 체크
     @GetMapping("/email/{email}")

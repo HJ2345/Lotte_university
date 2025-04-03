@@ -334,6 +334,20 @@ tr:last-child > td {
     width: 90px;
 }
 
+
+/* 총합 행 스타일 */
+.total-row {
+    border-top: 1px solid black;
+    border-bottom: 1px solid #A3A3A3;
+    background-color: #FAFAFA;
+    color: #333;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    height: 45px;
+}
+
+
 /* --------- main end --------- */
 
 /* --------- footer start --------- */

@@ -1,18 +1,14 @@
 package kr.co.greenuniv.controller;
 
 
-import kr.co.greenuniv.dto.CourseDTO;
-import kr.co.greenuniv.dto.StudentDTO;
+import kr.co.greenuniv.dto.*;
+import kr.co.greenuniv.entity.Course;
+import kr.co.greenuniv.entity.Department;
 import kr.co.greenuniv.entity.Professor;
-import kr.co.greenuniv.repository.DeptRepository;
-import kr.co.greenuniv.repository.ProfessorRepository;
-import kr.co.greenuniv.repository.UnivRepository;
+import kr.co.greenuniv.repository.*;
 import kr.co.greenuniv.service.CourseService;
-import kr.co.greenuniv.dto.DeptDTO;
-import kr.co.greenuniv.dto.UnivDTO;
 import kr.co.greenuniv.entity.University;
 import kr.co.greenuniv.service.DeptService;
-import kr.co.greenuniv.dto.ProfessorDTO;
 import kr.co.greenuniv.service.ProfessorService;
 
 import kr.co.greenuniv.service.StudentService;
@@ -25,11 +21,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-
-import static java.rmi.server.LogStream.log;
 
 
 @Slf4j
@@ -40,6 +33,10 @@ public class AdminController {
     private final UnivRepository univRepository;
     private final DeptRepository deptRepository;
     private final ProfessorRepository professorRepository;
+    private final StudentRepository studentRepository;
+    private final CourseRepository courseRepository;
+
+
 
     private final StudentService studentService;  // 학생등록 service
     private final UnivService univService;  // 학생등록 service
@@ -52,35 +49,82 @@ public class AdminController {
 
 
 
-    @GetMapping("admin/adminMain")
-    public String index(){
-        return "admin/adminMain";
+    @GetMapping("/admin/adminMain")
+    public String adminMain(Model model) {
+        AdminStatDTO stats = AdminStatDTO.builder()
+                .departmentCount(deptRepository.count())
+                .courseCount(courseRepository.count())
+                .professorCount(professorRepository.count())
+                .staffCount(24L) // 더미
+                .studentCount(studentRepository.countByStatus("재학")) // 재학생만 집계
+                .leaveCount(studentRepository.countByStatus("휴학"))
+                .graduateSchoolCount(studentRepository.countByStatus("대학원"))
+                .graduateCount(studentRepository.countByStatus("졸업"))
+                .build();
+
+
+        List<StudentDeptStatDTO> deptStats = studentService.getStatsByDepartmentWithTotal();
+        List<Course> courseList = courseRepository.findAll(); // 강의 목록
+        List<StudentGradeStatDTO> gradeStats = studentService.getStatsByGradeWithTotal();
+
+
+        model.addAttribute("courseList", courseList);
+        model.addAttribute("stats", stats);
+        model.addAttribute("gradeStats", gradeStats); // 💡 새로 추가된 통계
+        model.addAttribute("deptStats", deptStats);
+        return "/admin/adminMain";
     }
 
     @GetMapping("admin/courseStatus")
     public String courseStatus(){
-        return "admin/courseStatus";
+        return "/admin/courseStatus";
     }
 
     @GetMapping("admin/departmentList")
-    public String deptList(){
-        return "admin/departmentList";
+    public String deptList(Model model) {
+
+        List<DepartmentListDTO> departmentList = deptService.getDepartmentList();
+        log.info(">>> 전달되는 학과 목록 수: {}", departmentList.size());
+        model.addAttribute("departmentList", departmentList);
+
+
+        return "/admin/departmentList";
     }
 
     @GetMapping("admin/eduStatus")
-    public String eduStatus(){
-        return "admin/eduStatus";
+    public String eduStatus(Model model){
+
+        List<EduStatusDTO> eduStatusList = courseService.getEduStatusList();
+        model.addAttribute("eduStatusList", eduStatusList);
+
+
+
+        return "/admin/eduStatus";
     }
 
     @GetMapping("admin/facultyList")
-    public String facultyList(){
-        return "admin/facultyList";
+    public String facultyList(Model model){
+
+
+        List<ProfessorListDTO> professorList = professorService.getProfessorList();
+        model.addAttribute("professorList", professorList);
+
+
+        return "/admin/facultyList";
     }
 
-    @GetMapping("admin/lecEnrollment")  // 강의 등록
-    public String lecEnrollment(Model model){
+    @GetMapping("admin/lecEnrollment")
+    public String lecEnrollment(Model model) {
         model.addAttribute("courseDto", new CourseDTO());
-        return "admin/lecEnrollment";
+
+        // ✅ 여기에 대학 리스트랑 학과 리스트도 넘겨줘야 함
+        List<University> univList = univRepository.findAll();
+        List<Department> deptList = deptRepository.findAll();
+
+        model.addAttribute("univList", univList);
+        model.addAttribute("deptList", deptList);
+
+        return "/admin/lecEnrollment";
     }
 
     @PostMapping("admin/lecEnrollment")
@@ -92,8 +136,15 @@ public class AdminController {
 
 
     @GetMapping("admin/lectureList")
-    public String lectureList(){
-        return "admin/lectureList";
+    public String lectureList(Model model) {
+
+
+        List<lectureListDTO> lectureList = courseService.getAllCourses();
+        model.addAttribute("lectureList", lectureList);
+
+
+
+        return "/admin/lectureList";
     }
 
     @GetMapping("/admin/profEnrollment")
@@ -103,7 +154,7 @@ public class AdminController {
         model.addAttribute("deptList", deptRepository.findAll());
 
 
-        return "admin/profEnrollment";
+        return "/admin/profEnrollment";
     }
 
     @PostMapping("/admin/profEnrollment")
@@ -125,7 +176,7 @@ public class AdminController {
         model.addAttribute("deptList", deptRepository.findAll());
         model.addAttribute("profList", professorRepository.findAll());
         model.addAttribute("studentDTO", new StudentDTO());
-        return "admin/stdEnrollment";
+        return "/admin/stdEnrollment";
     }
 
     @PostMapping("/admin/stdEnrollment")
@@ -138,8 +189,13 @@ public class AdminController {
 
 
     @GetMapping("admin/studentList")
-    public String studentList(){
-        return "admin/studentList";
+    public String studentList(Model model) {
+
+
+        List<StudentListDTO> studentList = studentService.getStudentList();
+        model.addAttribute("studentList", studentList);
+
+        return "/admin/studentList";
     }
 
     @GetMapping("admin/univDeptEnrollment")
@@ -163,7 +219,7 @@ public class AdminController {
         });
 
 
-        return "admin/univDeptEnrollment";
+        return "/admin/univDeptEnrollment";
     }
 
     @PostMapping("/admin/univDeptEnrollment")
@@ -184,4 +240,10 @@ public class AdminController {
 
         return "redirect:/admin/univDeptEnrollment";
     }
+
+
+
+
+
+
 }

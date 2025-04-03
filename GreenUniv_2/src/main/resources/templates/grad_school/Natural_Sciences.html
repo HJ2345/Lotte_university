@@ -108,93 +108,18 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
+                            <tr th:each="grad : ${gradDTOList}">
                                 <td>
                                     <div>
-                                        <p>수학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="수학과"></a>
+                                        <p th:text="${grad.deptName}"></p>
+                                        <a href="#">
+                                            <img th:src="@{/images/ico_link.png}" alt="학과 링크">
+                                        </a>
                                     </div>
                                 </td>
-                                <td>김수학</td>
-                                <td>051-123-2001</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <p>물리학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="물리학과"></a>
-                                    </div>
-                                </td>
-                                <td>김물리</td>
-                                <td>051-123-2002</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <p>화학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="화학과"></a>
-                                    </div>
-                                </td>
-                                <td>김화학</td>
-                                <td>051-123-2003</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <p>천문학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="천문학과"></a>
-                                    </div>
-                                </td>
-                                <td>김천문</td>
-                                <td>051-123-2004</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <p>지구과학학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="지구과학학과"></a>
-                                    </div>
-                                </td>
-                                <td>김지구</td>
-                                <td>051-123-2005</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <p>생명과학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="생명과학과"></a>
-                                    </div>
-                                </td>
-                                <td>김생명</td>
-                                <td>051-123-2006</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <p>미생물학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="미생물학과"></a>
-                                    </div>
-                                </td>
-                                <td>김생물</td>
-                                <td>051-123-2007</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div>
-                                        <p>해양학과</p>
-                                        <a href="#"><img th:src="@{/images/ico_link.png}" alt="해양학과"></a>
-                                    </div>
-                                </td>
-                                <td>김해양</td>
-                                <td>051-123-2008</td>
-                                <td></td>
+                                <td th:text="${grad.deptChief}"></td>
+                                <td th:text="${grad.deptHp}"></td>
+                                <td th:text="${grad.univName}"></td>
                             </tr>
                             </tbody>
                         </table>
