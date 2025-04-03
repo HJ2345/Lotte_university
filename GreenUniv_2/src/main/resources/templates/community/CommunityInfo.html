@@ -49,7 +49,7 @@
                             th:alt="next"
                             class="ico-next"
                     />
-                    <a th:href="@{/community}">커뮤니티</a>
+                    <a th:href="@{/community/CommunityInfo}">커뮤니티</a>
                 </li>
                 <li>
                     <img
@@ -112,17 +112,17 @@
                                 <th>작성일</th>
                                 <th>조회</th>
                             </tr>
-                            <tr>
-                                <td>3</td>
+                            <tr th:each="community, i:${pageResponseDTO.dtoList}">
+                                <td>[[${pageResponseDTO.startNo - i.index}]]</td>
                                 <td class="left">
                                     <img
                                             th:src="@{/images/ico-new01.gif}"
-                                            th:alt="N"
+                                            alt="N"
                                             class="photos"
                                     />
-                                <a th:href="@{/community/CommunityInfo(CinforId=${community.CinforId})}">[[${community.title}]]&#91;[[${community.comment}]]&#93;</a>
+                                <a th:href="@{/community/CommunityInfo(CinforId=0)}">[[${community.title}]]</a>
                                 </td>
-                                <td>[[${community.writer}]]</td>
+                                <td>[[${community.nick}]]</td>
                                 <td>[[${community.wdate}]]</td>
                                 <td>[[${community.hit}]]</td>
                             </tr>
@@ -196,6 +196,7 @@
                                 />
                             </a>
                         </div>
+                        <button class="auth_Button" type="button">글쓰기</button>
                     </div>
                 </div>
             </div>

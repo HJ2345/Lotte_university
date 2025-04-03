@@ -4,10 +4,12 @@ import kr.co.greenuniv.dto.PageRequestDTO;
 import kr.co.greenuniv.dto.PageResponseDTO;
 import kr.co.greenuniv.service.CommunityService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+@Slf4j
 @RequiredArgsConstructor
 @Controller
 public class CommunityController {
@@ -26,9 +28,9 @@ public class CommunityController {
         PageResponseDTO pageResponseDTO = communityService.findAll(pageRequestDTO);
 
         // 전체 글 조회 서비스 호출(Mybatis)
-        model.addAttribute(pageResponseDTO);
+        model.addAttribute("pageResponseDTO", pageResponseDTO);
 
-        return "community/CommunityInfo";
+        return "/community/CommunityInfo";
     }
 
     @GetMapping("/community/Einformation")
@@ -44,7 +46,14 @@ public class CommunityController {
     }
 
     @GetMapping("/community/news")
-    public String news(){
+    public String news(Model model, PageRequestDTO pageRequestDTO){
+
+        // 전체 글 조회 서비스 호출(JPA)
+        PageResponseDTO pageResponseDTO = communityService.findAll(pageRequestDTO);
+        log.info("pageResponseDTO: {}", pageResponseDTO);
+
+        // 전체 글 조회 서비스 호출(Mybatis)
+        model.addAttribute("pageResponseDTO", pageResponseDTO);
 
         return "/community/news";
     }

@@ -32,10 +32,10 @@
         <div>
             <ul>
                 <li>
-                    <a href="#">
+                    <a th:href="@{/}">
                         <img
                                 th:src="@{/images/ico-home.png}"
-                                th:alt="home"
+                                alt="home"
                                 class="ico-home"
                         />
                     </a>
@@ -43,18 +43,18 @@
                 <li>
                     <img
                             th:src="@{/images/btn-next-page.png}"
-                            th:alt="next"
+                            alt="next"
                             class="ico-next"
                     />
-                    <a href="#">커뮤니티</a>
+                    <a th:href="@{/Community/CommunityInfo}">커뮤니티</a>
                 </li>
                 <li>
                     <img
                             th:src="@{/images/btn-next-page.png}"
-                            th:alt="next"
+                            alt="next"
                             class="ico-next"
                     />
-                    <a href="#" class="this-location">뉴스 및 칼럼</a>
+                    <a th:href="@{/Community/news}" class="this-location">뉴스 및 칼럼</a>
                 </li>
             </ul>
         </div>
@@ -89,7 +89,7 @@
                 <div class="enterance-container">
                     <h4>뉴스 및 칼럼</h4>
                     <div>
-                        <form action="#" class="searchForm">
+                        <form th:action="@{/community/news}" class="searchForm">
                             <select name="search" class="selectType">
                                 <option value="#" disabled selected class="selectTypes">선택</option>
                                 <option value="#" class="selectTypes">학년</option>
@@ -110,38 +110,38 @@
                                 <th>작성일</th>
                                 <th>조회</th>
                             </tr>
-                            <tr>
-                                <td>3</td>
+                            <tr th:each="community, i:${pageResponseDTO.dtoList}">
+                                <td>[[${pageResponseDTO.startNo - i.index}]]</td>
                                 <td><span class="btn-status btn-c">칼럼</span></td>
-                                <td class="left">정원호(식품자원경제) 교수, 시론 - 4차 산업 시대 …</td>
-                                <td>정원호</td>
-                                <td>24.04.09</td>
-                                <td>160</td>
+                                <td class="left"><a th:href="@{/community/news(CnewsId=0)}">[[${community.title}]]</a></td>
+                                <td>[[${community.nick}]]</td>
+                                <td>[[${community.wdate}]]</td>
+                                <td>[[${community.hit}]]</td>
                             </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><span class="btn-status btn-c">칼럼</span></td>
-                                <td class="left">주윤정(법학전문대학원), 교수, 기고 - 인공지능, …</td>
-                                <td>주윤정</td>
-                                <td>24.04.09</td>
-                                <td>160</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><span class="btn-status btn-news">뉴스</span></td>
-                                <td class="left">그린대, ‘2024년 2학기 늘봄학교 초1 맞춤형 프로…</td>
-                                <td>홍보실</td>
-                                <td>24.04.09</td>
-                                <td>160</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td><span class="btn-status btn-c">칼럼</span></td>
-                                <td class="left">김동헌(의학) 명예교수, 세상읽기 - 절대로 포기하…</td>
-                                <td>김동헌</td>
-                                <td>24.04.09</td>
-                                <td>160</td>
-                            </tr>
+                            <!--                            <tr>-->
+                            <!--                                <td>3</td>-->
+                            <!--                                <td><span class="btn-status btn-c">칼럼</span></td>-->
+                            <!--                                <td class="left">주윤정(법학전문대학원), 교수, 기고 - 인공지능, …</td>-->
+                            <!--                                <td>주윤정</td>-->
+                            <!--                                <td>24.04.09</td>-->
+                            <!--                                <td>160</td>-->
+                            <!--                            </tr>-->
+                            <!--                            <tr>-->
+                            <!--                                <td>3</td>-->
+                            <!--                                <td><span class="btn-status btn-news">뉴스</span></td>-->
+                            <!--                                <td class="left">그린대, ‘2024년 2학기 늘봄학교 초1 맞춤형 프로…</td>-->
+                            <!--                                <td>홍보실</td>-->
+                            <!--                                <td>24.04.09</td>-->
+                            <!--                                <td>160</td>-->
+                            <!--                            </tr>-->
+                            <!--                            <tr>-->
+                            <!--                                <td>3</td>-->
+                            <!--                                <td><span class="btn-status btn-c">칼럼</span></td>-->
+                            <!--                                <td class="left">김동헌(의학) 명예교수, 세상읽기 - 절대로 포기하…</td>-->
+                            <!--                                <td>김동헌</td>-->
+                            <!--                                <td>24.04.09</td>-->
+                            <!--                                <td>160</td>-->
+                            <!--                            </tr>-->
 
                         </table>
 
@@ -149,13 +149,13 @@
                             <a href="#" class="mr-3">
                                 <img
                                         th:src="@{/images/btn-first-page.png}"
-                                        th:alt="첫페이지"
+                                        alt="첫페이지"
                                 />
                             </a>
                             <a href="#" class="mr-10">
                                 <img
                                         th:src="@{/images/btn-prev-page.png}"
-                                        th:alt="이전페이지"
+                                        alt="이전페이지"
                                 />
                             </a>
 
@@ -172,13 +172,13 @@
                             <a href="#" class="mr-5">
                                 <img
                                         th:src="@{/images/btn-next-page.png}"
-                                        th:alt="이전페이지"
+                                        alt="이전페이지"
                                 />
                             </a>
                             <a href="#">
                                 <img
                                         th:src="@{/images/btn-last-page.png}"
-                                        th:alt="이전페이지"
+                                        alt="이전페이지"
                                 />
                             </a>
                         </div>
