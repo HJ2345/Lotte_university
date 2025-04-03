@@ -62,7 +62,7 @@ public class UserController {
             model.addAttribute("privacy", "개인정보 처리방침을 불러올 수 없습니다.");
         }
 
-        return "/user/terms";
+        return "user/terms";
     }
 
 

@@ -2,7 +2,6 @@ package kr.co.greenuniv.service;
 
 import kr.co.greenuniv.dto.DepartmentListDTO;
 import kr.co.greenuniv.dto.DeptDTO;
-import kr.co.greenuniv.dto.GradDTO;
 import kr.co.greenuniv.entity.Department;
 import kr.co.greenuniv.entity.University;
 import kr.co.greenuniv.repository.*;
@@ -13,7 +12,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -92,19 +90,6 @@ public class DeptService {
         log.info(">>> 최종 반환되는 학과 수: {}", list.size());
 
         return list;
-    }
-
-
-    public List<GradDTO> getDeptListByUnivName(String univName) {
-        return deptRepository.findAll().stream()
-                .filter(dept -> dept.getUniversity().getUnivName().equals(univName)) // 특정 대학명 필터링
-                .map(dept -> new GradDTO(
-                        dept.getDeptChief(),  // 학과장
-                        dept.getDeptHp(),     // 학과 전화번호
-                        dept.getDeptName(),   // 학과명
-                        dept.getUniversity().getUnivName()    // 대학명
-                ))
-                .collect(Collectors.toList());
     }
 
 }

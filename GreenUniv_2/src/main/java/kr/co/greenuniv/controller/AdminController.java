@@ -72,7 +72,7 @@ public class AdminController {
         model.addAttribute("stats", stats);
         model.addAttribute("gradeStats", gradeStats); // 💡 새로 추가된 통계
         model.addAttribute("deptStats", deptStats);
-        return "/admin/adminMain";
+        return "admin/adminMain";
     }
 
     @GetMapping("admin/courseStatus")
@@ -195,7 +195,7 @@ public class AdminController {
         List<StudentListDTO> studentList = studentService.getStudentList();
         model.addAttribute("studentList", studentList);
 
-        return "/admin/studentList";
+        return "admin/studentList";
     }
 
     @GetMapping("admin/univDeptEnrollment")

@@ -24,7 +24,6 @@
     margin-left: 30px;
     margin-right: 50px;
     flex: 3;
-    padding: 5px 0;
 }
 
 .dott {
@@ -59,7 +58,7 @@
     font-weight: 500;
     font-size: 22px;
 }
-.content, .date, .subcontent, .additional, .date2 {
+.content, .date {
     color: #222;
     font-weight: 400;
     font-size: 16px;
