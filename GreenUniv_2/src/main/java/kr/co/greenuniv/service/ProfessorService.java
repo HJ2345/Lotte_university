@@ -28,37 +28,28 @@ public class ProfessorService {
     private final ModelMapper modelMapper;
 
     public void regProfessor(ProfessorDTO professorDTO) {
-
-        // 외래키 엔티티 조회
         University university = univRepository.findById(professorDTO.getP_lesson())
                 .orElseThrow(() -> new RuntimeException("University not found"));
-
-        log.info("P_spec2 from DTO: {}", professorDTO.getP_spec2());
-        log.info("모든 Department 목록: {}", deptRepository.findAll());
-
 
         Department department = deptRepository.findByDeptNo(professorDTO.getP_spec2());
         if (department == null) {
             throw new RuntimeException("Department not found");
         }
 
-        // 2. 교수번호 생성
+        // 교수번호 생성
         String year = professorDTO.getP_appointdate().substring(0, 4);
         String prefix = year + department.getDeptNo(); // ex: 202401
 
-        String latest = professorRepository.findMaxPNumWithPrefix(prefix);
+        String latest = professorRepository.findMaxPNumWithPrefix("P" + prefix);
         int next = 1;
         if (latest != null) {
-            next = Integer.parseInt(latest.substring(prefix.length())) + 1;
+            String lastSeq = latest.substring(("P" + prefix).length());
+            next = Integer.parseInt(lastSeq) + 1;
         }
 
-        String newPnum = prefix + String.format("%02d", next);                         // ex: 202401
+        String newPnum = "P" + prefix + String.format("%02d", next); // ✅ 교수번호 완성 ex: P20240102
 
-
-
-
-
-        // 3. 엔티티 저장
+        // 매핑 및 저장
         Professor professor = modelMapper.map(professorDTO, Professor.class);
         professor.setP_num(newPnum);
         professor.setUniversity(university);

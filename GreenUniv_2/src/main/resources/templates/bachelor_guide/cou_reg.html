@@ -15,12 +15,12 @@
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/bachelor_guide/cou_reg.css}"/>
     <script th:src="@{/js/header.js}"></script> <!--자바스크립트-->
-    <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
+    <link rel="icon" type="png" th:href="@{/images/favicon.png}">
     <title>수강신청</title>
 </head>
 <body>
 <div id="wrapper">
-    <th:block th:include="common/_header.html"/>
+    <th:block th:include="/common/_header.html"/>
     <div class="location-container">
         <div>
             <ul>
@@ -145,7 +145,7 @@
             </div>
         </div>
     </main>
-    <th:block th:replace="common/_footer.html"/>
+    <th:block th:replace="/common/_footer.html"/>
 </div>
 </body>
 </html>

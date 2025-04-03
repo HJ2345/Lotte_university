@@ -26,6 +26,8 @@ public class StudentDTO {
     private String S_email;
     private String S_residentId;
 
+    private String status;  // 재학생 휴학생 대학원생 졸업
+
     private int admissionYear;
     private int graduationYear;
 

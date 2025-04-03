@@ -22,6 +22,8 @@ public class Course {
     private String cor_code;    // 과목코드
     private String cor_grade;
     private String semester;
+
+    private String cor_type;    // 이수구분
     private String cor_lecName; // 강의명
     private String cor_description; // 강의 설명
 
