@@ -263,6 +263,10 @@ select {
     appearance: none;
 }
 
+.add_semester > select {
+    width: 130px;
+}
+
 option {
     color: #333;
     font-weight: 350;
