@@ -200,3 +200,14 @@ table tr > .second_td,
     background: #3f97f6 !important;
     color: white !important;
 }
+
+.auth_Button {
+    float: right;
+    padding: 8px 10px;
+    border: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    background: #3F97F6;
+    cursor: pointer;
+}

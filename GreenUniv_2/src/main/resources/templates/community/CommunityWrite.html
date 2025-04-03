@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"/>
+
+    <script th:src="@{/js/header.js}"></script>
+    <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
+    <link rel="stylesheet" th:href="@{/style/community/newsView.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
+    <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
+
+    <link rel="website icon" type="png" th:href="@{/images/favicon.png}">
+    <title>공지사항 - 글쓰기</title>
+    <!--
+    날짜 : 2025-04-02
+    이름 : 정진우
+    내용 : 글쓰기 view
+
+    날짜 : 2025-04-03
+    이름 : 한결
+    내용 : 글쓰기 기능 구현
+    -->
+</head>
+<body>
+<div id="wrapper">
+    <th:block th:include="/common/_header.html"/>
+    <div class="location-container">
+        <div>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img th:src="@{/images/ico-home.png}" alt="home" class="ico-home"/>
+                    </a>
+                </li>
+                <li>
+                    <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next"/>
+                    <a href="#">커뮤니티</a>
+                </li>
+                <li>
+                    <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next"/>
+                    <a href="#" class="this-location">뉴스 및 칼럼</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div>
+                <aside>
+                    <h3>커뮤니티</h3>
+                    <div class="side-link-container">
+                        <a th:href="@{/community/CommunityInfo}">
+                            <div class="side-link">공지사항</div>
+                        </a>
+                        <a th:href="@{/community/news}">
+                            <div class="side-link selected-link">뉴스 및 칼럼</div>
+                        </a>
+                        <a th:href="@{/community/Einformation}">
+                            <div class="side-link">취업정보</div>
+                        </a>
+                        <a th:href="@{/community/Fboard}">
+                            <div class="side-link">자유게시판</div>
+                        </a>
+                        <a th:href="@{/community/qna}">
+                            <div class="side-link">질문과 답변</div>
+                        </a>
+                        <a th:href="@{/community/reference}">
+                            <div class="side-link">자료실</div>
+                        </a>
+                    </div>
+                </aside>
+                <div class="view-container">
+                    <h4>뉴스 및 칼럼 - 글쓰기</h4>
+                    <div class="content-container">
+                        <div>
+                            <div class="articleHeader">
+                                <div>
+                                    <p>첨부파일</p>
+                                    <p>{첨부파일.png}</p>
+                                </div>
+                                <p>{글쓴이}</p>
+                                <p>{작성일}</p>
+                                <p>{조회수}</p>
+                            </div>
+                            <div>
+                                <p class="newsContent">{Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s, when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen book. It has survived not only five centuries, but also the leap into
+                                    electronic typesetting, remaining essentially unchanged. It was popularised in the
+                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                    recently with desktop publishing software like Aldus PageMaker including versions of
+                                    Lorem Ipsum.}</p>
+                            </div>
+                            <div class="btnContainer">
+                                <a th:href="@{#}">
+                                    <button class="editPost btn">
+                                        <img th:src="@{/images/edit.png}" alt="수정버튼">
+                                    </button>
+                                </a>
+                                <a th:href="@{#}">
+                                    <button class="deletePost btn">
+                                        <img th:src="@{/images/delete.png}" alt="삭제버튼">
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment-container">
+                        <div>
+                            <p class="subheading">댓글 목록</p>
+                            <div class="comments">
+                                <div>
+                                    <p class="commentsInfo">{작성자} {작성일}</p>
+                                    <div>
+                                        <a th:href="@{#}">
+                                            <button class="editComment btn">
+                                                <img th:src="@{/images/edit.png}" alt="수정버튼">
+                                            </button>
+                                        </a>
+                                        <a th:href="@{#}">
+                                            <button class="deleteComment btn">
+                                                <img th:src="@{/images/delete.png}" alt="삭제버튼">
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="commentsContent">{댓글 내용}</p>
+                            </div><div class="comments">
+                                <div>
+                                    <p class="commentsInfo">{작성자} {작성일}</p>
+                                    <div>
+                                        <a th:href="@{#}">
+                                            <button class="editComment btn">
+                                                <img th:src="@{/images/edit.png}" alt="수정버튼">
+                                            </button>
+                                        </a>
+                                        <a th:href="@{#}">
+                                            <button class="deleteComment btn">
+                                                <img th:src="@{/images/delete.png}" alt="삭제버튼">
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="commentsContent">{댓글 내용}</p>
+                            </div><div class="comments">
+                                <div>
+                                    <p class="commentsInfo">{작성자} {작성일}</p>
+                                    <div>
+                                        <a th:href="@{#}">
+                                            <button class="editComment btn">
+                                                <img th:src="@{/images/edit.png}" alt="수정버튼">
+                                            </button>
+                                        </a>
+                                        <a th:href="@{#}">
+                                            <button class="deleteComment btn">
+                                                <img th:src="@{/images/delete.png}" alt="삭제버튼">
+                                            </button>
+                                        </a>
+                                    </div>
+                                </div>
+                                <p class="commentsContent">{댓글 내용}</p>
+                            </div>
+
+
+                        </div>
+                        <div>
+                            <form action="#" method="post">
+                                <p class="subheading subheading2">댓글 작성</p>
+                                <textarea class="commentWrite" placeholder="댓글 작성">{댓글 작성}</textarea>
+                                <button type="submit" class="commentSubmit">댓글 등록</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <th:block th:include="/common/_footer.html"/>
+</div>
+</body>
+</html>
