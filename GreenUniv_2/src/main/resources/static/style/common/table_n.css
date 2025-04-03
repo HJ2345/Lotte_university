@@ -90,27 +90,27 @@ td img {
 }
 
 table tr > th:nth-child(1) {
-    width: 93px;
+    width: 70px;
 }
 
 table tr > th:nth-child(2) {
-    width: 139.5px;
+    width: 70px;
 }
 
 table tr > th:nth-child(3) {
-    width: 372px;
+    width: 500px;
 }
 
 table tr > th:nth-child(4) {
-    width: 93px;
+    width: 120px;
 }
 
 table tr > th:nth-child(5) {
-    width: 93px;
+    width: 120px;
 }
 
 table tr > th:nth-child(6) {
-    width: 139.5px;
+    width: 80px;
 }
 
 table tr > td {
@@ -134,7 +134,6 @@ table tr > .second_td,
     color: green;
 }
 
-
 .appBtn {
     padding: 5px 6px;
     border: none;
@@ -149,12 +148,13 @@ table tr > .second_td,
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
     box-sizing: border-box;
 }
 
 .paging-container > a {
     color: #888;
+    width: 35px;
+    height: 35px;
 }
 
 .paging-container > a > img {
@@ -162,11 +162,15 @@ table tr > .second_td,
     border: 1px solid #dedede;
 }
 
-.paging-container > a > span {
-    padding: 3px 11px;
+.paging-container > a > button {
+    width: 35px;
+    height: 35px;
     border: 1px solid #dedede;
     font-size: 15px;
     font-weight: 350;
+    cursor: pointer;
+    color: #525252;
+    background: white;
 }
 
 
@@ -174,10 +178,10 @@ table tr > .second_td,
     background-color: #3f97f6;
     width: 110px;
     height: 42px;
-    font-weight: 350px;
+    font-weight: 350;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     border: 1px solid #3f97f6;
     color: white;
 }
@@ -199,12 +203,11 @@ table tr > .second_td,
 }
 
 .selected {
-    background: #3f97f6;
-    color: white;
+    background: #3f97f6 !important;
+    color: white !important;
 }
 
 /* 각 버튼 스타일 */
-
 .btn-status {
     font-size: 14px;
     font-weight: 34;
@@ -214,13 +217,33 @@ table tr > .second_td,
 
 .btn-news {
     background-color: #A0183A;
-
 }
 
 .btn-c {
     background-color: #3282D3;
+}
 
+.other {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
 
+.writeBtn {
+    background: #3F97F6;
+    color: white;
+    font-size: 15px;
+    font-weight: 350;
+    border: none;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.writeBtn:hover {
+    background: #3a88db;
+    transition: 0.3s;
 }
 
 

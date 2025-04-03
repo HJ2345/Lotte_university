@@ -13,6 +13,12 @@ public interface ProfessorRepository extends JpaRepository<Professor,String> {
     String findMaxPNumWithPrefix(@Param("prefix") String prefix);
 
 
+    // ProfessorRepository
+    int countByDepartment_DeptNo(String deptNo);
+
+ 
+
+
 }
 
 

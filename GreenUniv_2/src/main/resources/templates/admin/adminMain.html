@@ -185,11 +185,13 @@
                                 <th>전체</th>
                             </tr>
                             <tbody>
-                            <tr th:each="stat : ${gradeStats}">
+                            <tr th:each="stat : ${gradeStats}"
+                                th:class="${stat.grade == '총합'} ? 'total-row' : ''">
                                 <td th:text="${stat.grade}"></td>
                                 <td th:text="${stat.enrolledCount}"></td>
                                 <td th:text="${stat.leaveCount}"></td>
                                 <td th:text="${stat.totalCount}"></td>
+
                             </tr>
                             </tbody>
 
@@ -213,7 +215,8 @@
                                 <th>전체</th>
                             </tr>
                             <tbody>
-                            <tr th:each="stat : ${deptStats}">
+                            <tr th:each="stat : ${deptStats}"
+                                th:class="${stat.deptName == '총합'} ? 'total-row' : ''">
                                 <td th:text="${stat.deptName}"></td>
                                 <td th:text="${stat.enrolledCount}"></td>
                                 <td th:text="${stat.leaveCount}"></td>

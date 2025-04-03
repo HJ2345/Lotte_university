@@ -3,6 +3,7 @@ package kr.co.greenuniv.service;
 import kr.co.greenuniv.dto.StudentDTO;
 import kr.co.greenuniv.dto.StudentDeptStatDTO;
 import kr.co.greenuniv.dto.StudentGradeStatDTO;
+import kr.co.greenuniv.dto.StudentListDTO;
 import kr.co.greenuniv.entity.Department;
 import kr.co.greenuniv.entity.Professor;
 import kr.co.greenuniv.entity.Student;
@@ -139,5 +140,28 @@ public class StudentService {
 
         return list;
     }
+
+    public List<StudentListDTO> getStudentList() {
+        List<Student> students = studentRepository.findAll();
+        List<StudentListDTO> list = new ArrayList<>();
+
+        for (Student s : students) {
+            list.add(new StudentListDTO(
+                    s.getS_num(),                           // 학번
+                    s.getS_name(),                          // 이름
+                    s.getS_residentId(),                    // 주민번호
+                    s.getS_hp(),                            // 휴대폰
+                    s.getS_email(),                         // 이메일
+                    s.getDepartment().getDeptName(),        // 학과
+                    s.getAdmissionGrade(),                  // 학년
+                    s.getAdmissionSemester(),               // 학기
+                    s.getStatus()                           // 상태
+            ));
+        }
+
+        return list;
+    }
+
+
 
 }

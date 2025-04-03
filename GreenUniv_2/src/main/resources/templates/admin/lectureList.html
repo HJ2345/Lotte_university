@@ -124,41 +124,17 @@
                             <th>강의실</th>
                             <th>최대 수강 인원</th>
                         </tr>
-                        <tr>
-                            <td>3025112</td>
-                            <td>컴퓨터공학과</td>
-                            <td>1</td>
-                            <td>전공선택</td>
-                            <td>프로그래밍 개론</td>
-                            <td>김컴공</td>
-                            <td>3</td>
-                            <td>월, 수 10:00 ~ 12:00</td>
-                            <td>컴퓨터실</td>
-                            <td>30</td>
-                        </tr>
-                        <tr>
-                            <td>3025112</td>
-                            <td>컴퓨터공학과</td>
-                            <td>1</td>
-                            <td>전공선택</td>
-                            <td>프로그래밍 개론</td>
-                            <td>김컴공</td>
-                            <td>3</td>
-                            <td>월, 수 10:00 ~ 12:00</td>
-                            <td>컴퓨터실</td>
-                            <td>30</td>
-                        </tr>
-                        <tr>
-                            <td>3025112</td>
-                            <td>컴퓨터공학과</td>
-                            <td>1</td>
-                            <td>전공선택</td>
-                            <td>프로그래밍 개론</td>
-                            <td>김컴공</td>
-                            <td>3</td>
-                            <td>월, 수 10:00 ~ 12:00</td>
-                            <td>컴퓨터실</td>
-                            <td>30</td>
+                        <tr th:each="course : ${lectureList}">
+                            <td th:text="${course.corCode}"></td>
+                            <td th:text="${course.deptName}"></td>
+                            <td th:text="${course.corGrade}"></td>
+                            <td th:text="${course.corType}"></td>
+                            <td th:text="${course.corLecName}"></td>
+                            <td th:text="${course.professorName}"></td>
+                            <td th:text="${course.corPoint}"></td>
+                            <td th:text="${course.timeInfo}"></td>
+                            <td th:text="${course.corClass}"></td>
+                            <td th:text="${course.corMaxEnrolment}"></td>
                         </tr>
                     </table>
                 </div>

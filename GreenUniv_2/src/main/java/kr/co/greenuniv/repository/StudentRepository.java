@@ -22,6 +22,7 @@ public interface StudentRepository extends JpaRepository<Student, String> {
 
     long countByDepartment_DeptNoAndStatus(String deptNo, String status);
 
+    int countByDepartment_DeptNo(String deptNo); // 학과별 학생 수
 
 
 }
