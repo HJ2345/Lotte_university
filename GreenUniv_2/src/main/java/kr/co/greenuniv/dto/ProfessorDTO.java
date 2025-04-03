@@ -31,8 +31,5 @@ public class ProfessorDTO {
     private String P_lesson;  // univName
     private String P_spec2;   // deptName
 
-    private String username;    // 아이디
-    private String password;    // 비밀번호
-
 }
 
