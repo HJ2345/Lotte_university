@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"/>
 
     <script th:src="@{/js/header.js}"></script>
+    <script th:src="@{/js/rec.js}"></script>
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
     <link rel="stylesheet" th:href="@{/style/enterance_guide/early.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
@@ -35,7 +36,7 @@
                     <a href="#">
                         <img
                                 th:src="@{/images/ico-home.png}"
-                                th:alt="home"
+                                alt="home"
                                 class="ico-home"
                         />
                     </a>
@@ -43,7 +44,7 @@
                 <li>
                     <img
                             th:src="@{/images/btn-next-page.png}"
-                            th:alt="next"
+                            alt="next"
                             class="ico-next"
                     />
                     <a href="#">입학안내</a>
@@ -51,7 +52,7 @@
                 <li>
                     <img
                             th:src="@{/images/btn-next-page.png}"
-                            th:alt="next"
+                            alt="next"
                             class="ico-next"
                     />
                     <a href="#" class="this-location">수시모집</a>
@@ -85,54 +86,30 @@
                 </aside>
                 <div class="enterance-container">
                     <h4>수시모집</h4>
-                    <form action="#" class="searchForm">
-                        <button type="button" class="pdfBtn btnsize1" onclick="downloadPDF()">모집요강</button>
-                        <button type="button" class="pdfBtn btnsize2" onclick="downloadPDF()">생기부 교과목록</button>
-                        <button type="button" class="pdfBtn btnsize2" onclick="downloadPDF()">부가성적반영자격증</button>
-                    </form>
-
-                    <div class="education-intro-text">
-                        <p class="early-text1">접수 및 일정(2025학년도)</p>
-                    </div>
-
-                    <div class="table">
-                        <table cellspacing="0">
-                            <thead>
-                            <tr>
-                                <th>구분</th>
-                                <th>일정</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>원 서 접 수 (인터넷만 실시)</td>
-                                <td>
-                                    <li>진학사 : www.jinhakapply.com (1544-7715)</li>
-                                    <li>대학자체접수: apply.dit.ac.kr (860-3031~4) ※ 전형료 무료</li>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>접 수 기 간</td>
-                                <td>2024.12.31.(화)∼2025.01.14.(화)</td>
-                            </tr>
-                            <tr>
-                                <td>서 류 제 출</td>
-                                <td>2024.12.31.(화)∼2025.01.15.(수) [해당 기간 동안 대학 도착 서류만 유효함]</td>
-                            </tr>
-                            <tr>
-                                <td>면 접 고 사</td>
-                                <td>미실시</td>
-                            </tr>
-                            <tr>
-                                <td>합격자 발표</td>
-                                <td>2025.01.24.(금) 16:00 예정</td>
-                            </tr>
-                            <tr>
-                                <td>등록금 납부</td>
-                                <td>2025.02.10.(월)∼02.12.(수) 17:00까지</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                    <div class="recContainer">
+                        <div class="list">
+                            <ul class="steps">
+                                <li class="thisStep">모집요강확인 <span class="dott">•</span></li>
+                                <li>입학원서작성 <span class="dott">•</span></li>
+                                <li>서류제출 <span class="dott">•</span></li>
+                                <li>합격자발표 <span class="dott">•</span></li>
+                                <li>예치금납부 <span class="dott">•</span></li>
+                                <li>추가합격 <span class="dott">•</span></li>
+                                <li>본 등록 <span class="dott">•</span></li>
+                            </ul>
+                            <div class="cont">
+                                <p class="step">STEP 01</p>
+                                <p class="subtitle">모집요강확인</p>
+                                <p class="subcontent"></p>
+                                <p class="content">2025학년도 수시1차 모집요강을 확인하세요.</p>
+                                <p class="date"></p>
+                                <p class="additional"></p>
+                                <p class="date2"></p>
+                            </div>
+                            <div class="img">
+                                <img th:src="@{/images/step1.png}">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -203,31 +203,31 @@
                 <div class="smart-links-container">
                     <ul class="smart-links">
                         <li>
-                            <a href="#" class="link-icons">
+                            <a th:href="@{/enterance_guide/notice}" class="link-icons">
                                 <img th:src="@{/images/bg-main-link01.png}" alt="입학안내">
                                 <p>입학안내</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="link-icons">
+                            <a th:href="@{/bachelor_guide/bachelor_schedule}" class="link-icons">
                                 <img th:src="@{/images/bg-main-link02.png}" alt="학사일정">
                                 <p>학사일정</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="link-icons">
+                            <a th:href="@{col_life/std_council}" class="link-icons">
                                 <img th:src="@{/images/bg-main-link03.png}" alt="학생회">
                                 <p>학생회</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="link-icons">
+                            <a th:href="@{/}" class="link-icons">
                                 <img th:src="@{/images/bg-main-link04.png}" alt="교과과정">
                                 <p>교과과정</p>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="link-icons">
+                            <a th:href="@{community/Einformation}" class="link-icons">
                                 <img th:src="@{/images/bg-main-link05.png}" alt="취업안내">
                                 <p>취업안내</p>
                             </a>
@@ -239,7 +239,6 @@
 
     </main>
     <!-- main end -->
-
     <th:block th:include="/common/_footer.html"/>
 </div>
 </body>

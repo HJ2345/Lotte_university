@@ -11,116 +11,68 @@
     padding-bottom: 20.8px;
 }
 
-.early-text1 {
-    font-size: 30px;
-    font-weight: bold;
+.recContainer {
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont {
+    width: 300px;
+    margin-left: 30px;
+    margin-right: 50px;
+    flex: 3;
+    padding: 5px 0;
+}
+
+.dott {
+    margin-left: 20px;
+    font-size: 20px;
+}
+.steps {
+    text-align: right;
+}
+.steps > li {
+    font-size: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    color: #3d3d3d;
+}
+
+.cont > p {
     margin-bottom: 10px;
 }
-
-.left {
-    text-align: left;
-}
-
-.searchForm {
-    display: flex;
-    height: 40px;
-    margin-bottom: 20px;
-    gap: 10px;
-}
-
-.pdtBtn {
-    background: #666666;
-    margin-bottom: 30px;
-}
-
-.btnsize1 {
-    width: 150px;
-    font-size: 15px;
-}
-
-.btnsize2 {
-    width: 200px;
-    font-size: 15px;
-}
-
-table {
-    width: 100%;
-    text-align: center;
-    border-top: 2px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    border: 1px solid #a3a3a3;
+.step {
+    color: #3F97F6;
     font-size: 20px;
-}
-
-table tr > td li {
-    font-size: 20px;
-}
-
-th:first-child, td:first-child {
-    border-left: none;
-}
-
-th:last-child, td:last-child {
-    border-right: none;
-}
-
-table tr > th {
     font-weight: 700;
-    height: 61px;
+    flex: 3;
+}
+.thisStep {
+    color: #3F97F6 !important;
+    font-weight: 500;
+}
+.subtitle {
+    color: #222;
+    font-weight: 500;
+    font-size: 22px;
+}
+.content, .date, .subcontent, .additional, .date2 {
+    color: #222;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.img {
+    flex: 2;
+}
+.img > img {
+    width: 225px;
+    height: 225px;
+    padding: 20px;
     background: #fafafa;
-    border-bottom: 1px solid #a3a3a3;
-
-}
-
-table tr:nth-child(1) {
-    height: 100px;
-}
-
-table tr:nth-child(3) {
-    height: 100px;
-}
-
-table tr:nth-child(9) {
-    height: 100px;
-}
-
-table tr > th:nth-child(1) {
-    width: 250px;
-    font-weight: bold;
-}
-
-table tr > th:nth-child(2) {
-    width: 490px;
-}
-
-table tr > td:nth-child(1) {
-    width: 90px;
-    height: 61px;
-    font-weight: 350;
-    border-bottom: 1px solid #a3a3a3;
-}
-
-table tr > td:nth-child(2) {
-    width: 90px;
-    height: 61px;
-    font-weight: 350;
-    border-bottom: 1px solid #a3a3a3;
-    text-align: left;
-    padding-left: 10px;
-}
-
-
-.early-text {
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    box-sizing: border-box;
-}
-
-.early-text > p {
-    margin-bottom: 5px;
-    font-size: 15px;
+    box-shadow: 0 2px 2px 1px #eee;
+    border-radius: 175px;
 }
