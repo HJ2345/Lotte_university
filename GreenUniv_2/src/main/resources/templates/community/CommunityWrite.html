@@ -11,7 +11,7 @@
 
     <script th:src="@{/js/header.js}"></script>
     <link rel="stylesheet" th:href="@{/style/common/main.css}"/>
-    <link rel="stylesheet" th:href="@{/style/community/newsView.css}"/>
+    <link rel="stylesheet" th:href="@{/style/community/newsWrite.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_footer.css}"/>
     <link rel="stylesheet" th:href="@{/style/common/_header2.css}"/>
@@ -45,7 +45,7 @@
                 </li>
                 <li>
                     <img th:src="@{/images/btn-next-page.png}" alt="next" class="ico-next"/>
-                    <a href="#" class="this-location">뉴스 및 칼럼</a>
+                    <a href="#" class="this-location">공지사항</a>
                 </li>
             </ul>
         </div>
@@ -58,10 +58,10 @@
                     <h3>커뮤니티</h3>
                     <div class="side-link-container">
                         <a th:href="@{/community/CommunityInfo}">
-                            <div class="side-link">공지사항</div>
+                            <div class="side-link selected-link">공지사항</div>
                         </a>
                         <a th:href="@{/community/news}">
-                            <div class="side-link selected-link">뉴스 및 칼럼</div>
+                            <div class="side-link">뉴스 및 칼럼</div>
                         </a>
                         <a th:href="@{/community/Einformation}">
                             <div class="side-link">취업정보</div>
@@ -78,105 +78,23 @@
                     </div>
                 </aside>
                 <div class="view-container">
-                    <h4>뉴스 및 칼럼 - 글쓰기</h4>
+                    <h4>글쓰기</h4>
                     <div class="content-container">
                         <div>
-                            <div class="articleHeader">
-                                <div>
-                                    <p>첨부파일</p>
-                                    <p>{첨부파일.png}</p>
-                                </div>
-                                <p>{글쓴이}</p>
-                                <p>{작성일}</p>
-                                <p>{조회수}</p>
-                            </div>
-                            <div>
-                                <p class="newsContent">{Lorem Ipsum is simply dummy text of the printing and typesetting
-                                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the
-                                    1500s, when an unknown printer took a galley of type and scrambled it to make a type
-                                    specimen book. It has survived not only five centuries, but also the leap into
-                                    electronic typesetting, remaining essentially unchanged. It was popularised in the
-                                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-                                    recently with desktop publishing software like Aldus PageMaker including versions of
-                                    Lorem Ipsum.}</p>
-                            </div>
-                            <div class="btnContainer">
-                                <a th:href="@{#}">
-                                    <button class="editPost btn">
-                                        <img th:src="@{/images/edit.png}" alt="수정버튼">
-                                    </button>
-                                </a>
-                                <a th:href="@{#}">
-                                    <button class="deletePost btn">
-                                        <img th:src="@{/images/delete.png}" alt="삭제버튼">
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-container">
-                        <div>
-                            <p class="subheading">댓글 목록</p>
-                            <div class="comments">
-                                <div>
-                                    <p class="commentsInfo">{작성자} {작성일}</p>
-                                    <div>
-                                        <a th:href="@{#}">
-                                            <button class="editComment btn">
-                                                <img th:src="@{/images/edit.png}" alt="수정버튼">
-                                            </button>
-                                        </a>
-                                        <a th:href="@{#}">
-                                            <button class="deleteComment btn">
-                                                <img th:src="@{/images/delete.png}" alt="삭제버튼">
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <p class="commentsContent">{댓글 내용}</p>
-                            </div><div class="comments">
-                                <div>
-                                    <p class="commentsInfo">{작성자} {작성일}</p>
-                                    <div>
-                                        <a th:href="@{#}">
-                                            <button class="editComment btn">
-                                                <img th:src="@{/images/edit.png}" alt="수정버튼">
-                                            </button>
-                                        </a>
-                                        <a th:href="@{#}">
-                                            <button class="deleteComment btn">
-                                                <img th:src="@{/images/delete.png}" alt="삭제버튼">
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <p class="commentsContent">{댓글 내용}</p>
-                            </div><div class="comments">
-                                <div>
-                                    <p class="commentsInfo">{작성자} {작성일}</p>
-                                    <div>
-                                        <a th:href="@{#}">
-                                            <button class="editComment btn">
-                                                <img th:src="@{/images/edit.png}" alt="수정버튼">
-                                            </button>
-                                        </a>
-                                        <a th:href="@{#}">
-                                            <button class="deleteComment btn">
-                                                <img th:src="@{/images/delete.png}" alt="삭제버튼">
-                                            </button>
-                                        </a>
-                                    </div>
-                                </div>
-                                <p class="commentsContent">{댓글 내용}</p>
-                            </div>
+                            <form th:action="@{/community/CommunityWrite}" method="post" enctype="multipart/form-data">
 
-
-                        </div>
-                        <div>
-                            <form action="#" method="post">
-                                <p class="subheading subheading2">댓글 작성</p>
-                                <textarea class="commentWrite" placeholder="댓글 작성">{댓글 작성}</textarea>
-                                <button type="submit" class="commentSubmit">댓글 등록</button>
+                                <input type="hidden" name="writer" value="gyeol"/>
+                                <input type="hidden" name="cate" value="0">
+                                <div class="articleHeader">
+                                    <input type="text" name="title" placeholder="제목을 입력하세요." required>
+                                </div>
+                                <div>
+                                    <textarea class="content" name="content" placeholder="내용을 입력하세요." required>[[0]]</textarea>
+                                </div>
+                                <div class="other">
+                                    <input type="file">
+                                    <button class="btn">작성 완료</button>
+                                </div>
                             </form>
                         </div>
                     </div>
