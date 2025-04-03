@@ -61,4 +61,11 @@ public class CommunityController {
         return "/community/reference";
 
     }
+
+    @GetMapping("/community/newsEdit")
+    public String newsEdit() {
+        return "/community/newsEdit";
+    }
+
 }
+
