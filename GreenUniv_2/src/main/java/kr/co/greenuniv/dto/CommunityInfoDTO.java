@@ -30,8 +30,6 @@ public class CommunityInfoDTO {
     // 추가필드
     private String nick;
     private String regip;
-    private User user;
-    private User uid;
 
     public String getWdate() {
         if(wdate != null){

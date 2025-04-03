@@ -120,7 +120,7 @@
                                             alt="N"
                                             class="photos"
                                     />
-                                <a th:href="@{/community/CommunityInfo(CinforId=0)}">[[${community.title}]]</a>
+                                <a th:href="@{/community/CommunityView.html(CinforId=${community.CinforId})}">[[${community.title}]]</a>
                                 </td>
                                 <td>[[${community.nick}]]</td>
                                 <td>[[${community.wdate}]]</td>
@@ -184,9 +184,7 @@
                                 <img th:src="@{/images/btn-last-page.png}" alt="마지막페이지"/>
                             </a>
                         </div>
-                        <a th:href="@{/community/CommunityWrite}" sec:authorize="isAuthenticated()">
-                            <button class="auth_Button" type="button">글쓰기</button>
-                        </a>
+                        <a th:href="@{/community/CommunityWrite}"><button class="auth_Button" type="button">글쓰기</button></a>
                     </div>
                 </div>
             </div>
