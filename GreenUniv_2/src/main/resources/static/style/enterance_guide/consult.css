@@ -198,6 +198,8 @@ table tr > .second_td,
 }
 
 .selected {
-    background: #3f97f6;
-    color: white;
+
+    background: #3f97f6 !important;
+    color: white !important;
+
 }

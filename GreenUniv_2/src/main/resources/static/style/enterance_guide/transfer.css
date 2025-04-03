@@ -119,14 +119,31 @@ table tr > td:nth-child(3) {
 }
 
 
-.early-text {
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px;
-    box-sizing: border-box;
+.subtitle {
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    position: relative;
 }
 
-.early-text > p {
-    margin-bottom: 5px;
-    font-size: 15px;
+.subtitle:before {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 8px;
+    background: #3F97F6;
+    margin-bottom: 13px;
+    transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    position: absolute;
+    left: 3px;
+    top: 5px;
+}
+
+.paraContent {
+    font-size: 14px;
+    font-weight: 350;
+    line-height: 25px;
+
 }
