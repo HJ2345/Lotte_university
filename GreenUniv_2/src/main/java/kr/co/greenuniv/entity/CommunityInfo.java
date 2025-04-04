@@ -25,7 +25,7 @@ public class CommunityInfo {
 
     //private String writer;
     // 조회수, 조인
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "writer")
     private User user;
     //private String writer;

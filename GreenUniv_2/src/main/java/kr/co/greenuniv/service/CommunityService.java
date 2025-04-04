@@ -118,12 +118,11 @@ public class CommunityService {
 
     public int register(CommunityInfoDTO communityInfoDTO) {
 
-        /*
         User user = User.builder() // 초기화
-                .uid( communityInfoDTO.getWriter())
+                .uid(communityInfoDTO.getWriter())
                 .build();
-        */
-        User user = userRepository.findById(communityInfoDTO.getWriter()).get();
+
+        //User user = userRepository.findById(communityInfoDTO.getWriter()).get();
 
         CommunityInfo communityInfo = modelMapper.map(communityInfoDTO, CommunityInfo.class);
         communityInfo.setUser(user);
