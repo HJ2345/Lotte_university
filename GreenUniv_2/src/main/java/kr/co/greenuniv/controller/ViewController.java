@@ -1,4 +1,4 @@
-package kr.co.greenuniv.controller;
+/*package kr.co.greenuniv.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import kr.co.greenuniv.dto.CommunityInfoDTO;
@@ -42,4 +42,4 @@ public class ViewController {
     }
 
 
-}
+}*/
