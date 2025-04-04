@@ -6,6 +6,7 @@ import kr.co.greenuniv.service.CommunityService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -16,29 +17,14 @@ public class ViewController {
 
     private final CommunityService communityService;
 
-    @GetMapping("/community/CommunityWrite")
-    public String write() {
-        return "/community/CommunityWrite";
-    }
+    @GetMapping("/community/CommunityView")
+    public String view(int no, HttpServletRequest request, Model model) {
 
-    @PostMapping("/community/CommunityWrite")
-    public String write(CommunityInfoDTO communityInfoDTO, HttpServletRequest request) {
+        // 글 조회 서비스 호출
+        CommunityInfoDTO communityInfoDTO = communityService.findById(no);
 
-        //communityService.
-
-        String regip = request.getRemoteAddr();
-        communityInfoDTO.setRegip(regip);
-        log.info("communityInfoDTO: {}", communityInfoDTO);
-        log.info("communityInfoDTO: {}", communityInfoDTO);
-        log.info("communityInfoDTO: {}", communityInfoDTO);
-        log.info("communityInfoDTO: {}", communityInfoDTO);
-
-//        // 글 저장 서비스 호출
-//        communityInfoDTO.setFile(files.size()); // 업로드 된 파일 갯수
-        communityService.register(communityInfoDTO);
-
-        // 리다이렉트
-        return "redirect:/community/CommunityInfo";
+        model.addAttribute(communityInfoDTO);
+        return "/community/CommunityView";
     }
 
 

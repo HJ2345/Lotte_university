@@ -120,7 +120,7 @@
                                             alt="N"
                                             class="photos"
                                     />
-                                <a th:href="@{/community/CommunityView.html(CinforId=${community.CinforId})}">[[${community.title}]]</a>
+                                <a th:href="@{/community/CommunityView(no=${community.CinforId})}">[[${community.title}]]</a>
                                 </td>
                                 <td>[[${community.nick}]]</td>
                                 <td>[[${community.wdate}]]</td>
@@ -163,19 +163,19 @@
                             <a href="#" class="mr-3">
                                 <img th:src="@{/images/btn-first-page.png}" alt="첫페이지"/>
                             </a>
-                            <a href="#" class="mr-10">
+                            <a th:href="@{/community/CommunityInfo(pg=${pageResponseDTO.start-1})}" class="mr-10">
                                 <img th:src="@{/images/btn-prev-page.png}" alt="이전페이지"/>
                             </a>
 
-                            <a href="#" class="mr-3 mb-2">
-                                <button class="selected">1</button>
-                            </a>
-                            <a href="#" class="mr-3 mb-2">
-                                <button>2</button>
-                            </a>
-                            <a href="#" class="mr-10 mb-2">
-                                <button>3</button>
-                            </a>
+                                <a th:href="@{/community/CommunityInfo(pg=${num})}" class="mr-3 mb-2" th:class="${num == pageResponseDTO.pg} ? 'current' : 'num'">[[${num}]]>
+                                    <button class="selected">[[${pageResponseDTO.pg}]]</button>
+                                </a>
+<!--                            <a href="#" class="mr-3 mb-2">-->
+<!--                                <button>2</button>-->
+<!--                            </a>-->
+<!--                            <a href="#" class="mr-10 mb-2">-->
+<!--                                <button>3</button>-->
+<!--                            </a>-->
 
                             <a href="#" class="mr-3">
                                 <img th:src="@{/images/btn-next-page.png}" alt="다음페이지"/>
